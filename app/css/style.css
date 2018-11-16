@@ -72,6 +72,12 @@ body>.container {
 
 
 
+.visCard {
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 1.45rem;
+}
+
 .col-form-label {
   padding-left: 10px;
 }

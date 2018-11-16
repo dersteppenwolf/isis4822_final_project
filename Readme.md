@@ -92,7 +92,15 @@ Run for local development:
 
 ![alt text](https://raw.githubusercontent.com/dersteppenwolf/isis4822/master/hw5/images/a.png "Visualization")
 
-![alt text](https://raw.githubusercontent.com/dersteppenwolf/isis4822/master/hw5/images/b.png "Visualization")
+
+## References
+
+Crossfilter
+
+* Api Reference https://github.com/crossfilter/crossfilter/wiki/API-Reference
+* Explore Your Multivariate Data with Crossfilter http://matthiasnehlsen.com/blog/2013/09/15/using-crossfilter-with-angularjs/  http://jsfiddle.net/hitch17/vSUte/
+* Example https://bl.ocks.org/micahstubbs/66db7c01723983ff028584b6f304a54a
+* Example worldbank crossfilter https://drarmstr.github.io/chartcollection/examples/#worldbank/
 
 
 

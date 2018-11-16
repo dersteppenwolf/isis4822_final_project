@@ -9,10 +9,31 @@ dataViz.controller('costsController', function (
   $scope.states = []
   $scope.sections = []
 
+
+  $scope.totalPopulation = 0
+  $scope.totalCosts = 0
+  $scope.totalCostPerPerson = 0
+
+
+  ////////////////////////////////
+  // crossfilter   
+  $scope.cf = {}
+  $scope.totalPopulationSum = {}
+  $scope.totalCostsSum = {}
+
+  $scope.dimYear = {}
+  $scope.groupYear = {}
+
+  $scope.dimStates = {}
+  $scope.groupStates = {}
+
+  ////////////////////////////////
+
   $scope.margin = { top: 20, right: 40, bottom: 10, left: 20 }
   $scope.width = 800
 
-
+  
+  ////////////////////////////////
   $scope.loadDomains = function () {
     $log.log("loadDomains");
     $http.get('data/domains.json').
@@ -62,25 +83,34 @@ dataViz.controller('costsController', function (
       //v.anio = $scope.parseYear(v.anio)
       v.costo_procedimiento = +v.costo_procedimiento
       v.numero_personas_atendidas = +v.numero_personas_atendidas
+      v.anno = +v.anno
       //$log.log(v);
     });
     $log.log(d);
-    var cf = crossfilter(d);
-    var dimAdmin = cf.dimension(function (d) { return d.administradora || 0; });
-    var dimYear = cf.dimension(function (d) { return d.anno || 0; });
-    var dimProvider = cf.dimension(function (d) { return d.prestador || 0; });
-    var dimStates = cf.dimension(function (d) { return d.code_depto || 0; });
+
+    $scope.cf = crossfilter(d);
+    $scope.cf.onChange($scope.onCrossfilterChange);
+    $scope.totalPopulationSum = $scope.cf.groupAll().reduceSum((d) => d.numero_personas_atendidas);
+    $scope.totalCostsSum = $scope.cf.groupAll().reduceSum((d) => d.costo_procedimiento);
+
+    $scope.dimYear = $scope.cf.dimension(function (d) { return d.anno || 0; });
+    $scope.groupYear = $scope.dimYear.group().reduce(reduceAdd, reduceRemove, reduceInitial);
+
+    $scope.dimStates = $scope.cf.dimension(function (d) { return d.code_depto || 0; });
+    $scope.groupStates = $scope.dimStates.group().reduce(reduceAdd, reduceRemove, reduceInitial);
+
+    $scope.dimProvider = $scope.cf.dimension(function (d) { return d.prestador || 0; });
+    $scope.groupProvider = $scope.dimProvider.group().reduce(reduceAdd, reduceRemove, reduceInitial);
+
+    var dimAdmin = $scope.cf.dimension(function (d) { return d.administradora || 0; });
 
 
-    
-
-    
-    
+    //////////////
+    $scope.dimYear.filterAll()
 
 
-    var groupStates = dimStates.group().reduce(reduceAdd, reduceRemove, reduceInitial);
-    var groupProvider = dimProvider.group().reduce(reduceAdd, reduceRemove, reduceInitial);
 
+    //////////////
     function reduceAdd(p, v) {
       //$log.log(p);
       //$log.log(v);
@@ -98,19 +128,12 @@ dataViz.controller('costsController', function (
     }
 
     function reduceInitial() {
-      return { count: 0, costs: 0, people:0 };
+      return { count: 0, costs: 0, people: 0 };
     }
-
-    groupStates.top(Infinity).forEach(function (p, i) {
-      //$log.log(p.key + ": " + p.value);
-      $log.log(p);
-    });
-
-    groupProvider.top(Infinity).forEach(function (p, i) {
-      //$log.log(p.key + ": " + p.value);
-      $log.log(p);
-    });
+    //////////////
   }
+
+
 
   $scope.loadData = function () {
     $log.log("loadData")
@@ -118,22 +141,70 @@ dataViz.controller('costsController', function (
   };
 
 
-
-
-
-
-
   $scope.onSelectYear = function (item, model) {
     $log.log("onSelectYear")
-    $log.log(item)
-    $log.log(model)
+    //$log.log(item)
+    //$log.log(model)
+    if (item.code == -1) {
+      $scope.dimYear.filterAll();
+    } else {
+      $scope.dimYear.filterExact(item.code);
+    }
   };
 
   $scope.onSelectState = function (item, model) {
     $log.log("onSelectState")
     $log.log(item)
     $log.log(model)
+    if (item.code == -1) {
+      $scope.dimStates.filterAll();
+    } else {
+      $scope.dimStates.filterExact(item.code);
+    }
   };
+
+
+
+  $scope.onCrossfilterChange = function (eventType) {
+    $log.log("onCrossfilterChange")
+    $log.log(eventType)
+    $scope.totalPopulation = $scope.totalPopulationSum.value()
+    $scope.totalCosts = $scope.totalCostsSum.value()
+    if ($scope.totalCosts > 0 && $scope.totalPopulation > 0) {
+      $scope.totalCostPerPerson = $scope.totalCosts / $scope.totalPopulation;
+    } else {
+      $scope.totalCostPerPerson = 0;
+    }
+  }
+
+  /*
+    $log.log("*** groupStates ")
+    $scope.groupStates.top(Infinity).forEach(function (p, i) {
+      //$log.log(p.key + ": " + p.value);
+      $log.log(p);
+    });
+
+    $log.log("*** groupStates ")
+    $log.log($scope.groupStates.all())
+
+    $log.log("*** groupProvider ")
+    $scope.groupProvider.top(Infinity).forEach(function (p, i) {
+      //$log.log(p.key + ": " + p.value);
+      $log.log(p);
+    });
+
+    const ratioGoodOnOutOfDate = $scope.groupStates.all().map((item, index) => {
+      let ratio = {}
+      ratio.key = item.key
+      //ratio.value = quantityByCategory.all()[index].value / item.value
+      ratio.value = item.costs / item.people
+      return ratio
+    })
+
+    $log.log("*** ratioGoodOnOutOfDate ")
+    $log.log(ratioGoodOnOutOfDate);
+    */
+
 
 
   window.onresize = function () {

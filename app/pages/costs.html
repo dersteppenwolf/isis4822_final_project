@@ -11,10 +11,8 @@
 				<div class="form-group row">
 					<label for="yearSel" class="col-xs-3 col-form-label mr-2">Year</label>
 					<div class="col-xs-9">
-						<ui-select id="yearSel" ng-model="years.selected" theme="selectize" 
-						on-select="onSelectYear($item, $model)"
-						ng-disabled="ctrl.disabled" style="width: 280px;"
-						 title="Choose a year">
+						<ui-select id="yearSel" ng-model="years.selected" theme="selectize" on-select="onSelectYear($item, $model)"
+						 ng-disabled="ctrl.disabled" style="width: 280px;" title="Choose a year">
 							<ui-select-match placeholder="Select or search a year in the list...">{{$select.selected.label}}</ui-select-match>
 							<ui-select-choices repeat="year in years | filter: $select.search">
 								<span ng-bind-html="year.label | highlight: $select.search"></span>
@@ -30,10 +28,8 @@
 
 					<label for="stateSel" class="col-xs-3 col-form-label mr-2">State</label>
 					<div class="col-xs-9">
-						<ui-select id="stateSel" ng-model="states.selected" theme="selectize" 
-						on-select="onSelectState($item, $model)"
-						ng-disabled="ctrl.disabled" style="width: 350px;"
-						 title="Choose a state">
+						<ui-select id="stateSel" ng-model="states.selected" theme="selectize" on-select="onSelectState($item, $model)"
+						 ng-disabled="ctrl.disabled" style="width: 350px;" title="Choose a state">
 							<ui-select-match placeholder="Select or search a state in the list...">{{$select.selected.label}}</ui-select-match>
 							<ui-select-choices repeat="state in states | filter: $select.search">
 								<span ng-bind-html="state.label | highlight: $select.search"></span>
@@ -46,22 +42,14 @@
 						</ui-select>
 					</div>
 
-
+					<p class="col-xs-3 lead visCard ">Cost per Person <br> ${{totalCostPerPerson | megaNumber:1}} COP </p>
+					<p class="col-xs-3 lead visCard ">People Served <br> {{totalPopulation}} </p>
+					<p class="col-xs-3 lead visCard ">Total Costs <br> ${{totalCosts | megaNumber:1}} COP </p>
 
 				</div>
 
-
-
-
 			</form>
 
-
-
-
-
-
-			<p>Selected: {{years.selected}}</p>
-			<p>Selected: {{states.selected}}</p>
 
 		</div>
 	</div>
@@ -73,12 +61,11 @@
 
 	<div id="total" class="anchorDiv"></div>
 
-	<p class="subtitle">There are lots of information in Colombia's open data catalog,
-		but what kind of information you can find in it? </p>
+	<p class="subtitle">There </p>
 
 	<p class="subtitle">
 
-		The following dashboard allows to explore some facts about datasets published in
+		The following d
 		<span class="emphasis">datos.gov.co</span>
 	</p>
 
@@ -90,10 +77,6 @@
 			<div id="treevis"></div>
 		</div>
 	</div>
-
-
-
-
 
 
 
@@ -123,21 +106,7 @@
 
 	</div>
 
-	<div class="row">
 
-		<div class="w-40 col-12 " style="margin:20px">
-			<br />
-			<label>Datasets:</label>
-			<h2 class="col-12">{{selectedNode.label}} </h2>
-			<div class="datasetLinks">
-				<a class="datasetLink" ng-repeat="l in datasets" target="_blank" href="{{ l.link }}">{{ l.label }} , </a>
-			</div>
-			<br />
-		</div>
-
-
-
-	</div>
 
 
 
