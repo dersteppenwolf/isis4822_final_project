@@ -1,0 +1,87 @@
+<div class="jumbotron text-center">
+	<div id="total" class="anchorDiv"></div>
+	<h2 class="h1Title">Cost Analysis </h2>
+
+
+
+
+	<div id="total" class="anchorDiv"></div>
+
+	<p class="subtitle">There are lots of information in Colombia's open data catalog,
+		but what kind of information you can find in it? </p>
+
+	<p class="subtitle">
+
+		The following dashboard allows to explore some facts about datasets published in
+		<span class="emphasis">datos.gov.co</span>
+	</p>
+
+
+	<div class="row">
+		<div class="col-12">
+			<h1>Categories </h1>
+			<p>The following tree summarizes the catalog of data published in datos.gov.co according to the
+				main attributes available in it.
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="chart-container col-9 ">
+			<div id="treevis"></div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="row">
+		<div class="col-12">
+			<h1>Network </h1>
+			<p>Use <span class="emphasis">Mouse Over</span> to see relationships between categories and organizations.</p>
+			<p>Use <span class="emphasis">Mouse Click</span> to retrieve datasets for a category or organization.
+				You will see the results at the bottom of the page</p>
+			<p>
+				<i class="fas fa-circle" style="color:#66c2a5"><span class="emphasis">Organization</span> </i>
+				<i class="fas fa-circle" style="color:#fc8d62"><span class="emphasis">Category </span> </i>
+			</p>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="row">
+		<div id="nDiv" class="chart-container col-9 div.parent">
+			<svg id="svgNetwork" width="1200" height="600"></svg>
+		</div>
+
+	</div>
+
+	<div class="row">
+
+		<div class="w-40 col-12 " style="margin:20px">
+			<br />
+			<label>Datasets:</label>
+			<h2 class="col-12">{{selectedNode.label}} </h2>
+			<div class="datasetLinks">
+				<a class="datasetLink" ng-repeat="l in datasets" target="_blank" href="{{ l.link }}">{{ l.label }} , </a>
+			</div>
+			<br />
+		</div>
+
+
+
+	</div>
+
+
+
+
+
+
+</div>

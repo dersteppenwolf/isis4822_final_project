@@ -1,0 +1,326 @@
+{
+	"years": [
+		{
+			"code": 2010,
+			"costo_procedimiento": 2873079409,
+			"numero_personas_atendidas": 114809,
+			"costo_proc_usuario": 25024.8622407651,
+			"label": 2010
+		},
+		{
+			"code": 2011,
+			"costo_procedimiento": 3792349168,
+			"numero_personas_atendidas": 124066,
+			"costo_proc_usuario": 30567.191398126804,
+			"label": 2011
+		},
+		{
+			"code": 2012,
+			"costo_procedimiento": 3146132869,
+			"numero_personas_atendidas": 87262,
+			"costo_proc_usuario": 36053.870745570806,
+			"label": 2012
+		},
+		{
+			"code": 2013,
+			"costo_procedimiento": 2091691381,
+			"numero_personas_atendidas": 64449,
+			"costo_proc_usuario": 32454.985818243884,
+			"label": 2013
+		},
+		{
+			"code": 2014,
+			"costo_procedimiento": 3088751409,
+			"numero_personas_atendidas": 90950,
+			"costo_proc_usuario": 33960.98305662452,
+			"label": 2014
+		},
+		{
+			"code": 2015,
+			"costo_procedimiento": 4887458205,
+			"numero_personas_atendidas": 118613,
+			"costo_proc_usuario": 41205.0804296325,
+			"label": 2015
+		},
+		{
+			"code": 2016,
+			"costo_procedimiento": 1984399606,
+			"numero_personas_atendidas": 57174,
+			"costo_proc_usuario": 34708.0772029244,
+			"label": 2016
+		},
+		{
+			"code": 2017,
+			"costo_procedimiento": 3901436967,
+			"numero_personas_atendidas": 96836,
+			"costo_proc_usuario": 40289.11734272378,
+			"label": 2017
+		}
+	],
+	"states": [
+		{
+			"departamento": "91 - Amazonas",
+			"costo_procedimiento": 11333589,
+			"numero_personas_atendidas": 389,
+			"costo_proc_usuario": 29135.190231362467,
+			"code": 91,
+			"label": " Amazonas"
+		},
+		{
+			"departamento": "05 - Antioquia",
+			"costo_procedimiento": 6666493382,
+			"numero_personas_atendidas": 222064,
+			"costo_proc_usuario": 30020.59488255638,
+			"code": 5,
+			"label": " Antioquia"
+		},
+		{
+			"departamento": "81 - Arauca",
+			"costo_procedimiento": 23563926,
+			"numero_personas_atendidas": 629,
+			"costo_proc_usuario": 37462.52146263911,
+			"code": 81,
+			"label": " Arauca"
+		},
+		{
+			"departamento": "88 - Archipiélago de San Andrés, Providencia y Santa Catalina",
+			"costo_procedimiento": 1424980,
+			"numero_personas_atendidas": 55,
+			"costo_proc_usuario": 25908.727272727272,
+			"code": 88,
+			"label": " Archipiélago de San Andrés, Providencia y Santa Catalina"
+		},
+		{
+			"departamento": "08 - Atlántico",
+			"costo_procedimiento": 1065329825,
+			"numero_personas_atendidas": 30706,
+			"costo_proc_usuario": 34694.51654399792,
+			"code": 8,
+			"label": " Atlántico"
+		},
+		{
+			"departamento": "11 - Bogotá, D.C.",
+			"costo_procedimiento": 6318105215,
+			"numero_personas_atendidas": 183667,
+			"costo_proc_usuario": 34399.784474075364,
+			"code": 11,
+			"label": " Bogotá, D.C."
+		},
+		{
+			"departamento": "13 - Bolívar",
+			"costo_procedimiento": 327107505,
+			"numero_personas_atendidas": 8365,
+			"costo_proc_usuario": 39104.30424387328,
+			"code": 13,
+			"label": " Bolívar"
+		},
+		{
+			"departamento": "15 - Boyacá",
+			"costo_procedimiento": 933660530,
+			"numero_personas_atendidas": 22576,
+			"costo_proc_usuario": 41356.33105953225,
+			"code": 15,
+			"label": " Boyacá"
+		},
+		{
+			"departamento": "17 - Caldas",
+			"costo_procedimiento": 539348554,
+			"numero_personas_atendidas": 25143,
+			"costo_proc_usuario": 21451.241061130335,
+			"code": 17,
+			"label": " Caldas"
+		},
+		{
+			"departamento": "18 - Caquetá",
+			"costo_procedimiento": 77385949,
+			"numero_personas_atendidas": 1664,
+			"costo_proc_usuario": 46505.978966346156,
+			"code": 18,
+			"label": " Caquetá"
+		},
+		{
+			"departamento": "85 - Casanare",
+			"costo_procedimiento": 43165796,
+			"numero_personas_atendidas": 1308,
+			"costo_proc_usuario": 33001.37308868502,
+			"code": 85,
+			"label": " Casanare"
+		},
+		{
+			"departamento": "19 - Cauca",
+			"costo_procedimiento": 295434252,
+			"numero_personas_atendidas": 6587,
+			"costo_proc_usuario": 44851.108547138305,
+			"code": 19,
+			"label": " Cauca"
+		},
+		{
+			"departamento": "20 - Cesar",
+			"costo_procedimiento": 160178872,
+			"numero_personas_atendidas": 3677,
+			"costo_proc_usuario": 43562.38020125102,
+			"code": 20,
+			"label": " Cesar"
+		},
+		{
+			"departamento": "27 - Chocó",
+			"costo_procedimiento": 52106820,
+			"numero_personas_atendidas": 772,
+			"costo_proc_usuario": 67495.88082901554,
+			"code": 27,
+			"label": " Chocó"
+		},
+		{
+			"departamento": "25 - Cundinamarca",
+			"costo_procedimiento": 1270796561,
+			"numero_personas_atendidas": 35989,
+			"costo_proc_usuario": 35310.69385089888,
+			"code": 25,
+			"label": " Cundinamarca"
+		},
+		{
+			"departamento": "23 - Córdoba",
+			"costo_procedimiento": 381397577,
+			"numero_personas_atendidas": 11814,
+			"costo_proc_usuario": 32283.526070763503,
+			"code": 23,
+			"label": " Córdoba"
+		},
+		{
+			"departamento": "94 - Guainía",
+			"costo_procedimiento": 1723610,
+			"numero_personas_atendidas": 39,
+			"costo_proc_usuario": 44195.1282051282,
+			"code": 94,
+			"label": " Guainía"
+		},
+		{
+			"departamento": "95 - Guaviare",
+			"costo_procedimiento": 9634423,
+			"numero_personas_atendidas": 367,
+			"costo_proc_usuario": 26251.83378746594,
+			"code": 95,
+			"label": " Guaviare"
+		},
+		{
+			"departamento": "41 - Huila",
+			"costo_procedimiento": 641689511,
+			"numero_personas_atendidas": 12951,
+			"costo_proc_usuario": 49547.48752992047,
+			"code": 41,
+			"label": " Huila"
+		},
+		{
+			"departamento": "44 - La Guajira",
+			"costo_procedimiento": 48090492,
+			"numero_personas_atendidas": 1650,
+			"costo_proc_usuario": 29145.752727272727,
+			"code": 44,
+			"label": " La Guajira"
+		},
+		{
+			"departamento": "47 - Magdalena",
+			"costo_procedimiento": 194272068,
+			"numero_personas_atendidas": 6215,
+			"costo_proc_usuario": 31258.57892196299,
+			"code": 47,
+			"label": " Magdalena"
+		},
+		{
+			"departamento": "50 - Meta",
+			"costo_procedimiento": 260586704,
+			"numero_personas_atendidas": 8323,
+			"costo_proc_usuario": 31309.227922624053,
+			"code": 50,
+			"label": " Meta"
+		},
+		{
+			"departamento": "52 - Nariño",
+			"costo_procedimiento": 2211510762,
+			"numero_personas_atendidas": 43104,
+			"costo_proc_usuario": 51306.392956570155,
+			"code": 52,
+			"label": " Nariño"
+		},
+		{
+			"departamento": "54 - Norte de Santander",
+			"costo_procedimiento": 208032788,
+			"numero_personas_atendidas": 11333,
+			"costo_proc_usuario": 18356.37412865084,
+			"code": 54,
+			"label": " Norte de Santander"
+		},
+		{
+			"departamento": "86 - Putumayo",
+			"costo_procedimiento": 109361415,
+			"numero_personas_atendidas": 2167,
+			"costo_proc_usuario": 50466.7351176742,
+			"code": 86,
+			"label": " Putumayo"
+		},
+		{
+			"departamento": "63 - Quindio",
+			"costo_procedimiento": 192537155,
+			"numero_personas_atendidas": 7417,
+			"costo_proc_usuario": 25958.899150599973,
+			"code": 63,
+			"label": " Quindio"
+		},
+		{
+			"departamento": "66 - Risaralda",
+			"costo_procedimiento": 463164970,
+			"numero_personas_atendidas": 15879,
+			"costo_proc_usuario": 29168.396624472574,
+			"code": 66,
+			"label": " Risaralda"
+		},
+		{
+			"departamento": "68 - Santander",
+			"costo_procedimiento": 656772781,
+			"numero_personas_atendidas": 23829,
+			"costo_proc_usuario": 27561.911158672207,
+			"code": 68,
+			"label": " Santander"
+		},
+		{
+			"departamento": "70 - Sucre",
+			"costo_procedimiento": 121883553,
+			"numero_personas_atendidas": 4069,
+			"costo_proc_usuario": 29954.17866797739,
+			"code": 70,
+			"label": " Sucre"
+		},
+		{
+			"departamento": "73 - Tolima",
+			"costo_procedimiento": 540437835,
+			"numero_personas_atendidas": 14382,
+			"costo_proc_usuario": 37577.3769294952,
+			"code": 73,
+			"label": " Tolima"
+		},
+		{
+			"departamento": "76 - Valle del Cauca",
+			"costo_procedimiento": 1935327306,
+			"numero_personas_atendidas": 46887,
+			"costo_proc_usuario": 41276.415765564016,
+			"code": 76,
+			"label": " Valle del Cauca"
+		},
+		{
+			"departamento": "97 - Vaupés",
+			"costo_procedimiento": 1223868,
+			"numero_personas_atendidas": 64,
+			"costo_proc_usuario": 19122.9375,
+			"code": 97,
+			"label": " Vaupés"
+		},
+		{
+			"departamento": "99 - Vichada",
+			"costo_procedimiento": 2216440,
+			"numero_personas_atendidas": 78,
+			"costo_proc_usuario": 28415.897435897437,
+			"code": 99,
+			"label": " Vichada"
+		}
+	]
+}

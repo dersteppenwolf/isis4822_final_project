@@ -1,0 +1,289 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height 
+  margin-bottom: 60px;
+  */
+  font-family: 'Comfortaa', cursive;
+  color: black;
+}
+
+.headerTitle {
+  margin: 10px;
+  padding: 0px;
+  font-size: 24px !important;
+  color: #bfbfbf;
+}
+
+.header {
+  margin: 0px;
+  padding: 0px;
+  font-size: 19px;
+  color: #bfbfbf;
+}
+
+.header p {
+  margin: 10px;
+  padding: 0px;
+}
+
+.headerIcon {
+  margin: 0px;
+  margin-left: 20px;
+  font-size: 30px;
+  color: #bfbfbf;
+}
+
+.subtitle {
+  margin-top: 0px;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 0px;
+  font-size: 18px;
+  width: 90%;
+  text-align: justify;
+  text-justify: inter-word;
+  color: #737373;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px;
+  /* Vertically center the text there */
+  background-color: #000000;
+  color: #bfbfbf;
+}
+
+body>.container {
+  padding: 60px 15px 0;
+}
+
+.footer>.container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.jumbotron {
+  padding-top: 60px;
+  padding-bottom: 10px;
+}
+
+img {
+  padding: 15px;
+}
+
+h1 {
+  margin-top: 25px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.h1Title {
+  margin-top: 0px;
+  font-size: 40px;
+}
+
+.anchorDiv {
+  padding-top: 50px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.bold-span {
+  font-weight: 1000;
+}
+
+.bold-span a {
+  color: #000000;
+}
+
+/* Make the chart container fill the page using CSS. */
+
+#chart {
+  /* position: fixed; */
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+
+.chart-container {
+  padding: 0px;
+  margin: 0 auto;
+  background: #f0f0f0;
+  border: 1px;
+  border-style: solid;
+  border-color: #9fa9a3;
+  border-radius: 5px;
+  box-shadow: 0px 0px 1px 0px #06060d;
+}
+
+.lineSeries {
+  fill: none;
+  stroke: #c9c39c;
+  stroke-width: 3;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.dot {
+  fill: #fff;
+  stroke: #000;
+}
+
+.dotPopups {
+  fill: #ddc73c;
+  stroke: #000000;
+}
+
+.dotPopupsText {
+  color: black;
+  font-size: 13pt;
+  text-shadow: 2px 2px white;
+}
+
+.focus circle {
+  fill: none;
+  stroke: steelblue;
+}
+
+.shadow {
+  -webkit-filter: drop-shadow( 0px 3px 3px rgba(0, 0, 0, .5));
+  filter: drop-shadow( 0px 3px 3px rgba(0, 0, 0, .5));
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: black;
+  shape-rendering: crispEdge;
+}
+
+.axis text {
+  /* font-family: sans-serif; */
+  font-size: 10px;
+  text-anchor: middle;
+}
+
+.grid line {
+  stroke: lightgrey;
+  stroke-opacity: 0.7;
+  shape-rendering: crispEdges;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+.node {
+  stroke: #000;
+  stroke-width: 1px;
+  stroke-opacity: 0.6;
+}
+
+.link {
+  stroke: #d9d9d9;
+  stroke-opacity: 1;
+  stroke-width: 1px;
+}
+
+.linkOver {
+  stroke: #737373;
+  stroke-opacity: 1;
+  stroke-width: 1px;
+}
+
+div.parent {
+  position: relative;
+  left: 0px;
+  /* stick it wherever it was positioned by default */
+  top: 0px;
+  padding: 0px;
+}
+
+.svgNetwork {
+  padding: 0px;
+  margin: 0px;
+}
+
+div.tooltip {
+  position: absolute;
+  width: auto;
+  max-width: 120px;
+  height: auto;
+  padding: 1px;
+  margin: 1px;
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 0.5;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  white-space: pre-wrap;
+  /* CSS3 */
+  white-space: -moz-pre-wrap;
+  /* Firefox */
+  white-space: -pre-wrap;
+  /* Opera <7 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* IE */
+  text-align: left;
+  font-size: 9px;
+}
+
+.datasetLink {
+  font-size: 14px;
+  word-spacing: 2px;
+  line-height: 2;
+  color: #737373;
+}
+
+.datasetLinks a:hover {
+  color: #000000;
+  text-decoration: none;
+  font-size: 14px;
+  background-color: white;
+  margin: 5px;
+  padding: 5px;
+}
+
+.datasetLinks a:active {
+  color: #000;
+}
+
+.datasetLinks a:link {
+  color: #737373;
+}
+
+/* visited link */
+
+.datasetLinks a:visited {
+  color: #737373;
+}
+
+.emphasis {
+  font-family: "Comfortaa";
+  font-weight: 700;
+  font-size: 16px;
+  font-style: italic;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.treevisContainer {
+  border: #9fa9a3;
+  border: 1px;
+  border-style: solid;
+}
