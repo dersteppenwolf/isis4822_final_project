@@ -21,15 +21,31 @@ dataViz.controller('costsController', function (
         $scope.years = data.years
         $scope.states = data.states
 
+        let totalPeople = 0
+        let totalCosts = 0
+        $scope.years.forEach(function (v) {
+          totalPeople += v.numero_personas_atendidas
+          totalCosts += v.costo_procedimiento
+        });
+
         $scope.years.unshift({
           "code": -1,
-          "label": "All"
+          "label": "All",
+          "costo_procedimiento": totalCosts,
+          "numero_personas_atendidas": totalPeople,
+          "costo_proc_usuario": totalCosts / totalPeople
         });
 
         $scope.states.unshift({
           "code": -1,
-          "label": "All"
+          "label": "All",
+          "costo_procedimiento": totalCosts,
+          "numero_personas_atendidas": totalPeople,
+          "costo_proc_usuario": totalCosts / totalPeople
         });
+
+        $scope.years.selected = $scope.years[0]
+        $scope.states.selected = $scope.years[0]
 
         //$log.log($scope.years);
         //$log.log($scope.states);
@@ -52,69 +68,6 @@ dataViz.controller('costsController', function (
   }
 
 
-
-
-
-  /** 
-   * 
-   * 
-   * 
-   * 
-   * 
-   * **/
-  $scope.parseDatasets = (d) => {
-    $scope.progressbar.complete();
-    $log.log("parseDatasets");
-    $scope.datasets = d.rows
-    $log.log($scope.datasets);
-    $scope.$apply();
-  }
-
-
-
-
-  $scope.loadDatasets = function (d) {
-    $scope.selectedNode = d
-
-    var filterColumn = ""
-    if (d.id.substring(0, 1) == 'o') {
-      filterColumn = "organization_code"
-    } else {
-      filterColumn = "category_code"
-    }
-
-    let query = ` select resource_id as id, permalink as link, INITCAP(resource_name) as label, resource_createdat as creationDate
-      from datos_gov where ${filterColumn} = '${d.id}' 
-      order by resource_name  asc `
-
-    // $log.log(query);
-
-    $scope.progressbar.start();
-    d3.json($scope.remoteServiceUrl + query).then($scope.parseDatasets);
-  }
-
-
-
-
-  $scope.loadTree = function () {
-    d3.json("js/tree-layout2.vg.json").then((data) => {
-      vegaEmbed("#treevis", data, { theme: 'white', actions: false });
-    });
-
-  }
-
-
-
-
-
-
-
-  /**
-   * 
-   * 
-   * 
-   * 
-   */
 
 
 

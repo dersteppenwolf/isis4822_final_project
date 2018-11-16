@@ -11,5 +11,5 @@ gulp.task('browser-sync', function() {
 
 
 gulp.task('watch', ['browser-sync'], function () {
-    gulp.watch(["index.html", "js/*.*","data/*.*","test/*.html", "pages/*.html", "css/*.css"]).on('change', bs.reload);
+    gulp.watch(["index.html", "js/*.*","js/libs/*.*","data/*.*","test/*.html", "pages/*.html", "css/*.css"]).on('change', bs.reload);
 });

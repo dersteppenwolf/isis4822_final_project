@@ -1,6 +1,68 @@
 <div class="jumbotron text-center">
 	<div id="total" class="anchorDiv"></div>
-	<h2 class="h1Title">Cost Analysis </h2>
+	<h2 class="h1Title">Cost Analysis per Person </h2>
+
+
+	<div class="row">
+		<div class="col-xs-6">
+
+			<form class="form-horizontal">
+
+				<div class="form-group row">
+					<label for="yearSel" class="col-xs-3 col-form-label mr-2">Year</label>
+					<div class="col-xs-9">
+						<ui-select id="yearSel" ng-model="years.selected" theme="selectize" ng-disabled="ctrl.disabled" style="width: 250px;"
+						 title="Choose a year">
+							<ui-select-match placeholder="Select or search a year in the list...">{{$select.selected.label}}</ui-select-match>
+							<ui-select-choices repeat="year in years | filter: $select.search">
+								<span ng-bind-html="year.label | highlight: $select.search"></span>
+								<small>
+									Cost per User: ${{year.costo_proc_usuario | megaNumber:1}} COP,
+									Total Costs: ${{year.costo_procedimiento | megaNumber:1}} COP,
+									People: {{year.numero_personas_atendidas | megaNumber:1}}
+								</small>
+							</ui-select-choices>
+						</ui-select>
+					</div>
+
+
+					<label for="stateSel" class="col-xs-3 col-form-label mr-2">State</label>
+					<div class="col-xs-9">
+						<ui-select id="stateSel" ng-model="states.selected" theme="selectize" ng-disabled="ctrl.disabled" style="width: 300px;"
+						 title="Choose a state">
+							<ui-select-match placeholder="Select or search a state in the list...">{{$select.selected.label}}</ui-select-match>
+							<ui-select-choices repeat="state in states | filter: $select.search">
+								<span ng-bind-html="state.label | highlight: $select.search"></span>
+								<small>
+									Cost per User: ${{state.costo_proc_usuario | megaNumber:1}} COP,
+									Total Costs: ${{state.costo_procedimiento | megaNumber:1}} COP,
+									People: {{state.numero_personas_atendidas | megaNumber:1}}
+								</small>
+							</ui-select-choices>
+						</ui-select>
+					</div>
+
+
+
+				</div>
+
+
+
+
+			</form>
+
+
+
+
+
+
+			<p>Selected: {{years.selected}}</p>
+			<p>Selected: {{states.selected}}</p>
+
+		</div>
+	</div>
+
+
 
 
 
@@ -17,13 +79,7 @@
 	</p>
 
 
-	<div class="row">
-		<div class="col-12">
-			<h1>Categories </h1>
-			<p>The following tree summarizes the catalog of data published in datos.gov.co according to the
-				main attributes available in it.
-		</div>
-	</div>
+
 
 	<div class="row">
 		<div class="chart-container col-9 ">
