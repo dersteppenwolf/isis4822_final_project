@@ -56,47 +56,80 @@ dataViz.controller('costsController', function (
   };
 
 
-  $scope.parseData = (d) => { 
+  $scope.parseData = (d) => {
     $log.log("parseData");
-    d.forEach(function(v) {
+    d.forEach(function (v) {
       //v.anio = $scope.parseYear(v.anio)
-      //v.count = +v.count
+      v.costo_procedimiento = +v.costo_procedimiento
+      v.numero_personas_atendidas = +v.numero_personas_atendidas
       //$log.log(v);
-    }); 
+    });
     $log.log(d);
     var cf = crossfilter(d);
-    var dimAdmin = cf.dimension(function(d) { return d.administradora || 0; });
-    var dimYear = cf.dimension(function(d) { return d.anno || 0; });
-    var dimProvider = cf.dimension(function(d) { return d.prestador || 0; });
+    var dimAdmin = cf.dimension(function (d) { return d.administradora || 0; });
+    var dimYear = cf.dimension(function (d) { return d.anno || 0; });
+    var dimProvider = cf.dimension(function (d) { return d.prestador || 0; });
+    var dimStates = cf.dimension(function (d) { return d.code_depto || 0; });
+
+
     
 
-    var groupProvider = dimProvider.group();
-    groupProvider.top(Infinity).forEach(function(p, i) {
-      $log.log(p.key + ": " + p.value);
+    
+    
+
+
+    var groupStates = dimStates.group().reduce(reduceAdd, reduceRemove, reduceInitial);
+    var groupProvider = dimProvider.group().reduce(reduceAdd, reduceRemove, reduceInitial);
+
+    function reduceAdd(p, v) {
+      //$log.log(p);
+      //$log.log(v);
+      ++p.count;
+      p.costs += v.costo_procedimiento;
+      p.people += v.numero_personas_atendidas;
+      return p;
+    }
+
+    function reduceRemove(p, v) {
+      --p.count;
+      p.costs -= v.costo_procedimiento;
+      p.people -= v.numero_personas_atendidas;
+      return p;
+    }
+
+    function reduceInitial() {
+      return { count: 0, costs: 0, people:0 };
+    }
+
+    groupStates.top(Infinity).forEach(function (p, i) {
+      //$log.log(p.key + ": " + p.value);
+      $log.log(p);
+    });
+
+    groupProvider.top(Infinity).forEach(function (p, i) {
+      //$log.log(p.key + ": " + p.value);
+      $log.log(p);
     });
   }
 
-  $scope.loadData = function (){
+  $scope.loadData = function () {
     $log.log("loadData")
     d3.tsv('data/costs.tsv').then($scope.parseData)
-
-    
-    
   };
 
 
 
 
-  
 
 
-  $scope.onSelectYear = function (item, model){
+
+  $scope.onSelectYear = function (item, model) {
     $log.log("onSelectYear")
     $log.log(item)
     $log.log(model)
   };
 
-  $scope.onSelectState = function (item, model){
+  $scope.onSelectState = function (item, model) {
     $log.log("onSelectState")
     $log.log(item)
     $log.log(model)
