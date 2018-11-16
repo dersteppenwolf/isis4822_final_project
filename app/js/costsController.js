@@ -53,6 +53,19 @@ dataViz.controller('costsController', function (
   };
 
 
+  $scope.onSelectYear = function (item, model){
+    $log.log("onSelectYear")
+    $log.log(item)
+    $log.log(model)
+  };
+
+  $scope.onSelectState = function (item, model){
+    $log.log("onSelectState")
+    $log.log(item)
+    $log.log(model)
+  };
+
+
   window.onresize = function () {
     //$log.log("onresize");
     $scope.width = window.innerWidth - $scope.margin.left - $scope.margin.right;

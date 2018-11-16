@@ -11,7 +11,9 @@
 				<div class="form-group row">
 					<label for="yearSel" class="col-xs-3 col-form-label mr-2">Year</label>
 					<div class="col-xs-9">
-						<ui-select id="yearSel" ng-model="years.selected" theme="selectize" ng-disabled="ctrl.disabled" style="width: 250px;"
+						<ui-select id="yearSel" ng-model="years.selected" theme="selectize" 
+						on-select="onSelectYear($item, $model)"
+						ng-disabled="ctrl.disabled" style="width: 280px;"
 						 title="Choose a year">
 							<ui-select-match placeholder="Select or search a year in the list...">{{$select.selected.label}}</ui-select-match>
 							<ui-select-choices repeat="year in years | filter: $select.search">
@@ -28,7 +30,9 @@
 
 					<label for="stateSel" class="col-xs-3 col-form-label mr-2">State</label>
 					<div class="col-xs-9">
-						<ui-select id="stateSel" ng-model="states.selected" theme="selectize" ng-disabled="ctrl.disabled" style="width: 300px;"
+						<ui-select id="stateSel" ng-model="states.selected" theme="selectize" 
+						on-select="onSelectState($item, $model)"
+						ng-disabled="ctrl.disabled" style="width: 350px;"
 						 title="Choose a state">
 							<ui-select-match placeholder="Select or search a state in the list...">{{$select.selected.label}}</ui-select-match>
 							<ui-select-choices repeat="state in states | filter: $select.search">
