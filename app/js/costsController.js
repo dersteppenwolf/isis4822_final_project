@@ -7,6 +7,7 @@ dataViz.controller('costsController', function (
 
   $scope.years = []
   $scope.states = []
+  $scope.sections = []
 
   $scope.margin = { top: 20, right: 40, bottom: 10, left: 20 }
   $scope.width = 800
@@ -20,6 +21,7 @@ dataViz.controller('costsController', function (
         //$log.log(data);
         $scope.years = data.years
         $scope.states = data.states
+        $scope.sections = data.sections
 
         let totalPeople = 0
         let totalCosts = 0
@@ -49,8 +51,43 @@ dataViz.controller('costsController', function (
 
         //$log.log($scope.years);
         //$log.log($scope.states);
-      });
+      })
+      .then($scope.loadData);
   };
+
+
+  $scope.parseData = (d) => { 
+    $log.log("parseData");
+    d.forEach(function(v) {
+      //v.anio = $scope.parseYear(v.anio)
+      //v.count = +v.count
+      //$log.log(v);
+    }); 
+    $log.log(d);
+    var cf = crossfilter(d);
+    var dimAdmin = cf.dimension(function(d) { return d.administradora || 0; });
+    var dimYear = cf.dimension(function(d) { return d.anno || 0; });
+    var dimProvider = cf.dimension(function(d) { return d.prestador || 0; });
+    
+
+    var groupProvider = dimProvider.group();
+    groupProvider.top(Infinity).forEach(function(p, i) {
+      $log.log(p.key + ": " + p.value);
+    });
+  }
+
+  $scope.loadData = function (){
+    $log.log("loadData")
+    d3.tsv('data/costs.tsv').then($scope.parseData)
+
+    
+    
+  };
+
+
+
+
+  
 
 
   $scope.onSelectYear = function (item, model){

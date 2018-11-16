@@ -322,5 +322,31 @@
 			"code": 99,
 			"label": " Vichada"
 		}
+	],
+	"sections": [
+		{
+			"code": 1,
+			"label": " PROCEDIMIENTOS E INTERVENCIONES NO QUIRURGICOS",
+			"costo_procedimiento": 21963033621,
+			"numero_personas_atendidas": 743144,
+			"costo_proc_usuario": 29554.20971036569
+		},
+		{
+			"code": 0,
+			"label": " PROCEDIMIENTOS E INTERVENCIONES QUIRURGICAS",
+			"costo_procedimiento": 3743136837,
+			"numero_personas_atendidas": 10758,
+			"costo_proc_usuario": 347939.8435582822
+		},
+		{
+			"code": 2,
+			"label": " PROCEDIMIENTOS E INTERVENCIONES SOBRE LA COMUNIDAD, SU ENTORNO Y SALUD",
+			"costo_procedimiento": 59128556,
+			"numero_personas_atendidas": 257,
+			"costo_proc_usuario": 230072.20233463036
+		},
+		{
+			"code": null
+		}
 	]
 }
