@@ -75,8 +75,27 @@ body>.container {
 .visCard {
   padding-right: 15px;
   padding-left: 15px;
-  font-size: 1.45rem;
+  font-size: 1.45rem; 
 }
+
+.swap-animation.ng-enter, .swap-animation.ng-leave {
+  transition:0.2s linear all; 
+}
+.swap-animation.ng-enter {
+  /* background-color: #f2f2f2; */
+  color: grey; 
+  letter-spacing: 2px;
+}
+.swap-animation.ng-enter-active {
+  opacity: 0; 
+}
+.swap-animation.ng-leave {
+  opacity: 0; 
+}
+.swap-animation.ng-leave-active {
+  opacity: 0; 
+}
+
 
 .col-form-label {
   padding-left: 10px;

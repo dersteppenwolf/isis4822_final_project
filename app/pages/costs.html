@@ -42,9 +42,26 @@
 						</ui-select>
 					</div>
 
-					<p class="col-xs-3 lead visCard ">Cost per Person <br> ${{totalCostPerPerson | megaNumber:1}} COP </p>
-					<p class="col-xs-3 lead visCard ">People Served <br> {{totalPopulation}} </p>
-					<p class="col-xs-3 lead visCard ">Total Costs <br> ${{totalCosts | megaNumber:1}} COP </p>
+					<div class="col-xs-3 lead visCard">Cost per Person
+						<br>
+						<div ng-animate-swap="totalCostPerPerson" class="cell swap-animation">
+							${{totalCostPerPerson | megaNumber:1}} COP
+						</div>
+					</div>
+
+					<div class="col-xs-3 lead visCard">People Served 
+						<br>
+						<div ng-animate-swap="totalPopulation" class="cell swap-animation">
+							{{totalPopulation}} 
+						</div>
+					</div>
+
+					<div class="col-xs-3 lead visCard">Total Costs 
+						<br>
+						<div ng-animate-swap="totalCosts" class="cell swap-animation">
+							${{totalCosts | megaNumber:1}} COP
+						</div>
+					</div>
 
 				</div>
 
