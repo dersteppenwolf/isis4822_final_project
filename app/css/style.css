@@ -205,9 +205,11 @@ h2 {
 }
 
 .axis text {
-  /* font-family: sans-serif; */
-  font-size: 10px;
+  font-family: 'Comfortaa', cursive;
+  /* font-family: sans-serif; 
+  font-size: 11px;
   text-anchor: middle;
+  */
 }
 
 .grid line {
@@ -344,6 +346,86 @@ margin-top: 1em;
 position: relative;
 z-index: 10000; /* The select2 dropdown has a z-index of 9999 */
 }
+
+
+
+/**  chart components */
+#charts {
+  padding: 10px 0;
+}
+
+.chart {
+  display: inline-block;
+  height: 151px;
+  margin-bottom: 20px;
+}
+
+.reset {
+  padding-left: 1em;
+  font-size: smaller;
+  color: #ccc;
+}
+
+.background.bar {
+  fill: #ccc;
+}
+
+.foreground.bar {
+  fill: steelblue;
+}
+
+.brush-handle {
+  fill: #eee;
+  stroke: #666;
+}
+
+#year-chart {
+  padding-bottom: 50px;
+  margin: 0px;
+  height: 280px;
+}
+
+
+
+
+.bar {
+  fill: steelblue;
+}
+.bar:hover {
+  fill: brown;
+  cursor: pointer;
+}
+.bar.left {
+fill: rgb(255, 145, 229);
+}
+.bar.left:hover {
+  fill: brown;
+  cursor: pointer;
+}
+.bar.right {
+fill: rgb(83, 145, 238);
+}
+.bar.right:hover {
+  fill: brown;
+  cursor: pointer;
+}
+.axis--x path {
+  /* display: none; */
+}
+
+svg.barchart{
+  overflow: visible;
+}
+
+.barchart .x.axis text{
+  text-anchor: end;
+}
+.leftBarGroup .text_data{
+  text-anchor: end;
+}
+
+
+
 
 
 

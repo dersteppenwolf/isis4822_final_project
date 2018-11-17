@@ -101,6 +101,7 @@ Crossfilter
 * Explore Your Multivariate Data with Crossfilter http://matthiasnehlsen.com/blog/2013/09/15/using-crossfilter-with-angularjs/  http://jsfiddle.net/hitch17/vSUte/
 * Example https://bl.ocks.org/micahstubbs/66db7c01723983ff028584b6f304a54a
 * Example worldbank crossfilter https://drarmstr.github.io/chartcollection/examples/#worldbank/
+* https://blog.sicara.com/interactive-dashboard-crossfilter-dcjs-tutorial-7f3a3ea584c2 
 
 
 
