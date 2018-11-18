@@ -9,7 +9,7 @@ dataViz.directive('barChart', function ($parse, $log) {
             var group = $parse(attrs.group);
 
             scope.dataset = []
-            var xScale, yScale, rScale, xAxisGen, yAxisGen, line;
+            var xScale, yScale, yGridGen, xAxisGen, yAxisGen;
 
             var rawSvg = elem.find('svg');
             var svg = d3.select(rawSvg[0]);
@@ -19,8 +19,8 @@ dataViz.directive('barChart', function ($parse, $log) {
             var width = getDivWidth('.chart-container') - margin.left - margin.right
 
             //var height = getDivHeight('.chart-container') - margin.top - margin.bottom;
-            var height = 300- margin.top - margin.bottom;
-        
+            var height = 300 - margin.top - margin.bottom;
+
             window.onresize = function () {
                 $log.log("onresize");
                 width = getDivWidth('.chart-container') - margin.left - margin.right;
@@ -28,14 +28,14 @@ dataViz.directive('barChart', function ($parse, $log) {
                 //height = getDivHeight('.chart-container') - margin.top - margin.bottom;
                 //$log.log(height);
                 redrawChart();
-               // return scope.$apply();
+                // return scope.$apply();
             };
 
 
             ////////////////
             scope.$watch(crossfilter, function (newVal, oldVal) {
                 $log.log("watch crossfilter");
-                if(newVal.onChange){
+                if (newVal.onChange) {
                     crossfilter = newVal
                     crossfilter.onChange(onCrossfilterChange);
                 }
@@ -43,13 +43,13 @@ dataViz.directive('barChart', function ($parse, $log) {
 
             scope.$watch(group, function (newVal, oldVal) {
                 $log.log("watch group");
-                if(newVal.all){
+                if (newVal.all) {
                     group = newVal
                     onCrossfilterChange("load")
                 }
             });
 
-            function onCrossfilterChange  (eventType) {
+            function onCrossfilterChange(eventType) {
                 $log.log("barChartDirective - onCrossfilterChange")
                 $log.log(eventType)
                 scope.dataset = group.all()
@@ -66,20 +66,20 @@ dataViz.directive('barChart', function ($parse, $log) {
                     redrawChart();
                 }
                 try {
-                  //  scope.$apply();
-                } catch (error) { 
+                    //  scope.$apply();
+                } catch (error) {
                 }
-               
+
             }
 
 
             ////////////////
-            function xValue (d) { 
-                return d.key; 
+            function xValue(d) {
+                return d.key;
             }
 
-            function yValue (d) { 
-                return d.value.costPerson 
+            function yValue(d) {
+                return d.value.costPerson
             }
 
             // The x-accessor for the path generator; xScale o xValue.
@@ -92,21 +92,19 @@ dataViz.directive('barChart', function ($parse, $log) {
                 return yScale(yValue(d));
             }
 
-            // gridlines in y axis function
-            function make_y_gridlines() {
-                return d3.axisLeft(yScale).ticks(5)
-            }
 
-            function getDivWidth (div) {
+
+            function getDivWidth(div) {
                 var width = d3.select(div)
-                  // get the width of div element
-                  .style('width')
-                  // take of 'px'
-                  .slice(0, -2)
+                    // get the width of div element
+                    .style('width')
+                    // take of 'px'
+                    .slice(0, -2)
                 // return as an integer
                 return Math.round(Number(width))
             }
-            
+
+            /*
             function getDivHeight(div) {
                 var width = d3.select(div)
                   // get the width of div element
@@ -116,6 +114,7 @@ dataViz.directive('barChart', function ($parse, $log) {
                 // return as an integer
                 return Math.round(Number(width))
             }
+            */
 
 
             /**
@@ -149,7 +148,7 @@ dataViz.directive('barChart', function ($parse, $log) {
                     .curve(d3.curveMonotoneX)
                 */
 
-                
+
 
                 xAxisGen = g => g
                     .attr("transform", `translate(0,${height - margin.bottom})`)
@@ -163,6 +162,12 @@ dataViz.directive('barChart', function ($parse, $log) {
                         .attr("text-anchor", "start")
                         .attr("font-weight", "bold")
                         .text(scope.dataset.count))
+
+                yGridGen = g => g
+                    .call(d3.axisLeft(yScale).ticks(5).tickSize(-width)
+                        .tickFormat(""))
+
+
             }
 
 
@@ -182,6 +187,10 @@ dataViz.directive('barChart', function ($parse, $log) {
                 t.select("g.y.axis")
                     .duration(750)
                     .call(yAxisGen);
+
+                t.select("g.grid")
+                    .duration(750)
+                    .call(yGridGen);
 
                 /*
                 // Make the changes
@@ -215,10 +224,7 @@ dataViz.directive('barChart', function ($parse, $log) {
                 // add the Y gridlines
                 svg.append("g")
                     .attr("class", "grid")
-                    .call(make_y_gridlines()
-                        .tickSize(-width)
-                        .tickFormat("")
-                    )
+                    .call(yGridGen)
 
                 var bars = svg.append("g")
                     .attr("class", "bars")
@@ -229,13 +235,13 @@ dataViz.directive('barChart', function ($parse, $log) {
                     .attr("class", "bar")
                     //.merge(bars)
                     .attr("x", X)
-                    .attr("y", Y )
+                    .attr("y", Y)
                     .attr("width", xScale.bandwidth())
-                    .attr("height",  function (d) {   return height - Y(d) - margin.bottom   } )
+                    .attr("height", function (d) { return height - Y(d) - margin.bottom })
                     .on("mouseover", handleMouseOver)
                     .on("mouseout", handleMouseOut)
                     .on("click", handleMouseClick);
-    
+
                 bars.exit().remove();
                 scope.initialized = true;
             }
@@ -264,10 +270,10 @@ dataViz.directive('barChart', function ($parse, $log) {
                     .attr("class", "dot");
 
                 d3.select("#t" + d.x + "-" + d.y + "-" + i).remove(); */
-                
+
             }
 
-            function handleMouseClick(d, i){
+            function handleMouseClick(d, i) {
                 $log.log("handleMouseClick");
 
             }
