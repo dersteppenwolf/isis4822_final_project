@@ -191,11 +191,7 @@ h2 {
   stroke: #000000;
 }
 
-.dotPopupsText {
-  color: black;
-  font-size: 13pt;
-  text-shadow: 2px 2px white;
-}
+
 
 .focus circle {
   fill: none;
@@ -402,25 +398,25 @@ z-index: 10000; /* The select2 dropdown has a z-index of 9999 */
   cursor: pointer;
   fill: rgba(218, 146, 70 ,1);
   stroke: #9D570D;
+}
 
 
+.toolTip {
+  color: black;
+  font-size: 9pt;
+  /* text-shadow: 1px 1px white; */
+  position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  background: none repeat scroll 0 0 rgba(255, 255, 255 ,0.8);
+  border: 1px solid #08154F;
+  padding: 5px;
+  text-align: center;
 }
 
 
 
-
-/*
-svg.barchart{
-  overflow: visible;
-}
-
-.barchart .x.axis text{
-  text-anchor: end;
-}
-.leftBarGroup .text_data{
-  text-anchor: end;
-}
-*/
 
 
 
