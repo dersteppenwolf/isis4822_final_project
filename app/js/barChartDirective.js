@@ -9,7 +9,7 @@ dataViz.directive('barChart', function ($parse, $log) {
             var group = $parse(attrs.group);
 
             scope.dataset = []
-            var xScale, yScale, yGridGen, xAxisGen, yAxisGen;
+            var xScale, yScale, yGridGen, xAxisGen, yAxisGen, barsGen;
 
             var rawSvg = elem.find('svg');
             var svg = d3.select(rawSvg[0]);
@@ -104,51 +104,19 @@ dataViz.directive('barChart', function ($parse, $log) {
                 return Math.round(Number(width))
             }
 
-            /*
-            function getDivHeight(div) {
-                var width = d3.select(div)
-                  // get the width of div element
-                  .style('height')
-                  // take of 'px'
-                  .slice(0, -2)
-                // return as an integer
-                return Math.round(Number(width))
-            }
-            */
-
 
             /**
              * update drawing parameters according to new data
              */
             function updateParameters() {
-                xScale = d3.scaleBand().padding(0.1)
-                yScale = d3.scaleLinear()
-
-                xScale
+                xScale = d3.scaleBand()
+                    .padding(0.1)
                     .rangeRound([margin.left, width])
                     .domain(scope.dataset.map(function (d) { return xValue(d); }))
 
-                yScale
+                yScale = d3.scaleLinear()
                     .rangeRound([height - margin.bottom, margin.top])
                     .domain([0, d3.max(scope.dataset, function (d) { return yValue(d); })])
-
-
-                /*
-                xScale = d3.scaleTime()
-                    .domain(d3.extent(scope.dataset, d => d["date"]))
-                    .range([margin.left, width - margin.right])
-
-                yScale = d3.scaleLinear()
-                    .domain([0, maxYScale]).nice()
-                    .range([height - margin.bottom, margin.top])
-
-                line = d3.line()
-                    .x(function (d) { return xScale(d.date); }) // set the x values for the line generator
-                    .y(function (d) { return yScale(d.count); }) // set the y values for the line generator 
-                    .curve(d3.curveMonotoneX)
-                */
-
-
 
                 xAxisGen = g => g
                     .attr("transform", `translate(0,${height - margin.bottom})`)
@@ -166,6 +134,22 @@ dataViz.directive('barChart', function ($parse, $log) {
                 yGridGen = g => g
                     .call(d3.axisLeft(yScale).ticks(5).tickSize(-width)
                         .tickFormat(""))
+
+                barsGen = g => g
+                    .selectAll()
+                    .data(scope.dataset)
+                    .enter()
+                    .append("rect")
+                    .attr("class", "bar")
+                    //.merge(bars)
+                    .attr("x", X)
+                    .attr("y", Y)
+                    .attr("width", xScale.bandwidth())
+                    .attr("height", function (d) { return height - Y(d) - margin.bottom })
+                    .on("mouseover", handleMouseOver)
+                    .on("mouseout", handleMouseOut)
+                    .on("click", handleMouseClick)
+                    .exit().remove();
 
 
             }
@@ -185,19 +169,22 @@ dataViz.directive('barChart', function ($parse, $log) {
                     .call(xAxisGen);
 
                 t.select("g.y.axis")
-                    .duration(750)
+                    .duration(500)
                     .call(yAxisGen);
 
                 t.select("g.grid")
-                    .duration(750)
+                    .duration(500)
                     .call(yGridGen);
 
-                /*
-                // Make the changes
-                t.select(".lineSeries")
-                    .duration(750)
-                    .attr("d", line(scope.dataset));
-                    */
+                //t.select("g.bars")
+                //    .duration(750)
+                //    .call(barsGen);
+                svg.selectAll(".bar").remove()
+
+                svg.selectAll(".bars")
+                    .call(barsGen)
+
+                
 
             }
 
@@ -228,21 +215,8 @@ dataViz.directive('barChart', function ($parse, $log) {
 
                 var bars = svg.append("g")
                     .attr("class", "bars")
-                    .selectAll()
-                    .data(scope.dataset)
-                    .enter()
-                    .append("rect")
-                    .attr("class", "bar")
-                    //.merge(bars)
-                    .attr("x", X)
-                    .attr("y", Y)
-                    .attr("width", xScale.bandwidth())
-                    .attr("height", function (d) { return height - Y(d) - margin.bottom })
-                    .on("mouseover", handleMouseOver)
-                    .on("mouseout", handleMouseOut)
-                    .on("click", handleMouseClick);
+                    .call(barsGen)
 
-                bars.exit().remove();
                 scope.initialized = true;
             }
 
