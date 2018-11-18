@@ -15,7 +15,7 @@ dataViz.directive('barChart', function ($parse, $log) {
             var svg = d3.select(rawSvg[0]);
             svg.attr("preserveAspectRatio", "xMinYMin meet").classed("svg-content", true)
 
-            var margin = { top: 20, right: 40, bottom: 10, left: 40 }
+            var margin = { top: 10, bottom: 10, right: 10, left: 40 }
             var width = getDivWidth('.chart-container') - margin.left - margin.right
 
             //var height = getDivHeight('.chart-container') - margin.top - margin.bottom;
@@ -125,10 +125,12 @@ dataViz.directive('barChart', function ($parse, $log) {
                 xScale = d3.scaleBand().padding(0.1)
                 yScale = d3.scaleLinear()
 
-                xScale.rangeRound([margin.left, width])
+                xScale
+                    .rangeRound([margin.left, width])
                     .domain(scope.dataset.map(function (d) { return xValue(d); }))
 
-                yScale.rangeRound([height - margin.bottom, margin.top])
+                yScale
+                    .rangeRound([height - margin.bottom, margin.top])
                     .domain([0, d3.max(scope.dataset, function (d) { return yValue(d); })])
 
 
@@ -218,15 +220,9 @@ dataViz.directive('barChart', function ($parse, $log) {
                         .tickFormat("")
                     )
 
-                $log.log(scope.dataset)
-                
-                    //.attr("class", ".bar")
-                    //.data(scope.dataset)
-                
-                //var bars = svg.append("g")
-                //    .attr("class", ".bar")
-
-                var bars =     svg.selectAll()
+                var bars = svg.append("g")
+                    .attr("class", "bars")
+                    .selectAll()
                     .data(scope.dataset)
                     .enter()
                     .append("rect")
@@ -235,27 +231,13 @@ dataViz.directive('barChart', function ($parse, $log) {
                     .attr("x", X)
                     .attr("y", Y )
                     .attr("width", xScale.bandwidth())
-                    .attr("height",  function (d) { 
-                        return height - Y(d)    
-                    } )
+                    .attr("height",  function (d) {   return height - Y(d) - margin.bottom   } )
                     .on("mouseover", handleMouseOver)
                     .on("mouseout", handleMouseOut)
                     .on("click", handleMouseClick);
     
                 bars.exit().remove();
-
-                
-
-
-                /*
-                svg.append("path")
-                    .attr("class", "lineSeries")
-                    .attr("d", line(scope.dataset));
-                */
-
-
                 scope.initialized = true;
-
             }
 
             function handleMouseOver(d, i) {
