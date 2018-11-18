@@ -1,12 +1,12 @@
 <div class="jumbotron text-center">
-	
-	<h2 class="h1Title">Cost Analysis per Person </h2>
+
+	<h2 class="dashboardTitle">Cost Analysis per Person </h2>
 
 
 	<div class="row">
 		<div class="col-xs-6">
 
-			<form class="form-horizontal">
+			<form class="form-horizontal card-header">
 
 				<div class="form-group row">
 					<label for="yearSel" class="col-xs-3 col-form-label mr-2">Year</label>
@@ -73,18 +73,34 @@
 
 
 	<div class="row">
-		<div id="year-barchart" class="chart-container col-6" 
-		bar-chart crossfilter="cf" group="groupYear" title="Years"
-		 tooltip="tooltip">
+		<div id="year-barchart" class="chart-container col-6" bar-chart crossfilter="cf" group="groupYear" title="Years">
 		</div>
-		<div id="states-barchart" class="chart-container col-6" 
-		bar-chart crossfilter="cf" group="groupStates" domain="states" title="States"
-		 tooltip="tooltip">
+		<div id="states-barchart" class="chart-container col-6" bar-chart crossfilter="cf" group="groupStates" domain="states"
+		 title="States"></div>
+	</div>
+
+
+	<div class="row">
+		<h3 class="dashboardSubTitle">Procedures</h3>
+	</div>
+
+	<div class="row">
+		<div id="section-barchart" class="chart-container col-6" bar-chart crossfilter="cf" group="groupSection" domain="sections"
+		 title="Section">
+		</div>
+		<div class="col-6">
+			bla
 		</div>
 	</div>
 
 	<div class="row">
-		
+		<div class="col-6">
+			bla
+		</div>
+		<div class="col-6">
+			bla
+		</div>
+
 	</div>
 
 </div>

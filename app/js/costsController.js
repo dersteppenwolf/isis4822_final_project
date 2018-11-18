@@ -5,11 +5,14 @@ dataViz.controller('costsController', function (
   $scope.progressbar = ngProgressFactory.createInstance();
   $scope.progressbar.setHeight("5px");
 
+  ////////////////////////////////
+  // domains ( for labels)   
   $scope.years = []
   $scope.states = []
   $scope.sections = []
 
-
+  ////////////////////////////////
+  // data for cards  
   $scope.totalPopulation = 0
   $scope.totalCosts = 0
   $scope.totalCostPerPerson = 0
@@ -26,6 +29,10 @@ dataViz.controller('costsController', function (
 
   $scope.dimStates = {}
   $scope.groupStates = {}
+
+  //  Procedures
+  $scope.dimSection = {}
+  $scope.groupSection =  {}
 
   ////////////////////////////////
   $scope.loadDomains = function () {
@@ -79,6 +86,7 @@ dataViz.controller('costsController', function (
       v.numero_personas_atendidas = +v.numero_personas_atendidas
       v.anno = +v.anno
       v.code_depto = +v.code_depto
+      v.code_seccion = +v.code_seccion
       //$log.log(v);
     });
     $log.log(d);
@@ -98,10 +106,22 @@ dataViz.controller('costsController', function (
       .reduce(reduceAdd, reduceRemove, reduceInitial)
       .order(orderValue)
 
+    //////////////
+    //  Procedures
+    $scope.dimSection = $scope.cf.dimension(function (d) { return d.code_seccion || 0; });
+    $scope.groupSection = $scope.dimSection.group()
+      .reduce(reduceAdd, reduceRemove, reduceInitial)
+      .order(orderValue)
+
+
+    //////////////
+    //  providers
     $scope.dimProvider = $scope.cf.dimension(function (d) { return d.prestador || 0; });
     $scope.groupProvider = $scope.dimProvider.group().reduce(reduceAdd, reduceRemove, reduceInitial);
 
-    var dimAdmin = $scope.cf.dimension(function (d) { return d.administradora || 0; });
+    //////////////
+    //  administrators
+    $scope.dimAdmin = $scope.cf.dimension(function (d) { return d.administradora || 0; });
 
 
     //////////////

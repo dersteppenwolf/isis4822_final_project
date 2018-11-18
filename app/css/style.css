@@ -67,7 +67,10 @@ body>.container {
   padding-left: 15px;
 }
 
+.card-header{
+  height: 90px;
 
+}
 
 .visCard {
   padding-right: 15px;
@@ -115,9 +118,13 @@ h1 {
   font-size: 24px;
 }
 
-.h1Title {
+.dashboardTitle {
   margin-top: 20px;
   font-size: 40px;
+}
+.dashboardSubTitle {
+  margin-top: 20px;
+  font-size: 30px;
 }
 
 .anchorDiv {
