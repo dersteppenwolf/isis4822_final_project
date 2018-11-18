@@ -1,40 +1,29 @@
 dataViz.directive('barChart', function ($parse, $log, $filter) {
     return {
         restrict: 'EA',
-        template: '<div id="svgContent"></div>',
+        scope: true,
+        template: '',
         // https://stackoverflow.com/questions/20018507/angular-js-what-is-the-need-of-the-directive-s-link-function-when-we-already-ha
         link: function (scope, elem, attrs) {
 
-            var crossfilter = $parse(attrs.crossfilter);
+            scope.crossfilter = $parse(attrs.crossfilter);
             var group = $parse(attrs.group);
 
             scope.id = attrs.id
+            scope.title = attrs.title
             scope.dataset = []
 
-            var xScale, yScale, yGridGen, xAxisGen, yAxisGen, barsGen, tooltip;
+            var xScale, yScale, yGridGen, xAxisGen, yAxisGen, barsGen;
 
-            //var my = d3.select("#svgContent").append("svg")
+            scope.tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
-            // var rawSvg = elem.find('svg');
-            
-            //$log.log(rawSvg)
-            //$log.log(rawSvg[0])
+            scope.svg = d3.select("#" + scope.id)
+                .append("svg")
+                .attr("id", scope.id + "-svg")
+                .attr("preserveAspectRatio", "xMinYMin meet")
+                .classed("svg-content", true)
 
-            scope.svg = d3.select("#"+scope.id+".chart-container.col-6 #svgContent")
-                .append("svg") 
-                .attr("id", scope.id+"-svg")
-             //   .append("div").attr("class", "toolTip")
-            
-            // d3.select(rawSvg[0])
-            tooltip = d3.select("body").append("div").attr("class", "toolTip");
-            //tooltip = d3.select("#toolTip")
-
-            //scope.svg.append("div").attr("class", "toolTip")
-
-
-            //svg.attr("preserveAspectRatio", "xMinYMin meet").classed("svg-content", true)
-
-            var margin = { top: 10, bottom: 10, right: 10, left: 40 }
+            var margin = { top: 30, bottom: 10, right: 10, left: 40 }
             var width = getDivWidth('.chart-container') - margin.left - margin.right
 
             //var height = getDivHeight('.chart-container') - margin.top - margin.bottom;
@@ -43,33 +32,32 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
             window.onresize = function () {
                 $log.log("onresize");
                 width = getDivWidth('.chart-container') - margin.left - margin.right;
-                $log.log(width);
-                //height = getDivHeight('.chart-container') - margin.top - margin.bottom;
-                //$log.log(height);
                 redrawChart();
                 // return scope.$apply();
             };
 
 
             ////////////////
-            scope.$watch(crossfilter, function (newVal, oldVal) {
-                $log.log("watch crossfilter "+scope.id );
+
+
+            scope.$watch(scope.crossfilter, function (newVal, oldVal) {
+                $log.log("watch crossfilter " + scope.id);
                 if (newVal.onChange) {
-                    crossfilter = newVal
-                    crossfilter.onChange(onCrossfilterChange);
+                    scope.crossfilter = newVal
+                    scope.crossfilter.onChange(scope.onCrossfilterChange);
                 }
             });
 
             scope.$watch(group, function (newVal, oldVal) {
-                $log.log("watch group "+scope.id );
+                $log.log("watch group " + scope.id);
                 if (newVal.all) {
                     group = newVal
-                    onCrossfilterChange("load")
+                    scope.onCrossfilterChange("load")
                 }
             });
 
-            function onCrossfilterChange(eventType) {
-                $log.log("barChartDirective - onCrossfilterChange "+scope.id )
+            scope.onCrossfilterChange = function (eventType) {
+                $log.log("barChartDirective - onCrossfilterChange " + scope.id)
                 $log.log(eventType)
                 scope.dataset = group.all()
 
@@ -92,6 +80,8 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
             }
 
 
+
+
             ////////////////
             function xValue(d) {
                 return d.key;
@@ -103,7 +93,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
 
             function tooltipValue(d) {
                 return "<b>" + (d.key) +
-                    "</b>:<br>  Cost/Person: " + $filter('megaNumber')(d.value.costPerson) +
+                    "</b>:<br>Cost/Person: " + $filter('megaNumber')(d.value.costPerson) +
                     ",  Costs: " + $filter('megaNumber')(d.value.costs) +
                     ",   People Served: " + $filter('megaNumber')(d.value.people)
             }
@@ -152,13 +142,6 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     .attr("transform", `translate(${margin.left},0)`)
                     .call(d3.axisLeft(yScale).ticks(5))
                     .call(g => g.select(".domain").remove())
-                    /*
-                    .call(g => g.select(".tick:last-of-type text")
-                        .attr("text-anchor", "start")
-                        .attr("font-weight", "bold")
-                        .text(scope.dataset.count)
-                        )
-                    */
 
                 yGridGen = g => g
                     .call(d3.axisLeft(yScale).ticks(5).tickSize(-width)
@@ -170,7 +153,6 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     .enter()
                     .append("rect")
                     .attr("class", "bar")
-                    //.merge(bars)
                     .attr("x", X)
                     .attr("y", Y)
                     .attr("width", xScale.bandwidth())
@@ -215,7 +197,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
             function render() {
                 $log.log("render");
                 updateParameters()
-            
+
                 scope.svg
                     .attr("width", width + margin.left + margin.right)
                     .attr("height", height + margin.top + margin.bottom)
@@ -239,13 +221,20 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     .attr("class", "bars")
                     .call(barsGen)
 
+                scope.svg.append("text")
+                    .attr("class", "chartTitle")
+                    .attr("x", (width / 2))
+                    .attr("y", 0 + (margin.top / 2))
+                    .attr("text-anchor", "middle")
+                    .text(scope.title);
+
                 scope.initialized = true;
             }
 
             function handleMouseEnter(d, i) {
                 $log.log("handleMouseEnter");
 
-                tooltip.style("left", d3.event.pageX - 80 + "px")
+                scope.tooltip.style("left", d3.event.pageX - 80 + "px")
                     .style("top", d3.event.pageY - 70 + "px")
                     .style("display", "inline-block")
                     .html(tooltipValue(d));
@@ -253,26 +242,17 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
             }
 
             function handleMouseLeave(d, i) {
-                $log.log("handleMouseLeave");
-                tooltip.style("display", "none");
+                //$log.log("handleMouseLeave");
+                scope.tooltip.style("display", "none");
             }
 
             function handleMouseMove(d, i) {
-                $log.log("handleMouseMove");
+                //$log.log("handleMouseMove");
             }
 
 
             function handleMouseOut(d, i) {
-                $log.log("handleMouseOut");
-                /* d3.select(this)
-                    .attr("r", function (d) { return rScale(d.radius) })
-                    .attr("class", "dot");
-
-                */
-                //d3.select("#t" + d.x + "-" + d.y + "-" + i).remove(); 
-
-                //
-
+                //$log.log("handleMouseOut");
             }
 
             function handleMouseClick(d, i) {

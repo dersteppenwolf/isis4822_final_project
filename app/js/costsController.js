@@ -28,13 +28,6 @@ dataViz.controller('costsController', function (
   $scope.groupStates = {}
 
   ////////////////////////////////
-  $scope.chart = []
-
-  $scope.margin = { top: 20, right: 40, bottom: 10, left: 20 }
-  $scope.width = 800
-
-
-  ////////////////////////////////
   $scope.loadDomains = function () {
     $log.log("loadDomains");
     $http.get('data/domains.json').
@@ -153,18 +146,6 @@ dataViz.controller('costsController', function (
     //////////////
   }
 
-  // Renders the specified chart or list.
-  $scope.render = function (method) {
-    $log.log("render")
-    $log.log(method)
-    d3.select(this).call(method);
-  }
-
-  // // Whenever the brush moves, re-rendering everything.
-  $scope.renderAll = function () {
-    $log.log("renderAll")
-    $scope.chart.each($scope.render);
-  };
 
 
   $scope.loadData = function () {
@@ -260,7 +241,6 @@ dataViz.controller('costsController', function (
   window.onresize = function () {
     //$log.log("onresize");
     $scope.width = window.innerWidth - $scope.margin.left - $scope.margin.right;
-    //$log.log($scope.width);
     return $scope.$apply();
   };
 
@@ -268,16 +248,8 @@ dataViz.controller('costsController', function (
   $scope.init = function () {
     $log.log("init - costsController");
     $scope.loadDomains()
-    //$scope.loadTree()
   }
 
-
-
-
-
-
   $scope.init();
-
-
 
 });

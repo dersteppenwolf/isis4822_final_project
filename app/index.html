@@ -58,11 +58,10 @@
     <title>Rheumatoid Arthritis in Colombia</title>
 
 </head>
-
 <!-- define angular controller -->
-
 <body ng-controller="mainController">
 
+     <!-- navigation -->
     <div ng-controller="navController">
         <nav class="navbar navbar-expand-lg navbar-dark  fixed-top bg-dark ">
             <div class="navbar-header ">
@@ -130,17 +129,16 @@
                 </ul>
             </div>
         </nav>
-
-
     </div>
+
     <div id="main">
         <!-- angular templating -->
         <!-- this is where content will be injected -->
         <div id="main-content" ng-view>
-
         </div>
     </div>
 
+     <!-- footer-->
     <footer class="footer">
         <div class="container">
             <span class="">
@@ -151,7 +149,7 @@
         </div>
     </footer>
 
-
+    <!-- ga -->
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -167,6 +165,8 @@
         ga('create', 'UA-4568727-3', 'auto');
         ga('send', 'pageview');
     </script>
+
+     <!-- end -->
 
 </body>
 

@@ -116,7 +116,7 @@ h1 {
 }
 
 .h1Title {
-  margin-top: 0px;
+  margin-top: 20px;
   font-size: 40px;
 }
 
@@ -400,7 +400,6 @@ z-index: 10000; /* The select2 dropdown has a z-index of 9999 */
   stroke: #9D570D;
 }
 
-
 .toolTip {
   color: black;
   font-size: 9pt;
@@ -413,6 +412,11 @@ z-index: 10000; /* The select2 dropdown has a z-index of 9999 */
   border: 1px solid #08154F;
   padding: 5px;
   text-align: center;
+}
+
+.chartTitle{
+  font-size: 12pt;
+  font-weight: bold;
 }
 
 
