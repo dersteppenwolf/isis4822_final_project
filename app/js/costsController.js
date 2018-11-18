@@ -123,7 +123,7 @@ dataViz.controller('costsController', function (
       p.costs += v.costo_procedimiento;
       p.people += v.numero_personas_atendidas;
       if (p.costs > 0 && p.people > 0) {
-        p.costPerson  = p.costs / p.people;
+        p.costPerson = p.costs / p.people;
       } else {
         p.costPerson = 0;
       }
@@ -134,9 +134,9 @@ dataViz.controller('costsController', function (
       --p.count;
       p.costs -= v.costo_procedimiento;
       p.people -= v.numero_personas_atendidas;
-      
+
       if (p.costs > 0 && p.people > 0) {
-        p.costPerson  = p.costs / p.people;
+        p.costPerson = p.costs / p.people;
       } else {
         p.costPerson = 0;
       }
@@ -144,75 +144,13 @@ dataViz.controller('costsController', function (
     }
 
     function reduceInitial() {
-      return { count: 0, costs: 0, people: 0, costPerson:0 };
+      return { count: 0, costs: 0, people: 0, costPerson: 0 };
     }
 
     function orderValue(p) {
       return p.costPerson;
     }
     //////////////
-    $log.log("maxYear")
-
-    let minYear = d3.min($scope.groupYear.all(), (d) => d.key)
-    let maxYear = d3.max($scope.groupYear.all(), (d) => d.key)
-
-    var xScale = d3.scaleBand()
-      .domain(minYear, maxYear)
-      .rangeRound([0, 500]) 
-      .padding(0.2).round(true); 
-
-      /*
-    var xs = d3.scaleTime()
-    .domain([new Date(minYear - 1, 0, 1), new Date(maxYear, 0, 1)])
-    .rangeRound([0, 500]) 
-*/
-
-    var barrioBarChart = barChart()
-      .width(400)
-      .height(200)
-      //.xTicks(d3.timeYear.every(1))
-      .xScale(xScale)
-      .x(function (d) { return d.key; })
-      .y(function (d) { 
-        return d.value.costPerson 
-      });
-
-    d3.select("#year-chart")
-      .datum($scope.groupYear.all())
-      .call(barrioBarChart)
-      .select(".x.axis")
-      .selectAll(".tick text")
-      .attr("transform", "rotate(-90) translate(-10, -13)");
-
-    
-
-      /*
-    $scope.charts = [
-
-      barChart()
-        .dimension($scope.dimYear)
-        .group($scope.groupYear)
-        .round(d3.timeYear.round)
-        .xScale(d3.scaleTime()
-          .domain([new Date(minYear - 1, 0, 1), new Date(maxYear, 0, 1)])
-          .rangeRound([0, 500]))
-        .xTicks(d3.timeYear.every(1))
-        .yAttrib("costPerson")
-        .renderAll($scope.renderAll)
-
-    ];
-    */
-
-    // $scope.chart = d3.selectAll('.chart').data($scope.charts);
-
-
-
-
-
-
-    //$scope.renderAll();
-
-
   }
 
   // Renders the specified chart or list.
