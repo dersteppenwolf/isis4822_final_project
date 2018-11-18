@@ -392,33 +392,24 @@ z-index: 10000; /* The select2 dropdown has a z-index of 9999 */
 
 
 
-
+/* http://paletton.com/#uid=33S0u0kqdo0gQvulErltfjF-Tex   */
 .bar {
-  fill: steelblue;
-  stroke: black;
+  fill:#3C4C95;
+  stroke: #08154F;
 }
 .bar:hover {
-  fill: brown;
+  /* fill: brown; */
   cursor: pointer;
-}
-.bar.left {
-fill: rgb(255, 145, 229);
-}
-.bar.left:hover {
-  fill: brown;
-  cursor: pointer;
-}
-.bar.right {
-fill: rgb(83, 145, 238);
-}
-.bar.right:hover {
-  fill: brown;
-  cursor: pointer;
-}
-.axis--x path {
-  /* display: none; */
+  fill: rgba(218, 146, 70 ,1);
+  stroke: #9D570D;
+
+
 }
 
+
+
+
+/*
 svg.barchart{
   overflow: visible;
 }
@@ -429,6 +420,7 @@ svg.barchart{
 .leftBarGroup .text_data{
   text-anchor: end;
 }
+*/
 
 
 

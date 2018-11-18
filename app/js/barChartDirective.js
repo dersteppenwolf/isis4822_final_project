@@ -176,16 +176,10 @@ dataViz.directive('barChart', function ($parse, $log) {
                     .duration(500)
                     .call(yGridGen);
 
-                //t.select("g.bars")
-                //    .duration(750)
-                //    .call(barsGen);
                 svg.selectAll(".bar").remove()
 
                 svg.selectAll(".bars")
                     .call(barsGen)
-
-                
-
             }
 
 
