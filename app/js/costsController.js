@@ -78,6 +78,7 @@ dataViz.controller('costsController', function (
       v.costo_procedimiento = +v.costo_procedimiento
       v.numero_personas_atendidas = +v.numero_personas_atendidas
       v.anno = +v.anno
+      v.code_depto = +v.code_depto
       //$log.log(v);
     });
     $log.log(d);

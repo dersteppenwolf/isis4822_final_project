@@ -8,6 +8,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
 
             scope.crossfilter = $parse(attrs.crossfilter);
             var group = $parse(attrs.group);
+            var domain = $parse(attrs.domain);
 
             scope.id = attrs.id
             scope.title = attrs.title
@@ -25,8 +26,6 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
 
             var margin = { top: 30, bottom: 10, right: 10, left: 40 }
             var width = getDivWidth('.chart-container') - margin.left - margin.right
-
-            //var height = getDivHeight('.chart-container') - margin.top - margin.bottom;
             var height = 300 - margin.top - margin.bottom;
 
             window.onresize = function () {
@@ -35,11 +34,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 redrawChart();
                 // return scope.$apply();
             };
-
-
             ////////////////
-
-
             scope.$watch(scope.crossfilter, function (newVal, oldVal) {
                 $log.log("watch crossfilter " + scope.id);
                 if (newVal.onChange) {
@@ -56,9 +51,16 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 }
             });
 
+            scope.$watch(domain, function (newVal, oldVal) {
+                $log.log("watch domain " + scope.id);
+                if (newVal) {
+                    domain = newVal
+                }
+            });
+
             scope.onCrossfilterChange = function (eventType) {
                 $log.log("barChartDirective - onCrossfilterChange " + scope.id)
-                $log.log(eventType)
+                //$log.log(eventType)
                 scope.dataset = group.all()
 
                 // natural order
@@ -72,17 +74,10 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 } else {
                     redrawChart();
                 }
-                try {
-                    //  scope.$apply();
-                } catch (error) {
-                }
-
             }
 
-
-
-
             ////////////////
+
             function xValue(d) {
                 return d.key;
             }
@@ -92,11 +87,24 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
             }
 
             function tooltipValue(d) {
-                return "<b>" + (d.key) +
+                return "<b>" + labelFromDomain(d.key) +
                     "</b>:<br>Cost/Person: " + $filter('megaNumber')(d.value.costPerson) +
                     ",  Costs: " + $filter('megaNumber')(d.value.costs) +
                     ",   People Served: " + $filter('megaNumber')(d.value.people)
             }
+
+            function labelFromDomain(d) {
+                var label = d
+                if(domain.length > 0){
+                    const items = domain.filter(word => word.code == d);
+                    label = items[0].label
+                }
+                return label
+            }
+
+            
+
+
 
             // The x-accessor for the path generator; xScale o xValue.
             function X(d) {
@@ -125,6 +133,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
              * update drawing parameters according to new data
              */
             function updateParameters() {
+                $log.log("updateParameters");
                 xScale = d3.scaleBand()
                     .padding(0.1)
                     .rangeRound([margin.left, width])
@@ -134,9 +143,14 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     .rangeRound([height - margin.bottom, margin.top])
                     .domain([0, d3.max(scope.dataset, function (d) { return yValue(d); })])
 
+                
+                xAxis = d3.axisBottom(xScale).tickFormat(labelFromDomain )
+                
+                    
+
                 xAxisGen = g => g
                     .attr("transform", `translate(0,${height - margin.bottom})`)
-                    .call(d3.axisBottom(xScale))
+                    .call( xAxis  )
 
                 yAxisGen = g => g
                     .attr("transform", `translate(${margin.left},0)`)
@@ -233,7 +247,6 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
 
             function handleMouseEnter(d, i) {
                 $log.log("handleMouseEnter");
-
                 scope.tooltip.style("left", d3.event.pageX - 80 + "px")
                     .style("top", d3.event.pageY - 70 + "px")
                     .style("display", "inline-block")
