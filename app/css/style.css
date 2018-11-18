@@ -4,9 +4,6 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height 
-  margin-bottom: 60px;
-  */
   font-family: 'Comfortaa', cursive;
   color: black;
 }
@@ -152,13 +149,25 @@ h2 {
 
 .chart-container {
   padding: 0px;
+  /* padding-bottom: 50px; */
   margin: 0 auto;
   background: #f0f0f0;
   border: 1px;
   border-style: solid;
   border-color: #9fa9a3;
   border-radius: 5px;
-  box-shadow: 0px 0px 1px 0px #06060d;
+  /* box-shadow: 0px 0px 1px 0px #06060d; */
+  height: 300px;
+  width: 100%;
+}
+
+
+
+.svg-content {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .lineSeries {
@@ -379,17 +388,14 @@ z-index: 10000; /* The select2 dropdown has a z-index of 9999 */
   stroke: #666;
 }
 
-#year-chart {
-  padding-bottom: 50px;
-  margin: 0px;
-  height: 280px;
-}
+
 
 
 
 
 .bar {
   fill: steelblue;
+  stroke: black;
 }
 .bar:hover {
   fill: brown;

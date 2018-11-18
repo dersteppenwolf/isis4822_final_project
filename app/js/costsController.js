@@ -122,7 +122,11 @@ dataViz.controller('costsController', function (
       ++p.count;
       p.costs += v.costo_procedimiento;
       p.people += v.numero_personas_atendidas;
-      p.costPerson = p.costs / p.people;
+      if (p.costs > 0 && p.people > 0) {
+        p.costPerson  = p.costs / p.people;
+      } else {
+        p.costPerson = 0;
+      }
       return p;
     }
 
@@ -130,12 +134,17 @@ dataViz.controller('costsController', function (
       --p.count;
       p.costs -= v.costo_procedimiento;
       p.people -= v.numero_personas_atendidas;
-      p.costPerson = p.costs / p.people;
+      
+      if (p.costs > 0 && p.people > 0) {
+        p.costPerson  = p.costs / p.people;
+      } else {
+        p.costPerson = 0;
+      }
       return p;
     }
 
     function reduceInitial() {
-      return { count: 0, costs: 0, people: 0 };
+      return { count: 0, costs: 0, people: 0, costPerson:0 };
     }
 
     function orderValue(p) {
@@ -160,7 +169,7 @@ dataViz.controller('costsController', function (
 
     var barrioBarChart = barChart()
       .width(400)
-      .height(250)
+      .height(200)
       //.xTicks(d3.timeYear.every(1))
       .xScale(xScale)
       .x(function (d) { return d.key; })
