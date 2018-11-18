@@ -53,7 +53,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
 
             ////////////////
             scope.$watch(crossfilter, function (newVal, oldVal) {
-                $log.log("watch crossfilter");
+                $log.log("watch crossfilter "+scope.id );
                 if (newVal.onChange) {
                     crossfilter = newVal
                     crossfilter.onChange(onCrossfilterChange);
@@ -61,7 +61,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
             });
 
             scope.$watch(group, function (newVal, oldVal) {
-                $log.log("watch group");
+                $log.log("watch group "+scope.id );
                 if (newVal.all) {
                     group = newVal
                     onCrossfilterChange("load")
@@ -69,7 +69,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
             });
 
             function onCrossfilterChange(eventType) {
-                $log.log("barChartDirective - onCrossfilterChange")
+                $log.log("barChartDirective - onCrossfilterChange "+scope.id )
                 $log.log(eventType)
                 scope.dataset = group.all()
 
