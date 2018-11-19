@@ -400,12 +400,17 @@ z-index: 10000; /* The select2 dropdown has a z-index of 9999 */
   fill:#3C4C95;
   stroke: #08154F;
 }
-.bar:hover {
-  /* fill: brown; */
-  cursor: pointer;
+.barSelected {
   fill: rgba(218, 146, 70 ,1);
   stroke: #9D570D;
 }
+
+.barHover {
+  cursor: pointer;
+  fill: #FBBB77;
+  stroke: #9D570D;
+}
+
 
 .toolTip {
   color: black;

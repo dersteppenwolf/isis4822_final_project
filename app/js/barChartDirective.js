@@ -7,11 +7,12 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
         link: function (scope, elem, attrs) {
 
             scope.crossfilter = $parse(attrs.crossfilter);
+            var dimension = $parse(attrs.dimension);
             var group = $parse(attrs.group);
             var domain = $parse(attrs.domain);
 
             scope.id = attrs.id
-            scope.title = attrs.title
+            scope.charttitle = attrs.charttitle
             scope.dataset = []
 
             var xScale, yScale, yGridGen, xAxisGen, yAxisGen, barsGen;
@@ -43,6 +44,13 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 }
             });
 
+            scope.$watch(dimension, function (newVal, oldVal) {
+                $log.log("watch dimension " + scope.id);
+                if (newVal.filterExact) {
+                    dimension = newVal
+                }
+            });
+
             scope.$watch(group, function (newVal, oldVal) {
                 $log.log("watch group " + scope.id);
                 if (newVal.all) {
@@ -64,10 +72,10 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 scope.dataset = group.all()
 
                 // natural order
-                group.all().forEach(function (p, i) {
-                    //$log.log(p.key + ": " + p.value);
-                    $log.log(p);
-                });
+                // group.all().forEach(function (p, i) {
+                //     //$log.log(p.key + ": " + p.value);
+                //     $log.log(p);
+                // });
 
                 if (!scope.initialized) {
                     render();
@@ -152,8 +160,6 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
 
                 
                 xAxis = d3.axisBottom(xScale).tickFormat(labelFromDomain )
-                
-                    
 
                 xAxisGen = g => g
                     .attr("transform", `translate(0,${height - margin.bottom})`)
@@ -175,14 +181,15 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     .data(scope.dataset)
                     .enter()
                     .append("rect")
-                    .attr("class", "bar")
+                    .attr("class", function (d) { return Boolean(d.selected)?"barSelected":"bar"} )
                     .attr("x", X)
                     .attr("y", Y)
                     .attr("width", xScale.bandwidth())
                     .attr("height", function (d) { return height - Y(d) - margin.bottom })
                     .on("mouseenter", handleMouseEnter)
                     .on("mouseleave", handleMouseLeave)
-                    .on("mousemove", handleMouseMove)
+                    //.on("mousemove", handleMouseMove)
+                    //.on("mouseout", handleMouseOut)
                     .on("click", handleMouseClick)
                     .exit().remove();
             }
@@ -210,6 +217,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     .call(yGridGen);
 
                 scope.svg.selectAll(".bar").remove()
+                scope.svg.selectAll(".barSelected").remove()
 
                 scope.svg.selectAll(".bars")
                     .call(barsGen)
@@ -225,8 +233,16 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     .attr("width", width + margin.left + margin.right)
                     .attr("height", height + margin.top + margin.bottom)
                     .append("g")
-                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+                   
+                
+                scope.svg.append("text")
+                    .attr("class", "chartTitle")
+                    .attr("x", (width / 2))
+                    .attr("y", 0 + (margin.top / 2))
+                    .attr("text-anchor", "middle")
+                    .text(scope.charttitle)
+                
                 scope.svg.append("g")
                     .attr("class", "x axis")
                     .call(xAxisGen);
@@ -244,43 +260,74 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     .attr("class", "bars")
                     .call(barsGen)
 
-                scope.svg.append("text")
-                    .attr("class", "chartTitle")
-                    .attr("x", (width / 2))
-                    .attr("y", 0 + (margin.top / 2))
-                    .attr("text-anchor", "middle")
-                    .text(scope.title);
+                
 
                 scope.initialized = true;
             }
 
             function handleMouseEnter(d, i) {
-                $log.log("handleMouseEnter");
+                //$log.log("handleMouseEnter "+ scope.id);
                 scope.tooltip.style("left", d3.event.pageX - 80 + "px")
-                    .style("top", d3.event.pageY - 70 + "px")
+                    .style("top", d3.event.pageY - 80 + "px")
                     .style("display", "inline-block")
                     .html(tooltipValue(d));
-
+                if(! Boolean(d.selected) ){
+                    d3.select(this).attr("class", "barHover")
+                 }
+                //dimension.filterExact(d.key);
             }
 
             function handleMouseLeave(d, i) {
-                //$log.log("handleMouseLeave");
+                //$log.log("handleMouseLeave "+ scope.id);
                 scope.tooltip.style("display", "none");
+                //$log.log(Boolean(d.selected))
+                //$log.log(scope.dataset)
+                if(! Boolean(d.selected) ){
+                   d3.select(this).attr("class", "bar")
+                }
+                //dimension.filterAll();
+            }
+
+            function handleMouseClick(d, i) {
+                //$log.log("handleMouseClick "+ scope.id);
+                if(! Boolean(d.selected) ){
+                    d.selected = true;
+                    d3.select(this).attr("class", "barSelected")
+                    //$log.log(scope.dataset)
+                    //dimension.filterExact(d.key);
+                }else{
+                    d.selected = false
+                }
+
+                const selectedItems = scope.dataset.filter(i => Boolean(i.selected)).map(a => a.key)   ;
+                //$log.log(selectedItems)
+                if(selectedItems.length > 0){
+                    dimension.filter(function (d) { 
+                        //$log.log("filter")
+                        //$log.log(d +" : "+selectedItems.includes(d))
+                        return selectedItems.includes(d) ; 
+                    });
+                }else{
+                    dimension.filterAll();
+                }
+                
+                
+                
+                //.style("fill", "");
+                // fill: rgba(218, 146, 70 ,1);
+                // stroke: #9D570D;
+
+            }
+
+            function handleMouseOut(d, i) {
+                $log.log("handleMouseOut");
             }
 
             function handleMouseMove(d, i) {
                 //$log.log("handleMouseMove");
             }
 
-
-            function handleMouseOut(d, i) {
-                //$log.log("handleMouseOut");
-            }
-
-            function handleMouseClick(d, i) {
-                $log.log("handleMouseClick");
-
-            }
+            
 
 
             function wrap(text, width) {

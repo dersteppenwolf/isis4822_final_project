@@ -223,18 +223,18 @@ dataViz.controller('costsController', function (
       $scope.totalCostPerPerson = 0;
     }
 
-    $log.log("*** groupYear ")
-    $scope.groupYear.top(Infinity).forEach(function (p, i) {
-      //$log.log(p.key + ": " + p.value);
-      $log.log(p);
-    });
+    // $log.log("*** groupYear ")
+    // $scope.groupYear.top(Infinity).forEach(function (p, i) {
+    //   //$log.log(p.key + ": " + p.value);
+    //   $log.log(p);
+    // });
 
 
-    $log.log("*** groupStates top  ")
-    $scope.groupStates.top(2).forEach(function (p, i) {
-      //$log.log(p.key + ": " + p.value);
-      $log.log(p);
-    });
+    // $log.log("*** groupStates top  ")
+    // $scope.groupStates.top(2).forEach(function (p, i) {
+    //   //$log.log(p.key + ": " + p.value);
+    //   $log.log(p);
+    // });
 
   }
 
