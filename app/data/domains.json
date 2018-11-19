@@ -1,4 +1,64 @@
 {
+	"sisben":[
+		{
+			"label": "NIVEL 1",
+			"costo_procedimiento": 950853017,
+			"numero_personas_atendidas": 25116,
+			"costo_proc_usuario": 37858.45743749005,
+			"code": 1
+		},
+		{
+			"label": "NIVEL 2",
+			"costo_procedimiento": 258127432,
+			"numero_personas_atendidas": 7184,
+			"costo_proc_usuario": 35930.87861915368,
+			"code": 2
+		},
+		{
+			"label": "NO APLICA",
+			"costo_procedimiento": 808985245,
+			"numero_personas_atendidas": 25300,
+			"costo_proc_usuario": 31975.70138339921,
+			"code": 3
+		},
+		{
+			"label": "NO REPORTADO",
+			"costo_procedimiento": 23747333320,
+			"numero_personas_atendidas": 696559,
+			"costo_proc_usuario": 34092.350138322814,
+			"code": 4
+		}
+	],
+	"regime":[
+		{
+			"label": "SALUD: CONTRIBUTIVO",
+			"costo_procedimiento": 19820571007,
+			"numero_personas_atendidas": 642477,
+			"costo_proc_usuario": 30850.242120729614,
+			"code": 1
+		},
+		{
+			"label": "SALUD: EXCEPCION / ESPECIAL",
+			"costo_procedimiento": 135641409,
+			"numero_personas_atendidas": 1021,
+			"costo_proc_usuario": 132851.52693437805,
+			"code": 2
+		},
+		{
+			"label": "SALUD: PREPAGADA",
+			"costo_procedimiento": 111219049,
+			"numero_personas_atendidas": 2922,
+			"costo_proc_usuario": 38062.64510609172,
+			"code": 3
+		},
+		{
+			"label": "SALUD: SUBSIDIADO",
+			"costo_procedimiento": 5697867549,
+			"numero_personas_atendidas": 107739,
+			"costo_proc_usuario": 52885.84030852337,
+			"code": 4
+		}
+	],
 	"years": [
 		{
 			"code": 2010,
