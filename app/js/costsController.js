@@ -10,6 +10,8 @@ dataViz.controller('costsController', function (
   $scope.years = []
   $scope.states = []
   $scope.sections = []
+  $scope.administrators = []
+  $scope.providers = [] 
 
   ////////////////////////////////
   // data for cards  
@@ -34,6 +36,13 @@ dataViz.controller('costsController', function (
   $scope.dimSection = {}
   $scope.groupSection =  {}
 
+  //  administrators
+  $scope.dimAdministrators = {}
+  $scope.groupAdministrators=  {}
+
+  $scope.dimProviders = {}
+  $scope.groupProviders=  {}
+
   ////////////////////////////////
   $scope.loadDomains = function () {
     $log.log("loadDomains");
@@ -44,6 +53,8 @@ dataViz.controller('costsController', function (
         $scope.years = data.years
         $scope.states = data.states
         $scope.sections = data.sections
+        $scope.administrators = data.administrators
+        $scope.providers = data.providers        
 
         let totalPeople = 0
         let totalCosts = 0
@@ -116,8 +127,17 @@ dataViz.controller('costsController', function (
 
     //////////////
     //  providers
-    $scope.dimProvider = $scope.cf.dimension(function (d) { return d.prestador || 0; });
-    $scope.groupProvider = $scope.dimProvider.group().reduce(reduceAdd, reduceRemove, reduceInitial);
+    $scope.dimAdministrators = $scope.cf.dimension(function (d) { return d.code_admin || 0; });
+    $scope.groupAdministrators = $scope.dimAdministrators.group()
+      .reduce(reduceAdd, reduceRemove, reduceInitial)
+      .order(orderValue)
+
+    $scope.dimProviders = $scope.cf.dimension(function (d) { return d.code_prestador || 0; });
+    $scope.groupProviders = $scope.dimProviders.group()
+      .reduce(reduceAdd, reduceRemove, reduceInitial)
+      .order(orderValue)
+
+    
 
     //////////////
     //  administrators

@@ -97,7 +97,14 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 var label = d
                 if(domain.length > 0){
                     const items = domain.filter(word => word.code == d);
-                    label = items[0].label
+                    if(items.length>0){
+                        label = items[0].label
+                    }else{
+                        $log.log("Not Foud: "+d)
+                        $log.log(domain)
+                        label = d
+                    }
+                    
                 }
                 return label
             }
