@@ -6,17 +6,17 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
         // https://stackoverflow.com/questions/20018507/angular-js-what-is-the-need-of-the-directive-s-link-function-when-we-already-ha
         link: function (scope, elem, attrs) {
 
-            var numOfTopItems = 10
+            var NUM_TOP_ITEMS = 10
+            const HEIGHT = 200
 
             scope.crossfilter = $parse(attrs.crossfilter);
             var dimension = $parse(attrs.dimension);
             var group = $parse(attrs.group);
             var domain = $parse(attrs.domain);
-            
 
             scope.id = attrs.id
             scope.charttitle = attrs.charttitle
-            scope.showall =  JSON.parse( attrs.showall )
+            scope.showall = JSON.parse(attrs.showall)
             scope.dataset = []
 
             var xScale, yScale, yGridGen, xAxisGen, yAxisGen, barsGen;
@@ -29,13 +29,14 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 .attr("preserveAspectRatio", "xMinYMin meet")
                 .classed("svg-content", true)
 
-            var margin = { top: 30, bottom: 10, right: 10, left: 40 }
+            var margin = { top: 30, bottom: 5, right: 10, left: 40 }
             var width = getDivWidth('.chart-container') - margin.left - margin.right
-            var height = 300 - margin.top - margin.bottom;
+            var height = HEIGHT - margin.top - margin.bottom;
 
             window.onresize = function () {
                 $log.log("onresize");
                 width = getDivWidth('.chart-container') - margin.left - margin.right;
+                $log.log(width);  
                 redrawChart();
                 // return scope.$apply();
             };
@@ -73,15 +74,11 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
             scope.onCrossfilterChange = function (eventType) {
                 $log.log("barChartDirective - onCrossfilterChange " + scope.id)
                 //$log.log(eventType)
-                if(scope.showall){
+                if (scope.showall) {
                     scope.dataset = group.all()
-                }else{
-                    scope.dataset = group.top(numOfTopItems)
+                } else {
+                    scope.dataset = group.top(NUM_TOP_ITEMS)
                 }
-                
-
-                
-
                 if (!scope.initialized) {
                     render();
                 } else {
@@ -101,28 +98,28 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
 
             function tooltipValue(d) {
                 return "<b>" + labelFromDomain(d.key) +
-                    "</b>:<br>Cost/Person: " + $filter('megaNumber')(d.value.costPerson) +
+                    " ("+d.key+") </b>:<br>Cost/Person: " + $filter('megaNumber')(d.value.costPerson) +
                     ",  Costs: " + $filter('megaNumber')(d.value.costs) +
                     ",   People Served: " + $filter('megaNumber')(d.value.people)
             }
 
             function labelFromDomain(d) {
                 var label = d
-                if(domain.length > 0){
+                if (domain.length > 0) {
                     const items = domain.filter(word => word.code == d);
-                    if(items.length>0){
+                    if (items.length > 0) {
                         label = items[0].label
-                    }else{
-                        $log.log("Not Foud: "+d)
+                    } else {
+                        $log.log("Not Foud: " + d)
                         $log.log(domain)
                         label = d
                     }
-                    
+
                 }
                 return label
             }
 
-            
+
 
 
 
@@ -154,6 +151,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
              */
             function updateParameters() {
                 $log.log("updateParameters");
+                
                 xScale = d3.scaleBand()
                     .padding(0.1)
                     .rangeRound([margin.left, width])
@@ -163,20 +161,34 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     .rangeRound([height - margin.bottom, margin.top])
                     .domain([0, d3.max(scope.dataset, function (d) { return yValue(d); })])
 
+
+                xAxis = d3.axisBottom(xScale)
+                    .tickFormat(labelFromDomain)
                 
-                xAxis = d3.axisBottom(xScale).tickFormat(labelFromDomain )
+                yAxis = d3.axisLeft(yScale)
+                    .ticks(5).tickPadding(10)
+                    .tickFormat(d => (  $filter('megaNumber')(d)    )   );
+
 
                 xAxisGen = g => g
                     .attr("transform", `translate(0,${height - margin.bottom})`)
-                    .call( xAxis  )
-                    .selectAll(".tick text")
-                    .call(wrap, xScale.bandwidth()) 
+                    .call(xAxis)
+                    .selectAll("text")
+                    //.attr("y", 0)
+                    //.attr("x", 9)
+                    //.attr("dy", ".35em")
+                    //.attr("transform", "rotate(-45)")
+                    //.style("text-anchor", "start")
+                    //.selectAll(".tick text")
+                    //.call(wrap, xScale.bandwidth())   
+                    
 
                 yAxisGen = g => g
                     .attr("transform", `translate(${margin.left},0)`)
-                    .call(d3.axisLeft(yScale).ticks(5))
+                    .call(yAxis)
                     .call(g => g.select(".domain").remove())
 
+                
                 yGridGen = g => g
                     .call(d3.axisLeft(yScale).ticks(5).tickSize(-width)
                         .tickFormat(""))
@@ -186,7 +198,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     .data(scope.dataset)
                     .enter()
                     .append("rect")
-                    .attr("class", function (d) { return Boolean(d.selected)?"barSelected":"bar"} )
+                    .attr("class", function (d) { return Boolean(d.selected) ? "barSelected" : "bar" })
                     .attr("x", X)
                     .attr("y", Y)
                     .attr("width", xScale.bandwidth())
@@ -196,7 +208,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     //.on("mousemove", handleMouseMove)
                     //.on("mouseout", handleMouseOut)
                     .on("click", handleMouseClick)
-                    .exit().remove();    
+                    .exit().remove();
             }
 
             function redrawChart() {
@@ -236,15 +248,15 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     .attr("height", height + margin.top + margin.bottom)
                     .append("g")
                     .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-                   
-                
+
+
                 scope.svg.append("text")
                     .attr("class", "chartTitle")
                     .attr("x", (width / 2))
                     .attr("y", 0 + (margin.top / 2))
                     .attr("text-anchor", "middle")
                     .text(scope.charttitle)
-                
+
                 scope.svg.append("g")
                     .attr("class", "x axis")
                     .call(xAxisGen);
@@ -262,8 +274,6 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     .attr("class", "bars")
                     .call(barsGen)
 
-                
-
                 scope.initialized = true;
             }
 
@@ -273,9 +283,9 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     .style("top", d3.event.pageY - 80 + "px")
                     .style("display", "inline-block")
                     .html(tooltipValue(d));
-                if(! Boolean(d.selected) ){
+                if (!Boolean(d.selected)) {
                     d3.select(this).attr("class", "barHover")
-                 }
+                }
                 //dimension.filterExact(d.key);
             }
 
@@ -284,81 +294,71 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 scope.tooltip.style("display", "none");
                 //$log.log(Boolean(d.selected))
                 //$log.log(scope.dataset)
-                if(! Boolean(d.selected) ){
-                   d3.select(this).attr("class", "bar")
+                if (!Boolean(d.selected)) {
+                    d3.select(this).attr("class", "bar")
                 }
                 //dimension.filterAll();
             }
 
             function handleMouseClick(d, i) {
                 //$log.log("handleMouseClick "+ scope.id);
-                if(! Boolean(d.selected) ){
+                if (!Boolean(d.selected)) {
                     d.selected = true;
                     d3.select(this).attr("class", "barSelected")
                     //$log.log(scope.dataset)
                     //dimension.filterExact(d.key);
-                }else{
+                } else {
                     d.selected = false
                 }
 
-                const selectedItems = scope.dataset.filter(i => Boolean(i.selected)).map(a => a.key)   ;
+                const selectedItems = scope.dataset.filter(i => Boolean(i.selected)).map(a => a.key);
                 //$log.log(selectedItems)
-                if(selectedItems.length > 0){
-                    dimension.filter(function (d) { 
+                if (selectedItems.length > 0) {
+                    dimension.filter(function (d) {
                         //$log.log("filter")
                         //$log.log(d +" : "+selectedItems.includes(d))
-                        return selectedItems.includes(d) ; 
+                        return selectedItems.includes(d);
                     });
-                }else{
+                } else {
                     dimension.filterAll();
                 }
             }
 
             function handleMouseOut(d, i) {
-               // $log.log("handleMouseOut");
+                // $log.log("handleMouseOut");
             }
 
             function handleMouseMove(d, i) {
                 //$log.log("handleMouseMove");
             }
 
-            
-
-
-            function wrap(text, width) {
+            function wrap(text, w) {
                 text.each(function() {
                   var text = d3.select(this),
                       words = text.text().split(/\s+/).reverse(),
                       word,
                       line = [],
                       lineNumber = 0,
-                      lineHeight = 1.0, // ems
+                      lineHeight = 1.1, // ems
                       y = text.attr("y"),
-                      dy = parseFloat(text.attr("dy"));
-                
-                if(words.length > 1){
-                    $log.log(words)
-                    var tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
-                  
-                    while (word = words.pop()) {
-                        line.push(word);
-                        tspan.text(line.join(" "));
-                        if (tspan.node().getComputedTextLength() > width) {
-                        line.pop();
-                        tspan.text(line.join(" "));
-                        line = [word];
-                        tspan = text.append("tspan")
-                            .attr("x", 0).attr("y", y)
-                            .attr("dy", ++lineNumber * lineHeight + dy + "em")
-                            .text(word);
-                        }
+                      dy = parseFloat(text.attr("dy")),
+                      tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em")
+                  while (word = words.pop()) {
+                    line.push(word)
+                    tspan.text(line.join(" "))
+                    if (tspan.node().getComputedTextLength() > w) {
+                      line.pop()
+                      tspan.text(line.join(" "))
+                      line = [word]
+                      tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", `${++lineNumber * lineHeight + dy}em`).text(word)
                     }
+                  }
+                })
+            }
 
-                }
-                      
-                 
-                });
-              }
+
+
+           
 
 
         }
