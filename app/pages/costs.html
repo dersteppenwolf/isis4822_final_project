@@ -75,8 +75,8 @@
 		<div id="states-barchart" class="chart-container col-6" 
 		bar-chart crossfilter="cf" dimension="dimStates" group="groupStates" 
 		domain="states"
-		showall="false"
-		charttitle="States"></div>
+		showall="false" resolveaxislabel="true"
+		charttitle="States (Top 10)"></div>
 
 		<div id="year-barchart" class="chart-container col-6" 
 		bar-chart crossfilter="cf" dimension="dimYear" group="groupYear" 
@@ -96,14 +96,14 @@
 			bar-chart crossfilter="cf" dimension="dimAdministrators" group="groupAdministrators" 
 			domain="administrators"
 			showall="false"
-			charttitle="Administrators">
+			charttitle="Administrators (Top 10)">
 			</div>
 
 			<div id="providers-barchart" class="chart-container col-6" 
 			bar-chart crossfilter="cf" dimension="dimProviders"  group="groupProviders" 
 			domain="providers"
 			showall="false"
-			charttitle="Providers">
+			charttitle="Providers (Top 10)" >
 			</div>
 		</div>
 
@@ -113,15 +113,34 @@
 	</div>
 
 	<div class="row">
-		<div id="section-barchart" class="chart-container col-6" 
+		<div id="section-barchart" class="chart-container col-3" 
 		bar-chart crossfilter="cf" dimension="dimSection"  group="groupSection" 
 		domain="sections"
 		showall="true"
 		charttitle="Section">
 		</div>
-		<div class="col-6">
-			bla
+		<div id="chapter-barchart" class="chart-container col-3" 
+		bar-chart crossfilter="cf" dimension="dimChapter"  group="groupChapter" 
+		domain="chapter"
+		showall="false"
+		charttitle="Chapter (Top 10)">
 		</div>
+
+		<div id="group-barchart" class="chart-container col-3" 
+		bar-chart crossfilter="cf" dimension="dimGroup"  group="groupGroup" 
+		domain="group"
+		showall="false"
+		charttitle="Group (Top 10)">
+		</div>
+
+		<div id="subgroup-barchart" class="chart-container col-3" 
+		bar-chart crossfilter="cf" dimension="dimSubgroup"  group="groupSubgroup" 
+		domain="subgroup"
+		showall="false"
+		charttitle="SubGroup (Top 10)">
+		</div>
+		
+
 	</div>
 
 	<div class="row">

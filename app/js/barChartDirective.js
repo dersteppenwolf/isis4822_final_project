@@ -17,6 +17,11 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
             scope.id = attrs.id
             scope.charttitle = attrs.charttitle
             scope.showall = JSON.parse(attrs.showall)
+            scope.resolveaxislabel = false
+            if(attrs.resolveaxislabel)  {
+                scope.resolveaxislabel = JSON.parse(attrs.resolveaxislabel)
+            }
+            
             scope.dataset = []
 
             var xScale, yScale, yGridGen, xAxisGen, yAxisGen, barsGen;
@@ -26,17 +31,20 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
             scope.svg = d3.select("#" + scope.id)
                 .append("svg")
                 .attr("id", scope.id + "-svg")
-                .attr("preserveAspectRatio", "xMinYMin meet")
-                .classed("svg-content", true)
+                //.attr("preserveAspectRatio", "xMinYMin meet")
+                //.classed("svg-content", true)
 
             var margin = { top: 30, bottom: 5, right: 10, left: 40 }
-            var width = getDivWidth('.chart-container') - margin.left - margin.right
+            //var width = getDivWidth('.chart-container') - margin.left - margin.right
+            var width = getDivWidth("#"+scope.id) - margin.left - margin.right
             var height = HEIGHT - margin.top - margin.bottom;
 
             window.onresize = function () {
                 $log.log("onresize");
-                width = getDivWidth('.chart-container') - margin.left - margin.right;
+                //width = getDivWidth('.chart-container') - margin.left - margin.right;
+                width = getDivWidth("#"+scope.id) - margin.left - margin.right;
                 $log.log(width);  
+                
                 redrawChart();
                 // return scope.$apply();
             };
@@ -163,22 +171,34 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
 
 
                 xAxis = d3.axisBottom(xScale)
-                    .tickFormat(labelFromDomain)
+                if(scope.resolveaxislabel){
+                    xAxis.tickFormat(labelFromDomain)
+                }
+                
                 
                 yAxis = d3.axisLeft(yScale)
                     .ticks(5).tickPadding(10)
                     .tickFormat(d => (  $filter('megaNumber')(d)    )   );
 
 
-                xAxisGen = g => g
-                    .attr("transform", `translate(0,${height - margin.bottom})`)
-                    .call(xAxis)
-                    .selectAll("text")
-                    //.attr("y", 0)
-                    //.attr("x", 9)
-                    //.attr("dy", ".35em")
-                    //.attr("transform", "rotate(-45)")
-                    //.style("text-anchor", "start")
+                
+
+                if(!scope.resolveaxislabel){
+                    xAxisGen = g => g
+                        .attr("transform", `translate(0,${height - margin.bottom})`)
+                        .call(xAxis)
+                        .selectAll("text")
+                        .attr("y", 15)
+                        .attr("x", 0)
+                        .attr("dy", ".35em")
+                        .attr("transform", "rotate(30)")
+                        .style("text-anchor", "start")
+                }else{
+                    xAxisGen = g => g
+                        .attr("transform", `translate(0,${height - margin.bottom})`)
+                        .call(xAxis)
+                }
+                    
                     //.selectAll(".tick text")
                     //.call(wrap, xScale.bandwidth())   
                     
