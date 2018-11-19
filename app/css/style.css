@@ -72,11 +72,7 @@ body>.container {
 
 }
 
-.visCard {
-  padding-right: 15px;
-  padding-left: 15px;
-  font-size: 1.45rem; 
-}
+
 
 .swap-animation.ng-enter, .swap-animation.ng-leave {
   transition:0.2s linear all; 
@@ -119,13 +115,22 @@ h1 {
 }
 
 .dashboardTitle {
-  margin-top: 20px;
-  font-size: 40px;
+  margin-top: 0px;
+  padding: 10px;
+  font-size: 25px;
 }
 .dashboardSubTitle {
   margin-top: 20px;
-  font-size: 30px;
+  font-size: 20px;
 }
+.visCard {
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 20px;
+}
+
+
+
 
 .anchorDiv {
   padding-top: 50px;

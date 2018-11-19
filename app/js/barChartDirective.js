@@ -170,7 +170,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     .attr("transform", `translate(0,${height - margin.bottom})`)
                     .call( xAxis  )
                     .selectAll(".tick text")
-                    .call(wrap, xScale.bandwidth())
+                    .call(wrap, xScale.bandwidth()) 
 
                 yAxisGen = g => g
                     .attr("transform", `translate(${margin.left},0)`)
@@ -312,17 +312,10 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 }else{
                     dimension.filterAll();
                 }
-                
-                
-                
-                //.style("fill", "");
-                // fill: rgba(218, 146, 70 ,1);
-                // stroke: #9D570D;
-
             }
 
             function handleMouseOut(d, i) {
-                $log.log("handleMouseOut");
+               // $log.log("handleMouseOut");
             }
 
             function handleMouseMove(d, i) {
@@ -344,7 +337,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                       dy = parseFloat(text.attr("dy"));
                 
                 if(words.length > 1){
-
+                    $log.log(words)
                     var tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
                   
                     while (word = words.pop()) {

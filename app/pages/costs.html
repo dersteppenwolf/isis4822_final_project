@@ -1,14 +1,12 @@
 <div class="jumbotron text-center">
 
-	<h2 class="dashboardTitle">Cost Analysis per Person </h2>
-
-
 	<div class="row">
 		<div class="col-xs-6">
 
 			<form class="form-horizontal card-header">
 
 				<div class="form-group row">
+					<!--
 					<label for="yearSel" class="col-xs-3 col-form-label mr-2">Year</label>
 					<div class="col-xs-9">
 						<ui-select id="yearSel" ng-model="years.selected" theme="selectize" on-select="onSelectYear($item, $model)"
@@ -24,8 +22,9 @@
 							</ui-select-choices>
 						</ui-select>
 					</div>
+				-->
 
-
+					<p class="dashboardTitle">Cost Analysis per Person</p>
 					<label for="stateSel" class="col-xs-3 col-form-label mr-2">State</label>
 					<div class="col-xs-9">
 						<ui-select id="stateSel" ng-model="states.selected" theme="selectize" on-select="onSelectState($item, $model)"
@@ -73,16 +72,17 @@
 
 
 	<div class="row">
-		<div id="year-barchart" class="chart-container col-6" 
-		bar-chart crossfilter="cf" dimension="dimYear" group="groupYear" 
-		showall="true"
-		charttitle="Years">
-		</div>
 		<div id="states-barchart" class="chart-container col-6" 
 		bar-chart crossfilter="cf" dimension="dimStates" group="groupStates" 
 		domain="states"
 		showall="false"
 		charttitle="States"></div>
+
+		<div id="year-barchart" class="chart-container col-6" 
+		bar-chart crossfilter="cf" dimension="dimYear" group="groupYear" 
+		showall="true"
+		charttitle="Years">
+		</div>
 	</div>
 
 

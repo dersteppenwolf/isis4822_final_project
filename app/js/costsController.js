@@ -13,6 +13,12 @@ dataViz.controller('costsController', function (
   $scope.administrators = []
   $scope.providers = [] 
 
+  $scope.sisben = [] 
+  $scope.regime = [] 
+  $scope.chapter = [] 
+  $scope.group = [] 
+  $scope.subgroup = [] 
+
   ////////////////////////////////
   // data for cards  
   $scope.totalPopulation = 0
@@ -32,9 +38,7 @@ dataViz.controller('costsController', function (
   $scope.dimStates = {}
   $scope.groupStates = {}
 
-  //  Procedures
-  $scope.dimSection = {}
-  $scope.groupSection =  {}
+  
 
   //  administrators
   $scope.dimAdministrators = {}
@@ -42,6 +46,29 @@ dataViz.controller('costsController', function (
 
   $scope.dimProviders = {}
   $scope.groupProviders=  {}
+
+  $scope.dimSisben= {}
+  $scope.groupSisben=  {}
+
+  $scope.dimRegime= {}
+  $scope.groupRegime =   {}
+
+  //  Procedures
+  $scope.dimSection = {}
+  $scope.groupSection =  {}
+
+  $scope.dimChapter = {}
+  $scope.groupChapter=  {}
+
+  $scope.dimGroup= {}
+  $scope.groupGroup=  {}
+
+  $scope.dimSubgroup= {}
+  $scope.groupSubgroup =  {}
+
+
+  
+  
 
   ////////////////////////////////
   $scope.loadDomains = function () {
@@ -54,7 +81,15 @@ dataViz.controller('costsController', function (
         $scope.states = data.states
         $scope.sections = data.sections
         $scope.administrators = data.administrators
-        $scope.providers = data.providers        
+        $scope.providers = data.providers 
+        
+        $scope.sisben = data.sisben 
+        $scope.regime = data.regime 
+        $scope.chapter = data.chapter 
+        $scope.group = data.group 
+        $scope.subgroup = data.subgroup 
+        
+        
 
         let totalPeople = 0
         let totalCosts = 0
@@ -118,12 +153,7 @@ dataViz.controller('costsController', function (
       .reduce(reduceAdd, reduceRemove, reduceInitial)
       .order(orderValue)
 
-    //////////////
-    //  Procedures
-    $scope.dimSection = $scope.cf.dimension(function (d) { return d.code_seccion || 0; });
-    $scope.groupSection = $scope.dimSection.group()
-      .reduce(reduceAdd, reduceRemove, reduceInitial)
-      .order(orderValue)
+    
 
 
     //////////////
@@ -138,7 +168,37 @@ dataViz.controller('costsController', function (
       .reduce(reduceAdd, reduceRemove, reduceInitial)
       .order(orderValue)
 
+    $scope.dimSisben = $scope.cf.dimension(function (d) { return d.code_sisben || 0; });
+    $scope.groupSisben = $scope.dimSisben.group()
+      .reduce(reduceAdd, reduceRemove, reduceInitial)
+      .order(orderValue)
+    
+    $scope.dimRegime = $scope.cf.dimension(function (d) { return d.code_regimen || 0; });
+    $scope.groupRegime = $scope.dimRegime.group()
+      .reduce(reduceAdd, reduceRemove, reduceInitial)
+      .order(orderValue)
 
+    //////////////
+    //  Procedures
+    $scope.dimSection = $scope.cf.dimension(function (d) { return d.code_seccion || 0; });
+    $scope.groupSection = $scope.dimSection.group()
+      .reduce(reduceAdd, reduceRemove, reduceInitial)
+      .order(orderValue)
+    
+    $scope.dimChapter = $scope.cf.dimension(function (d) { return d.code_capitulo || 0; });
+    $scope.groupChapter = $scope.dimChapter.group()
+      .reduce(reduceAdd, reduceRemove, reduceInitial)
+      .order(orderValue)
+    
+    $scope.dimGroup = $scope.cf.dimension(function (d) { return d.code_grupo || 0; });
+    $scope.groupGroup = $scope.dimGroup.group()
+      .reduce(reduceAdd, reduceRemove, reduceInitial)
+      .order(orderValue)
+    
+    $scope.dimSubgroup = $scope.cf.dimension(function (d) { return d.code_subgrupo || 0; });
+    $scope.groupSubgroup = $scope.dimSubgroup.group()
+      .reduce(reduceAdd, reduceRemove, reduceInitial)
+      .order(orderValue)
 
     //////////////
     $scope.dimYear.filterAll()
