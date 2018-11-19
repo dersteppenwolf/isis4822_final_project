@@ -100,10 +100,11 @@ dataViz.controller('costsController', function (
       v.code_seccion = +v.code_seccion
       //$log.log(v);
     });
-    $log.log(d);
+    $log.log(d[0]);
 
     $scope.cf = crossfilter(d);
     $scope.cf.onChange($scope.onCrossfilterChange);
+
     $scope.totalPopulationSum = $scope.cf.groupAll().reduceSum((d) => d.numero_personas_atendidas);
     $scope.totalCostsSum = $scope.cf.groupAll().reduceSum((d) => d.costo_procedimiento);
 
@@ -211,67 +212,22 @@ dataViz.controller('costsController', function (
   };
 
 
-
   $scope.onCrossfilterChange = function (eventType) {
-    $log.log("onCrossfilterChange")
-    //$log.log(eventType)
+    $log.log("onCrossfilterChange - costsController")
+    // $log.log(eventType)
+    
     $scope.totalPopulation = $scope.totalPopulationSum.value()
     $scope.totalCosts = $scope.totalCostsSum.value()
+
     if ($scope.totalCosts > 0 && $scope.totalPopulation > 0) {
       $scope.totalCostPerPerson = $scope.totalCosts / $scope.totalPopulation;
     } else {
       $scope.totalCostPerPerson = 0;
     }
-
-    // $log.log("*** groupYear ")
-    // $scope.groupYear.top(Infinity).forEach(function (p, i) {
-    //   //$log.log(p.key + ": " + p.value);
-    //   $log.log(p);
-    // });
-
-
-    // $log.log("*** groupStates top  ")
-    // $scope.groupStates.top(2).forEach(function (p, i) {
-    //   //$log.log(p.key + ": " + p.value);
-    //   $log.log(p);
-    // });
-
+    $scope.$apply();
   }
 
-  /*
-    $log.log("*** groupStates ")
-    $scope.groupStates.top(Infinity).forEach(function (p, i) {
-      //$log.log(p.key + ": " + p.value);
-      $log.log(p);
-    });
-    */
-
-  /*
-   
-
-    $log.log("*** groupStates ")
-    $log.log($scope.groupStates.all())
-
-    $log.log("*** groupProvider ")
-    $scope.groupProvider.top(Infinity).forEach(function (p, i) {
-      //$log.log(p.key + ": " + p.value);
-      $log.log(p);
-    });
-
-    const ratioGoodOnOutOfDate = $scope.groupStates.all().map((item, index) => {
-      let ratio = {}
-      ratio.key = item.key
-      //ratio.value = quantityByCategory.all()[index].value / item.value
-      ratio.value = item.costs / item.people
-      return ratio
-    })
-
-    $log.log("*** ratioGoodOnOutOfDate ")
-    $log.log(ratioGoodOnOutOfDate);
-    */
-
-
-
+  
   window.onresize = function () {
     //$log.log("onresize");
     $scope.width = window.innerWidth - $scope.margin.left - $scope.margin.right;
