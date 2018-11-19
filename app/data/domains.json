@@ -64,7 +64,7 @@
 			"numero_personas_atendidas": 389,
 			"costo_proc_usuario": 29135.190231362467,
 			"code": 91,
-			"label": " Amazonas"
+			"label": "Amazonas"
 		},
 		{
 			"departamento": "05 - Antioquia",
@@ -72,7 +72,7 @@
 			"numero_personas_atendidas": 222064,
 			"costo_proc_usuario": 30020.59488255638,
 			"code": 5,
-			"label": " Antioquia"
+			"label": "Antioquia"
 		},
 		{
 			"departamento": "81 - Arauca",
@@ -80,7 +80,7 @@
 			"numero_personas_atendidas": 629,
 			"costo_proc_usuario": 37462.52146263911,
 			"code": 81,
-			"label": " Arauca"
+			"label": "Arauca"
 		},
 		{
 			"departamento": "88 - Archipiélago de San Andrés, Providencia y Santa Catalina",
@@ -88,7 +88,7 @@
 			"numero_personas_atendidas": 55,
 			"costo_proc_usuario": 25908.727272727272,
 			"code": 88,
-			"label": " Archipiélago de San Andrés, Providencia y Santa Catalina"
+			"label": "Archipiélago de San Andrés, Providencia y Santa Catalina"
 		},
 		{
 			"departamento": "08 - Atlántico",
@@ -96,7 +96,7 @@
 			"numero_personas_atendidas": 30706,
 			"costo_proc_usuario": 34694.51654399792,
 			"code": 8,
-			"label": " Atlántico"
+			"label": "Atlántico"
 		},
 		{
 			"departamento": "11 - Bogotá, D.C.",
@@ -104,7 +104,7 @@
 			"numero_personas_atendidas": 183667,
 			"costo_proc_usuario": 34399.784474075364,
 			"code": 11,
-			"label": " Bogotá, D.C."
+			"label": "Bogotá, D.C."
 		},
 		{
 			"departamento": "13 - Bolívar",
@@ -112,7 +112,7 @@
 			"numero_personas_atendidas": 8365,
 			"costo_proc_usuario": 39104.30424387328,
 			"code": 13,
-			"label": " Bolívar"
+			"label": "Bolívar"
 		},
 		{
 			"departamento": "15 - Boyacá",
@@ -120,7 +120,7 @@
 			"numero_personas_atendidas": 22576,
 			"costo_proc_usuario": 41356.33105953225,
 			"code": 15,
-			"label": " Boyacá"
+			"label": "Boyacá"
 		},
 		{
 			"departamento": "17 - Caldas",
@@ -128,7 +128,7 @@
 			"numero_personas_atendidas": 25143,
 			"costo_proc_usuario": 21451.241061130335,
 			"code": 17,
-			"label": " Caldas"
+			"label": "Caldas"
 		},
 		{
 			"departamento": "18 - Caquetá",
@@ -136,7 +136,7 @@
 			"numero_personas_atendidas": 1664,
 			"costo_proc_usuario": 46505.978966346156,
 			"code": 18,
-			"label": " Caquetá"
+			"label": "Caquetá"
 		},
 		{
 			"departamento": "85 - Casanare",
@@ -144,7 +144,7 @@
 			"numero_personas_atendidas": 1308,
 			"costo_proc_usuario": 33001.37308868502,
 			"code": 85,
-			"label": " Casanare"
+			"label": "Casanare"
 		},
 		{
 			"departamento": "19 - Cauca",
@@ -152,7 +152,7 @@
 			"numero_personas_atendidas": 6587,
 			"costo_proc_usuario": 44851.108547138305,
 			"code": 19,
-			"label": " Cauca"
+			"label": "Cauca"
 		},
 		{
 			"departamento": "20 - Cesar",
@@ -160,7 +160,7 @@
 			"numero_personas_atendidas": 3677,
 			"costo_proc_usuario": 43562.38020125102,
 			"code": 20,
-			"label": " Cesar"
+			"label": "Cesar"
 		},
 		{
 			"departamento": "27 - Chocó",
@@ -168,7 +168,7 @@
 			"numero_personas_atendidas": 772,
 			"costo_proc_usuario": 67495.88082901554,
 			"code": 27,
-			"label": " Chocó"
+			"label": "Chocó"
 		},
 		{
 			"departamento": "25 - Cundinamarca",
@@ -176,7 +176,7 @@
 			"numero_personas_atendidas": 35989,
 			"costo_proc_usuario": 35310.69385089888,
 			"code": 25,
-			"label": " Cundinamarca"
+			"label": "Cundinamarca"
 		},
 		{
 			"departamento": "23 - Córdoba",
@@ -184,7 +184,7 @@
 			"numero_personas_atendidas": 11814,
 			"costo_proc_usuario": 32283.526070763503,
 			"code": 23,
-			"label": " Córdoba"
+			"label": "Córdoba"
 		},
 		{
 			"departamento": "94 - Guainía",
@@ -192,7 +192,7 @@
 			"numero_personas_atendidas": 39,
 			"costo_proc_usuario": 44195.1282051282,
 			"code": 94,
-			"label": " Guainía"
+			"label": "Guainía"
 		},
 		{
 			"departamento": "95 - Guaviare",
@@ -200,7 +200,7 @@
 			"numero_personas_atendidas": 367,
 			"costo_proc_usuario": 26251.83378746594,
 			"code": 95,
-			"label": " Guaviare"
+			"label": "Guaviare"
 		},
 		{
 			"departamento": "41 - Huila",
@@ -208,7 +208,7 @@
 			"numero_personas_atendidas": 12951,
 			"costo_proc_usuario": 49547.48752992047,
 			"code": 41,
-			"label": " Huila"
+			"label": "Huila"
 		},
 		{
 			"departamento": "44 - La Guajira",
@@ -216,7 +216,7 @@
 			"numero_personas_atendidas": 1650,
 			"costo_proc_usuario": 29145.752727272727,
 			"code": 44,
-			"label": " La Guajira"
+			"label": "La Guajira"
 		},
 		{
 			"departamento": "47 - Magdalena",
@@ -224,7 +224,7 @@
 			"numero_personas_atendidas": 6215,
 			"costo_proc_usuario": 31258.57892196299,
 			"code": 47,
-			"label": " Magdalena"
+			"label": "Magdalena"
 		},
 		{
 			"departamento": "50 - Meta",
@@ -232,7 +232,7 @@
 			"numero_personas_atendidas": 8323,
 			"costo_proc_usuario": 31309.227922624053,
 			"code": 50,
-			"label": " Meta"
+			"label": "Meta"
 		},
 		{
 			"departamento": "52 - Nariño",
@@ -240,7 +240,7 @@
 			"numero_personas_atendidas": 43104,
 			"costo_proc_usuario": 51306.392956570155,
 			"code": 52,
-			"label": " Nariño"
+			"label": "Nariño"
 		},
 		{
 			"departamento": "54 - Norte de Santander",
@@ -248,7 +248,7 @@
 			"numero_personas_atendidas": 11333,
 			"costo_proc_usuario": 18356.37412865084,
 			"code": 54,
-			"label": " Norte de Santander"
+			"label": "Norte de Santander"
 		},
 		{
 			"departamento": "86 - Putumayo",
@@ -256,7 +256,7 @@
 			"numero_personas_atendidas": 2167,
 			"costo_proc_usuario": 50466.7351176742,
 			"code": 86,
-			"label": " Putumayo"
+			"label": "Putumayo"
 		},
 		{
 			"departamento": "63 - Quindio",
@@ -264,7 +264,7 @@
 			"numero_personas_atendidas": 7417,
 			"costo_proc_usuario": 25958.899150599973,
 			"code": 63,
-			"label": " Quindio"
+			"label": "Quindio"
 		},
 		{
 			"departamento": "66 - Risaralda",
@@ -272,7 +272,7 @@
 			"numero_personas_atendidas": 15879,
 			"costo_proc_usuario": 29168.396624472574,
 			"code": 66,
-			"label": " Risaralda"
+			"label": "Risaralda"
 		},
 		{
 			"departamento": "68 - Santander",
@@ -280,7 +280,7 @@
 			"numero_personas_atendidas": 23829,
 			"costo_proc_usuario": 27561.911158672207,
 			"code": 68,
-			"label": " Santander"
+			"label": "Santander"
 		},
 		{
 			"departamento": "70 - Sucre",
@@ -288,7 +288,7 @@
 			"numero_personas_atendidas": 4069,
 			"costo_proc_usuario": 29954.17866797739,
 			"code": 70,
-			"label": " Sucre"
+			"label": "Sucre"
 		},
 		{
 			"departamento": "73 - Tolima",
@@ -296,7 +296,7 @@
 			"numero_personas_atendidas": 14382,
 			"costo_proc_usuario": 37577.3769294952,
 			"code": 73,
-			"label": " Tolima"
+			"label": "Tolima"
 		},
 		{
 			"departamento": "76 - Valle del Cauca",
@@ -304,7 +304,7 @@
 			"numero_personas_atendidas": 46887,
 			"costo_proc_usuario": 41276.415765564016,
 			"code": 76,
-			"label": " Valle del Cauca"
+			"label": "Valle del Cauca"
 		},
 		{
 			"departamento": "97 - Vaupés",
@@ -312,7 +312,7 @@
 			"numero_personas_atendidas": 64,
 			"costo_proc_usuario": 19122.9375,
 			"code": 97,
-			"label": " Vaupés"
+			"label": "Vaupés"
 		},
 		{
 			"departamento": "99 - Vichada",
@@ -320,33 +320,30 @@
 			"numero_personas_atendidas": 78,
 			"costo_proc_usuario": 28415.897435897437,
 			"code": 99,
-			"label": " Vichada"
+			"label": "Vichada"
 		}
 	],
 	"sections": [
 		{
 			"code": 1,
-			"label": " PROCEDIMIENTOS E INTERVENCIONES NO QUIRURGICOS",
+			"label": "Procedimientos e Intervenciones No Quirurgicos",
 			"costo_procedimiento": 21963033621,
 			"numero_personas_atendidas": 743144,
 			"costo_proc_usuario": 29554.20971036569
 		},
 		{
 			"code": 0,
-			"label": " PROCEDIMIENTOS E INTERVENCIONES QUIRURGICAS",
+			"label": "Procedimientos e Intervenciones Quirurgicas",
 			"costo_procedimiento": 3743136837,
 			"numero_personas_atendidas": 10758,
 			"costo_proc_usuario": 347939.8435582822
 		},
 		{
 			"code": 2,
-			"label": " PROCEDIMIENTOS E INTERVENCIONES SOBRE LA COMUNIDAD, SU ENTORNO Y SALUD",
+			"label": "Procedimientos e Intervenciones Sobre La Comunidad, Su Entorno Y Salud",
 			"costo_procedimiento": 59128556,
 			"numero_personas_atendidas": 257,
 			"costo_proc_usuario": 230072.20233463036
-		},
-		{
-			"code": null
 		}
 	], 
 	"administrators": [

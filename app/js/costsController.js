@@ -126,7 +126,7 @@ dataViz.controller('costsController', function (
 
 
     //////////////
-    //  providers
+    //  administrators / providers
     $scope.dimAdministrators = $scope.cf.dimension(function (d) { return d.code_admin || 0; });
     $scope.groupAdministrators = $scope.dimAdministrators.group()
       .reduce(reduceAdd, reduceRemove, reduceInitial)
@@ -137,17 +137,10 @@ dataViz.controller('costsController', function (
       .reduce(reduceAdd, reduceRemove, reduceInitial)
       .order(orderValue)
 
-    
-
-    //////////////
-    //  administrators
-    $scope.dimAdmin = $scope.cf.dimension(function (d) { return d.administradora || 0; });
 
 
     //////////////
     $scope.dimYear.filterAll()
-
-
 
     //////////////
     function reduceAdd(p, v) {
@@ -221,7 +214,7 @@ dataViz.controller('costsController', function (
 
   $scope.onCrossfilterChange = function (eventType) {
     $log.log("onCrossfilterChange")
-    $log.log(eventType)
+    //$log.log(eventType)
     $scope.totalPopulation = $scope.totalPopulationSum.value()
     $scope.totalCosts = $scope.totalCostsSum.value()
     if ($scope.totalCosts > 0 && $scope.totalPopulation > 0) {

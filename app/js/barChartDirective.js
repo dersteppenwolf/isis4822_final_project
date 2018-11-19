@@ -158,6 +158,8 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 xAxisGen = g => g
                     .attr("transform", `translate(0,${height - margin.bottom})`)
                     .call( xAxis  )
+                    .selectAll(".tick text")
+                    .call(wrap, xScale.bandwidth())
 
                 yAxisGen = g => g
                     .attr("transform", `translate(${margin.left},0)`)
@@ -279,6 +281,42 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 $log.log("handleMouseClick");
 
             }
+
+
+            function wrap(text, width) {
+                text.each(function() {
+                  var text = d3.select(this),
+                      words = text.text().split(/\s+/).reverse(),
+                      word,
+                      line = [],
+                      lineNumber = 0,
+                      lineHeight = 1.0, // ems
+                      y = text.attr("y"),
+                      dy = parseFloat(text.attr("dy"));
+                
+                if(words.length > 1){
+
+                    var tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+                  
+                    while (word = words.pop()) {
+                        line.push(word);
+                        tspan.text(line.join(" "));
+                        if (tspan.node().getComputedTextLength() > width) {
+                        line.pop();
+                        tspan.text(line.join(" "));
+                        line = [word];
+                        tspan = text.append("tspan")
+                            .attr("x", 0).attr("y", y)
+                            .attr("dy", ++lineNumber * lineHeight + dy + "em")
+                            .text(word);
+                        }
+                    }
+
+                }
+                      
+                 
+                });
+              }
 
 
         }
