@@ -75,11 +75,13 @@
 	<div class="row">
 		<div id="year-barchart" class="chart-container col-6" 
 		bar-chart crossfilter="cf" dimension="dimYear" group="groupYear" 
+		showall="true"
 		charttitle="Years">
 		</div>
 		<div id="states-barchart" class="chart-container col-6" 
 		bar-chart crossfilter="cf" dimension="dimStates" group="groupStates" 
 		domain="states"
+		showall="false"
 		charttitle="States"></div>
 	</div>
 
@@ -93,12 +95,14 @@
 			<div id="admin-barchart" class="chart-container col-6" 
 			bar-chart crossfilter="cf" dimension="dimAdministrators" group="groupAdministrators" 
 			domain="administrators"
+			showall="false"
 			charttitle="Administrators">
 			</div>
 
 			<div id="providers-barchart" class="chart-container col-6" 
 			bar-chart crossfilter="cf" dimension="dimProviders"  group="groupProviders" 
 			domain="providers"
+			showall="false"
 			charttitle="Providers">
 			</div>
 		</div>
@@ -112,6 +116,7 @@
 		<div id="section-barchart" class="chart-container col-6" 
 		bar-chart crossfilter="cf" dimension="dimSection"  group="groupSection" 
 		domain="sections"
+		showall="false"
 		charttitle="Section">
 		</div>
 		<div class="col-6">

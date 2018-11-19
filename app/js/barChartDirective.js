@@ -6,13 +6,17 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
         // https://stackoverflow.com/questions/20018507/angular-js-what-is-the-need-of-the-directive-s-link-function-when-we-already-ha
         link: function (scope, elem, attrs) {
 
+            var numOfTopItems = 10
+
             scope.crossfilter = $parse(attrs.crossfilter);
             var dimension = $parse(attrs.dimension);
             var group = $parse(attrs.group);
             var domain = $parse(attrs.domain);
+            
 
             scope.id = attrs.id
             scope.charttitle = attrs.charttitle
+            scope.showall =  JSON.parse( attrs.showall )
             scope.dataset = []
 
             var xScale, yScale, yGridGen, xAxisGen, yAxisGen, barsGen;
@@ -69,13 +73,14 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
             scope.onCrossfilterChange = function (eventType) {
                 $log.log("barChartDirective - onCrossfilterChange " + scope.id)
                 //$log.log(eventType)
-                scope.dataset = group.all()
+                if(scope.showall){
+                    scope.dataset = group.all()
+                }else{
+                    scope.dataset = group.top(numOfTopItems)
+                }
+                
 
-                // natural order
-                // group.all().forEach(function (p, i) {
-                //     //$log.log(p.key + ": " + p.value);
-                //     $log.log(p);
-                // });
+                
 
                 if (!scope.initialized) {
                     render();
@@ -191,11 +196,8 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     //.on("mousemove", handleMouseMove)
                     //.on("mouseout", handleMouseOut)
                     .on("click", handleMouseClick)
-                    .exit().remove();
+                    .exit().remove();    
             }
-
-
-
 
             function redrawChart() {
                 $log.log("redrawChart");
