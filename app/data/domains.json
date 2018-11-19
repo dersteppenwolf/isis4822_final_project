@@ -29355,5 +29355,3302 @@
 			"numero_personas_atendidas": 1,
 			"costo_proc_usuario": 13800
 		}
+	], 
+
+	"chapter" : [
+		{
+			"code": 1,
+			"label": "SISTEMA NERVIOSO",
+			"costo_procedimiento": 186685000,
+			"numero_personas_atendidas": 847,
+			"costo_proc_usuario": 220407.3199527745
+		},
+		{
+			"code": 2,
+			"label": "SISTEMA ENDOCRINO",
+			"costo_procedimiento": 6904424,
+			"numero_personas_atendidas": 39,
+			"costo_proc_usuario": 177036.5128205128
+		},
+		{
+			"code": 3,
+			"label": "SISTEMA VISUAL",
+			"costo_procedimiento": 38707356,
+			"numero_personas_atendidas": 324,
+			"costo_proc_usuario": 119467.14814814815
+		},
+		{
+			"code": 4,
+			"label": "SISTEMA AUDITIVO",
+			"costo_procedimiento": 646007,
+			"numero_personas_atendidas": 11,
+			"costo_proc_usuario": 58727.90909090909
+		},
+		{
+			"code": 5,
+			"label": "NARIZ, BOCA Y FARINGE",
+			"costo_procedimiento": 183724779,
+			"numero_personas_atendidas": 1620,
+			"costo_proc_usuario": 113410.35740740741
+		},
+		{
+			"code": 6,
+			"label": "SISTEMA RESPIRATORIO",
+			"costo_procedimiento": 101950031,
+			"numero_personas_atendidas": 126,
+			"costo_proc_usuario": 809127.2301587302
+		},
+		{
+			"code": 7,
+			"label": "SISTEMA CIRCULATORIO",
+			"costo_procedimiento": 64794417,
+			"numero_personas_atendidas": 317,
+			"costo_proc_usuario": 204398.79179810727
+		},
+		{
+			"code": 8,
+			"label": "SISTEMA HEMATICO Y LINFATICO",
+			"costo_procedimiento": 9983922,
+			"numero_personas_atendidas": 31,
+			"costo_proc_usuario": 322062
+		},
+		{
+			"code": 9,
+			"label": "SISTEMA DIGESTIVO",
+			"costo_procedimiento": 587881139,
+			"numero_personas_atendidas": 1579,
+			"costo_proc_usuario": 372312.31095630146
+		},
+		{
+			"code": 10,
+			"label": "SISTEMA URINARIO",
+			"costo_procedimiento": 47986975,
+			"numero_personas_atendidas": 83,
+			"costo_proc_usuario": 578156.3253012048
+		},
+		{
+			"code": 11,
+			"label": "SISTEMA REPRODUCTOR MASCULINO",
+			"costo_procedimiento": 24026654,
+			"numero_personas_atendidas": 15,
+			"costo_proc_usuario": 1601776.9333333333
+		},
+		{
+			"code": 12,
+			"label": "SISTEMA REPRODUCTOR FEMENINO",
+			"costo_procedimiento": 31828828,
+			"numero_personas_atendidas": 164,
+			"costo_proc_usuario": 194078.21951219512
+		},
+		{
+			"code": 13,
+			"label": "SISTEMA OSTEOMUSCULAR",
+			"costo_procedimiento": 2207427271,
+			"numero_personas_atendidas": 4076,
+			"costo_proc_usuario": 541567.0439156035
+		},
+		{
+			"code": 14,
+			"label": "SISTEMA TEGUMENTARIO",
+			"costo_procedimiento": 250590034,
+			"numero_personas_atendidas": 1526,
+			"costo_proc_usuario": 164213.65268676277
+		},
+		{
+			"code": 15,
+			"label": "IMAGENOLOGIA",
+			"costo_procedimiento": 5814423894,
+			"numero_personas_atendidas": 76741,
+			"costo_proc_usuario": 75766.85075774358
+		},
+		{
+			"code": 16,
+			"label": "CONSULTA, MONITORIZACION Y PROCEDIMIENTOS DIAGNÓSTICOS",
+			"costo_procedimiento": 482709003,
+			"numero_personas_atendidas": 13367,
+			"costo_proc_usuario": 36111.9924440787
+		},
+		{
+			"code": 17,
+			"label": "LABORATORIO CLÍNICO",
+			"costo_procedimiento": 11437212385,
+			"numero_personas_atendidas": 625488,
+			"costo_proc_usuario": 18285.262682897195
+		},
+		{
+			"code": 18,
+			"label": "MEDICINA TRANSFUSIONAL Y BANCO DE SANGRE",
+			"costo_procedimiento": 63297725,
+			"numero_personas_atendidas": 510,
+			"costo_proc_usuario": 124113.1862745098
+		},
+		{
+			"code": 19,
+			"label": "MEDICINA NUCLEAR Y RADIOTERAPIA +",
+			"costo_procedimiento": 403382739,
+			"numero_personas_atendidas": 1703,
+			"costo_proc_usuario": 236865.96535525544
+		},
+		{
+			"code": 20,
+			"label": "DESEMPEÑO FUNCIONAL Y REHABILITACION +",
+			"costo_procedimiento": 1271790679,
+			"numero_personas_atendidas": 12983,
+			"costo_proc_usuario": 97958.1513517677
+		},
+		{
+			"code": 21,
+			"label": "SALUD MENTAL",
+			"costo_procedimiento": 3225540,
+			"numero_personas_atendidas": 35,
+			"costo_proc_usuario": 92158.28571428571
+		},
+		{
+			"code": 22,
+			"label": "DIAGNOSTICO Y TRATAMIENTO EN SISTEMAS VISUAL Y AUDITIVO +",
+			"costo_procedimiento": 39817719,
+			"numero_personas_atendidas": 982,
+			"costo_proc_usuario": 40547.57535641548
+		},
+		{
+			"code": 23,
+			"label": "OTROS PROCEDIMIENTOS NO QUIRURGICOS",
+			"costo_procedimiento": 15184274,
+			"numero_personas_atendidas": 264,
+			"costo_proc_usuario": 57516.18939393939
+		},
+		{
+			"code": 24,
+			"label": "PROCEDIMIENTOS MISCELANEOS +",
+			"costo_procedimiento": 2431989663,
+			"numero_personas_atendidas": 11071,
+			"costo_proc_usuario": 219672.08590009937
+		},
+		{
+			"code": 25,
+			"label": "PROCEDIMIENTOS E INTERVENCIONES COLECTIVAS +",
+			"costo_procedimiento": 59128556,
+			"numero_personas_atendidas": 257,
+			"costo_proc_usuario": 230072.20233463036
+		}
+	]  , 
+
+	"group" : [
+		{
+			"code": 1,
+			"label": "PROCEDIMIENTOS EN CRANEO, CEREBRO Y MENINGES CEREBRALES",
+			"costo_procedimiento": 600377,
+			"numero_personas_atendidas": 7,
+			"costo_proc_usuario": 85768.14285714286
+		},
+		{
+			"code": 2,
+			"label": "OTROS PROCEDIMIENTOS EN CRANEO, CEREBRO Y MENINGES CEREBRALES",
+			"costo_procedimiento": 7346955,
+			"numero_personas_atendidas": 15,
+			"costo_proc_usuario": 489797
+		},
+		{
+			"code": 3,
+			"label": "PROCEDIMIENTOS EN MEDULA ESPINAL Y ESTRUCTURAS DEL CANAL RAQUIDEO Excluye: DESCOMPRESION MEDIANTE VERTEBRECTOMÍA  (77.89 Y 77.99), DISCECTOMIA, Y DISCOLISIS (80.5)",
+			"costo_procedimiento": 56572443,
+			"numero_personas_atendidas": 67,
+			"costo_proc_usuario": 844364.8208955224
+		},
+		{
+			"code": 4,
+			"label": "PROCEDIMIENTOS EN NERVIOS CRANEALES Y PERIFERICOS",
+			"costo_procedimiento": 48656330,
+			"numero_personas_atendidas": 284,
+			"costo_proc_usuario": 171325.10563380283
+		},
+		{
+			"code": 5,
+			"label": "PROCEDIMIENTOS EN NERVIOS O GANGLIOS SIMPATICOS",
+			"costo_procedimiento": 73508895,
+			"numero_personas_atendidas": 474,
+			"costo_proc_usuario": 155082.05696202532
+		},
+		{
+			"code": 6,
+			"label": "PROCEDIMIENTOS EN LAS GLANDULAS TIROIDES Y PARATIROIDES INCLUYE: RESECCIÓN ACCIDENTAL DE HUESO HIODES SimultAneo: CUALQUIER ESCISIÓN DE GALNGLIO LINFATICO REGIONAL (403) O CERVICAL (404)",
+			"costo_procedimiento": 6904424,
+			"numero_personas_atendidas": 39,
+			"costo_proc_usuario": 177036.5128205128
+		},
+		{
+			"code": 8,
+			"label": "PROCEDIMIENTOS EN PARPADOS INCLUYE: PROCEDIMIENTOS EN CEJAS SimultAneo: CUALQUIER RECONSTRUCCION SIMULTANEA (08.6,08.8)",
+			"costo_procedimiento": 822583,
+			"numero_personas_atendidas": 249,
+			"costo_proc_usuario": 3303.5461847389556
+		},
+		{
+			"code": 9,
+			"label": "PROCEDIMIENTOS E INTERVENCIONES EN APARATO LAGRIMAL",
+			"costo_procedimiento": 2280931,
+			"numero_personas_atendidas": 6,
+			"costo_proc_usuario": 380155.1666666667
+		},
+		{
+			"code": 10,
+			"label": "PROCEDIMIENTOS EN CONJUNTIVA",
+			"costo_procedimiento": 3536859,
+			"numero_personas_atendidas": 12,
+			"costo_proc_usuario": 294738.25
+		},
+		{
+			"code": 11,
+			"label": "PROCEDIMIENTOS EN CORNEA",
+			"costo_procedimiento": 1050835,
+			"numero_personas_atendidas": 24,
+			"costo_proc_usuario": 43784.791666666664
+		},
+		{
+			"code": 12,
+			"label": "PROCEDIMIENTOS EN IRIS, CUERPO CILIAR, ESCLERA Y CAMARA ANTERIOR",
+			"costo_procedimiento": 3981897,
+			"numero_personas_atendidas": 8,
+			"costo_proc_usuario": 497737.125
+		},
+		{
+			"code": 13,
+			"label": "PROCEDIMIENTOS EN CRISTALINO",
+			"costo_procedimiento": 11883325,
+			"numero_personas_atendidas": 14,
+			"costo_proc_usuario": 848808.9285714285
+		},
+		{
+			"code": 14,
+			"label": "PROCEDIMIENTOS EN RETINA, COROIDES, VITREO Y CAMARA POSTERIOR",
+			"costo_procedimiento": 10281757,
+			"numero_personas_atendidas": 6,
+			"costo_proc_usuario": 1713626.1666666667
+		},
+		{
+			"code": 15,
+			"label": "PROCEDIMIENTOS EN MUSCULOS EXTRAOCULARES",
+			"costo_procedimiento": 33678,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 33678
+		},
+		{
+			"code": 16,
+			"label": "PROCEDIMIENTOS EN ORBITA Y GLOBO OCULAR",
+			"costo_procedimiento": 4835491,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 1208872.75
+		},
+		{
+			"code": 18,
+			"label": "PROCEDIMIENTOS EN OIDO EXTERNO INCLUYE: CONDUCTO AUDITIVO EXTERNO, PIEL Y CARTILAGO DE PABELLON AURICULAR Y MEATO",
+			"costo_procedimiento": 384731,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 96182.75
+		},
+		{
+			"code": 19,
+			"label": "PROCEDIMIENTOS RECONSTRUCTIVOS EN OIDO MEDIO",
+			"costo_procedimiento": 20000,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 6666.666666666667
+		},
+		{
+			"code": 20,
+			"label": "OTROS PROCEDIMIENTOS EN EL OIDO MEDIO Y EL OIDO INTERNO SimultAneo: CUALQUIER TIMPANOPLASTIA (19.4,)",
+			"costo_procedimiento": 241276,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 60319
+		},
+		{
+			"code": 21,
+			"label": "PROCEDIMIENTOS EN NARIZ INCLUYE: ESQUELETO NASAL Y PIEL DE NARIZ",
+			"costo_procedimiento": 2988107,
+			"numero_personas_atendidas": 39,
+			"costo_proc_usuario": 76618.1282051282
+		},
+		{
+			"code": 22,
+			"label": "PROCEDIMIENTOS EN SENOS PARANASALES",
+			"costo_procedimiento": 15740761,
+			"numero_personas_atendidas": 425,
+			"costo_proc_usuario": 37037.08470588236
+		},
+		{
+			"code": 23,
+			"label": "PROCEDIMIENTOS EN DIENTES",
+			"costo_procedimiento": 53607057,
+			"numero_personas_atendidas": 551,
+			"costo_proc_usuario": 97290.48457350272
+		},
+		{
+			"code": 24,
+			"label": "PROCEDIMIENTOS EN DIENTES, ENCÍAS Y ALVEOLOS [TERAPIA PERIODONTAL]",
+			"costo_procedimiento": 3050792,
+			"numero_personas_atendidas": 8,
+			"costo_proc_usuario": 381349
+		},
+		{
+			"code": 25,
+			"label": "PROCEDIMIENTOS E INTERVENCIONES EN LENGUA SimultAneo: CUALQUIER VACIAMIENTO LINFATICO DE CUELLO (40.4); TRAQUEOSTOMIA (31.1)",
+			"costo_procedimiento": 476862,
+			"numero_personas_atendidas": 6,
+			"costo_proc_usuario": 79477
+		},
+		{
+			"code": 26,
+			"label": "PROCEDIMIENTOS EN GLANDULAS Y CONDUCTOS SALIVALES INCLUYE: GLANDULA Y CONDUCTOS PAROTIDEOS, SALIVALES MENORES, SUBLINGUALES, SUBMAXILARES SimultAneo: CUALQUIER VACIAMIENTO LINFATICO DE CUELLO (40.4)",
+			"costo_procedimiento": 103621940,
+			"numero_personas_atendidas": 569,
+			"costo_proc_usuario": 182112.3725834798
+		},
+		{
+			"code": 27,
+			"label": "PROCEDIMIENTOS E INTERVENCIONES EN BOCA Y CARA INCLUYE: LABIOS, PALADAR, TEJIDOS BLANDOS DE CARA Y BOCA,",
+			"costo_procedimiento": 2748141,
+			"numero_personas_atendidas": 8,
+			"costo_proc_usuario": 343517.625
+		},
+		{
+			"code": 29,
+			"label": "PROCEDIMIENTOS EN FARINGE INCLUYE: HIPOFARINGE, NASOFARINGE, OROFARINGE, SACO FARINGEO Y SENO PIRIFORME",
+			"costo_procedimiento": 1491119,
+			"numero_personas_atendidas": 14,
+			"costo_proc_usuario": 106508.5
+		},
+		{
+			"code": 30,
+			"label": "PROCEDIMIENTOS EN LARINGE",
+			"costo_procedimiento": 462,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 115.5
+		},
+		{
+			"code": 31,
+			"label": "PROCEDIMIENTOS EN LARINGE Y TRAQUEA",
+			"costo_procedimiento": 50727260,
+			"numero_personas_atendidas": 44,
+			"costo_proc_usuario": 1152892.2727272727
+		},
+		{
+			"code": 32,
+			"label": "PROCEDIMIENTOS EN PULMON Y BRONQUIO INCLUYE: ESTERNOTOMIA (TOTAL O LONGITUDINAL), RESECCIÓN DE COSTILLA, O TORACOTOMIA, COMO VÍA DE ACCESO QUIRURGICO",
+			"costo_procedimiento": 22083273,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 7361091
+		},
+		{
+			"code": 33,
+			"label": "OTROS PROCEDIMIENTOS EN BRONQUIO Y PULMON INCLUYE: ESTERNOTOMIA (TOTAL O LONGITUDINAL), RESECCIÓN DE COSTILLA, O TORACOTOMIA, COMO VÍA DE ACCESO QUIRURGICO",
+			"costo_procedimiento": 20495458,
+			"numero_personas_atendidas": 44,
+			"costo_proc_usuario": 465805.86363636365
+		},
+		{
+			"code": 34,
+			"label": "PROCEDIMIENTOS EN PARED TORACCICA, PLEURA, MEDIASTINO Y DIAFRAGMA Excluye: PROCEDIMIENTOS EN MAMA (85)",
+			"costo_procedimiento": 8643578,
+			"numero_personas_atendidas": 31,
+			"costo_proc_usuario": 278825.0967741936
+		},
+		{
+			"code": 36,
+			"label": "PROCEDIMIENTOS EN VASOS CARDIACOS (CORONARIAS) INCLUYE: ESTERNOTOMIA (MEDIA) (TRANSVERSA), TORACOTOMIA COMO VÍA DE ACCESO QUIRURGICO SimultAneo:  CUANDO SE REALICE DERIVACIÓN CARDIOPULMONAR [CIRCULACION EXTRACORPOREA] (39.6.1)",
+			"costo_procedimiento": 7897240,
+			"numero_personas_atendidas": 5,
+			"costo_proc_usuario": 1579448
+		},
+		{
+			"code": 37,
+			"label": "PROCEDIMIENTOS EN CORAZON Y PERICARDIO SimultAneo: CUANDO SE REALICE DERIVACIÓN CARDIOPULMONAR [CIRCULACION EXTRACORPOREA] (39.6.1)",
+			"costo_procedimiento": 18800087,
+			"numero_personas_atendidas": 18,
+			"costo_proc_usuario": 1044449.2777777778
+		},
+		{
+			"code": 38,
+			"label": "PROCEDIMIENTOS EN VASOS SANGUINEOS (INCISIÓN, ESCISIÓN Y OCLUSIÓN) SimultAneo: CUANDO SE REALICE DERIVACIÓN CARDIOPULMONAR [CIRCULACION EXTRACORPOREA] (39.6.1)  Excluye:  AQUELLOS DE VASOS CORONARIOS (36)",
+			"costo_procedimiento": 26217673,
+			"numero_personas_atendidas": 278,
+			"costo_proc_usuario": 94308.17625899281
+		},
+		{
+			"code": 39,
+			"label": "OTROS PROCEDIMIENTOS EN VASOS SANGUINEOS",
+			"costo_procedimiento": 11879417,
+			"numero_personas_atendidas": 16,
+			"costo_proc_usuario": 742463.5625
+		},
+		{
+			"code": 40,
+			"label": "PROCEDIMIENTOS EN EL SISTEMA LINFATICO",
+			"costo_procedimiento": 4349405,
+			"numero_personas_atendidas": 12,
+			"costo_proc_usuario": 362450.4166666667
+		},
+		{
+			"code": 41,
+			"label": "PROCEDIMIENTOS EN MEDULA OSEA Y BAZO",
+			"costo_procedimiento": 5634517,
+			"numero_personas_atendidas": 19,
+			"costo_proc_usuario": 296553.5263157895
+		},
+		{
+			"code": 42,
+			"label": "PROCEDIMIENTOS EN ESÓFAGO",
+			"costo_procedimiento": 13280852,
+			"numero_personas_atendidas": 105,
+			"costo_proc_usuario": 126484.30476190476
+		},
+		{
+			"code": 43,
+			"label": "PROCEDIMIENTOS EN ESTOMAGO",
+			"costo_procedimiento": 1139455,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 379818.3333333333
+		},
+		{
+			"code": 44,
+			"label": "OTRAS PROCEDIMIENTOS EN EL ESTOMAGO",
+			"costo_procedimiento": 25536785,
+			"numero_personas_atendidas": 13,
+			"costo_proc_usuario": 1964368.076923077
+		},
+		{
+			"code": 45,
+			"label": "PROCEDIMIENTOS EN INTESTINO",
+			"costo_procedimiento": 485598830,
+			"numero_personas_atendidas": 1334,
+			"costo_proc_usuario": 364017.1139430285
+		},
+		{
+			"code": 46,
+			"label": "OTROS PROCEDIMIENTOS EN INTESTINO",
+			"costo_procedimiento": 2066344,
+			"numero_personas_atendidas": 5,
+			"costo_proc_usuario": 413268.8
+		},
+		{
+			"code": 47,
+			"label": "PROCEDIMIENTOS EN APENDICE INCLUYE:RESTO O MUÑÒN DE APENDICE",
+			"costo_procedimiento": 591220,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 591220
+		},
+		{
+			"code": 48,
+			"label": "PROCEDIMIENTOS EN RECTO, RECTOSIGMOIDE Y TEJIDO PERIRRECTAL",
+			"costo_procedimiento": 3363734,
+			"numero_personas_atendidas": 20,
+			"costo_proc_usuario": 168186.7
+		},
+		{
+			"code": 49,
+			"label": "PROCEDIMIENTOS EN ANO",
+			"costo_procedimiento": 271200,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 271200
+		},
+		{
+			"code": 50,
+			"label": "PROCEDIMIENTOS EN HIGADO",
+			"costo_procedimiento": 3340521,
+			"numero_personas_atendidas": 10,
+			"costo_proc_usuario": 334052.1
+		},
+		{
+			"code": 51,
+			"label": "PROCEDIMIENTOS EN VESICULA BILIAR Y TRACTO BILIAR INCLUYE: PROCEDIMIENTOS SOBRE AMPOLLA HEPATOPANCREATICA(WATER), CONDUCTO CISTICO,CONDUCTO HEPATICO, CONDUCTO BILIAR INTRAHEPATICO, COLEDOCO, ESFINTER DE ODDI",
+			"costo_procedimiento": 11100577,
+			"numero_personas_atendidas": 7,
+			"costo_proc_usuario": 1585796.7142857143
+		},
+		{
+			"code": 53,
+			"label": "PROCEDIMIENTOS EN PARED ABDOMINAL INCLUYE: HERNIOPLASTIA, HERNIORRAFIA, HERNIOTOMIA Excluye: REDUCCIÓN MANUAL DE HERNIA (96.2.7)",
+			"costo_procedimiento": 4170385,
+			"numero_personas_atendidas": 8,
+			"costo_proc_usuario": 521298.125
+		},
+		{
+			"code": 54,
+			"label": "OTROS PROCEDIMIENTOS EN PARED ABDOMINAL INCLUYE: CAVIDAD PELVICA MASCULINA, EPIPLON, ESPACIO RETROPERITONEAL, FLANCOS, HIPOCONDRIOS, MESENTERIO, PERITONEO, REGION COSTAL, CRURAL, EPIGASTRICA,INGUINAL Y LUMBAR Excluye:  PIEL Y TEJIDO CELULAR SUBCUTANEO DE",
+			"costo_procedimiento": 37421236,
+			"numero_personas_atendidas": 72,
+			"costo_proc_usuario": 519739.3888888889
+		},
+		{
+			"code": 55,
+			"label": "PROCEDIMIENTOS EN RIÑÓN INCLUYE: PROCEDIMIENTOS SOBRE PELVIS RENAL SimultAneo: RESECCIÓN SIMULTANEA DE URETER(564) SI NO SE DESCRIBE COMO NEFROURETERECTOMIA(5551);CODIFICAR ADEMAS CUALQUIER ESCISIÓN SIMULTANEA DE GANGLIOS LINFATICOS (4053-4055) SEGMENTO D",
+			"costo_procedimiento": 37624494,
+			"numero_personas_atendidas": 36,
+			"costo_proc_usuario": 1045124.8333333334
+		},
+		{
+			"code": 56,
+			"label": "PROCEDIMIENTOS EN URETER Excluye: NEFROURETERECTOMÍA (55.51- 55.54) SimultAneo:    NEFRECTOMIA (55.5.0) SI NO SE DESCRIBE COMO NEFROURETERECTOMIA(55.5.1)",
+			"costo_procedimiento": 3030290,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 757572.5
+		},
+		{
+			"code": 57,
+			"label": "PROCEDIMIENTOS EN VEJIGA Excluye: AQUELLA COMO EXANTERACIÓN PELVICA EN MUJER(68.8); AQUELLA DESCRITA COMO URETROCISTOPEXIA (595);ESCISIÓN DE QUISTE URACAL DE PARED ABDOMINAL (54.3)",
+			"costo_procedimiento": 5216821,
+			"numero_personas_atendidas": 37,
+			"costo_proc_usuario": 140995.16216216216
+		},
+		{
+			"code": 58,
+			"label": "PROCEDIMIENTOS EN URETRA INCLUYE: PROCEDIMIENTOS EN GLANDULA BULBOURETRAL (GLANDULA DE COWPER) Y TEJIDO PERIURETRAL",
+			"costo_procedimiento": 2051370,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 512842.5
+		},
+		{
+			"code": 59,
+			"label": "OTROS PROCEDIMIENTOS EN EL TRACTO URINARIO SimultAneo: CODIFICAR TAMBIEN CUALQUIER URETROTOMIA (56.2)",
+			"costo_procedimiento": 64000,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 32000
+		},
+		{
+			"code": 60,
+			"label": "PROCEDIMIENTOS EN PRÓSTATA Y VESICULAS SEMINALES",
+			"costo_procedimiento": 16458124,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 5486041.333333333
+		},
+		{
+			"code": 61,
+			"label": "PROCEDIMIENTOS EN ESCROTO Y TÚNICA VAGINALIS",
+			"costo_procedimiento": 695636,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 347818
+		},
+		{
+			"code": 63,
+			"label": "PROCEDIMIENTOS EN CORDÓN ESPERMATICO, EPIDÍDIMO Y CONDUCTO DEFERENTE",
+			"costo_procedimiento": 6640265,
+			"numero_personas_atendidas": 6,
+			"costo_proc_usuario": 1106710.8333333333
+		},
+		{
+			"code": 64,
+			"label": "PROCEDIMIENTOS EN PENE INCLUYE: CUERPOS CAVERNOSOS, GLANDE Y PREPUCIO",
+			"costo_procedimiento": 232629,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 58157.25
+		},
+		{
+			"code": 66,
+			"label": "PROCEDIMIENTOS EN TROMPAS DE FALOPIO",
+			"costo_procedimiento": 7630782,
+			"numero_personas_atendidas": 16,
+			"costo_proc_usuario": 476923.875
+		},
+		{
+			"code": 67,
+			"label": "PROCEDIMIENTOS EN CUELLO UTERINO",
+			"costo_procedimiento": 1312511,
+			"numero_personas_atendidas": 11,
+			"costo_proc_usuario": 119319.18181818182
+		},
+		{
+			"code": 68,
+			"label": "PROCEDIMIENTOS EN ÚTERO SimultAneo: ESCISIÓN DE TROMPAS Y OVARIOS(653-655, 664-666), REPARACIÓN DE CISTO/RECTOCELE(705), REPARACIÓN DE SUELO PELVICO(707), COLOSTOMIA(461), DERIVACIÓN URINARIA(565-566), DISECCIÓN DE GANGLIOS LINFATICOS (403-405)",
+			"costo_procedimiento": 1613690,
+			"numero_personas_atendidas": 7,
+			"costo_proc_usuario": 230527.14285714287
+		},
+		{
+			"code": 69,
+			"label": "OTROS PROCEDIMIENTOS EN UTERO Y ESTRUCTURAS DE SOPORTE",
+			"costo_procedimiento": 4793866,
+			"numero_personas_atendidas": 16,
+			"costo_proc_usuario": 299616.625
+		},
+		{
+			"code": 70,
+			"label": "PROCEDIMIENTOS EN VAGINA Y FONDO DE SACO",
+			"costo_procedimiento": 9749171,
+			"numero_personas_atendidas": 99,
+			"costo_proc_usuario": 98476.47474747474
+		},
+		{
+			"code": 73,
+			"label": "OTROS PROCEDIMIENTOS DE ATENCIÓN E INDUCCIÓN DEL PARTO VAGINAL INCLUYE: TODAS LAS ACTIVIDADES DE ADAPTACIÓN NEONATAL INMEDIATA ESTABLECIDAS SEGÚN REGLAMENTACIÓN VIGENTE PARA LA  ATENCIÓN DEL (OS) RECIEN NACIDO (S).",
+			"costo_procedimiento": 1461632,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 730816
+		},
+		{
+			"code": 75,
+			"label": "OTROS PROCEDIMIENTOS E INTERVENCIONES OBSTETRICOS SimultAneo: CODIFICAR ADEMAS CUALQUIER ACCESO POR HISTEROTOMIA(680)",
+			"costo_procedimiento": 5267176,
+			"numero_personas_atendidas": 13,
+			"costo_proc_usuario": 405167.3846153846
+		},
+		{
+			"code": 76,
+			"label": "PROCEDIMIENTOS EN HUESOS Y ARTICULACIONES FACIALES + Excluye:  CRANEO (01); HUESOS NASALES (21); SENOS PARANASALES (22)",
+			"costo_procedimiento": 32772811,
+			"numero_personas_atendidas": 148,
+			"costo_proc_usuario": 221437.91216216216
+		},
+		{
+			"code": 77,
+			"label": "PROCEDIMIENTOS EN HUESOS NO FACIALES Excluye: ESTERNOTOMIA ACCESORIA DE OPERACIÓN TORACICA Y RESECCIÓNES COSTALES ACCESORIAS A OPERACIONES TORACICAS (OMITIR CÓDIGO); LAMINOTOMÍA O INCISIÓN EN VERTEBRA(03.01-03.09); LAMINECTOMIAS O HEMILAMINECTOMIAS(03.01-",
+			"costo_procedimiento": 257429708,
+			"numero_personas_atendidas": 411,
+			"costo_proc_usuario": 626349.6545012166
+		},
+		{
+			"code": 78,
+			"label": "OTROS PROCEDIMIENTOS EN HUESOS, EXCEPTO HUESOS FACIALES",
+			"costo_procedimiento": 50044923,
+			"numero_personas_atendidas": 122,
+			"costo_proc_usuario": 410204.2868852459
+		},
+		{
+			"code": 79,
+			"label": "REDUCCIÓN DE FRACTURA Y LUXACIÓN INCLUYE: APLICACIÓN DE ESCAYOLA O FERULA, REDUCCIÓN CON INSERCIÓN DE DISPOSITIVO DE TRACCION (ALAMBRE O PLACA DE KIRSCHNER, CLAVO DE STEINMANN) SimultAneo: APLICACIÓN DE DISPOSITIVO EXTERNO DE FIJACION (78.1)",
+			"costo_procedimiento": 42818023,
+			"numero_personas_atendidas": 58,
+			"costo_proc_usuario": 738241.775862069
+		},
+		{
+			"code": 80,
+			"label": "PROCEDIMIENTOS EN ESTRUCTURAS DE ARTICULACION INCLUYE: PROCEDIMIENTOS SOBRE CAPSULA, CARTÍLAGO, LIGAMENTO, MEMBRANA SINOVIAL Y MENISCO Excluye: ESCISIÓN DE EXTREMOS DE HUESOS Y CONDILECTOMIA O ESCISIÓN PARCIAL DE HUESO(77.80-77.89); ESCISIÓN QUISTE DE BAK",
+			"costo_procedimiento": 143052760,
+			"numero_personas_atendidas": 309,
+			"costo_proc_usuario": 462953.91585760517
+		},
+		{
+			"code": 81,
+			"label": "PROCEDIMIENTOS DE REPARACIÓN Y PLASTIAS EN ESTRUCTURAS DE LA ARTICULACION",
+			"costo_procedimiento": 1227510736,
+			"numero_personas_atendidas": 2135,
+			"costo_proc_usuario": 574946.4805620608
+		},
+		{
+			"code": 82,
+			"label": "PROCEDIMIENTOS EN TENDONES, MUSCULOS Y FASCIA DE MANO INCLUYE: APONEUROSIS, VAINA DE TENDÓN Y MEMBRANA SINOVIAL Excluye: AQUELLA NO QUIRURGICA O REALIZADA SOLO POR ESTIRADO O MANIPULACIÓN (93.26), DESCOMPRESIÓN DE TUNEL METACARPIANO(04.43) SimultAneo: COD",
+			"costo_procedimiento": 143872061,
+			"numero_personas_atendidas": 214,
+			"costo_proc_usuario": 672299.3504672897
+		},
+		{
+			"code": 83,
+			"label": "PROCEDIMIENTOS EN MÚSCULO, TENDÓN, FASCIA Y BURSA, EXCEPTO MANO + INCLUYE: PROCEDIMIENTOS SOBRE APONEUROSIS, MEMBRANA SINOVIAL DE BURSA Y ENVOLTURA O VAINA DE TENDON Excluye: EXTRACCIÓN POR ARTROTOMÍA DE CUERPOS EXTRAÑOS O MATERIAL DE SUTURA DE ARTICULACI",
+			"costo_procedimiento": 101348925,
+			"numero_personas_atendidas": 604,
+			"costo_proc_usuario": 167796.2334437086
+		},
+		{
+			"code": 84,
+			"label": "OTROS PROCEDIMIENTOS EN SISTEMA OSTEOMUSCULAR +",
+			"costo_procedimiento": 208577324,
+			"numero_personas_atendidas": 75,
+			"costo_proc_usuario": 2781030.986666667
+		},
+		{
+			"code": 85,
+			"label": "PROCEDIMIENTOS EN LA MAMA INCLUYE: PROCEDIMIENTOS SOBRE PIEL Y TEJIDO CELULAR SUBCUTANEO DE MAMA (FEMENINA O MASCULINA), SITIO DE MASTECTOMIA ANTERIOR Y REVISIÓNES DE MASTECTOMIA PREVIA",
+			"costo_procedimiento": 4852705,
+			"numero_personas_atendidas": 16,
+			"costo_proc_usuario": 303294.0625
+		},
+		{
+			"code": 86,
+			"label": "PROCEDIMIENTOS EN PIEL Y TEJIDO CELULAR SUBCUTANEO INCLUYE: PROCEDIMIENTOS SOBRE CUERPOS ADIPOSOS SUBCUTANEOS, FOLICULOS PILOSOS, FOSAS SUPERFICIALES,GLANDULAS SUDORIPARAS, PERINE MASCULINO Y UÑAS. EL AREA ESPECIAL COMPRENDE: CARA, CUERO CABELLUDO, CUELLO",
+			"costo_procedimiento": 245737329,
+			"numero_personas_atendidas": 1510,
+			"costo_proc_usuario": 162739.95298013245
+		},
+		{
+			"code": 87,
+			"label": "IMAGENOLOGIA RADIOLOGICA",
+			"costo_procedimiento": 1974913206,
+			"numero_personas_atendidas": 52929,
+			"costo_proc_usuario": 37312.49798787054
+		},
+		{
+			"code": 88,
+			"label": "IMAGENOLOGIA CON OTRAS TECNICAS NO RADIOLOGICAS INCLUYE: ESTUDIOS DE IMAGEN DIAGNOSTICA CON ULTRASONIDO O ULTRASONOGRAFIA O ECOGRAFIA, RESONANCIA MAGNETICA",
+			"costo_procedimiento": 3839510688,
+			"numero_personas_atendidas": 23812,
+			"costo_proc_usuario": 161242.67965731563
+		},
+		{
+			"code": 89,
+			"label": "CONSULTA, MEDICIONES ANATOMICAS, FISIOLOGICAS, EXAMENES MANUALES Y ANATOMOPATOLOGICOS",
+			"costo_procedimiento": 482709003,
+			"numero_personas_atendidas": 13367,
+			"costo_proc_usuario": 36111.9924440787
+		},
+		{
+			"code": 90,
+			"label": "LABORATORIO CLÍNICO",
+			"costo_procedimiento": 11437212385,
+			"numero_personas_atendidas": 625488,
+			"costo_proc_usuario": 18285.262682897195
+		},
+		{
+			"code": 91,
+			"label": "BANCO DE SANGRE Y MEDICINA TRANSFUSIONAL",
+			"costo_procedimiento": 63297725,
+			"numero_personas_atendidas": 510,
+			"costo_proc_usuario": 124113.1862745098
+		},
+		{
+			"code": 92,
+			"label": "MEDICINA NUCLEAR Y RADIOTERAPIA +",
+			"costo_procedimiento": 403382739,
+			"numero_personas_atendidas": 1703,
+			"costo_proc_usuario": 236865.96535525544
+		},
+		{
+			"code": 93,
+			"label": "PROCEDIMIENTOS E INTERVENCIONES EN DESEMPEÑO FUNCIONAL, REHABILITACION Y RELACIONADOS +",
+			"costo_procedimiento": 1271790679,
+			"numero_personas_atendidas": 12983,
+			"costo_proc_usuario": 97958.1513517677
+		},
+		{
+			"code": 94,
+			"label": "PROCEDIMIENTOS RELACIONADOS CON LA PSIQUE",
+			"costo_procedimiento": 3225540,
+			"numero_personas_atendidas": 35,
+			"costo_proc_usuario": 92158.28571428571
+		},
+		{
+			"code": 95,
+			"label": "PROCEDIMIENTOS E INTERVENCIONES NO QUIRURGICOS RELACIONADOS CON EL OJO Y OIDO +",
+			"costo_procedimiento": 39817719,
+			"numero_personas_atendidas": 982,
+			"costo_proc_usuario": 40547.57535641548
+		},
+		{
+			"code": 96,
+			"label": "INTUBACION E IRRIGACION NO QUIRURGICAS",
+			"costo_procedimiento": 13246152,
+			"numero_personas_atendidas": 232,
+			"costo_proc_usuario": 57095.48275862069
+		},
+		{
+			"code": 97,
+			"label": "SUSTITUCION Y EXTRACCIÓN DE DISPOSITIVOS TERAPEUTICOS",
+			"costo_procedimiento": 1713203,
+			"numero_personas_atendidas": 19,
+			"costo_proc_usuario": 90168.57894736843
+		},
+		{
+			"code": 98,
+			"label": "EXTRACCIÓN DE CUERPO EXTRAÑO Y CALCULO NO OPERATORIO",
+			"costo_procedimiento": 224919,
+			"numero_personas_atendidas": 13,
+			"costo_proc_usuario": 17301.46153846154
+		},
+		{
+			"code": 99,
+			"label": "PROCEDIMIENTOS PROFILACTICOS, TERAPEUTICOS Y OTROS PROCEDIMIENTOS MISCELANEOS + INCLUYE: PROCEDIMIENTOS E INTERVENCIONES PROFILACTICOS Y/O TERAPEUTICOS NO QUIRURGICOS RELACIONADOS CON LAS FASES DE PROMOCION DE LA SALUD, PREVENCION DE LA ENFERMEDAD Y REHAB",
+			"costo_procedimiento": 2431989663,
+			"numero_personas_atendidas": 11071,
+			"costo_proc_usuario": 219672.08590009937
+		},
+		{
+			"code": "A1",
+			"label": "PROMOCION O FOMENTO DE LA SALUD § INCLUYE:  LA INTEGRACION DE LAS ACCIONES QUE REALIZAN LA POBLACION, LOS SERVICIOS DE SALUD, LAS AUTORIDADES SANITARIAS, LOS SECTORES SOCIALES Y LOS PRODUCTIVOS CON EL OBJETO DE GARANTIZAR, MAS ALLA DE LA AUSENCIA DE ENFER",
+			"costo_procedimiento": 1497246,
+			"numero_personas_atendidas": 138,
+			"costo_proc_usuario": 10849.608695652174
+		},
+		{
+			"code": "A2",
+			"label": "PREVENCION Y CONTROL DE LA ENFERMEDAD § INCLUYE: AQUELLAS ACCIONES DIRIGIDAS A EVITAR QUE EL DAÑO EN LA SALUD O LA ENFERMEDAD APAREZCAN, SE PROLONGUEN, OCASIONEN DAÑOS MAYORES O GENEREN SECUELAS EVITABLES",
+			"costo_procedimiento": 57631310,
+			"numero_personas_atendidas": 119,
+			"costo_proc_usuario": 484296.7226890756
+		}
 	]
+
+	, 
+
+	"subgroup" : [
+		{
+			"code": 10,
+			"label": "INCISIÓN DE CRANEO (PUNCIÓN CRANEAL)",
+			"costo_procedimiento": 574260,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 143565
+		},
+		{
+			"code": 11,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN CRANEO, CEREBRO Y MENINGES CEREBRALES",
+			"costo_procedimiento": 4217,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 2108.5
+		},
+		{
+			"code": 13,
+			"label": "INCISIÓN DE CEREBRO Y MENINGES CEREBRALES",
+			"costo_procedimiento": 21900,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 21900
+		},
+		{
+			"code": 20,
+			"label": "CRANEOPLASTIA (REPARACIÓN EN CRANEO) Excluye: AQUELLA CON REPARACIÓN SIMULTANEA DE ENCEFALOCELE (02.1)",
+			"costo_procedimiento": 5974923,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 1991641
+		},
+		{
+			"code": 21,
+			"label": "REPARACIÓN DE MENINGES CEREBRALES",
+			"costo_procedimiento": 1372032,
+			"numero_personas_atendidas": 12,
+			"costo_proc_usuario": 114336
+		},
+		{
+			"code": 30,
+			"label": "EXPLORACION Y DESCOMPRESION DE ESTRUCTURAS DEL CANAL RAQUIDEO INCLUYE: SEGMENTOS CERVICAL, TORACICO, LUMBAR Y/O SACRO; AQUELLA PARA CORRECCIÓN DE CANAL ESTRECHO SEGMENTARIO",
+			"costo_procedimiento": 14216848,
+			"numero_personas_atendidas": 11,
+			"costo_proc_usuario": 1292440.7272727273
+		},
+		{
+			"code": 33,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN LA MEDULA ESPINAL O ESTRUCTURAS DEL CANAL RAQUIDEO",
+			"costo_procedimiento": 1257393,
+			"numero_personas_atendidas": 11,
+			"costo_proc_usuario": 114308.45454545454
+		},
+		{
+			"code": 34,
+			"label": "ESCISIÓN O ABLACIÒN DE LESIÓN DE LA MEDULA ESPINAL O DE MENINGES ESPINALES INCLUYE: POR TUMOR, ABSCESOS, HEMATOMAS O EMPIEMAS; RESECCIÓN PARCIAL O TOTAL EN SEGMENTOS CERVICALES, DORSALES, LUMBOSACROS O COCCIGEOS;",
+			"costo_procedimiento": 1317200,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 1317200
+		},
+		{
+			"code": 35,
+			"label": "PROCEDIMIENTOS PLASTICOS EN ESTRUCTURAS DEL CANAL RAQUIDEO INCLUYE: POR MENINGOCELE,MIELOMENINGOCELE, MIELOCELE, MENINGORADICULOCELE,DIASTEMATOMELIA, KLIPPEL FEIL, SIRINGOMIELIA CERVICAL ENTRE OTRAS CAUSAS.",
+			"costo_procedimiento": 7400,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 7400
+		},
+		{
+			"code": 36,
+			"label": "LISIS DE ADHERENCIAS DE MEDULA ESPINAL Y RAICES DE NERVIOS ESPINALES",
+			"costo_procedimiento": 1000000,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 1000000
+		},
+		{
+			"code": 38,
+			"label": "INYECCIÓN DE AGENTE DESTRUCTIVO EN EL CANAL ESPINAL + INCLUYE:      EN SEGMENTOS CERVICAL. TORACICO O LUMBAR",
+			"costo_procedimiento": 26597984,
+			"numero_personas_atendidas": 30,
+			"costo_proc_usuario": 886599.4666666667
+		},
+		{
+			"code": 39,
+			"label": "OTROS PROCEDIMIENTOS EN MEDULA ESPINAL Y ESTRUCTURAS DEL CANAL RAQUIDEO",
+			"costo_procedimiento": 12175618,
+			"numero_personas_atendidas": 12,
+			"costo_proc_usuario": 1014634.8333333334
+		},
+		{
+			"code": 40,
+			"label": "INCISIÓN, DIVISIÓN Y ESCISIÓN DE NERVIOS CRANEALES Y PERIFERICOS INCLUYE: CRANEOTOMIA COMO VÍA DE ABORDAJE Excluye: GANGLIONECTOMIA SIMPATICA (05.2)",
+			"costo_procedimiento": 13784,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 6892
+		},
+		{
+			"code": 41,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN SISTEMA NERVIOSO PERIFERICO",
+			"costo_procedimiento": 1714259,
+			"numero_personas_atendidas": 5,
+			"costo_proc_usuario": 342851.8
+		},
+		{
+			"code": 42,
+			"label": "ABLACIÓN DE NERVIOS CRANEALES Y PERIFERICOS",
+			"costo_procedimiento": 5641821,
+			"numero_personas_atendidas": 5,
+			"costo_proc_usuario": 1128364.2
+		},
+		{
+			"code": 43,
+			"label": "SUTURA DE NERVIOS CRANEALES Y PERIFERICOS",
+			"costo_procedimiento": 155681,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 51893.666666666664
+		},
+		{
+			"code": 44,
+			"label": "LISIS DE ADHERENCIAS Y DESCOMPRESION DE NERVIOS CRANEALES Y PERIFERICOS",
+			"costo_procedimiento": 2355767,
+			"numero_personas_atendidas": 6,
+			"costo_proc_usuario": 392627.8333333333
+		},
+		{
+			"code": 47,
+			"label": "NEUROPLASTIA CRANEAL O PERIFERICA",
+			"costo_procedimiento": 29,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 29
+		},
+		{
+			"code": 48,
+			"label": "INYECCIÓN DENTRO DE NERVIO CRANEAL O PERIFERICO",
+			"costo_procedimiento": 38774989,
+			"numero_personas_atendidas": 262,
+			"costo_proc_usuario": 147996.14122137404
+		},
+		{
+			"code": 51,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN NERVIOS O GANGLIOS SIMPATICOS",
+			"costo_procedimiento": 614970,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 307485
+		},
+		{
+			"code": 53,
+			"label": "INYECCIÓN EN NERVIO O GANGLIO SIMPATICO",
+			"costo_procedimiento": 72893925,
+			"numero_personas_atendidas": 472,
+			"costo_proc_usuario": 154436.28177966102
+		},
+		{
+			"code": 60,
+			"label": "INCISIÓN EN EL AREA TIROIDEA",
+			"costo_procedimiento": 921764,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 460882
+		},
+		{
+			"code": 61,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN GLANDULAS PARATIROIDES Y TIROIDES",
+			"costo_procedimiento": 5982660,
+			"numero_personas_atendidas": 37,
+			"costo_proc_usuario": 161693.51351351352
+		},
+		{
+			"code": 80,
+			"label": "INCISIÓN DE PARPADO",
+			"costo_procedimiento": 16767,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 16767
+		},
+		{
+			"code": 81,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN PARPADOS",
+			"costo_procedimiento": 38329,
+			"numero_personas_atendidas": 239,
+			"costo_proc_usuario": 160.3723849372385
+		},
+		{
+			"code": 82,
+			"label": "ESCISIÓN O ABLACIÓN DE LESIÓN O TEJIDO DE PARPADO INCLUYE: AQUELLA POR TUMOR BENIGNO O MALIGNO",
+			"costo_procedimiento": 660348,
+			"numero_personas_atendidas": 6,
+			"costo_proc_usuario": 110058
+		},
+		{
+			"code": 83,
+			"label": "REPARACIÓN DE BLEFAROPTOSIS Y RETRACCIÓN DE BORDES PALPEBRALES",
+			"costo_procedimiento": 1139,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 1139
+		},
+		{
+			"code": 89,
+			"label": "OTROS PROCEDIMIENTOS EN PARPADOS O CEJAS",
+			"costo_procedimiento": 106000,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 53000
+		},
+		{
+			"code": 94,
+			"label": "MANIPULACIÓN DEL CONDUCTO LAGRIMAL  INCLUYE: AQUELLA CON DILATACIÓN, EXTRACCIÓN DE CALCULOS  ENTRE OTRAS CAUSAS Excluye:    DACRIOCISTOGRAFIA (87.4.6)",
+			"costo_procedimiento": 90620,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 30206.666666666668
+		},
+		{
+			"code": 97,
+			"label": "REPARACIÓN DE PUNTO Y CANALÍCULO LAGRIMAL Excluye: REPARACIÓN DE PARPADO (08.8)",
+			"costo_procedimiento": 2190311,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 730103.6666666666
+		},
+		{
+			"code": 103,
+			"label": "ESCISIÓN O ABLACIÓN DE LESIÓN O TEJIDO DE CONJUNTIVA",
+			"costo_procedimiento": 2239479,
+			"numero_personas_atendidas": 8,
+			"costo_proc_usuario": 279934.875
+		},
+		{
+			"code": 104,
+			"label": "CONJUNTIVOPLASTIA INCLUYE: TRASPLANTE, PLASTIA O PERITOMÍA",
+			"costo_procedimiento": 1275000,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 1275000
+		},
+		{
+			"code": 107,
+			"label": "OTROS PROCEDIMIENTOS EN CONJUNTIVA",
+			"costo_procedimiento": 22380,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 7460
+		},
+		{
+			"code": 115,
+			"label": "REPARACIÓN DE CORNEA",
+			"costo_procedimiento": 1049551,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 349850.3333333333
+		},
+		{
+			"code": 117,
+			"label": "CIRUGIA RECONSTRUCTIVA Y REFRACTIVA EN CORNEA",
+			"costo_procedimiento": 1284,
+			"numero_personas_atendidas": 21,
+			"costo_proc_usuario": 61.142857142857146
+		},
+		{
+			"code": 121,
+			"label": "IRIDOTOMÍA E IRIDECTOMÍA SIMPLE Excluye: IRIDECTOMIA ASOCIADA CON : ESCISIÓN DE LESIÓN (12.4), EXTRACCIÓN DE CATARATA (13.1,13.2,13.6) FISTULIZACION ESCLERAL (12,6)",
+			"costo_procedimiento": 1923457,
+			"numero_personas_atendidas": 5,
+			"costo_proc_usuario": 384691.4
+		},
+		{
+			"code": 123,
+			"label": "IRIDOPLASTIA Y PUPILOPLASTIA",
+			"costo_procedimiento": 120,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 120
+		},
+		{
+			"code": 126,
+			"label": "FISTULIZACIÓN ESCLERAL",
+			"costo_procedimiento": 1430060,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 1430060
+		},
+		{
+			"code": 129,
+			"label": "OTROS PROCEDIMIENTOS EN IRIS, CUERPO CILIAR Y CAMARA ANTERIOR",
+			"costo_procedimiento": 628260,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 628260
+		},
+		{
+			"code": 132,
+			"label": "EXTRACCIÓN EXTRACAPSULAR DE CRISTALINO",
+			"costo_procedimiento": 4728565,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 2364282.5
+		},
+		{
+			"code": 136,
+			"label": "OTRA EXTRACCIÓN DE CATARATA",
+			"costo_procedimiento": 2466336,
+			"numero_personas_atendidas": 6,
+			"costo_proc_usuario": 411056
+		},
+		{
+			"code": 137,
+			"label": "INSERCIÓN DE CRISTALINO PROTESICO (PSEUDOCRISTALINO)",
+			"costo_procedimiento": 2185492,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 546373
+		},
+		{
+			"code": 138,
+			"label": "EXTRACCIÓN DE CRISTALINO IMPLANTADO",
+			"costo_procedimiento": 2502932,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 1251466
+		},
+		{
+			"code": 141,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN RETINA, COROIDES, VITREO Y CAMARA POSTERIOR",
+			"costo_procedimiento": 10270200,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 2567550
+		},
+		{
+			"code": 142,
+			"label": "ABLACIÓN DE LESIÓN EN RETINA Y COROIDES INCLUYE: AQUELLA  POR CORIORETINOPATÍA O LESIÓN CORIORETINAL AISLADA Excluye: AQUELLA PARA REPARACIÓN DE RETINA (14.3 ,14.5)",
+			"costo_procedimiento": 9741,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 9741
+		},
+		{
+			"code": 143,
+			"label": "REPARACIÓN DE RETINA + INCLUYE: REPARACIÓN DE DEFECTO RETINAL Excluye: REPARACIÓN DE DESPRENDIMIENTO RETINAL (14.5)",
+			"costo_procedimiento": 1816,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 1816
+		},
+		{
+			"code": 150,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN MUSCULOS Y TENDONES EXTRAOCULARES",
+			"costo_procedimiento": 33678,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 33678
+		},
+		{
+			"code": 164,
+			"label": "ENUCLEACIÓN DEL GLOBO",
+			"costo_procedimiento": 102528,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 102528
+		},
+		{
+			"code": 168,
+			"label": "REPARACIÓN DE LESIÓN DE GLOBO Y ÓRBITA",
+			"costo_procedimiento": 743263,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 371631.5
+		},
+		{
+			"code": 169,
+			"label": "OTROS PROCEDIMIENTOS EN ORBITA Y GLOBO",
+			"costo_procedimiento": 3989700,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 3989700
+		},
+		{
+			"code": 182,
+			"label": "ESCISIÓN DE TEJIDO O ABLACIÓN DE LESIÓN DE OÍDO EXTERNO",
+			"costo_procedimiento": 314100,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 314100
+		},
+		{
+			"code": 186,
+			"label": "RECONSTRUCCIÓN DE CONDUCTO AUDITIVO EXTERNO",
+			"costo_procedimiento": 2411,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 1205.5
+		},
+		{
+			"code": 187,
+			"label": "OTRA REPARACIÓN DEL OIDO EXTERNO INCLUYE: AQUELLA POR CUALQUIER CAUSA CONGENITA O ADQUIRIDA (TRAUMA)",
+			"costo_procedimiento": 68220,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 68220
+		},
+		{
+			"code": 190,
+			"label": "MOVILIZACIÓN DEL ESTRIBO Excluye: AQUELLA CON ESTAPEDECTOMIA SIMULTANEA (19.1)",
+			"costo_procedimiento": 9800,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 9800
+		},
+		{
+			"code": 199,
+			"label": "OTRA REPARACIÓN DE OIDO MEDIO",
+			"costo_procedimiento": 10200,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 5100
+		},
+		{
+			"code": 202,
+			"label": "INCISIÓN DE MASTOIDES Y OÍDO MEDIO",
+			"costo_procedimiento": 241276,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 60319
+		},
+		{
+			"code": 210,
+			"label": "CONTROL DE EPISTAXIS",
+			"costo_procedimiento": 272523,
+			"numero_personas_atendidas": 10,
+			"costo_proc_usuario": 27252.3
+		},
+		{
+			"code": 211,
+			"label": "INCISIÓN NASAL",
+			"costo_procedimiento": 87646,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 29215.333333333332
+		},
+		{
+			"code": 217,
+			"label": "REDUCCIÓN DE FRACTURA NASAL",
+			"costo_procedimiento": 470700,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 470700
+		},
+		{
+			"code": 218,
+			"label": "REPARACIÓN Y PLASTIAS EN LA PIRAMIDE NASAL INCLUYE: AQUELLA  PARA CORRECCIÓN DE APLANAMIENTO DE FOSAS NASALES, EN SILLA DE MONTAR, Y RINOPLASTIA SECUNDARIA",
+			"costo_procedimiento": 2157238,
+			"numero_personas_atendidas": 25,
+			"costo_proc_usuario": 86289.52
+		},
+		{
+			"code": 220,
+			"label": "ASPIRACIÓN Y LAVADO DE SENO MAXILAR",
+			"costo_procedimiento": 182340,
+			"numero_personas_atendidas": 409,
+			"costo_proc_usuario": 445.81907090464546
+		},
+		{
+			"code": 221,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN SENOS PARANASALES",
+			"costo_procedimiento": 9800024,
+			"numero_personas_atendidas": 7,
+			"costo_proc_usuario": 1400003.4285714286
+		},
+		{
+			"code": 222,
+			"label": "ANTROTOMÍA INTRANASAL",
+			"costo_procedimiento": 1650894,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 1650894
+		},
+		{
+			"code": 226,
+			"label": "OTRA SINUSECTOMÍA (ESCISIÓN DE LESION) PARANASAL",
+			"costo_procedimiento": 4107503,
+			"numero_personas_atendidas": 8,
+			"costo_proc_usuario": 513437.875
+		},
+		{
+			"code": 230,
+			"label": "EXODONCIA SIMPLE (EXTRACCIÓN DE DIENTE CON FORCEPS)",
+			"costo_procedimiento": 2348962,
+			"numero_personas_atendidas": 129,
+			"costo_proc_usuario": 18209.007751937985
+		},
+		{
+			"code": 231,
+			"label": "EXODONCIA QUIRURGICA (EXTRACCIÓN QUIRURGICA DE DIENTES)",
+			"costo_procedimiento": 2643533,
+			"numero_personas_atendidas": 12,
+			"costo_proc_usuario": 220294.41666666666
+		},
+		{
+			"code": 232,
+			"label": "RESTAURACION DE DIENTES MEDIANTE OBTURACIONES [OPERATORIA DENTAL]",
+			"costo_procedimiento": 15487658,
+			"numero_personas_atendidas": 381,
+			"costo_proc_usuario": 40650.02099737533
+		},
+		{
+			"code": 234,
+			"label": "INSERCIÓN DE CORONAS Y PROTESIS",
+			"costo_procedimiento": 16968800,
+			"numero_personas_atendidas": 6,
+			"costo_proc_usuario": 2828133.3333333335
+		},
+		{
+			"code": 236,
+			"label": "IMPLANTE DENTAL PROTESICO",
+			"costo_procedimiento": 14460000,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 14460000
+		},
+		{
+			"code": 237,
+			"label": "TERAPIA DE CONDUCTO RADICULAR Y PROCEDIMIENTOS ENDODONTICOS",
+			"costo_procedimiento": 1698104,
+			"numero_personas_atendidas": 22,
+			"costo_proc_usuario": 77186.54545454546
+		},
+		{
+			"code": 240,
+			"label": "INCISIÓN DE ENCÍA O HUESO ALVEOLAR",
+			"costo_procedimiento": 1146,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 382
+		},
+		{
+			"code": 241,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN DIENTES, ENCIAS Y ALVEOLOS",
+			"costo_procedimiento": 192908,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 192908
+		},
+		{
+			"code": 242,
+			"label": "REPARACIÓN Y PLASTIA PERIODONTAL [CIRUGIA PERIODONTAL] +",
+			"costo_procedimiento": 1194800,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 1194800
+		},
+		{
+			"code": 244,
+			"label": "ESCISIÓN DE LESIÓN MAXILAR DE ORIGEN DENTARIO",
+			"costo_procedimiento": 248738,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 248738
+		},
+		{
+			"code": 247,
+			"label": "APLICACIÓN DE DISPOSITIVO ORTODONTICO [ORTODONCIA Y ORTOPEDIA] INCLUYE: ESTUDIO COMPLETO",
+			"costo_procedimiento": 1194000,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 1194000
+		},
+		{
+			"code": 248,
+			"label": "OTROS PROCEDIMIENTOS ORTODÓNTICOS",
+			"costo_procedimiento": 219200,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 219200
+		},
+		{
+			"code": 250,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN LENGUA",
+			"costo_procedimiento": 476862,
+			"numero_personas_atendidas": 6,
+			"costo_proc_usuario": 79477
+		},
+		{
+			"code": 261,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN GLANDULAS Y CONDUCTOS SALIVALES",
+			"costo_procedimiento": 101463764,
+			"numero_personas_atendidas": 566,
+			"costo_proc_usuario": 179264.60070671377
+		},
+		{
+			"code": 262,
+			"label": "ESCISIÓN DE LESIÓN DE GLANDULA SALIVAL",
+			"costo_procedimiento": 205487,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 205487
+		},
+		{
+			"code": 263,
+			"label": "SIALOADENECTOMÍA",
+			"costo_procedimiento": 1708008,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 1708008
+		},
+		{
+			"code": 264,
+			"label": "REPARACIÓN DE GLANDULAS O CONDUCTOS SALIVALES",
+			"costo_procedimiento": 244681,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 244681
+		},
+		{
+			"code": 271,
+			"label": "INCISIÓN DE PALADAR",
+			"costo_procedimiento": 18254,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 18254
+		},
+		{
+			"code": 272,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN CAVIDAD ORAL",
+			"costo_procedimiento": 306834,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 102278
+		},
+		{
+			"code": 274,
+			"label": "ESCISIÓN DE OTRAS PARTES DE LA BOCA",
+			"costo_procedimiento": 1589238,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 794619
+		},
+		{
+			"code": 275,
+			"label": "REPARACIÓN PLASTICA DE BOCA Excluye: PALATOPLASTIA (27.6)",
+			"costo_procedimiento": 833599,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 833599
+		},
+		{
+			"code": 277,
+			"label": "PROCEDIMIENTOS EN ÚVULA",
+			"costo_procedimiento": 216,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 216
+		},
+		{
+			"code": 290,
+			"label": "FARINGOTOMÍA Excluye: EXTRACCCION DE CUERPO EXTRAÑO SIN INCISIÓN (98.1.3); INCISIÓN Y DRENAJE DE AMIGDALA Y ESTRUCTURAS PERIAMIGDALARES (28.0)",
+			"costo_procedimiento": 1223100,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 1223100
+		},
+		{
+			"code": 291,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN FARINGE",
+			"costo_procedimiento": 157400,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 78700
+		},
+		{
+			"code": 293,
+			"label": "ESCISIÓN O ABLACIÓN DE LESIÓN O TEJIDO DE FARINGE",
+			"costo_procedimiento": 1440,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 360
+		},
+		{
+			"code": 295,
+			"label": "OTRA REPARACIÓN DE FARINGE (CON COLGAJOS LIBRES O PEDICULADOS) +",
+			"costo_procedimiento": 4084,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 1361.3333333333333
+		},
+		{
+			"code": 296,
+			"label": "OTROS PROCEDIMIENTOS EN FARINGE",
+			"costo_procedimiento": 105095,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 26273.75
+		},
+		{
+			"code": 300,
+			"label": "ESCISIÓN O ABLACIÒN DE LESIÓN O TEJIDO DE LARINGE INCLUYE: AQUELLA  POR LESIONES EN LARINGE O CUERDA VOCAL (BORDE LIBRE O INTRACORDAL): PAPILOPILOMATOSIS LARINGEA, MEMBRANA CONGENITA LARINGEA; QUISTE SUBMUCOSO, NODULO, PÓLIPO, GRANULOMA DE PLIEGUE VOCAL,",
+			"costo_procedimiento": 462,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 115.5
+		},
+		{
+			"code": 310,
+			"label": "INYECCIÓN EN LARINGE",
+			"costo_procedimiento": 260000,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 130000
+		},
+		{
+			"code": 311,
+			"label": "TRAQUEOTOMÍAS Y TRAQUEOSTOMIAS",
+			"costo_procedimiento": 668315,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 668315
+		},
+		{
+			"code": 313,
+			"label": "EXTRACCIÓN DE CUERPO EXTRAÑO DE TRAQUEA O LARINGE",
+			"costo_procedimiento": 48268,
+			"numero_personas_atendidas": 11,
+			"costo_proc_usuario": 4388
+		},
+		{
+			"code": 314,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN LARINGE Y TRAQUEA",
+			"costo_procedimiento": 49704831,
+			"numero_personas_atendidas": 21,
+			"costo_proc_usuario": 2366896.714285714
+		},
+		{
+			"code": 316,
+			"label": "REPARACIÓN DE LARINGE",
+			"costo_procedimiento": 45846,
+			"numero_personas_atendidas": 9,
+			"costo_proc_usuario": 5094
+		},
+		{
+			"code": 322,
+			"label": "ESCISIÓN LOCAL O ABLACIÓN DE LESIÓN O TEJIDO PULMONAR INCLUYE: AQUELLA  POR ENFISEMA PULMONAR ENTRE OTRAS CAUSAS",
+			"costo_procedimiento": 6283935,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 6283935
+		},
+		{
+			"code": 323,
+			"label": "RESECCIÓN SEGMENTARIA DE PULMON",
+			"costo_procedimiento": 15799338,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 7899669
+		},
+		{
+			"code": 332,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN PULMON Y BRONQUIO",
+			"costo_procedimiento": 20495458,
+			"numero_personas_atendidas": 44,
+			"costo_proc_usuario": 465805.86363636365
+		},
+		{
+			"code": 340,
+			"label": "INCISIÓN DE PARED TORACCICA Y PLEURAL Excluye: AQUELLA EMPLEADA COMO VÍA DE ABORDAJE QUIRURGICO-OMITIR CODIGO",
+			"costo_procedimiento": 5987100,
+			"numero_personas_atendidas": 23,
+			"costo_proc_usuario": 260308.69565217392
+		},
+		{
+			"code": 341,
+			"label": "INCISIÓN DE MEDIASTINO",
+			"costo_procedimiento": 250307,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 250307
+		},
+		{
+			"code": 342,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN PARED TORACCICA, PLEURA, MEDIASTINO Y DIAFRAGMA",
+			"costo_procedimiento": 2406171,
+			"numero_personas_atendidas": 7,
+			"costo_proc_usuario": 343738.71428571426
+		},
+		{
+			"code": 360,
+			"label": "ABLACIÒN O ELIMINACION DE OBSTRUCCION DE ARTERIA CON O SIN IMPLANTE DE PROTESIS INTRACORONARIA (STENT)",
+			"costo_procedimiento": 6859000,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 2286333.3333333335
+		},
+		{
+			"code": 361,
+			"label": "ANASTOMOSIS PARA REVASCULARIZACIÓN MIOCARDICA SimultAneo:  CUANDO SE REALICE DERIVACIÓN CARDIOPULMONAR [CIRCULACION EXTRACORPOREA] (39.6.1)",
+			"costo_procedimiento": 1038240,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 519120
+		},
+		{
+			"code": 370,
+			"label": "PROCEDIMIENTOS EN EL PERICARDIO",
+			"costo_procedimiento": 241830,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 241830
+		},
+		{
+			"code": 372,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN CORAZON Y PERICARDIO",
+			"costo_procedimiento": 9204914,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 3068304.6666666665
+		},
+		{
+			"code": 377,
+			"label": "IMPLANTACION,REVISIÓN,SUSTITUCION Y ELIMINACION DE ELECTRODOS DE MARCAPASO; IMPLANTACIÓN DE SISTEMA DE MARCAPASO TEMPORAL; O REVISIÓN DE BOLSA SimultAneo:  CUALQUIER IMPLANTE DE MARCAPASOS (37.8)",
+			"costo_procedimiento": 4176800,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 4176800
+		},
+		{
+			"code": 378,
+			"label": "INSERCIÓN, SUSTITUCION, REVISIÓN Y ELIMINACION DE APARATOS MARCAPASOS",
+			"costo_procedimiento": 3170369,
+			"numero_personas_atendidas": 10,
+			"costo_proc_usuario": 317036.9
+		},
+		{
+			"code": 379,
+			"label": "OTROS PROCEDIMIENTOS EN CORAZON Y PERICARDIO",
+			"costo_procedimiento": 2006174,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 668724.6666666666
+		},
+		{
+			"code": 380,
+			"label": "TROMBOEMBOLECTOMIA INCLUYE:  TROMBECTOMIA, TROMBOLISIS, EMBOLECTOMIA",
+			"costo_procedimiento": 321800,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 107266.66666666667
+		},
+		{
+			"code": 382,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN VASOS SANGUINEOS",
+			"costo_procedimiento": 1972798,
+			"numero_personas_atendidas": 51,
+			"costo_proc_usuario": 38682.313725490196
+		},
+		{
+			"code": 383,
+			"label": "RESECCIÓN DE VASO CON ANASTOMOSIS INCLUYE: ANGIECTOMIA, ESCISIÓN DE LESIÓN EN VASO SANGUINEO (ANEURISMAS, FISTULAS AV MALFORMACION AV) CONGENITA O ADQUIRIDA Excluye: REVASCULARIZACIÓN CARDIACA (36.2)",
+			"costo_procedimiento": 3749753,
+			"numero_personas_atendidas": 124,
+			"costo_proc_usuario": 30239.9435483871
+		},
+		{
+			"code": 384,
+			"label": "RESECCIÓN DE VASO CON SUSTITUCION INCLUYE: ANGIECTOMIA CON SUSTITUCION, ESCISIÓN DE LESIÓN EN VASO (ANEURISMAS, FISTULAS AV) CONGENITAS O ADQUIRIDAS; RECONSTRUCCION SIMULTANEA DE VASO SANGUINEO CON INJERTO O PARCHE SINTETICO",
+			"costo_procedimiento": 160022,
+			"numero_personas_atendidas": 7,
+			"costo_proc_usuario": 22860.285714285714
+		},
+		{
+			"code": 385,
+			"label": "OCLUSIÓN, PINZAMIENTO O LIGADURA DE VASOS SANGUINEOS INCLUYE: AQUELLA POR ANEURISMA, MALFORMACION AV, FISTULA AV U OTRA LESIÓN DE VASO SANGUINEO, EMBOLIZACION VÍA ENDOVASCULAR",
+			"costo_procedimiento": 1601195,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 800597.5
+		},
+		{
+			"code": 388,
+			"label": "LIGADURA Y ESCISIÓN DE VENAS VARICOSAS Excluye: LIGADURA DE VARICES ESOFAGICAS (42.9.1) Y GASTRICAS (44.9.1)",
+			"costo_procedimiento": 4620,
+			"numero_personas_atendidas": 9,
+			"costo_proc_usuario": 513.3333333333334
+		},
+		{
+			"code": 389,
+			"label": "PUNCIÓN DE VASO Excluye: AQUELLA PARA MONITORIZACION CIRCULATORIA (89.6)",
+			"costo_procedimiento": 18407485,
+			"numero_personas_atendidas": 82,
+			"costo_proc_usuario": 224481.5243902439
+		},
+		{
+			"code": 392,
+			"label": "RECONSTRUCCION, ANASTOMOSIS O DERIVACIÓN O PUENTES DE VASOS NO CORONARIOS",
+			"costo_procedimiento": 1166865,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 291716.25
+		},
+		{
+			"code": 394,
+			"label": "REVISIÓN DE PROCEDIMIENTO VASCULAR",
+			"costo_procedimiento": 87500,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 87500
+		},
+		{
+			"code": 395,
+			"label": "OTRA REPARACIÓN O RECONSTRUCCION DE VASOS SANGUINEOS",
+			"costo_procedimiento": 2236497,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 745499
+		},
+		{
+			"code": 399,
+			"label": "OTROS PROCEDIMIENTOS EN VASOS SANGUINEOS",
+			"costo_procedimiento": 8388555,
+			"numero_personas_atendidas": 8,
+			"costo_proc_usuario": 1048569.375
+		},
+		{
+			"code": 401,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN ESTRUCTURAS LINFATICAS",
+			"costo_procedimiento": 2894185,
+			"numero_personas_atendidas": 6,
+			"costo_proc_usuario": 482364.1666666667
+		},
+		{
+			"code": 402,
+			"label": "ESCISIÓN SIMPLE DE ESTRUCTURA LINFATICA",
+			"costo_procedimiento": 1249158,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 1249158
+		},
+		{
+			"code": 406,
+			"label": "PROCEDIMIENTOS EN CONDUCTO TORACICO",
+			"costo_procedimiento": 206062,
+			"numero_personas_atendidas": 5,
+			"costo_proc_usuario": 41212.4
+		},
+		{
+			"code": 413,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN MEDULA OSEA Y BAZO",
+			"costo_procedimiento": 4948797,
+			"numero_personas_atendidas": 18,
+			"costo_proc_usuario": 274933.1666666667
+		},
+		{
+			"code": 419,
+			"label": "OTROS PROCEDIMIENTOS EN BAZO Y MEDULA OSEA",
+			"costo_procedimiento": 685720,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 685720
+		},
+		{
+			"code": 422,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN ESÓFAGO",
+			"costo_procedimiento": 11949538,
+			"numero_personas_atendidas": 101,
+			"costo_proc_usuario": 118312.25742574257
+		},
+		{
+			"code": 429,
+			"label": "OTROS PROCEDIMIENTOS DE ESÓFAGO",
+			"costo_procedimiento": 1331314,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 332828.5
+		},
+		{
+			"code": 431,
+			"label": "GASTROSTOMIA",
+			"costo_procedimiento": 437300,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 437300
+		},
+		{
+			"code": 434,
+			"label": "ESCISIÓN LOCAL ENDOSCÓPICA DE LESIÓN O TEJIDO DE ESTOMAGO",
+			"costo_procedimiento": 702155,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 351077.5
+		},
+		{
+			"code": 441,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN EL ESTOMAGO",
+			"costo_procedimiento": 1564841,
+			"numero_personas_atendidas": 10,
+			"costo_proc_usuario": 156484.1
+		},
+		{
+			"code": 444,
+			"label": "CONTROL DE HEMORRAGIA Y SUTURA DE ÚLCERA GASTRICA O DUODENAL",
+			"costo_procedimiento": 23971944,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 7990648
+		},
+		{
+			"code": 451,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN EL INTESTINO DELGADO",
+			"costo_procedimiento": 274930722,
+			"numero_personas_atendidas": 984,
+			"costo_proc_usuario": 279401.14024390245
+		},
+		{
+			"code": 452,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN INTESTINO GRUESO",
+			"costo_procedimiento": 207959307,
+			"numero_personas_atendidas": 346,
+			"costo_proc_usuario": 601038.4595375722
+		},
+		{
+			"code": 454,
+			"label": "ESCISIÓN LOCAL DE LESIÓN O TEJIDO DE INTESTINO GRUESO",
+			"costo_procedimiento": 1151101,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 383700.3333333333
+		},
+		{
+			"code": 457,
+			"label": "RESECCIÓN PARCIAL DE INTESTINO GRUESO",
+			"costo_procedimiento": 1557700,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 1557700
+		},
+		{
+			"code": 460,
+			"label": "EXTERIORIZACION DE INTESTINO (ENTEROSTOMIA)",
+			"costo_procedimiento": 246000,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 123000
+		},
+		{
+			"code": 468,
+			"label": "DILATACIÓN Y OTRA MANIPULACION DE INTESTINO",
+			"costo_procedimiento": 1707154,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 853577
+		},
+		{
+			"code": 469,
+			"label": "OTROS PROCEDIMIENTOS EN EL INTESTINO",
+			"costo_procedimiento": 113190,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 113190
+		},
+		{
+			"code": 471,
+			"label": "RESECCIÓN DE APENDICE",
+			"costo_procedimiento": 591220,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 591220
+		},
+		{
+			"code": 482,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN RECTO, RECTOSIGMOIDE Y TEJIDO PERIRRECTAL",
+			"costo_procedimiento": 3363734,
+			"numero_personas_atendidas": 20,
+			"costo_proc_usuario": 168186.7
+		},
+		{
+			"code": 492,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN ANO Y TEJIDO PERIANAL",
+			"costo_procedimiento": 271200,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 271200
+		},
+		{
+			"code": 501,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN HIGADO",
+			"costo_procedimiento": 3019827,
+			"numero_personas_atendidas": 9,
+			"costo_proc_usuario": 335536.3333333333
+		},
+		{
+			"code": 505,
+			"label": "TRASPLANTE DE HÍGADO",
+			"costo_procedimiento": 320694,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 320694
+		},
+		{
+			"code": 510,
+			"label": "COLECISTOTOMIA Y COLECISTOSTOMIA",
+			"costo_procedimiento": 198824,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 198824
+		},
+		{
+			"code": 511,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN LA VÍA BILIAR PRINCIPAL",
+			"costo_procedimiento": 151400,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 151400
+		},
+		{
+			"code": 512,
+			"label": "RESECCIÓN DE LESIÓN O TEJIDO DE VESICULA BILIAR Y VÍAS BILIARES",
+			"costo_procedimiento": 10750353,
+			"numero_personas_atendidas": 5,
+			"costo_proc_usuario": 2150070.6
+		},
+		{
+			"code": 530,
+			"label": "REPARACIÓN UNILATERAL DE HERNIA INGUINAL",
+			"costo_procedimiento": 2314927,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 771642.3333333334
+		},
+		{
+			"code": 534,
+			"label": "REPARACIÓN DE HERNIA UMBILICAL",
+			"costo_procedimiento": 1317806,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 439268.6666666667
+		},
+		{
+			"code": 535,
+			"label": "REPARACIÓN DE OTRA HERNIA DE PARED ABDOMINAL ANTERIOR",
+			"costo_procedimiento": 537652,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 268826
+		},
+		{
+			"code": 541,
+			"label": "LAPAROTOMÍA Excluye: COMO VÍA DE ACCESO QUIRURGICO – OMITIR CODIGO",
+			"costo_procedimiento": 24375645,
+			"numero_personas_atendidas": 12,
+			"costo_proc_usuario": 2031303.75
+		},
+		{
+			"code": 542,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS DE LA REGION ABDOMINAL INCLUYE:PERITONEO",
+			"costo_procedimiento": 1280204,
+			"numero_personas_atendidas": 5,
+			"costo_proc_usuario": 256040.8
+		},
+		{
+			"code": 545,
+			"label": "LISIS DE ADHERENCIAS PERITONEALES",
+			"costo_procedimiento": 185100,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 185100
+		},
+		{
+			"code": 547,
+			"label": "OTRA REPARACIÓN DE PARED ABDOMINAL Y PERITONEO",
+			"costo_procedimiento": 55780,
+			"numero_personas_atendidas": 19,
+			"costo_proc_usuario": 2935.7894736842104
+		},
+		{
+			"code": 549,
+			"label": "OTROS PROCEDIMIENTOS DE LA REGION ABDOMINAL",
+			"costo_procedimiento": 11524507,
+			"numero_personas_atendidas": 35,
+			"costo_proc_usuario": 329271.6285714286
+		},
+		{
+			"code": 550,
+			"label": "NEFROTOMÍA Y NEFROSTOMIA Excluye: DRENAJE POR ANASTOMOSIS(55.86), ASPIRACIÓN(55.92) E INCISIÓN DE PELVIS RENAL(55.11-55.12)",
+			"costo_procedimiento": 493,
+			"numero_personas_atendidas": 12,
+			"costo_proc_usuario": 41.083333333333336
+		},
+		{
+			"code": 552,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN RIÑÓN Y TEJIDOS PERIRENALES",
+			"costo_procedimiento": 3953831,
+			"numero_personas_atendidas": 10,
+			"costo_proc_usuario": 395383.1
+		},
+		{
+			"code": 553,
+			"label": "ESCISIÓN LOCAL DE LESIÓN RENAL",
+			"costo_procedimiento": 1063618,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 1063618
+		},
+		{
+			"code": 554,
+			"label": "NEFRECTOMÍA PARCIAL  Excluye: NEFROURETERECTOMIA(55.5.1)",
+			"costo_procedimiento": 40800,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 20400
+		},
+		{
+			"code": 556,
+			"label": "TRASPLANTE DE RIÑÓN",
+			"costo_procedimiento": 28098848,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 14049424
+		},
+		{
+			"code": 558,
+			"label": "OTRAS REPARACIONES EN RIÑÓN",
+			"costo_procedimiento": 1403000,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 1403000
+		},
+		{
+			"code": 559,
+			"label": "OTROS PROCEDIMIENTOS EN RIÑÓN Excluye: LIBERACIÓN O LISIS DE ADHERENCIAS PERIRENALES O PERIURETERALES(59.02, 5903)",
+			"costo_procedimiento": 3063904,
+			"numero_personas_atendidas": 8,
+			"costo_proc_usuario": 382988
+		},
+		{
+			"code": 560,
+			"label": "REMOCIÓN TRANSURETRAL [ENDOSCÓPICA] DE OBSTRUCCION EN URETER O PELVIS RENAL Excluye: AQUELLA MEDIANTE INCISIÓN(55.1.1-56.2)",
+			"costo_procedimiento": 2936295,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 1468147.5
+		},
+		{
+			"code": 565,
+			"label": "FORMACIÓN DE DERIVACIÓNES URINARIAS",
+			"costo_procedimiento": 60000,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 60000
+		},
+		{
+			"code": 569,
+			"label": "OTROS PROCEDIMIENTOS EN URETER",
+			"costo_procedimiento": 33995,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 33995
+		},
+		{
+			"code": 571,
+			"label": "CISTOTOMÍAS Y CISTOSTOMÍAS Excluye:CISTOTOMIAS Y CISTOSTOMÍAS COMO ACCESO OPERATORIO- OMITIR CÓDIGO",
+			"costo_procedimiento": 52700,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 52700
+		},
+		{
+			"code": 573,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN VEJIGA",
+			"costo_procedimiento": 4930781,
+			"numero_personas_atendidas": 21,
+			"costo_proc_usuario": 234799.09523809524
+		},
+		{
+			"code": 579,
+			"label": "OTROS PROCEDIMIENTOS EN VEJIGA",
+			"costo_procedimiento": 233340,
+			"numero_personas_atendidas": 15,
+			"costo_proc_usuario": 15556
+		},
+		{
+			"code": 583,
+			"label": "ESCISIÓN O ABLACIÓN DE LESIÓN O TEJIDO URETRAL Excluye: BIOPSIA DE URETRA (58.23), ESCISIÓN DE GLANDULA BULBOURETRAL (58.91) FISTULECTOMÍA(58.43), URETRECTOMÍA COMO PARTE DE CISTECTOMIA RADFICAL O TOTAL Y EXANTERACIÓN PELVICA(57.70, 57.71)",
+			"costo_procedimiento": 272990,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 272990
+		},
+		{
+			"code": 585,
+			"label": "LIBERACIÓN DE ESTENOSIS URETRAL",
+			"costo_procedimiento": 294126,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 294126
+		},
+		{
+			"code": 586,
+			"label": "DILATACIÓN DE URETRA INCLUYE: CALIBRACIÓN URETRAL",
+			"costo_procedimiento": 1484254,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 742127
+		},
+		{
+			"code": 599,
+			"label": "OTROS PROCEDIMIENTOS EN SISTEMA URINARIO Excluye: EXTRACCIÓN  NO OPERATORIA DE DISPOSITIVO TERAPEUTICO(97.6)",
+			"costo_procedimiento": 64000,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 32000
+		},
+		{
+			"code": 601,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN PRÓSTATA Y VESÍCULAS SEMINALES",
+			"costo_procedimiento": 380,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 380
+		},
+		{
+			"code": 603,
+			"label": "ADENOMECTOMÍA SUPRAPUBICA Excluye: PROSTATECTOMÍA RADICAL (60.5)",
+			"costo_procedimiento": 8461328,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 8461328
+		},
+		{
+			"code": 609,
+			"label": "OTROS PROCEDIMIENTOS EN PRÓSTATA",
+			"costo_procedimiento": 7996416,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 7996416
+		},
+		{
+			"code": 610,
+			"label": "INCISIÓN DE ESCROTO Y TUNICA VAGINALIS",
+			"costo_procedimiento": 695636,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 347818
+		},
+		{
+			"code": 631,
+			"label": "ESCISIÓN DE VARICOCELE E HIDROCELE DE CORDÓN ESPERMATICO",
+			"costo_procedimiento": 1113510,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 1113510
+		},
+		{
+			"code": 637,
+			"label": "VASECTOMÍA Y LIGADURA DE CONDUCTO DEFERENTE",
+			"costo_procedimiento": 5286962,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 1321740.5
+		},
+		{
+			"code": 639,
+			"label": "OTROS PROCEDIMIENTOS EN CORDÓN ESPERMATICO, EPIDÍDIMO Y CONDUCTO DEFERENTE",
+			"costo_procedimiento": 239793,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 239793
+		},
+		{
+			"code": 641,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN PENE",
+			"costo_procedimiento": 34200,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 34200
+		},
+		{
+			"code": 644,
+			"label": "CORRECCIONES Y PLASTIAS EN PENE",
+			"costo_procedimiento": 198429,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 66143
+		},
+		{
+			"code": 663,
+			"label": "OCLUSIÓN O ABLACIÒN BILATERAL DE TROMPAS DE FALOPIO  Excluye: ABLACIÒN U OCLUSIÓN ENDOSCÓPICA DE TROMPAS DE FALOPIO (66.2)",
+			"costo_procedimiento": 7630782,
+			"numero_personas_atendidas": 16,
+			"costo_proc_usuario": 476923.875
+		},
+		{
+			"code": 671,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN CUELLO UTERINO (CERVIX)",
+			"costo_procedimiento": 555448,
+			"numero_personas_atendidas": 5,
+			"costo_proc_usuario": 111089.6
+		},
+		{
+			"code": 672,
+			"label": "CONIZACIÓN Excluye: CRIOCAUTERIZACIÓN Y ELECTROCAUTERIZACIÓN (67.3)",
+			"costo_procedimiento": 360135,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 360135
+		},
+		{
+			"code": 673,
+			"label": "OTRA ESCISIÓN O ABLACIÓN DE TEJIDOS DE CUELLO UTERINO (CERVIX)",
+			"costo_procedimiento": 396928,
+			"numero_personas_atendidas": 5,
+			"costo_proc_usuario": 79385.6
+		},
+		{
+			"code": 681,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN ÚTERO Y ESTRUCTURAS DE SOPORTE",
+			"costo_procedimiento": 550072,
+			"numero_personas_atendidas": 6,
+			"costo_proc_usuario": 91678.66666666667
+		},
+		{
+			"code": 683,
+			"label": "HISTERECTOMÍA SUBTOTAL ABDOMINAL",
+			"costo_procedimiento": 1063618,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 1063618
+		},
+		{
+			"code": 690,
+			"label": "DILATACIÓN Y LEGRADO DE ÚTERO",
+			"costo_procedimiento": 1763528,
+			"numero_personas_atendidas": 6,
+			"costo_proc_usuario": 293921.3333333333
+		},
+		{
+			"code": 691,
+			"label": "ESCISIÓN Y ABLACIÒN DE LESIÓN O TEJIDO EN ÚTERO Y ESTRUCTURAS DE SOPORTE",
+			"costo_procedimiento": 1317800,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 658900
+		},
+		{
+			"code": 697,
+			"label": "INSERCIÓN DE DISPOSITIVO INTRAUTERINO ANTICONCEPTIVO",
+			"costo_procedimiento": 205801,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 51450.25
+		},
+		{
+			"code": 699,
+			"label": "OTROS PROCEDIMIENTOS EN ÚTERO, CUELLO UTERINO (CERVIX) Y ESTRUCTURAS DE SOPORTE",
+			"costo_procedimiento": 1506737,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 376684.25
+		},
+		{
+			"code": 702,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN VAGINA Y FONDO DE SACO",
+			"costo_procedimiento": 9157951,
+			"numero_personas_atendidas": 98,
+			"costo_proc_usuario": 93448.47959183673
+		},
+		{
+			"code": 705,
+			"label": "CORRECCIÓN DE CISTOCELE Y RECTOCELE",
+			"costo_procedimiento": 591220,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 591220
+		},
+		{
+			"code": 735,
+			"label": "PARTO ASISTIDO MANUALMENTE",
+			"costo_procedimiento": 1461632,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 730816
+		},
+		{
+			"code": 750,
+			"label": "LEGRADO UTERINO OBSTETRICO Excluye: LEGRADO UTERINO GINECOLOGICO (69.0.1)",
+			"costo_procedimiento": 1179932,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 393310.6666666667
+		},
+		{
+			"code": 755,
+			"label": "REPARACIÓN DE DESGARRO UTERINO OBSTETRICO ACTUAL",
+			"costo_procedimiento": 4087244,
+			"numero_personas_atendidas": 10,
+			"costo_proc_usuario": 408724.4
+		},
+		{
+			"code": 761,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN HUESOS Y ARTICULACIONES FACIALES",
+			"costo_procedimiento": 27287789,
+			"numero_personas_atendidas": 98,
+			"costo_proc_usuario": 278446.82653061225
+		},
+		{
+			"code": 765,
+			"label": "ARTROPLASTIA TEMPOROMANDIBULAR",
+			"costo_procedimiento": 770000,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 770000
+		},
+		{
+			"code": 767,
+			"label": "REDUCCIÓN DE FRACTURA FACIAL",
+			"costo_procedimiento": 255775,
+			"numero_personas_atendidas": 17,
+			"costo_proc_usuario": 15045.588235294117
+		},
+		{
+			"code": 768,
+			"label": "OTROS PROCEDIMIENTOS EN HUESOS Y ARTICULACIONES FACIALES",
+			"costo_procedimiento": 4459247,
+			"numero_personas_atendidas": 32,
+			"costo_proc_usuario": 139351.46875
+		},
+		{
+			"code": 770,
+			"label": "SECUESTRECTOMÍA, DRENAJE, DESBRIDAMIENTO Excluye: DESBRIDAMIENTO DE FRACTURA ABIERTA (79.60-79.69) Y VERTEBRECTOMÍA (77.89 -77.99)",
+			"costo_procedimiento": 55312678,
+			"numero_personas_atendidas": 64,
+			"costo_proc_usuario": 864260.59375
+		},
+		{
+			"code": 772,
+			"label": "OSTEOTOMÍA Excluye: AQUELLAS PARA HALLUX VALGUS (77.5.1); PARA PLASTIA DE MALFORMACION DE PIE (77.3) Y ARTEJOS (77.5)",
+			"costo_procedimiento": 77159231,
+			"numero_personas_atendidas": 110,
+			"costo_proc_usuario": 701447.5545454546
+		},
+		{
+			"code": 774,
+			"label": "BIOPSIA DE HUESO Y PERIOSTO INCLUYE: PERIOSTIO",
+			"costo_procedimiento": 2202480,
+			"numero_personas_atendidas": 6,
+			"costo_proc_usuario": 367080
+		},
+		{
+			"code": 775,
+			"label": "ESCISIÓN Y REPARACIÓN DE HALLUX VALGUS (JUANETE) Y DE OTRAS DEFORMIDADES DE LOS DEDOS DEL PIE",
+			"costo_procedimiento": 90394573,
+			"numero_personas_atendidas": 155,
+			"costo_proc_usuario": 583190.7935483871
+		},
+		{
+			"code": 776,
+			"label": "ESCISIÓN LOCAL DE LESIÓN OSEA O TEJIDO OSEO Excluye: BIOPSIA DE HUESO(77.40-77.49), DESBRIDAMIENTO DE FRACTURA ABIERTA (79.69)",
+			"costo_procedimiento": 17452744,
+			"numero_personas_atendidas": 13,
+			"costo_proc_usuario": 1342518.7692307692
+		},
+		{
+			"code": 777,
+			"label": "TOMA DE INJERTO ÓSEO",
+			"costo_procedimiento": 4352138,
+			"numero_personas_atendidas": 15,
+			"costo_proc_usuario": 290142.5333333333
+		},
+		{
+			"code": 778,
+			"label": "RESECCIÓN PARCIAL OSEA INCLUYE: AQUELLA POR TUMORES BENIGNOS, MALIGNOS, PRIMARIOS O METASTASICOS; CONDILECTOMÍAS ENTRE OTRAS CAUSAS. Excluye: AMPUTACIONES PARCIALES(84.00-84.91), AQUELLA ACCESORIA A OTRAS OPERACIONES(OMITIR CÓDIGO), ARTRECTOMIAS(80.84), E",
+			"costo_procedimiento": 4632150,
+			"numero_personas_atendidas": 42,
+			"costo_proc_usuario": 110289.28571428571
+		},
+		{
+			"code": 779,
+			"label": "RESECCIÓN TOTAL OSEA INCLUYE: AQUELLA POR TUMORES BENIGNOS, MALIGNOS, PRIMARIOS O METASTASICOS ENTRE OTRAS CAUSAS Excluye: AMPUTACIONES DE MIEMBROS(84.00-84.91) Y AQUELLA ACCESORIA DE OTRA OPERACIÓN (OMITIR CÓDIGO)",
+			"costo_procedimiento": 5923714,
+			"numero_personas_atendidas": 6,
+			"costo_proc_usuario": 987285.6666666666
+		},
+		{
+			"code": 780,
+			"label": "INJERTO ÓSEO (AUTOLOGO, HETERÓLOGO) Excluye: AQUEL PARA ALARGAMIENTO DE HUESO (78.30-78.39) Y PARA ARTRODESIS O FUSIÓN(81.00-81.85) Y AQUEL INJERTO ESPECIFICADO EN OTRO PROCEDIMIENTO –OMITIR CODIGO SimultAneo: CODIFICAR TAMBIEN CUALQUIER ESCISIÓN DE HUESO",
+			"costo_procedimiento": 21322806,
+			"numero_personas_atendidas": 40,
+			"costo_proc_usuario": 533070.15
+		},
+		{
+			"code": 781,
+			"label": "APLICACIÓN DE DISPOSITIVO EXTERNO DE FIJACIÓN INCLUYE: MINIFIJADOR CON INSERCIÓN DE CLAVO/ALAMBRE/TORNILLO EN EL HUESO",
+			"costo_procedimiento": 372294,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 372294
+		},
+		{
+			"code": 782,
+			"label": "PROCEDIMIENTOS DE ACORTAMIENTO DE EXTREMIDADES",
+			"costo_procedimiento": 5304209,
+			"numero_personas_atendidas": 13,
+			"costo_proc_usuario": 408016.07692307694
+		},
+		{
+			"code": 783,
+			"label": "PROCEDIMIENTO DE ALARGAMIENTO DE EXTREMIDADES",
+			"costo_procedimiento": 2329542,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 2329542
+		},
+		{
+			"code": 786,
+			"label": "EXTRACCIÓN DE DISPOSITIVO IMPLANTADO O CUERPO EXTRAÑO EN HUESO + INCLUYE: AQUEL DISPOSITIVO DE FIJACION INTERNA O EXTERNA, OSTEOSÍNTESIS, INSTRUMENTACION, ESTIMULADOR DE CRECIMIENTO ÓSEO  Excluye: EXTRACCIÓN SIN INCISIÓN DE DISPOSITIVO TERAPEUTICO O DE CU",
+			"costo_procedimiento": 20716072,
+			"numero_personas_atendidas": 67,
+			"costo_proc_usuario": 309195.10447761195
+		},
+		{
+			"code": 790,
+			"label": "REDUCCIÓN CERRADA DE FRACTURA SIN FIJACIÓN INTERNA Excluye: AQUELLA PARA SEPARACIÓN DE EPÍFISIS (79.4)",
+			"costo_procedimiento": 2093943,
+			"numero_personas_atendidas": 11,
+			"costo_proc_usuario": 190358.45454545456
+		},
+		{
+			"code": 792,
+			"label": "REDUCCIÓN ABIERTA DE FRACTURA SIN FIJACIÓN INTERNA Excluye: RETIRO O SUSTITUCIÓN DE FERULA (97.11-97.14, 97.88), TRACCIÓN COMO ÚNICA REDUCCIÓN DE FRACTURA (93.41-93.46) Y AQUELLA PARA SEPARACIÓN DE EPÍFISIS (79.4)",
+			"costo_procedimiento": 1137306,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 1137306
+		},
+		{
+			"code": 793,
+			"label": "REDUCCIÓN ABIERTA DE FRACTURA CON FIJACIÓN INTERNA Excluye: RETIRO O SUSTITUCIÓN DE FERULA (97.11-97.14, 97.88), TRACCIÓN COMO ÚNICA REDUCCIÓN DE FRACTURA (93.41-93.46) Y AQUELLA PARA SEPARACIÓN DE EPÍFISIS (79.4)",
+			"costo_procedimiento": 21114430,
+			"numero_personas_atendidas": 20,
+			"costo_proc_usuario": 1055721.5
+		},
+		{
+			"code": 794,
+			"label": "REDUCCIÓN CERRADA DE EPIFISIS SEPARADA",
+			"costo_procedimiento": 125821,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 125821
+		},
+		{
+			"code": 796,
+			"label": "LAVADO Y DESBRIDAMIENTO DE FRACTURA ABIERTA Excluye: LAVADO Y DESBRIDAMIENTO DE ARTICULACIÓN Y DE LUXOFRACTURA (80.8)",
+			"costo_procedimiento": 2821725,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 940575
+		},
+		{
+			"code": 797,
+			"label": "REDUCCIÓN CERRADA DE LUXACIONES Excluye: REDUCCIÓN CERRADA DE LUXACIÓN DE ARTICULACIÓN TEMPORO-MANDIBULAR(76.83) Y LUXOFRACTURAS O FRACTURAS INTRAARTICULARES (79.9)",
+			"costo_procedimiento": 7229871,
+			"numero_personas_atendidas": 10,
+			"costo_proc_usuario": 722987.1
+		},
+		{
+			"code": 798,
+			"label": "REDUCCIÓN ABIERTA DE LUXACIÓN Excluye:   REDUCCIÓN ABIERTA DE LUXACIÓN DE ARTICULACIÓN TEMPORO-MANDIBULAR(76.8.4) Y DE LUXOFRACTURAS O FRACTURAS INTRAARTICULARES (79.9)",
+			"costo_procedimiento": 4397209,
+			"numero_personas_atendidas": 6,
+			"costo_proc_usuario": 732868.1666666666
+		},
+		{
+			"code": 799,
+			"label": "REDUCCIÓN DE FRACTURAS INTRAARTICULARES Y LUXOFRACTURAS",
+			"costo_procedimiento": 3897718,
+			"numero_personas_atendidas": 6,
+			"costo_proc_usuario": 649619.6666666666
+		},
+		{
+			"code": 800,
+			"label": "INCISIÓN Y ESCISIÓN DE ESTRUCTURAS DE ARTICULACION INCLUYE:  AQUELLA PARA EXTRACCIÓN DE PROTESIS, MATERIAL DE FIJACION INTERNA, DISPOSITIVOS DE FIJACIÓN, OSTEOSÍNTESIS, INSTRUMENTACION, O ESTIMULADOR DE CRECIMIENTO IMPLANTADOS EN ARTICULACIÓN.",
+			"costo_procedimiento": 4850091,
+			"numero_personas_atendidas": 19,
+			"costo_proc_usuario": 255267.94736842104
+		},
+		{
+			"code": 801,
+			"label": "OTRA ARTROTOMÍA NO CLASIFICADA BAJO OTRO CONCEPTO  Excluye: AQUELLA PARA ACCESO OPERATORIO(OMITIR CÓDIGO), ARTROGRAFIA(87.32), ARTROSCOPIA (80.2), INYECCIÓN O INFILTRACIÓN DE MEDICAMENTO(81.92)",
+			"costo_procedimiento": 31767280,
+			"numero_personas_atendidas": 123,
+			"costo_proc_usuario": 258270.56910569104
+		},
+		{
+			"code": 802,
+			"label": "ARTROSCOPIA INCLUYE: DIAGNOSTICA CON TOMA DE BIOPSIA  Excluye: AQUELLA COMO VÍA DE ACCESO OPERATORIO ESPECIFICADA O CODIFICADA EN OTRA PARTE (OMITIR CÓDIGO)",
+			"costo_procedimiento": 11064762,
+			"numero_personas_atendidas": 10,
+			"costo_proc_usuario": 1106476.2
+		},
+		{
+			"code": 803,
+			"label": "BIOPSIA DE ESTRUCTURAS ARTICULARES",
+			"costo_procedimiento": 365438,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 121812.66666666667
+		},
+		{
+			"code": 804,
+			"label": "DIVISIÓN DE CAPSULA, LIGAMENTO O CARTÍLAGO ARTICULAR Excluye: AQUELLA  POR SINDROME DE TUNEL CARPIANO O METARSIANO((04.43-04.44)",
+			"costo_procedimiento": 3187677,
+			"numero_personas_atendidas": 9,
+			"costo_proc_usuario": 354186.3333333333
+		},
+		{
+			"code": 805,
+			"label": "ESCISIÓN O ABLACIÓNDE DISCO INTERVERTEBRAL INCLUYE: CON/SIN MICROSCOPIO O MICRODISCECTOMÍA Y AQUELLA PARA DESCOMPRIMIR CANAL CERVICAL, PARA DESCOMPRIMIR RAIZ DE NERVIO ESPINAL AL MISMO NIVEL Y LA DESCRITA COMO  EXTRACCIÓN DE NUCLEO PULPOSO HERNIADO",
+			"costo_procedimiento": 7378872,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 3689436
+		},
+		{
+			"code": 806,
+			"label": "ESCISIÓN DE CARTÍLAGO SEMILUNAR DE RODILLA",
+			"costo_procedimiento": 5661253,
+			"numero_personas_atendidas": 33,
+			"costo_proc_usuario": 171553.12121212122
+		},
+		{
+			"code": 807,
+			"label": "SINOVECTOMÍA Excluye: ESCISIÓN DE QUISTE DE BAKER(83.39)",
+			"costo_procedimiento": 64404915,
+			"numero_personas_atendidas": 78,
+			"costo_proc_usuario": 825704.0384615385
+		},
+		{
+			"code": 808,
+			"label": "OTROS PROCEDIMIENTOS EN ARTICULACION",
+			"costo_procedimiento": 14372472,
+			"numero_personas_atendidas": 32,
+			"costo_proc_usuario": 449139.75
+		},
+		{
+			"code": 810,
+			"label": "ARTRODESIS O FUSIÓN ESPINAL INCLUYE: AQUELLA  CON INJERTO ÓSEO Y/O FIJACION INTERNA",
+			"costo_procedimiento": 26523469,
+			"numero_personas_atendidas": 17,
+			"costo_proc_usuario": 1560204.0588235294
+		},
+		{
+			"code": 811,
+			"label": "ARTRODESIS DE PIE Y TOBILLO",
+			"costo_procedimiento": 118746452,
+			"numero_personas_atendidas": 160,
+			"costo_proc_usuario": 742165.325
+		},
+		{
+			"code": 812,
+			"label": "ARTRODESIS DE OTRA ARTICULACION",
+			"costo_procedimiento": 85686589,
+			"numero_personas_atendidas": 103,
+			"costo_proc_usuario": 831908.6310679612
+		},
+		{
+			"code": 813,
+			"label": "ARTROPLASTIA DE PIE Y ARTEJOS",
+			"costo_procedimiento": 129025424,
+			"numero_personas_atendidas": 156,
+			"costo_proc_usuario": 827086.0512820513
+		},
+		{
+			"code": 814,
+			"label": "ARTROPLASTIA DE CADERA, RODILLA Y TOBILLO",
+			"costo_procedimiento": 27329897,
+			"numero_personas_atendidas": 31,
+			"costo_proc_usuario": 881609.5806451613
+		},
+		{
+			"code": 815,
+			"label": "REEMPLAZO ARTICULAR EN EXTREMIDADES INFERIORES",
+			"costo_procedimiento": 603415288,
+			"numero_personas_atendidas": 149,
+			"costo_proc_usuario": 4049767.033557047
+		},
+		{
+			"code": 817,
+			"label": "ARTROPLASTIA Y REPARACIONES DE MUÑECA, MANO Y DEDOS Excluye: OPERACIONES EN MUSCULO, TENDÓN Y FASCIA DE LA MANO(82.0-82.9)",
+			"costo_procedimiento": 104925364,
+			"numero_personas_atendidas": 121,
+			"costo_proc_usuario": 867151.7685950414
+		},
+		{
+			"code": 818,
+			"label": "ARTROPLASTIA Y REPARACIÓN DE HOMBRO Y CODO",
+			"costo_procedimiento": 56252363,
+			"numero_personas_atendidas": 32,
+			"costo_proc_usuario": 1757886.34375
+		},
+		{
+			"code": 819,
+			"label": "OTROS PROCEDIMIENTOS EN ARTICULACIONES INCLUYE: REVISIÓN DE ARTROPLASTIA O SUSTITUCIÓN PARCIAL O TOTAL; PROCEDIMIENTOS NO DESCRITOS O CODIFICADOS EN OTRA PARTE Excluye: ARTROSCOPIA (89.8-89.9), BIOPSIA (803), IMAGENOLOGIA (87), ESTUDIOS ANATOMOPATOLOGICOS",
+			"costo_procedimiento": 75605890,
+			"numero_personas_atendidas": 1366,
+			"costo_proc_usuario": 55348.38213762811
+		},
+		{
+			"code": 820,
+			"label": "INCISIÓN DE MUSCULO, TENDON, FASCIA Y BOLSA SINOVIAL DE MANO",
+			"costo_procedimiento": 226709,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 226709
+		},
+		{
+			"code": 821,
+			"label": "INCISIÓN DE MUSCULO, TENDON Y FASCIA DE MANO",
+			"costo_procedimiento": 1150022,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 383340.6666666667
+		},
+		{
+			"code": 822,
+			"label": "ESCISIÓN DE LESIÓN DE MUSCULO, FASCIA O ENVOLTURA O VAINA DE TENDÓN DE MANO Excluye: ESCISIÓN DE LESIÓN EN PIEL Y TEJIDO SUBCUTANEO(86.2-86.3)",
+			"costo_procedimiento": 3694048,
+			"numero_personas_atendidas": 11,
+			"costo_proc_usuario": 335822.54545454547
+		},
+		{
+			"code": 823,
+			"label": "OTRA ESCISIÓN DE TEJIDO BLANDO DE MANO INCLUYE: RESECCIÓN O ESCISIÓN DE APONEUROSIS EN MANO Excluye: ESCISIÓN DE PIEL Y TEJIDO SUBCUTANEO(86.2-86.3)",
+			"costo_procedimiento": 21575161,
+			"numero_personas_atendidas": 36,
+			"costo_proc_usuario": 599310.0277777778
+		},
+		{
+			"code": 824,
+			"label": "SUTURA DE MÚSCULO, TENDÓN Y FASCIA DE MANO INCLUYE: SUTURA RETARDADA DE TENDON EXTENSOR DE MANO O DEDOS Excluye: ESCISIÓN DE LESIÓN EN PIEL Y TEJIDO CELULAR SUBCUTANEO(86.2-86.3)",
+			"costo_procedimiento": 8072286,
+			"numero_personas_atendidas": 14,
+			"costo_proc_usuario": 576591.8571428572
+		},
+		{
+			"code": 825,
+			"label": "TRASPLANTE DE MÚSCULO Y TENDÓN DE MANO",
+			"costo_procedimiento": 53960121,
+			"numero_personas_atendidas": 45,
+			"costo_proc_usuario": 1199113.8
+		},
+		{
+			"code": 827,
+			"label": "PROCEDIMIENTOS PLASTICOS EN MANO CON INJERTO O IMPLANTE",
+			"costo_procedimiento": 5501641,
+			"numero_personas_atendidas": 7,
+			"costo_proc_usuario": 785948.7142857143
+		},
+		{
+			"code": 828,
+			"label": "OTROS PROCEDIMIENTOS PLASTICOS EN MANO",
+			"costo_procedimiento": 26015040,
+			"numero_personas_atendidas": 39,
+			"costo_proc_usuario": 667052.3076923077
+		},
+		{
+			"code": 829,
+			"label": "OTROS PROCEDIMIENTOS EN MUSCULO, TENDON Y FASCIA DE MANO Excluye: OPERACIONES O PROCEDIMIENTOS DIAGNÓSTICOS SOBRE TEJIDOS BLANDOS DE MANO (83.21-83.29)",
+			"costo_procedimiento": 23677033,
+			"numero_personas_atendidas": 58,
+			"costo_proc_usuario": 408224.7068965517
+		},
+		{
+			"code": 830,
+			"label": "INCISIÓN DE MÚSCULO, TENDÓN, FASCIA Y BURSA",
+			"costo_procedimiento": 60000,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 60000
+		},
+		{
+			"code": 831,
+			"label": "INCISIÓN O DIVISIÓN EN MUSCULO, TENDON Y FASCIA INCLUYE: APONEUROTOMÍA, TRANSECCIÓN O DIVISIÓN DE TENDÓN Y LIBERACIÓN DE TENDÓN.",
+			"costo_procedimiento": 3754987,
+			"numero_personas_atendidas": 19,
+			"costo_proc_usuario": 197630.8947368421
+		},
+		{
+			"code": 832,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN MUSCULO, TENDON, FASCIA Y BOLSA SINOVIAL, INCLUSO AQUEL DE MANO",
+			"costo_procedimiento": 4833691,
+			"numero_personas_atendidas": 15,
+			"costo_proc_usuario": 322246.06666666665
+		},
+		{
+			"code": 833,
+			"label": "ESCISIÓN DE LESIÓN DE MUSCULO, TENDON, FASCIA Y BOLSA SINOVIAL",
+			"costo_procedimiento": 5713024,
+			"numero_personas_atendidas": 14,
+			"costo_proc_usuario": 408073.14285714284
+		},
+		{
+			"code": 834,
+			"label": "OTRA ESCISIÓN DE MUSCULO, TENDON Y FASCIA",
+			"costo_procedimiento": 5543192,
+			"numero_personas_atendidas": 16,
+			"costo_proc_usuario": 346449.5
+		},
+		{
+			"code": 835,
+			"label": "BURSECTOMÍA",
+			"costo_procedimiento": 2129781,
+			"numero_personas_atendidas": 7,
+			"costo_proc_usuario": 304254.4285714286
+		},
+		{
+			"code": 836,
+			"label": "SUTURA DE MUSCULO, TENDON Y FASCIA  INCLUYE: AQUILORRAFIA",
+			"costo_procedimiento": 2069131,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 517282.75
+		},
+		{
+			"code": 837,
+			"label": "RECONSTRUCCION DE MUSCULOS Y TENDON + Excluye: RECONSTRUCCIÓN MUSCULAR Y DE TENDÓN ASOCIADA CON ARTROPLASTIA",
+			"costo_procedimiento": 19880807,
+			"numero_personas_atendidas": 34,
+			"costo_proc_usuario": 584729.6176470588
+		},
+		{
+			"code": 838,
+			"label": "OTRAS OPERACIONES PLASTICAS EN MÚSCULO, TENDON Y FASCIA + INCLUYE: PLICATURA, PLASTIAS, ALARGAMIENTO, ACORTAMIENTO Excluye: PLASTIAS DE MUSCULO Y TENDÓN ASOCIADAS  CON ARTROPLASTIA",
+			"costo_procedimiento": 4030372,
+			"numero_personas_atendidas": 6,
+			"costo_proc_usuario": 671728.6666666666
+		},
+		{
+			"code": 839,
+			"label": "OTROS PROCEDIMIENTOS EN MÚSCULOS, TENDÓN, FASCIA Y BURSA + Excluye: ESTIRADO Y MANIPULACIONES NO OPERATORIAS(93.25-93.29)",
+			"costo_procedimiento": 53333940,
+			"numero_personas_atendidas": 488,
+			"costo_proc_usuario": 109290.8606557377
+		},
+		{
+			"code": 840,
+			"label": "AMPUTACIÓN DE MIEMBRO SUPERIOR Excluye: REVISÓN DE MUÑÓN(84.3)",
+			"costo_procedimiento": 867926,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 216981.5
+		},
+		{
+			"code": 841,
+			"label": "AMPUTACIÓN DE MIEMBRO INFERIOR Excluye: REVISIÓN DE MUÑÓN DE AMPUTACIÓN(84.3)",
+			"costo_procedimiento": 3912561,
+			"numero_personas_atendidas": 8,
+			"costo_proc_usuario": 489070.125
+		},
+		{
+			"code": 842,
+			"label": "REIMPLANTE DE EXTREMIDAD",
+			"costo_procedimiento": 1268,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 634
+		},
+		{
+			"code": 849,
+			"label": "OTROS PROCEDIMIENTOS EN SISTEMA OSTEOMUSCULAR + Excluye: MANIPULACIÓN NO OPERATORIA(93.25-93.29)",
+			"costo_procedimiento": 203795569,
+			"numero_personas_atendidas": 61,
+			"costo_proc_usuario": 3340910.9672131147
+		},
+		{
+			"code": 851,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN MAMA",
+			"costo_procedimiento": 4035211,
+			"numero_personas_atendidas": 13,
+			"costo_proc_usuario": 310400.8461538461
+		},
+		{
+			"code": 857,
+			"label": "RECONSTRUCCION TOTAL DE MAMA",
+			"costo_procedimiento": 228,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 228
+		},
+		{
+			"code": 858,
+			"label": "REPARACIONES Y PLASTIAS EN MAMA",
+			"costo_procedimiento": 817266,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 408633
+		},
+		{
+			"code": 860,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN PIEL Y TEJIDO CELULAR SUBCUTANEO",
+			"costo_procedimiento": 28673690,
+			"numero_personas_atendidas": 581,
+			"costo_proc_usuario": 49352.306368330464
+		},
+		{
+			"code": 861,
+			"label": "INCISIÓN DE PIEL Y TEJIDO CELULAR SUBCUTANEO",
+			"costo_procedimiento": 65475552,
+			"numero_personas_atendidas": 557,
+			"costo_proc_usuario": 117550.36265709157
+		},
+		{
+			"code": 862,
+			"label": "ESCISIÓN O ABLACIÒN DE LESIÓN O TEJIDO DE PIEL Y TEJIDO CELULAR SUBCUTANEO",
+			"costo_procedimiento": 41611352,
+			"numero_personas_atendidas": 71,
+			"costo_proc_usuario": 586075.3802816902
+		},
+		{
+			"code": 863,
+			"label": "OTRA ESCISIÓN LOCAL O ABLACIÒN DE LESIÓN DE PIEL Y TEJIDO CELULAR SUBCUTANEO",
+			"costo_procedimiento": 4251390,
+			"numero_personas_atendidas": 77,
+			"costo_proc_usuario": 55212.857142857145
+		},
+		{
+			"code": 864,
+			"label": "ESCISIÓN RADICAL DE LESIÓN CUTANEA",
+			"costo_procedimiento": 15023104,
+			"numero_personas_atendidas": 45,
+			"costo_proc_usuario": 333846.7555555556
+		},
+		{
+			"code": 865,
+			"label": "SUTURA DE PIEL Y TEJIDO CELULAR SUBCUTANEO Excluye: LA SUTURA COMO ACTIVIDAD DE OTRO PROCEDIMIENTO QUIRURGICO-OMITIR CODIGO",
+			"costo_procedimiento": 2037578,
+			"numero_personas_atendidas": 16,
+			"costo_proc_usuario": 127348.625
+		},
+		{
+			"code": 866,
+			"label": "INJERTO CUTANEO LIBRE INCLUYE: ESCISIÓN DE PIEL PARA INJERTO AUTOLOGO (SUTURA ZONA DADORA)",
+			"costo_procedimiento": 3202714,
+			"numero_personas_atendidas": 6,
+			"costo_proc_usuario": 533785.6666666666
+		},
+		{
+			"code": 867,
+			"label": "COLGAJOS Excluye:  COLGAJO EN LA MAMA (85.8.4)",
+			"costo_procedimiento": 52674666,
+			"numero_personas_atendidas": 42,
+			"costo_proc_usuario": 1254158.7142857143
+		},
+		{
+			"code": 868,
+			"label": "REPARACIÓN Y RECONSTRUCCION DE PIEL Y TEJIDO CELULAR SUBCUTANEO INCLUYE: POR SECUELA DE QUEMADURA O SINDACTILIA",
+			"costo_procedimiento": 5017368,
+			"numero_personas_atendidas": 11,
+			"costo_proc_usuario": 456124.36363636365
+		},
+		{
+			"code": 869,
+			"label": "OTROS PROCEDIMIENTOS EN PIEL Y TEJIDO CELULAR SUBCUTANEO",
+			"costo_procedimiento": 27769915,
+			"numero_personas_atendidas": 104,
+			"costo_proc_usuario": 267018.41346153844
+		},
+		{
+			"code": 870,
+			"label": "RADIOLOGIA GENERAL DE CABEZA, CARA Y CUELLO INCLUYE:    RADIOLOGIA SIMPLE O CON MEDIO DE CONTRASTE DEGLUTIDO, TOMOGRAFIAS LINEALES Y FLUOROSCOPIA Excluye: ESTUDIOS RADIOLOGICOS ESPECIALES O INTERVENCIONISTAS O CON MEDIO DE CONTRASTE INYECTADO, INFILTRADO",
+			"costo_procedimiento": 10059052,
+			"numero_personas_atendidas": 301,
+			"costo_proc_usuario": 33418.77740863787
+		},
+		{
+			"code": 871,
+			"label": "RADIOLOGIA GENERAL DE COLUMNA VERTEBRAL, TORAX, Y ORGANOS O ESTRUCTURAS CONEXAS INCLUYE: RADIOLOGIA SIMPLE O CON MEDIO DE CONTRASTE DEGLUTIDO, TOMOGRAFIAS LINEALES Y FLUOROSCOPIA.  ANGIOCARDIOGRAFIAS SIN CONTRASTE Excluye: ESTUDIOS RADIOLOGICOS ESPECIALES",
+			"costo_procedimiento": 417686322,
+			"numero_personas_atendidas": 10785,
+			"costo_proc_usuario": 38728.44895688456
+		},
+		{
+			"code": 872,
+			"label": "RADIOLOGIA GENERAL DE ABDOMEN, PELVIS Y ORGANOS O ESTRUCTURAS CONEXAS INCLUYE: ESTUDIO CON MEDIO DE CONTRASTE DEGLUTIDO O POR ENEMA; ESTUDIO RADIOLOGICO SIMPLE, TOMOGRAFIAS  LINEALES Excluye: ESTUDIOS RADIOLOGICOS ESPECIALES O INTERVENCIONISTAS O CON MEDI",
+			"costo_procedimiento": 13106616,
+			"numero_personas_atendidas": 235,
+			"costo_proc_usuario": 55772.83404255319
+		},
+		{
+			"code": 873,
+			"label": "RADIOLOGIA GENERAL DE EXTREMIDADES Y ARTICULACIONES Excluye: ESTUDIOS RADIOLOGICOS ESPECIALES O INTERVENCIONISTAS O CON MEDIO DE CONTRASTE INYECTADO O INFILTRADO EN SITIO VISUALIZADO. ANGIOGRAFIAS (87.8.1-87.8.2) FLEBOGRAFIAS (87.8.3-87.8.4), ARTROGRAFIAS",
+			"costo_procedimiento": 899931949,
+			"numero_personas_atendidas": 36818,
+			"costo_proc_usuario": 24442.716850453584
+		},
+		{
+			"code": 874,
+			"label": "RADIOLOGIA ESPECIAL E INTERVENCIONISTA DE CABEZA, CARA Y CUELLO INCLUYE: PUNCIÓN E INYECCIÓN DE MEDIO DE CONTRASTE Excluye: TOMOGRAFIA AXIAL COMPUTARIZADA (87.9), ESTUDIO RADIOLÓGICO DE OJO (95.1.4)",
+			"costo_procedimiento": 7546242,
+			"numero_personas_atendidas": 85,
+			"costo_proc_usuario": 88779.31764705882
+		},
+		{
+			"code": 875,
+			"label": "RADIOLOGIA ESPECIAL E INTERVENCIONISTA DE LA COLUMNA VERTEBRAL Y CANAL ESPINAL INCLUYE: PUNCIÓN E INYECCIÓN DE MEDIO DE CONTRASTE.  Excluye:  TOMOGRAFIA AXIAL COMPUTARIZADA (879)",
+			"costo_procedimiento": 868115,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 289371.6666666667
+		},
+		{
+			"code": 876,
+			"label": "RADIOLOGIA ESPECIAL E INTERVENCIONISTA EN TORAX Y ORGANOS O ESTRUCTURAS INTRATORACCICAS INCLUYE: PUNCIÓN E INYECCIÓN DE MEDIO DE CONTRASTE.  Excluye: TOMOGRAFIA AXIAL COMPUTARIZADA (87.9)",
+			"costo_procedimiento": 262568047,
+			"numero_personas_atendidas": 2757,
+			"costo_proc_usuario": 95236.86869785999
+		},
+		{
+			"code": 877,
+			"label": "RADIOLOGIA ESPECIAL E INTERVENCIONISTA EN ABDOMEN, PELVIS Y ORGANOS O ESTRUCTURAS CONEXAS INCLUYE: PUNCIÓN E INYECCIÓN DE MEDIO DE CONTRASTE Excluye: TOMOGRAFIA AXIAL COMPUTARIZADA (87.9)",
+			"costo_procedimiento": 2307758,
+			"numero_personas_atendidas": 16,
+			"costo_proc_usuario": 144234.875
+		},
+		{
+			"code": 878,
+			"label": "RADIOLOGIA ESPECIAL E INTERVENCIONISTA EN EXTREMIDADES Y ARTICULACIONES INCLUYE: PUNCIÓN E INYECCIÓN DE MEDIO DE CONTRASTE Excluye:  TOMOGRAFIA AXIAL COMPUTARIZADA (87.9)",
+			"costo_procedimiento": 3415150,
+			"numero_personas_atendidas": 10,
+			"costo_proc_usuario": 341515
+		},
+		{
+			"code": 879,
+			"label": "TOMOGRAFIA AXIAL COMPUTARIZADA (TAC) Excluye: TOMOGRAFIAS LINEALES (87.0-87.3)",
+			"costo_procedimiento": 357423955,
+			"numero_personas_atendidas": 1919,
+			"costo_proc_usuario": 186255.31787389267
+		},
+		{
+			"code": 881,
+			"label": "ULTRASONOGRAFIA DIAGNOSTICA (ECOGRAFIAS) Excluye: ESTUDIOS VASCULARES NO INVASIVOS (88.2)",
+			"costo_procedimiento": 1007928083,
+			"numero_personas_atendidas": 9740,
+			"costo_proc_usuario": 103483.37607802874
+		},
+		{
+			"code": 882,
+			"label": "ESTUDIOS VASCULARES NO INVASIVOS",
+			"costo_procedimiento": 147427258,
+			"numero_personas_atendidas": 1122,
+			"costo_proc_usuario": 131396.8431372549
+		},
+		{
+			"code": 883,
+			"label": "RESONANCIA NUCLEAR MAGNETICA INCLUYE:  AQUELLA CON GADOLINIO DTPA ENTRE OTROS MEDIOS DE CONTRASTE",
+			"costo_procedimiento": 1153587679,
+			"numero_personas_atendidas": 2401,
+			"costo_proc_usuario": 480461.3406913786
+		},
+		{
+			"code": 886,
+			"label": "OTRAS TECNICAS DE DIAGNOSTICO POR IMAGEN §",
+			"costo_procedimiento": 1527407820,
+			"numero_personas_atendidas": 10539,
+			"costo_proc_usuario": 144929.10333048677
+		},
+		{
+			"code": 887,
+			"label": "OTROS ESTUDIOS DE IMAGENOLOGIA",
+			"costo_procedimiento": 3159848,
+			"numero_personas_atendidas": 10,
+			"costo_proc_usuario": 315984.8
+		},
+		{
+			"code": 890,
+			"label": "ENTREVISTA, CONSULTA Y EVALUACION [VALORACIÓN] + INCLUYE: AQUELLA EN CUALQUIER FASE DE LA ATENCION: PROMOCION DE LA SALUD, PREVENCION DE LA ENFERMEDAD, DIAGNOSTICO, TRATAMIENTO Y/O REHABILITACION INTEGRAL; CONSEJERIA COMO ACTIVIDAD DE CUALESQUIER CONSULTA",
+			"costo_procedimiento": 720750,
+			"numero_personas_atendidas": 6,
+			"costo_proc_usuario": 120125
+		},
+		{
+			"code": 891,
+			"label": "MEDICIONES ANATOMICAS, FISIOLOGICAS Y EXAMENES MANUALES DE SISTEMA NERVIOSO Y ORGANOS DE LOS SENTIDOS Excluye: EXAMEN DE OIDO (95.4), EXAMEN DE OJO (95.0) Y LOS PROCEDIMIENTOS LISTADOS SI HACEN PARTE DE UNA CONSULTA GLOBAL DE PRIMERA VEZ O DE CONTROL(89.0",
+			"costo_procedimiento": 142378775,
+			"numero_personas_atendidas": 2507,
+			"costo_proc_usuario": 56792.49102512964
+		},
+		{
+			"code": 892,
+			"label": "MEDICIONES ANATOMICAS, FISIOLOGICAS Y EXAMENES MANUALES DE APARATO GENITOURINARIO + Excluye: LOS PROCEDIMIENTOS LISTADOS SI HACEN PARTE DE UNA CONSULTA GLOBAL DE PRIMERA VEZ O DE CONTROL (89.0) OMITIR CODIGO",
+			"costo_procedimiento": 45670904,
+			"numero_personas_atendidas": 3437,
+			"costo_proc_usuario": 13288.013965667733
+		},
+		{
+			"code": 893,
+			"label": "OTRAS MEDICIONES ANATOMICAS, FISIOLOGICAS Y EXAMENES MANUALES Excluye: LOS PROCEDIMIENTOS LISTADOS SI HACEN PARTE DE UNA CONSULTA GLOBAL DE PRIMERA VEZ O DE CONTROL (89.0) OMITIR CODIGOS",
+			"costo_procedimiento": 76360489,
+			"numero_personas_atendidas": 1272,
+			"costo_proc_usuario": 60031.830974842764
+		},
+		{
+			"code": 894,
+			"label": "PRUEBAS DE STRESS CARDIACO Y COMPROBACIONES DE MARCAPASOS",
+			"costo_procedimiento": 19928964,
+			"numero_personas_atendidas": 134,
+			"costo_proc_usuario": 148723.61194029852
+		},
+		{
+			"code": 895,
+			"label": "OTROS PROCEDIMIENTOS DIAGNÓSTICOS CARDIACOS Y VASCULARES NO QUIRURGICOS",
+			"costo_procedimiento": 108592446,
+			"numero_personas_atendidas": 2793,
+			"costo_proc_usuario": 38880.216970998925
+		},
+		{
+			"code": 896,
+			"label": "MONITORIZACION CIRCULATORIA + Excluye: MONITORIZACION ELECTROCARDIOGRAFICA DURANTE PROCEDIMIENTO QUIRURGICO -OMITIR CODIGO",
+			"costo_procedimiento": 9474334,
+			"numero_personas_atendidas": 71,
+			"costo_proc_usuario": 133441.32394366196
+		},
+		{
+			"code": 897,
+			"label": "MONITORIZACION DE FETO",
+			"costo_procedimiento": 605875,
+			"numero_personas_atendidas": 20,
+			"costo_proc_usuario": 30293.75
+		},
+		{
+			"code": 898,
+			"label": "PROCEDIMIENTOS ANATOMOPATOLOGICOS + INCLUYE: PROCESAMIENTO DEL TEJIDO Y LECTURA DEL ESTUDIO",
+			"costo_procedimiento": 78976466,
+			"numero_personas_atendidas": 3127,
+			"costo_proc_usuario": 25256.305084745763
+		},
+		{
+			"code": 901,
+			"label": "MICROBIOLOGIA (BACTERIOLOGIA, PARASITOLOGIA, MICOLOGIA Y VIROLOGIA)",
+			"costo_procedimiento": 272265549,
+			"numero_personas_atendidas": 7224,
+			"costo_proc_usuario": 37689.02948504983
+		},
+		{
+			"code": 902,
+			"label": "HEMATOLOGIA",
+			"costo_procedimiento": 1343535491,
+			"numero_personas_atendidas": 127685,
+			"costo_proc_usuario": 10522.265661589066
+		},
+		{
+			"code": 903,
+			"label": "QUIMICA SANGUINEA Y DE OTROS FLUIDOS CORPORALES",
+			"costo_procedimiento": 3508107838,
+			"numero_personas_atendidas": 270513,
+			"costo_proc_usuario": 12968.352123557832
+		},
+		{
+			"code": 904,
+			"label": "ENDOCRINOLOGIA",
+			"costo_procedimiento": 1049821631,
+			"numero_personas_atendidas": 26762,
+			"costo_proc_usuario": 39228.07080935655
+		},
+		{
+			"code": 905,
+			"label": "MONITOREO DE MEDICAMENTOS Y TOXICOLOGIA",
+			"costo_procedimiento": 3752490,
+			"numero_personas_atendidas": 317,
+			"costo_proc_usuario": 11837.50788643533
+		},
+		{
+			"code": 906,
+			"label": "INMUNOLOGIA Y MARCADORES TUMORALES",
+			"costo_procedimiento": 4824765227,
+			"numero_personas_atendidas": 152548,
+			"costo_proc_usuario": 31627.84977187508
+		},
+		{
+			"code": 907,
+			"label": "MICROSCOPIA",
+			"costo_procedimiento": 371568108,
+			"numero_personas_atendidas": 38127,
+			"costo_proc_usuario": 9745.537493115115
+		},
+		{
+			"code": 908,
+			"label": "GENETICA Y ERRORES METABOLICOS",
+			"costo_procedimiento": 63396051,
+			"numero_personas_atendidas": 2312,
+			"costo_proc_usuario": 27420.437283737025
+		},
+		{
+			"code": 911,
+			"label": "BANCO DE SANGRE",
+			"costo_procedimiento": 53221401,
+			"numero_personas_atendidas": 421,
+			"costo_proc_usuario": 126416.62945368171
+		},
+		{
+			"code": 912,
+			"label": "MEDICINA TRANSFUSIONAL",
+			"costo_procedimiento": 10076324,
+			"numero_personas_atendidas": 89,
+			"costo_proc_usuario": 113217.12359550562
+		},
+		{
+			"code": 920,
+			"label": "GAMAGRAFÍA, ESTUDIOS ISOTOPICOS FUNCIONALES Y MORFOLOGICOS +",
+			"costo_procedimiento": 387462207,
+			"numero_personas_atendidas": 1680,
+			"costo_proc_usuario": 230632.26607142857
+		},
+		{
+			"code": 921,
+			"label": "GAMAGRAFÍA, ESTUDIOS ISOTOPICOS FUNCIONALES Y MORFOLOGICOS DE OTRAS LOCALIZACIONES +",
+			"costo_procedimiento": 6181810,
+			"numero_personas_atendidas": 4,
+			"costo_proc_usuario": 1545452.5
+		},
+		{
+			"code": 922,
+			"label": "RADIOTERAPIA + Excluye: AQUELLA ABLACIÓNDE LESIONES CORIORETINIANAS(14.2) Y LESIONES CEREBRALES (92.3)",
+			"costo_procedimiento": 9738722,
+			"numero_personas_atendidas": 19,
+			"costo_proc_usuario": 512564.3157894737
+		},
+		{
+			"code": 930,
+			"label": "PROCEDIMIENTOS DIAGNÓSTICOS EN DESEMPEÑO FUNCIONAL Y REHABILITACION +",
+			"costo_procedimiento": 180913727,
+			"numero_personas_atendidas": 2813,
+			"costo_proc_usuario": 64313.447209385
+		},
+		{
+			"code": 931,
+			"label": "PROCEDIMIENTOS TERAPEUTICOS EN DESEMPEÑO FUNCIONAL Y REHABILITACION +",
+			"costo_procedimiento": 770062500,
+			"numero_personas_atendidas": 7716,
+			"costo_proc_usuario": 99800.73872472784
+		},
+		{
+			"code": 932,
+			"label": "OTRA MANIPULACION MUSCULOESQUELETICA EN DESEMPEÑO FUNCIONAL Y REHABILITACION +",
+			"costo_procedimiento": 5276861,
+			"numero_personas_atendidas": 29,
+			"costo_proc_usuario": 181960.72413793104
+		},
+		{
+			"code": 933,
+			"label": "OTROS PROCEDIMIENTOS TERAPEUTICOS DEL DESEMPEÑO FUNCIONAL Y REHABILITACION +",
+			"costo_procedimiento": 136903278,
+			"numero_personas_atendidas": 592,
+			"costo_proc_usuario": 231255.53716216216
+		},
+		{
+			"code": 935,
+			"label": "OTRA INMOVILIZACION, PRESION Y CUIDADO DE HERIDA (CUIDADO TEGUMENTARIO) Excluye: LIMPIEZA DE HERIDA(965); LA INMOVILIZACION REALIZADA EN EL POST OPERATORIO INMEDIATO",
+			"costo_procedimiento": 2016432,
+			"numero_personas_atendidas": 38,
+			"costo_proc_usuario": 53064
+		},
+		{
+			"code": 936,
+			"label": "TRATAMIENTO MANIPULATIVO OSTEOPATICO",
+			"costo_procedimiento": 5332971,
+			"numero_personas_atendidas": 29,
+			"costo_proc_usuario": 183895.55172413794
+		},
+		{
+			"code": 937,
+			"label": "REHABILITACION DEL HABLA, DEL LENGUAJE Y LA COMUNICACIÓN +",
+			"costo_procedimiento": 13881205,
+			"numero_personas_atendidas": 211,
+			"costo_proc_usuario": 65787.70142180094
+		},
+		{
+			"code": 938,
+			"label": "OTRA TERAPIA DE REHABILITACION",
+			"costo_procedimiento": 122232068,
+			"numero_personas_atendidas": 1250,
+			"costo_proc_usuario": 97785.6544
+		},
+		{
+			"code": 939,
+			"label": "TERAPIA RESPIRATORIA Excluye: INSERCIÓN DE VÍA AEREA (96.0.1) Y OTRA VENTILACION MECANICA CONTINUA (96.7.0)",
+			"costo_procedimiento": 35171637,
+			"numero_personas_atendidas": 305,
+			"costo_proc_usuario": 115316.84262295082
+		},
+		{
+			"code": 940,
+			"label": "EVALUACION Y PRUEBAS PSICOLOGICAS",
+			"costo_procedimiento": 1642900,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 821450
+		},
+		{
+			"code": 943,
+			"label": "PSICOTERAPIA + INCLUYE: AQUELLA PARA EL CONTROL DE FACTORES DE RIESGO PSICOSOCIALES EN LA PROTECCION DE LA SALUD DE LOS TRABAJADORES COMO EL MANEJO DEL CONFLICTO Y LA NEGOCIACION, COMUNICACIÓN EFECTIVA, INCREMENTO DE AUTOESTIMA, ENTRE OTRAS ESTRATEGIAS",
+			"costo_procedimiento": 1424591,
+			"numero_personas_atendidas": 28,
+			"costo_proc_usuario": 50878.25
+		},
+		{
+			"code": 944,
+			"label": "OTRAS MODALIDADES TERAPEUTICAS EN SALUD MENTAL",
+			"costo_procedimiento": 158049,
+			"numero_personas_atendidas": 5,
+			"costo_proc_usuario": 31609.8
+		},
+		{
+			"code": 950,
+			"label": "EXAMENES DE OJOS GENERAL Y SUBJETIVO",
+			"costo_procedimiento": 16339590,
+			"numero_personas_atendidas": 322,
+			"costo_proc_usuario": 50744.068322981366
+		},
+		{
+			"code": 951,
+			"label": "EXAMENES DE FORMA Y ESTRUCTURA DE OJO",
+			"costo_procedimiento": 8465996,
+			"numero_personas_atendidas": 82,
+			"costo_proc_usuario": 103243.85365853658
+		},
+		{
+			"code": 952,
+			"label": "PRUEBAS OBJETIVAS DEL FUNCIONAMIENTO DEL OJO Excluye: AQUELLA CON POLISOMNOGRAMA (89.1.7)",
+			"costo_procedimiento": 6710241,
+			"numero_personas_atendidas": 51,
+			"costo_proc_usuario": 131573.35294117648
+		},
+		{
+			"code": 953,
+			"label": "PROCEDIMIENTOS E INTERVENCIONES VISUALES ESPECIALES",
+			"costo_procedimiento": 6845,
+			"numero_personas_atendidas": 5,
+			"costo_proc_usuario": 1369
+		},
+		{
+			"code": 954,
+			"label": "PROCEDIMIENTOS NO QUIRURGICOS RELACIONADOS CON EL OIDO",
+			"costo_procedimiento": 8295047,
+			"numero_personas_atendidas": 522,
+			"costo_proc_usuario": 15890.894636015326
+		},
+		{
+			"code": 960,
+			"label": "INTUBACION NO OPERATORIA DE TRACTOS GASTROINTESTINAL Y RESPIRATORIO",
+			"costo_procedimiento": 573179,
+			"numero_personas_atendidas": 7,
+			"costo_proc_usuario": 81882.71428571429
+		},
+		{
+			"code": 961,
+			"label": "OTRA INSERCIÓN NO QUIRURGICA Excluye: INTUBACION  NASOLAGRIMAL(09.4.4)",
+			"costo_procedimiento": 4806631,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 1602210.3333333333
+		},
+		{
+			"code": 962,
+			"label": "DILATACIÓN Y MANIPULACION NO QUIRURGICA",
+			"costo_procedimiento": 66509,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 33254.5
+		},
+		{
+			"code": 965,
+			"label": "OTRA IRRIGACION, LAVADO, LIMPIEZA O INSTILACION LOCAL NO QUIRURGICAS",
+			"costo_procedimiento": 5106233,
+			"numero_personas_atendidas": 219,
+			"costo_proc_usuario": 23316.132420091326
+		},
+		{
+			"code": 966,
+			"label": "INFUSIÓN ENTERAL DE SUSTANCIAS NUTRITIVAS CONCENTRADAS",
+			"costo_procedimiento": 2693600,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 2693600
+		},
+		{
+			"code": 971,
+			"label": "SUSTITUCION NO QUIRURGICA DE DISPOSITIVO DE LOS SISTEMAS MUSCULOESQUELETICO O TEGUMENTARIO",
+			"costo_procedimiento": 186883,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 62294.333333333336
+		},
+		{
+			"code": 973,
+			"label": "EXTRACCIÓN NO QUIRURGICA DE DISPOSITIVO TERAPEUTICO DE CABEZA Y CUELLO",
+			"costo_procedimiento": 15280,
+			"numero_personas_atendidas": 2,
+			"costo_proc_usuario": 7640
+		},
+		{
+			"code": 976,
+			"label": "EXTRACCIÓN NO QUIRURGICA DE DISPOSITIVO TERAPEUTICO DEL SISTEMA URINARIO",
+			"costo_procedimiento": 255721,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 85240.33333333333
+		},
+		{
+			"code": 977,
+			"label": "EXTRACCIÓN NO QUIRURGICA DE DISPOSITIVO TERAPEUTICO DEL SISTEMA REPRODUCTOR FEMENINO",
+			"costo_procedimiento": 931339,
+			"numero_personas_atendidas": 6,
+			"costo_proc_usuario": 155223.16666666666
+		},
+		{
+			"code": 978,
+			"label": "OTRA EXTRACCIÓN NO QUIRURGICA DE DISPOSITIVO TERAPEUTICO",
+			"costo_procedimiento": 323980,
+			"numero_personas_atendidas": 5,
+			"costo_proc_usuario": 64796
+		},
+		{
+			"code": 981,
+			"label": "EXTRACCIÓN SIN INCISIÓN CUERPO EXTRAÑO INTRALUMINAL OTROS SITIOS Excluye: EXTRACCIÓN DE DISPOSITIVO TERAPEUTICO(973, 974, 976, 977,978)",
+			"costo_procedimiento": 56234,
+			"numero_personas_atendidas": 3,
+			"costo_proc_usuario": 18744.666666666668
+		},
+		{
+			"code": 982,
+			"label": "EXTRACCIÓN SIN INCISIÓN DE CUERPO EXTRAÑO NO INTRALUMINAL Excluye: EXTRACCIÓN DE CUERPO EXTRAÑO INTRALUMINAL(980-981)",
+			"costo_procedimiento": 168685,
+			"numero_personas_atendidas": 10,
+			"costo_proc_usuario": 16868.5
+		},
+		{
+			"code": 990,
+			"label": "EDUCACION EN SALUD Excluye: LA ACTIVIDAD DE ORIENTACION Y EDUCACION DURANTE LA CONSULTA O EL CONTROL-OMITIR CODIGO",
+			"costo_procedimiento": 29162694,
+			"numero_personas_atendidas": 2599,
+			"costo_proc_usuario": 11220.73643709119
+		},
+		{
+			"code": 991,
+			"label": "INYECCIÓN O INFUSIÓN DE SUSTANCIA TERAPEUTICA O PROFILACTICA INCLUYE: INYECCIÓN REALIZADA POR VÍA INTRAMUSCULAR, INTRAVENOSA O HIPODERMICA, DE ACCION LOCAL O SISTEMICA SimultAneo: CODIFICAR SIMULTANEAMENTE SITIO DE INYECCIÓN/ PERFUSIÓN. EJEMPLOS: ARTICULA",
+			"costo_procedimiento": 51801334,
+			"numero_personas_atendidas": 161,
+			"costo_proc_usuario": 321747.41614906833
+		},
+		{
+			"code": 992,
+			"label": "INYECCIÓN O INFUSIÓN DE OTRA SUSTANCIA TERAPEUTICA O PROFILACTICA INCLUYE: INYECCIÓN REALIZADA POR VÍA INTRAMUSCULAR, INTRAVENOSA O HIPODERMICA, DE ACCION LOCAL O SISTEMICA",
+			"costo_procedimiento": 2198126265,
+			"numero_personas_atendidas": 6528,
+			"costo_proc_usuario": 336722.7734375
+		},
+		{
+			"code": 993,
+			"label": "VACUNACION E INOCULACION PROFILACTICA CONTRA CIERTAS ENFERMEDADES INMUNOPREVENIBLES INCLUYE:  AQUELLA PARA LA PROTECCION DE LA SALUD DE LOS TRABAJADORES Excluye: INFUSIÓN/INYECCIÓN DE GLOBULINA INMUNE RH (99.1.1), DE GAMMA GLOBULINA O SUEROS INMUNES (99.1",
+			"costo_procedimiento": 1427261,
+			"numero_personas_atendidas": 91,
+			"costo_proc_usuario": 15684.186813186812
+		},
+		{
+			"code": 995,
+			"label": "VACUNACION E INOCULACION PROFILACTICA CONTRA OTRAS ENFERMEDADES",
+			"costo_procedimiento": 79200,
+			"numero_personas_atendidas": 31,
+			"costo_proc_usuario": 2554.8387096774195
+		},
+		{
+			"code": 996,
+			"label": "CONVERSION DEL RITMO CARDIACO Excluye:  MASAJE CARDIACO A TORAX ABIERTO (37.9.1)",
+			"costo_procedimiento": 114234,
+			"numero_personas_atendidas": 1,
+			"costo_proc_usuario": 114234
+		},
+		{
+			"code": 997,
+			"label": "PROCEDIMIENTOS PROFILACTICOS EN SALUD ORAL",
+			"costo_procedimiento": 56258098,
+			"numero_personas_atendidas": 1077,
+			"costo_proc_usuario": 52235.931290622095
+		},
+		{
+			"code": 998,
+			"label": "PROCEDIMIENTOS FISICOS MISCELANEOS",
+			"costo_procedimiento": 1054899,
+			"numero_personas_atendidas": 5,
+			"costo_proc_usuario": 210979.8
+		},
+		{
+			"code": 999,
+			"label": "OTROS PROCEDIMIENTOS MISCELANEOS NO CLASIFICADOS BAJO OTRO CONCEPTO",
+			"costo_procedimiento": 93965678,
+			"numero_personas_atendidas": 578,
+			"costo_proc_usuario": 162570.37716262977
+		},
+		{
+			"code": "A10",
+			"label": "INFORMACIÓN, EDUCACION Y COMUCACION (IEC) Excluye: AQUELLA HACIA EL FOMENTO DE LA SALUD OCUPACIONAL (T1.1, T2.1)",
+			"costo_procedimiento": 1497246,
+			"numero_personas_atendidas": 138,
+			"costo_proc_usuario": 10849.608695652174
+		},
+		{
+			"code": "A20",
+			"label": "GESTION EN PREVENCION Y CONTROL DE LA ENFERMEDAD",
+			"costo_procedimiento": 57305543,
+			"numero_personas_atendidas": 97,
+			"costo_proc_usuario": 590778.793814433
+		},
+		{
+			"code": "A22",
+			"label": "ORIENTACION E IDENTIFICACION DE LA POBLACION HACIA EL DIAGNOSTICO TEMPRANO",
+			"costo_procedimiento": 325767,
+			"numero_personas_atendidas": 22,
+			"costo_proc_usuario": 14807.59090909091
+		}
+	]
+
+
+
 }
