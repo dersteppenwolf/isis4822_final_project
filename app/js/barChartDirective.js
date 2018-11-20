@@ -183,7 +183,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
 
                 
 
-                if(!scope.resolveaxislabel){
+                //if(!scope.resolveaxislabel){
                     xAxisGen = g => g
                         .attr("transform", `translate(0,${height - margin.bottom})`)
                         .call(xAxis)
@@ -191,13 +191,13 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                         .attr("y", 15)
                         .attr("x", 0)
                         .attr("dy", ".35em")
-                        .attr("transform", "rotate(30)")
+                        .attr("transform", "rotate(25)")
                         .style("text-anchor", "start")
-                }else{
-                    xAxisGen = g => g
-                        .attr("transform", `translate(0,${height - margin.bottom})`)
-                        .call(xAxis)
-                }
+                // }else{
+                //     xAxisGen = g => g
+                //         .attr("transform", `translate(0,${height - margin.bottom})`)
+                //         .call(xAxis)
+                // }
                     
                     //.selectAll(".tick text")
                     //.call(wrap, xScale.bandwidth())   
@@ -352,6 +352,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 //$log.log("handleMouseMove");
             }
 
+            /*
             function wrap(text, w) {
                 text.each(function() {
                   var text = d3.select(this),
@@ -375,6 +376,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                   }
                 })
             }
+            */
 
 
 

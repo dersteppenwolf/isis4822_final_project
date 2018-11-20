@@ -90,15 +90,30 @@
 	
 		<div class="row">
 			<div class="vtitle">Administrators</div>
+
+			<div id="regime-barchart" class="chart-container col-3" 
+			bar-chart crossfilter="cf" dimension="dimRegime" group="groupRegime" 
+			domain="regime"
+			showall="false" resolveaxislabel="true"
+			charttitle="Regime">
+			</div>
+
+			<div id="sisben-barchart" class="chart-container col-3" 
+			bar-chart crossfilter="cf" dimension="dimSisben" group="groupSisben" 
+			domain="sisben"
+			showall="false" resolveaxislabel="true"
+			charttitle="Sisben">
+			</div>
 			
-			<div id="admin-barchart" class="chart-container col-6" 
+			
+			<div id="admin-barchart" class="chart-container col-3" 
 			bar-chart crossfilter="cf" dimension="dimAdministrators" group="groupAdministrators" 
 			domain="administrators"
 			showall="false"
 			charttitle="Administrators (Top 10)">
 			</div>
 
-			<div id="providers-barchart" class="chart-container col-6" 
+			<div id="providers-barchart" class="chart-container col-3" 
 			bar-chart crossfilter="cf" dimension="dimProviders"  group="groupProviders" 
 			domain="providers"
 			showall="false"
@@ -142,6 +157,7 @@
 
 	</div>
 
+	<!--
 	<div class="row">
 		<div class="col-6">
 			bla
@@ -151,5 +167,6 @@
 		</div>
 
 	</div>
+	-->
 
 </div>
