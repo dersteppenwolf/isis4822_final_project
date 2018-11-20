@@ -4,7 +4,7 @@ Project for  Class *ISIS 4822 -  Visual Analytics - Universidad de los Andes* ht
 
 ## Related Links
 
-* Demo: 
+* Demo: http://jcmendez.gkudos.com/ar/
 * Slides: 
 * Videos: 
 * Paper: 
@@ -17,19 +17,7 @@ According to
 
 ## About the Authors 
 
-
-### Andrés Eslava
-
-**Email**: 
-
-**Twitter**: 
-
-**Github**: 
-
-**Web**: 
-
 ### Juan Carlos Méndez
-
 
 **Email**: jc.mendez[~at~]uniandes.edu.co , juan[~at~]gkudos.com
 
