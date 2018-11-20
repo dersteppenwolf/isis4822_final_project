@@ -45,6 +45,18 @@ body {
   text-justify: inter-word;
   color: #737373;
 }
+.vtitle {
+  line-height: 50px;
+  white-space: nowrap;
+  position: absolute;
+  right: 100%;
+  transform-origin: top right 0;
+  transform: rotate( 270deg );
+  font-size: 14px;
+  margin-top: 20px;
+  padding: 0px;
+}
+
 
 .footer {
   position: absolute;
@@ -126,10 +138,7 @@ h2 {
   padding: 10px;
   font-size: 25px;
 }
-.dashboardSubTitle {
-  margin-top: 20px;
-  font-size: 20px;
-}
+
 .visCard {
   padding-right: 15px;
   padding-left: 15px;
