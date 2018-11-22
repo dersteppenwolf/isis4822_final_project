@@ -274,18 +274,22 @@ dataViz.controller('costsController', function (
     //$log.log(item)
     //$log.log(model)
     if (item.code == -1) {
+      $scope.groupStates.all().forEach(function(v){
+        v.selected = false;
+        //$log.log(v)
+      })
       $scope.dimStates.filterAll();
     } else {
       $scope.dimStates.filterAll();
-      $scope.dimStates.filterExact(item.code); 
       $scope.groupStates.all().forEach(function(v){
         if(v.key == item.code){
           v.selected = true;
         }else{
           v.selected = false;
         }
-        $log.log(v)
+        //$log.log(v)
       })
+      $scope.dimStates.filterExact(item.code); 
     }
   };
 
