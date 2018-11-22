@@ -106,9 +106,10 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
 
             function tooltipValue(d) {
                 return "<b>" + labelFromDomain(d.key) +
-                    " ("+d.key+") </b>:<br>Cost/Person: " + $filter('megaNumber')(d.value.costPerson) +
-                    ",  Costs: " + $filter('megaNumber')(d.value.costs) +
-                    ",   People Served: " + $filter('megaNumber')(d.value.people)
+                    " ("+d.key+") </b>:<br>C/P: $" + $filter('megaNumber')(d.value.costPerson) +
+                    ",   People: " + $filter('megaNumber')(d.value.people) +
+                    ",  Costs: $" + $filter('megaNumber')(d.value.costs) 
+                    
             }
 
             function labelFromDomain(d) {
@@ -178,7 +179,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 
                 yAxis = d3.axisLeft(yScale)
                     .ticks(5).tickPadding(10)
-                    .tickFormat(d => (  $filter('megaNumber')(d)    )   );
+                    .tickFormat(d => ( "$ " +$filter('megaNumber')(d) + "  "    )   );
 
 
                 
@@ -276,6 +277,12 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     .attr("y", 0 + (margin.top / 2))
                     .attr("text-anchor", "middle")
                     .text(scope.charttitle)
+
+                // scope.svg.append("text")
+                //     .attr("class", "chartUnit")
+                //     .attr("text-anchor", "middle")  // this makes it easy to centre the text as the transform is applied to the anchor
+                //     .attr("transform", "translate("+ (10) +","+(height/2)+")rotate(-90)")  // text is drawn off the screen top left, move down and out and rotate
+                //     .text("C/P");
 
                 scope.svg.append("g")
                     .attr("class", "x axis")

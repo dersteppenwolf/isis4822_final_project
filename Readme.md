@@ -15,7 +15,7 @@ Project for  Class *ISIS 4822 -  Visual Analytics - Universidad de los Andes* ht
 According to 
 
 
-## About the Authors 
+## About the Author 
 
 ### Juan Carlos Méndez
 
@@ -54,6 +54,7 @@ data...
 ### Technologies used
 
 * D3 v5.7.0 https://github.com/d3/d3/releases/tag/v5.7.0
+* Crossfilter.js v1.4.6
 * Vega https://vega.github.io/vega/
 * AngularJS https://angularjs.org/
 * Bootstrap: http://getbootstrap.com/

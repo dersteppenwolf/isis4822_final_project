@@ -33,15 +33,15 @@
 							<ui-select-choices repeat="state in states | filter: $select.search">
 								<span ng-bind-html="state.label | highlight: $select.search"></span>
 								<small>
-									Cost per User: ${{state.costo_proc_usuario | megaNumber:1}} COP,
-									Total Costs: ${{state.costo_procedimiento | megaNumber:1}} COP,
-									People: {{state.numero_personas_atendidas | megaNumber:1}}
+									Cost per Person: ${{state.costo_proc_usuario | megaNumber:1}} COP,
+									People: {{state.numero_personas_atendidas | megaNumber:1}} , 
+									Total Costs: ${{state.costo_procedimiento | megaNumber:1}} COP
 								</small>
 							</ui-select-choices>
 						</ui-select>
 					</div>
 
-					<div class="col-xs-3 lead visCard">Cost per Person
+					<div class="col-xs-3 lead visCard">Costs per Person (C/P)
 						<br>
 						<div ng-animate-swap="totalCostPerPerson" class="cell swap-animation">
 							${{totalCostPerPerson | megaNumber:1}} COP

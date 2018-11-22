@@ -5,6 +5,8 @@ dataViz.controller('costsController', function (
   $scope.progressbar = ngProgressFactory.createInstance();
   $scope.progressbar.setHeight("5px");
 
+  $scope.tooltip = d3.select("body").append("div").attr("class", "toolTip");
+
   ////////////////////////////////
   // domains ( for labels)   
   $scope.years = []
@@ -73,6 +75,12 @@ dataViz.controller('costsController', function (
   ////////////////////////////////
   $scope.loadDomains = function () {
     $log.log("loadDomains");
+
+    $scope.tooltip.style("left", window.innerWidth / 2 - 80 + "px")
+                    .style("top", window.innerHeight / 2- 80 + "px")
+                    .style("display", "inline-block")
+                    .html('<div style="margin:30px; padding:10px" >Loading 200k rows... </div>');
+
     $http.get('data/domains.json').
       then(function (response) {
         var data = response.data;
@@ -239,6 +247,7 @@ dataViz.controller('costsController', function (
       return p.costPerson;
     }
     //////////////
+    $scope.tooltip.style("display", "none");
   }
 
 
@@ -267,7 +276,16 @@ dataViz.controller('costsController', function (
     if (item.code == -1) {
       $scope.dimStates.filterAll();
     } else {
-      $scope.dimStates.filterExact(item.code);
+      $scope.dimStates.filterAll();
+      $scope.dimStates.filterExact(item.code); 
+      $scope.groupStates.all().forEach(function(v){
+        if(v.key == item.code){
+          v.selected = true;
+        }else{
+          v.selected = false;
+        }
+        $log.log(v)
+      })
     }
   };
 
