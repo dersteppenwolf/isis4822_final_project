@@ -21,10 +21,14 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
             if(attrs.resolveaxislabel)  {
                 scope.resolveaxislabel = JSON.parse(attrs.resolveaxislabel)
             }
+            scope.showtrend = false
+            if(attrs.showtrend)  {
+                scope.showtrend = JSON.parse(attrs.showtrend)
+            }
             
             scope.dataset = []
 
-            var xScale, yScale, yGridGen, xAxisGen, yAxisGen, barsGen;
+            var xScale, yScale, yGridGen, xAxisGen, yAxisGen, barsGen, lineGen;
 
             scope.tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
@@ -230,6 +234,11 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     //.on("mouseout", handleMouseOut)
                     .on("click", handleMouseClick)
                     .exit().remove();
+
+                lineGen = d3.line()
+                    .x(X) // set the x values for the line generator
+                    .y(Y) // set the y values for the line generator 
+                    .curve(d3.curveMonotoneX)
             }
 
             function redrawChart() {
@@ -256,6 +265,14 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
 
                 scope.svg.selectAll(".bars")
                     .call(barsGen)
+                
+                if(scope.showtrend ){
+                    t.select(".lineSeries")
+                        .duration(750)
+                        .attr("d", lineGen(scope.dataset));
+                }
+
+                    
             }
 
 
@@ -300,6 +317,12 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 scope.svg.append("g")
                     .attr("class", "bars")
                     .call(barsGen)
+                
+                if(scope.showtrend ){
+                    scope.svg.append("path")
+                        .attr("class", "lineSeries")
+                        .attr("d", lineGen(scope.dataset));
+                }
 
                 scope.initialized = true;
             }

@@ -281,6 +281,12 @@ z-index: 10000; /* The select2 dropdown has a z-index of 9999 */
   stroke: #9D570D;
 }
 
+.lineSeries {
+  fill: none;
+  stroke: #FBBB77;
+  stroke-width: 3;
+}
+
 
 .toolTip {
   color: black;
