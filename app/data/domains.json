@@ -1,4 +1,36 @@
 {
+	"sex" : [
+		{
+			"label": "FEMENINO",
+			"costo_procedimiento": 6141004425,
+			"numero_personas_atendidas": 394162,
+			"costo_proc_usuario": 15579.899698601082,
+			"code": 1
+		},
+		{
+			"label": "MASCULINO",
+			"costo_procedimiento": 1673160798,
+			"numero_personas_atendidas": 102564,
+			"costo_proc_usuario": 16313.334093834093,
+			"code": 2
+		},
+		{
+			"label": "NO DEFINIDO",
+			"costo_procedimiento": 158130,
+			"numero_personas_atendidas": 8,
+			"costo_proc_usuario": 19766.25,
+			"code": 3
+		},
+		{
+			"label": "NR - NO REPORTADO",
+			"costo_procedimiento": 7225519,
+			"numero_personas_atendidas": 316,
+			"costo_proc_usuario": 22865.566455696204,
+			"code": 4
+		}
+	], 
+	
+	
 	"years":[
 		{
 			"anno": 2010,

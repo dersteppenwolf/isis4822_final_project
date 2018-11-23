@@ -9,24 +9,22 @@ dataViz.controller('costsController', function (
 
   ////////////////////////////////
   // domains ( for labels)   
+  $scope.sex = []
   $scope.years = []
   $scope.states = []
-  $scope.sections = []
+  $scope.age = []
+  $scope.regime = []
+  $scope.sisben = []
   $scope.administrators = []
-  $scope.providers = [] 
-
-  $scope.sisben = [] 
-  $scope.regime = [] 
-  $scope.chapter = [] 
-  $scope.group = [] 
-  $scope.subgroup = [] 
-
+  $scope.providers = []
+  $scope.procedures = []
+       
+ 
   ////////////////////////////////
   // data for cards  
   $scope.totalPopulation = 0
   $scope.totalCosts = 0
   $scope.totalCostPerPerson = 0
-
 
   ////////////////////////////////
   // crossfilter   
@@ -40,7 +38,11 @@ dataViz.controller('costsController', function (
   $scope.dimStates = {}
   $scope.groupStates = {}
 
-  
+  $scope.dimAge = {}
+  $scope.groupAge = {}
+
+  $scope.dimSex = {}
+  $scope.groupSex  = {}
 
   //  administrators
   $scope.dimAdministrators = {}
@@ -56,19 +58,8 @@ dataViz.controller('costsController', function (
   $scope.groupRegime =   {}
 
   //  Procedures
-  $scope.dimSection = {}
-  $scope.groupSection =  {}
-
-  $scope.dimChapter = {}
-  $scope.groupChapter=  {}
-
-  $scope.dimGroup= {}
-  $scope.groupGroup=  {}
-
-  $scope.dimSubgroup= {}
-  $scope.groupSubgroup =  {}
-
-
+  $scope.dimProcedure = {}
+  $scope.groupProcedure = {}
   
   
 
@@ -83,21 +74,20 @@ dataViz.controller('costsController', function (
 
     $http.get('data/domains.json').
       then(function (response) {
+        //$log.log("loadDomains ok ");
         var data = response.data;
         //$log.log(data);
+        //$log.log(Object.keys(data));
+
+        $scope.sex = data.sex
         $scope.years = data.years
         $scope.states = data.states
-        $scope.sections = data.sections
+        $scope.age = data.age
+        $scope.regime = data.regime 
+        $scope.sisben = data.sisben 
         $scope.administrators = data.administrators
         $scope.providers = data.providers 
-        
-        $scope.sisben = data.sisben 
-        $scope.regime = data.regime 
-        $scope.chapter = data.chapter 
-        $scope.group = data.group 
-        $scope.subgroup = data.subgroup 
-        
-        
+        $scope.procedures = data.procedures 
 
         let totalPeople = 0
         let totalCosts = 0
@@ -140,7 +130,7 @@ dataViz.controller('costsController', function (
       v.numero_personas_atendidas = +v.numero_personas_atendidas
       v.anno = +v.anno
       v.code_depto = +v.code_depto
-      v.code_seccion = +v.code_seccion
+   
       //$log.log(v);
     });
     $log.log(d[0]);
@@ -151,6 +141,11 @@ dataViz.controller('costsController', function (
     $scope.totalPopulationSum = $scope.cf.groupAll().reduceSum((d) => d.numero_personas_atendidas);
     $scope.totalCostsSum = $scope.cf.groupAll().reduceSum((d) => d.costo_procedimiento);
 
+    $scope.dimSex = $scope.cf.dimension(function (d) { return d.code_sexo || 0; });
+    $scope.groupSex = $scope.dimSex.group()
+      .reduce(reduceAdd, reduceRemove, reduceInitial)
+      .order(orderValue)
+
     $scope.dimYear = $scope.cf.dimension(function (d) { return d.anno || 0; });
     $scope.groupYear = $scope.dimYear.group()
       .reduce(reduceAdd, reduceRemove, reduceInitial)
@@ -160,9 +155,11 @@ dataViz.controller('costsController', function (
     $scope.groupStates = $scope.dimStates.group()
       .reduce(reduceAdd, reduceRemove, reduceInitial)
       .order(orderValue)
-
     
-
+    $scope.dimAge = $scope.cf.dimension(function (d) { return d.code_age || 0; });
+    $scope.groupAge = $scope.dimAge.group()
+      .reduce(reduceAdd, reduceRemove, reduceInitial)
+      .order(orderValue)
 
     //////////////
     //  administrators / providers
@@ -188,23 +185,8 @@ dataViz.controller('costsController', function (
 
     //////////////
     //  Procedures
-    $scope.dimSection = $scope.cf.dimension(function (d) { return d.code_seccion || 0; });
-    $scope.groupSection = $scope.dimSection.group()
-      .reduce(reduceAdd, reduceRemove, reduceInitial)
-      .order(orderValue)
-    
-    $scope.dimChapter = $scope.cf.dimension(function (d) { return d.code_capitulo || 0; });
-    $scope.groupChapter = $scope.dimChapter.group()
-      .reduce(reduceAdd, reduceRemove, reduceInitial)
-      .order(orderValue)
-    
-    $scope.dimGroup = $scope.cf.dimension(function (d) { return d.code_grupo || 0; });
-    $scope.groupGroup = $scope.dimGroup.group()
-      .reduce(reduceAdd, reduceRemove, reduceInitial)
-      .order(orderValue)
-    
-    $scope.dimSubgroup = $scope.cf.dimension(function (d) { return d.code_subgrupo || 0; });
-    $scope.groupSubgroup = $scope.dimSubgroup.group()
+    $scope.dimProcedure = $scope.cf.dimension(function (d) { return d.code_procedimiento || 0; });
+    $scope.groupProcedure = $scope.dimProcedure.group()
       .reduce(reduceAdd, reduceRemove, reduceInitial)
       .order(orderValue)
 

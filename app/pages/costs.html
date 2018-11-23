@@ -75,12 +75,12 @@
 		<div id="states-barchart" class="chart-container col-6" 
 		bar-chart crossfilter="cf" dimension="dimStates" group="groupStates" 
 		domain="states"
-		showall="false" resolveaxislabel="true"
+		showall="true" resolveaxislabel="true"
 		charttitle="States (Top 10)"></div>
 
 		<div id="year-barchart" class="chart-container col-6" 
 		bar-chart crossfilter="cf" dimension="dimYear" group="groupYear" 
-		showall="true" showtrend="true"
+		showall="true" showtrend="false"
 		charttitle="Years">
 		</div>
 	</div>
@@ -127,32 +127,28 @@
 	<div class="row">
 		<div class="vtitle">Procedures</div>
 
-		<div id="section-barchart" class="chart-container col-3" 
-		bar-chart crossfilter="cf" dimension="dimSection"  group="groupSection" 
-		domain="sections"
-		showall="true"
-		charttitle="Section">
-		</div>
-		<div id="chapter-barchart" class="chart-container col-3" 
-		bar-chart crossfilter="cf" dimension="dimChapter"  group="groupChapter" 
-		domain="chapter"
+		<div id="procedure-barchart" class="chart-container col-3" 
+		bar-chart crossfilter="cf" dimension="dimProcedure"  group="groupProcedure" 
+		domain="procedures"
 		showall="false"
-		charttitle="Chapter (Top 10)">
+		charttitle="Procedures">
 		</div>
 
-		<div id="group-barchart" class="chart-container col-3" 
-		bar-chart crossfilter="cf" dimension="dimGroup"  group="groupGroup" 
-		domain="group"
-		showall="false"
-		charttitle="Group (Top 10)">
+		<div id="sex-barchart" class="chart-container col-3" 
+		bar-chart crossfilter="cf" dimension="dimSex"  group="groupSex" 
+		domain="sex"
+		showall="true" resolveaxislabel="true"
+		charttitle="Sex">
 		</div>
 
-		<div id="subgroup-barchart" class="chart-container col-3" 
-		bar-chart crossfilter="cf" dimension="dimSubgroup"  group="groupSubgroup" 
-		domain="subgroup"
-		showall="false"
-		charttitle="SubGroup (Top 10)">
+		<div id="age-barchart" class="chart-container col-3" 
+		bar-chart crossfilter="cf" dimension="dimAge"  group="groupAge" 
+		domain="age"
+		showall="true" resolveaxislabel="true"
+		charttitle="Age Group">
 		</div>
+
+		
 		
 
 	</div>
