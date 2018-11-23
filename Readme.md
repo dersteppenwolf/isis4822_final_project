@@ -55,7 +55,6 @@ data...
 
 * D3 v5.7.0 https://github.com/d3/d3/releases/tag/v5.7.0
 * Crossfilter.js v1.4.6
-* Vega https://vega.github.io/vega/
 * AngularJS https://angularjs.org/
 * Bootstrap: http://getbootstrap.com/
 * Gulp: https://gulpjs.com/
