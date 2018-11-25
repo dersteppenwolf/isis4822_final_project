@@ -31,7 +31,7 @@ dataViz.directive('horizontalBarChart', function ($parse, $log, $filter) {
                 .append("svg")
                 .attr("id", scope.id + "-svg")
 
-            var margin = { top: 30, bottom: 5, right: 10, left: 10 }
+            var margin = { top: 30, bottom: 3, right: 10, left: 10 }
             var width = getDivWidth("#"+scope.id) - margin.left - margin.right
             var height = HEIGHT - margin.top - margin.bottom;
 
@@ -77,11 +77,28 @@ dataViz.directive('horizontalBarChart', function ($parse, $log, $filter) {
             scope.onCrossfilterChange = function (eventType) {
                 $log.log("horizontalBarChartDirective - onCrossfilterChange " + scope.id)
                 //$log.log(eventType)
+                var data = []
                 if (scope.showall) {
-                    scope.dataset = group.all()
+                    data = group.all()
                 } else {
-                    scope.dataset = group.top(NUM_TOP_ITEMS)
+                    data = group.top(NUM_TOP_ITEMS)
                 }
+
+                data.forEach(d => {
+                    d.label = labelFromDomain(d.key)
+                });
+
+                scope.dataset = data.sort( function (a, b) {
+                    if (a.label > b.label) {
+                      return 1;
+                    }
+                    if (a.label < b.label) {
+                      return -1;
+                    }
+                    // a must be equal to b
+                    return 0;
+                  }).reverse()
+
                 if (!scope.initialized) {
                     render();
                 } else {
@@ -145,7 +162,7 @@ dataViz.directive('horizontalBarChart', function ($parse, $log, $filter) {
                 $log.log("updateParameters");
                 
                 yScale  = d3.scaleBand()
-                    .padding(0.1)
+                    .padding(0.2)
                     .rangeRound([height, margin.top])
                     .domain(scope.dataset.map(function (d) { return yValue(d); }))
 
@@ -155,8 +172,7 @@ dataViz.directive('horizontalBarChart', function ($parse, $log, $filter) {
 
                 xAxis = d3.axisBottom(xScale).ticks(5)
                                 
-                yAxis = d3.axisLeft(yScale)
-                    .tickFormat("")
+                yAxis = d3.axisLeft(yScale).tickFormat("")
                                     
                 xAxisGen = g => g
                         .attr("transform", `translate(0,${height - margin.bottom})`)
@@ -171,27 +187,15 @@ dataViz.directive('horizontalBarChart', function ($parse, $log, $filter) {
                     .call(yAxis)
                     .call(g => g.select(".domain").remove())
 
-
                 barsGen = g => {
-                    var bar = g.selectAll()
+                    var bars = g.selectAll()
                     .data(scope.dataset)
                     //.enter()
                     .enter().append("g")
                     .attr("transform", `translate(${margin.left},0)`)
                     .attr("class", "bar")
-                    //.attr("transform", function(d, i) { return "translate("+margin.left + ", " + (yScale(i) ) + ")";   })
-                    
-                    // bar.append("text")
-                    // .attr("class", "below")
-                    // .attr("x", 12)
-                    // .attr("dy", "1.2em")
-                    // .attr("text-anchor", "left")
-                    // .text(function(d) { return labelFromDomain(d.key); } )
-                    // .style("fill", "#000000")
-                    //
-                    //.attr("transform", `translate(${margin.left},0)`)
-                    //.attr("transform", `translate(0,${height - margin.bottom})`)
-                    bar.append("rect")
+
+                bars.append("rect")
                     .attr("class", function (d) { return Boolean(d.selected) ? "barSelected" : "bar" })
                     //.attr("x", X )
                     .attr("y", Y )
@@ -200,24 +204,19 @@ dataViz.directive('horizontalBarChart', function ($parse, $log, $filter) {
                     .on("mouseenter", handleMouseEnter)
                     .on("mouseleave", handleMouseLeave)
                     .on("click", handleMouseClick)
-                    
-
-                    // bar.append("svg")
-                    //     .attr({
-                    //         height: barWidth-gap
-                    //     })
-                    //     .append("text")
-                    //     .attr("class", "up")
-                    //     .attr("x", 12)
-                    //     .attr("dy", "1.2em")
-                    //     .attr("text-anchor", "left")
-                    //     .text(function(d) { return labelFromDomain(d.key); })
-                    //     .style("fill", "#ffffff")
-
-                    bar.exit().remove()
+                    .exit().remove()
+  
+                bars.append("text")
+                    .attr("class", "value")
+                    .attr("y", function (d) {
+                        return Y(d)  + yScale.bandwidth() / 2 +4 
+                    })
+                    .attr("x", function (d) {
+                        return margin.left  + 5
+                            // X(d) + 3;
+                    })
+                    .text(function (d) { return labelFromDomain(d.key) ; })
                 }
-                    
-                
             }
 
             function redrawChart() {
@@ -290,6 +289,7 @@ dataViz.directive('horizontalBarChart', function ($parse, $log, $filter) {
                     .html(tooltipValue(d));
                 if (!Boolean(d.selected)) {
                     d3.select(this).attr("class", "barHover")
+                    d3.select(this).select("text.value").attr("class", "valueOver")
                 }
                 //dimension.filterExact(d.key);
             }

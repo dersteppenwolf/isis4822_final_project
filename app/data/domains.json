@@ -385,28 +385,28 @@
 			"code": 2
 		},
 		{
-			"label": "SALUD: CONTRIBUTIVO",
+			"label": "CONTRIBUTIVO",
 			"costo_procedimiento": 6364923187,
 			"numero_personas_atendidas": 419532,
 			"costo_proc_usuario": 15171.48438498136,
 			"code": 3
 		},
 		{
-			"label": "SALUD: EXCEPCION / ESPECIAL",
+			"label": "EXCEPCION / ESPECIAL",
 			"costo_procedimiento": 16834215,
 			"numero_personas_atendidas": 698,
 			"costo_proc_usuario": 24117.78653295129,
 			"code": 4
 		},
 		{
-			"label": "SALUD: PREPAGADA",
+			"label": "PREPAGADA",
 			"costo_procedimiento": 43451273,
 			"numero_personas_atendidas": 2594,
 			"costo_proc_usuario": 16750.683500385505,
 			"code": 5
 		},
 		{
-			"label": "SALUD: SUBSIDIADO",
+			"label": "SUBSIDIADO",
 			"costo_procedimiento": 1274804097,
 			"numero_personas_atendidas": 64984,
 			"costo_proc_usuario": 19617.19957220239,

@@ -270,7 +270,29 @@ z-index: 10000; /* The select2 dropdown has a z-index of 9999 */
   fill:#3C4C95;
   stroke: #08154F;
 }
+
+text.value {
+  font-family: 'Comfortaa', cursive;
+  font-size: 11px; 
+  text-anchor: left;
+  stroke: white;
+  color: white;
+  text-transform: lowercase;
+}
+text.valueOver {
+  font-family: 'Comfortaa', cursive;
+  font-size: 11px; 
+  text-anchor: left;
+  stroke: black;
+  color: black;
+  text-transform: lowercase;
+}
+
+
+
+
 .barSelected {
+  cursor: pointer;
   fill: rgba(218, 146, 70 ,1);
   stroke: #9D570D;
 }
@@ -278,7 +300,7 @@ z-index: 10000; /* The select2 dropdown has a z-index of 9999 */
 .barHover {
   cursor: pointer;
   fill: #fff;
-  stroke: #9D570D;
+  stroke: #000000;
 }
 
 .lineSeries {
