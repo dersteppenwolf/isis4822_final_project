@@ -92,8 +92,8 @@
 
 	"states" : [
 		{
-			"code": null,
-			"label": "1 - NO DEFINIDO",
+			"code": 0,
+			"label": "1 - NA",
 			"costo_procedimiento": 59203547,
 			"numero_personas_atendidas": 3095,
 			"costo_proc_usuario": 19128.771243941843

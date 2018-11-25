@@ -87,10 +87,28 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 $log.log("barChartDirective - onCrossfilterChange " + scope.id)
                 //$log.log(eventType)
                 if (scope.showall) {
-                    scope.dataset = group.all()
+                    var data = group.all()
+                    data.forEach(d => {
+                        d.label = labelFromDomain(d.key)
+                    });
+    
+                    scope.dataset = data.sort( function (a, b) {
+                        if (a.label > b.label) {
+                          return 1;
+                        }
+                        if (a.label < b.label) {
+                          return -1;
+                        }
+                        // a must be equal to b
+                        return 0;
+                      })
                 } else {
                     scope.dataset = group.top(NUM_TOP_ITEMS)
                 }
+
+                
+
+
                 if (!scope.initialized) {
                     render();
                 } else {
