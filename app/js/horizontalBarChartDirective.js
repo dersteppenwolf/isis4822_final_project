@@ -17,10 +17,6 @@ dataViz.directive('horizontalBarChart', function ($parse, $log, $filter) {
             scope.id = attrs.id
             scope.charttitle = attrs.charttitle
             scope.showall = JSON.parse(attrs.showall)
-            scope.resolveaxislabel = false
-            if(attrs.resolveaxislabel)  {
-                scope.resolveaxislabel = JSON.parse(attrs.resolveaxislabel)
-            }
             scope.dataset = []
 
             var xScale, yScale, xGridGen, xAxisGen, yAxisGen, barsGen;
@@ -194,28 +190,29 @@ dataViz.directive('horizontalBarChart', function ($parse, $log, $filter) {
                     .enter().append("g")
                     .attr("transform", `translate(${margin.left},0)`)
                     .attr("class", "bar")
-
-                bars.append("rect")
-                    .attr("class", function (d) { return Boolean(d.selected) ? "barSelected" : "bar" })
-                    //.attr("x", X )
-                    .attr("y", Y )
-                    .attr("height", yScale.bandwidth())
-                    .attr("width", function (d) { return  X(d) - margin.left - margin.right  } )
                     .on("mouseenter", handleMouseEnter)
                     .on("mouseleave", handleMouseLeave)
                     .on("click", handleMouseClick)
-                    .exit().remove()
-  
-                bars.append("text")
-                    .attr("class", "value")
-                    .attr("y", function (d) {
-                        return Y(d)  + yScale.bandwidth() / 2 +4 
-                    })
-                    .attr("x", function (d) {
-                        return margin.left  + 5
-                            // X(d) + 3;
-                    })
-                    .text(function (d) { return labelFromDomain(d.key) ; })
+
+                    bars.append("rect")
+                        .attr("class", function (d) { return Boolean(d.selected) ? "barSelected" : "bar" })
+                        //.attr("x", X )
+                        .attr("y", Y )
+                        .attr("height", yScale.bandwidth())
+                        .attr("width", function (d) { return  X(d) - margin.left - margin.right  } )
+                        
+                        .exit().remove()
+    
+                    bars.append("text")
+                        .attr("class", "value")
+                        .attr("y", function (d) {
+                            return Y(d)  + yScale.bandwidth() / 2 +4 
+                        })
+                        .attr("x", function (d) {
+                            return margin.left  + 5
+                                // X(d) + 3;
+                        })
+                        .text(function (d) { return labelFromDomain(d.key) ; })
                 }
             }
 
@@ -284,12 +281,12 @@ dataViz.directive('horizontalBarChart', function ($parse, $log, $filter) {
             function handleMouseEnter(d, i) {
                 //$log.log("handleMouseEnter "+ scope.id);
                 scope.tooltip.style("left", d3.event.pageX - 80 + "px")
-                    .style("top", d3.event.pageY - 80 + "px")
+                    .style("top", d3.event.pageY - 70 + "px")
                     .style("display", "inline-block")
                     .html(tooltipValue(d));
                 if (!Boolean(d.selected)) {
-                    d3.select(this).attr("class", "barHover")
-                    d3.select(this).select("text.value").attr("class", "valueOver")
+                    d3.select(this).selectAll("rect").attr("class", "barHover")
+                    d3.select(this).selectAll("text").attr("class", "valueOver")
                 }
                 //dimension.filterExact(d.key);
             }
@@ -300,7 +297,8 @@ dataViz.directive('horizontalBarChart', function ($parse, $log, $filter) {
                 //$log.log(Boolean(d.selected))
                 //$log.log(scope.dataset)
                 if (!Boolean(d.selected)) {
-                    d3.select(this).attr("class", "bar")
+                    d3.select(this).selectAll("rect").attr("class", "bar")
+                    d3.select(this).selectAll("text").attr("class", "value")
                 }
                 //dimension.filterAll();
             }
