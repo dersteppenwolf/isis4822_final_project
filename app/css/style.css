@@ -134,14 +134,14 @@ h2 {
 svg {
   overflow: hidden;
   vertical-align: middle;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
 }
 
 .card-header{
   /* height: 90px;
   margin-top: 20px;*/
   padding: 40px;
-  background-color: #f2f2f2; 
+  background-color: #ffffff; 
 
 }
 .dashboardTitle {
@@ -166,7 +166,7 @@ svg {
 .chart-container {
   padding: 3px;
   /* padding-bottom: 50px; */
-  background: #f0f0f0;
+  background: #ffffff;
   border: 1px;
   border-style: solid;
   border-color: #d7dbd8;
@@ -289,7 +289,16 @@ z-index: 10000; /* The select2 dropdown has a z-index of 9999 */
   fill:rgba(60, 76, 149, 0.9);
   stroke: #08154F;
 }
-
+.barSelected {
+  cursor: pointer;
+  fill: rgba(218, 146, 70 ,1);
+  stroke: #9D570D;
+}
+.barHover {
+  cursor: pointer;
+  fill: #fff;
+  stroke: #000000;
+}
 text.value {
   font-size: 12px; 
   text-anchor: left;
@@ -312,20 +321,39 @@ text.valueOver {
   text-transform: lowercase;
 }
 
-
-
-
-.barSelected {
+.categoryBack {
+  cursor: pointer;
+  fill:rgba(255, 255, 255, 0.5);
+  stroke: #ffffff;
+}
+.category {
+  cursor: pointer;
+  fill:rgba(60, 76, 149, 0.9);
+  stroke: #08154F;
+  stroke-width: 1
+}
+.categorySelected {
   cursor: pointer;
   fill: rgba(218, 146, 70 ,1);
   stroke: #9D570D;
+  stroke-width: 1
 }
-
-.barHover {
+.categoryHover {
   cursor: pointer;
-  fill: #fff;
+  /* fill: #fff; */
   stroke: #000000;
 }
+text.categoryLabel {
+  font-size: 11px; 
+  text-anchor: left;
+  stroke: rgba(0, 0, 0 ,0.6);
+  
+ 
+}
+
+
+
+
 .lineSeries {
   fill: none;
   stroke: #FBBB77;
