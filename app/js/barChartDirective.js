@@ -6,8 +6,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
         // https://stackoverflow.com/questions/20018507/angular-js-what-is-the-need-of-the-directive-s-link-function-when-we-already-ha
         link: function (scope, elem, attrs) {
 
-            var NUM_TOP_ITEMS = 10
-            const HEIGHT = 200
+            var NUM_TOP_ITEMS = 20
 
             scope.crossfilter = $parse(attrs.crossfilter);
             var dimension = $parse(attrs.dimension);
@@ -25,6 +24,8 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
             if(attrs.showtrend)  {
                 scope.showtrend = JSON.parse(attrs.showtrend)
             }
+
+            
             
             scope.dataset = []
 
@@ -41,7 +42,10 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
             var margin = { top: 30, bottom: 5, right: 10, left: 40 }
             //var width = getDivWidth('.chart-container') - margin.left - margin.right
             var width = getDivWidth("#"+scope.id) - margin.left - margin.right
-            var height = HEIGHT - margin.top - margin.bottom;
+
+            var divH = getDivHeight("#"+scope.id)
+            var height = divH - margin.top - margin.bottom;
+          
 
             window.onresize = function () {
                 $log.log("onresize");
@@ -176,6 +180,16 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 return Math.round(Number(width))
             }
 
+            function getDivHeight(div) {
+                var width = d3.select(div)
+                    // get the width of div element
+                    .style('height')
+                    // take of 'px'
+                    .slice(0, -2)
+                // return as an integer
+                return Math.round(Number(width))
+            }
+
 
             /**
              * update drawing parameters according to new data
@@ -184,7 +198,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 $log.log("updateParameters");
                 
                 xScale = d3.scaleBand()
-                    .padding(0.1)
+                    .padding(0.2)
                     .rangeRound([margin.left, width])
                     .domain(scope.dataset.map(function (d) { return xValue(d); }))
 

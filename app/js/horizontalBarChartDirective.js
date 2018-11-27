@@ -6,8 +6,8 @@ dataViz.directive('horizontalBarChart', function ($parse, $log, $filter) {
         // https://stackoverflow.com/questions/20018507/angular-js-what-is-the-need-of-the-directive-s-link-function-when-we-already-ha
         link: function (scope, elem, attrs) {
 
-            var NUM_TOP_ITEMS = 10
-            const HEIGHT = 200
+            var NUM_TOP_ITEMS = 20
+            
 
             scope.crossfilter = $parse(attrs.crossfilter);
             var dimension = $parse(attrs.dimension);
@@ -17,6 +17,10 @@ dataViz.directive('horizontalBarChart', function ($parse, $log, $filter) {
             scope.id = attrs.id
             scope.charttitle = attrs.charttitle
             scope.showall = JSON.parse(attrs.showall)
+
+            
+
+
             scope.dataset = []
 
             var xScale, yScale, xGridGen, xAxisGen, yAxisGen, barsGen, bars;
@@ -29,7 +33,9 @@ dataViz.directive('horizontalBarChart', function ($parse, $log, $filter) {
 
             var margin = { top: 30, bottom: 3, right: 10, left: 10 }
             var width = getDivWidth("#"+scope.id) - margin.left - margin.right
-            var height = HEIGHT - margin.top - margin.bottom;
+
+            var divH = getDivHeight("#"+scope.id)
+            var height = divH - margin.top - margin.bottom;
 
             window.onresize = function () {
                 $log.log("onresize");
@@ -145,6 +151,16 @@ dataViz.directive('horizontalBarChart', function ($parse, $log, $filter) {
                 var width = d3.select(div)
                     // get the width of div element
                     .style('width')
+                    // take of 'px'
+                    .slice(0, -2)
+                // return as an integer
+                return Math.round(Number(width))
+            }
+
+            function getDivHeight(div) {
+                var width = d3.select(div)
+                    // get the width of div element
+                    .style('height')
                     // take of 'px'
                     .slice(0, -2)
                 // return as an integer

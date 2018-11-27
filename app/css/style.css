@@ -87,7 +87,7 @@ body>.container {
   transition:0.2s linear all; 
 }
 .swap-animation.ng-enter {
-  /* background-color: #f2f2f2; */
+
   color: grey; 
   letter-spacing: 2px;
 }
@@ -131,10 +131,17 @@ h2 {
   font-size: 18px;
 }
 
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+  background-color: #f2f2f2;
+}
 
 .card-header{
-  height: 90px;
-  margin-top: 20px;
+  /* height: 90px;
+  margin-top: 20px;*/
+  padding: 40px;
+  background-color: #f2f2f2; 
 
 }
 .dashboardTitle {
@@ -144,20 +151,21 @@ h2 {
 }
 
 .visCard {
-  padding-right: 15px;
-  padding-left: 15px;
-  font-size: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 18px;
 }
 
 
 
 
-
+.row {
+  margin-left: 50px;
+}
 
 .chart-container {
-  padding: 0px;
+  padding: 3px;
   /* padding-bottom: 50px; */
-  margin: 0 auto;
   background: #f0f0f0;
   border: 1px;
   border-style: solid;
@@ -166,6 +174,13 @@ h2 {
   /* box-shadow: 0px 0px 1px 0px #06060d; */
   height: 200px;
   width: 100%;
+}
+
+.chart-container-large{
+  height: 700px;
+}
+.chart-container-little{
+  height: 150px;
 }
 
 
@@ -271,7 +286,7 @@ z-index: 10000; /* The select2 dropdown has a z-index of 9999 */
 
 /* http://paletton.com/#uid=33S0u0kqdo0gQvulErltfjF-Tex   */
 .bar {
-  fill:#3C4C95;
+  fill:rgba(60, 76, 149, 0.9);
   stroke: #08154F;
 }
 
@@ -293,7 +308,7 @@ text.valueOver {
   font-size: 12px; 
   text-anchor: left;
   stroke: #000000; 
-  stroke-width: 1px;
+  stroke-width: 0.8px;
   text-transform: lowercase;
 }
 
