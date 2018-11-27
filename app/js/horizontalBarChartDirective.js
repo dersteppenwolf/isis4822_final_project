@@ -194,6 +194,17 @@ dataViz.directive('horizontalBarChart', function ($parse, $log, $filter) {
                     .on("mouseleave", handleMouseLeave)
                     .on("click", handleMouseClick)
 
+                    bars.append("text")
+                        .attr("class", "valueBack")
+                        .attr("y", function (d) {
+                            return Y(d)  + yScale.bandwidth() / 2 +4 
+                        })
+                        .attr("x", function (d) {
+                            return margin.left  + 5
+                                // X(d) + 3;
+                        })
+                        .text(function (d) { return labelFromDomain(d.key) ; })
+
                     bars.append("rect")
                         .attr("class", function (d) { return Boolean(d.selected) ? "barSelected" : "bar" })
                         //.attr("x", X )
@@ -212,6 +223,7 @@ dataViz.directive('horizontalBarChart', function ($parse, $log, $filter) {
                             return margin.left  + 5
                                 // X(d) + 3;
                         })
+                        .attr("width", function (d) { return  X(d) - margin.left - margin.right  } )
                         .text(function (d) { return labelFromDomain(d.key) ; })
                 }
             }

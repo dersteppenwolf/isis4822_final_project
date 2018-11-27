@@ -272,17 +272,24 @@ z-index: 10000; /* The select2 dropdown has a z-index of 9999 */
 }
 
 text.value {
-  font-size: 11px; 
+  font-size: 12px; 
   text-anchor: left;
-  stroke: white;
-  color: white;
+  stroke: #ffffff; 
+  stroke-width: 1px;
+  text-transform: lowercase;
+}
+text.valueBack {
+  font-size: 12px; 
+  text-anchor: left;
+  stroke: #000000; 
+  stroke-width: 2px;
   text-transform: lowercase;
 }
 text.valueOver {
-  font-size: 11px; 
+  font-size: 12px; 
   text-anchor: left;
-  stroke: black;
-  color: black;
+  stroke: #000000; 
+  stroke-width: 1px;
   text-transform: lowercase;
 }
 
