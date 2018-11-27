@@ -374,7 +374,7 @@ text.categoryLabel {
   display: none;
   min-width: 80px;
   height: auto;
-  background: none repeat scroll 0 0 rgba(255, 255, 255 ,0.85);
+  background: none repeat scroll 0 0 rgba(255, 255, 255 ,0.9);
   border: 1px solid #08154F;
   padding: 5px;
   text-align: center;

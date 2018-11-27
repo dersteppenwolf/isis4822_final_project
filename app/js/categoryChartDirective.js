@@ -188,7 +188,9 @@ dataViz.directive('categoryChart', function ($parse, $log, $filter) {
                     .domain([0, d3.max(scope.dataset, function (d) { return xValue(d); })])
                     .nice()
 
-                xAxis = d3.axisBottom(xScale).ticks(5)
+                xAxis = d3.axisBottom(xScale)
+                    .ticks(5)
+                    .tickFormat(function(d) { return "$" + $filter('megaNumber')(d)  + "" } )
                                 
                 //yAxis = d3.axisLeft(yScale).tickFormat("")
                                     
