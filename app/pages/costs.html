@@ -1,39 +1,14 @@
 <div class="jumbotron text-center">
 
 	<div class="row">
-		<div class="col-sm-12">
+		<div class="col-sm-3">
 			<p class="dashboardTitle">Costs per Person</p>
 		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-sm-3">map col-sm-4</div>
-		<div class="col-sm-5">
+		<div class="col-sm-6">
 
 			<form class="form-horizontal card-header chart-container-little">
 
 				<div class="form-group row">
-
-
-
-					<!--
-									<label for="stateSel" class="col-xs-3 col-form-label mr-2">State</label>
-									<div class="col-xs-9">
-										<ui-select id="stateSel" ng-model="states.selected" theme="selectize" on-select="onSelectState($item, $model)"
-										 ng-disabled="ctrl.disabled" style="width: 350px;" title="Choose a state">
-											<ui-select-match placeholder="Select or search a state in the list...">{{$select.selected.label}}</ui-select-match>
-											<ui-select-choices repeat="state in states | filter: $select.search">
-												<span ng-bind-html="state.label | highlight: $select.search"></span>
-												<small>
-													Cost per Person: ${{state.costo_proc_usuario | megaNumber:1}} COP,
-													People: {{state.numero_personas_atendidas | megaNumber:1}} , 
-													Total Costs: ${{state.costo_procedimiento | megaNumber:1}} COP
-												</small>
-											</ui-select-choices>
-										</ui-select>
-									</div>
-								-->
-
 					<div class="col-xs-3 lead visCard">Costs per Person (C/P)
 						<br>
 						<div ng-animate-swap="totalCostPerPerson" class="cell swap-animation">
@@ -64,7 +39,7 @@
 
 
 
-		<div id="year-barchart" class="chart-container chart-container-little col-sm-4" bar-chart crossfilter="cf" dimension="dimYear"
+		<div id="year-barchart" class="chart-container chart-container-little col-sm-3" bar-chart crossfilter="cf" dimension="dimYear"
 		 group="groupYear" showall="true" showtrend="false" charttitle="Years">
 		</div>
 
@@ -72,24 +47,30 @@
 
 	<div class="row">
 
-		<div class="col-sm-3">
 
-			<div id="states-barchart" class="chart-container chart-container-large col-sm-12" category-chart crossfilter="cf"
-			 dimension="dimStates" group="groupStates" domain="states" showall="true" charttitle="States"></div>
 
-		</div>
+		<div id="states-barchart" class="chart-container chart-container-large col-md-2" category-chart crossfilter="cf"
+		 dimension="dimStates" group="groupStates" domain="states" showall="true" charttitle="States"></div>
 
-		<div class="col-sm-9">
-		
-				<div id="regime-barchart" class="chart-container  col-sm-6" category-chart crossfilter="cf" dimension="dimRegime"
-				 group="groupRegime" domain="regime" showall="true" charttitle="Regime">
+
+
+		<div class="col-md-10">
+
+			<div class="row">
+				<div id="regime-barchart" class="chart-container chart-container-medium col-sm-3" category-chart crossfilter="cf"
+				 dimension="dimRegime" group="groupRegime" domain="regime" showall="true" charttitle="Regime">
+				</div>
+				<div id="sisben-barchart" class="chart-container chart-container-medium col-sm-3" category-chart crossfilter="cf"
+				 dimension="dimSisben" group="groupSisben" domain="sisben" showall="true" charttitle="Sisben">
 				</div>
 
-				<div id="sisben-barchart" class="chart-container col-sm-6" category-chart crossfilter="cf" dimension="dimSisben"
-				 group="groupSisben" domain="sisben" showall="true" charttitle="Sisben">
+				<div id="sex-barchart" class="chart-container chart-container-medium col-sm-3" category-chart crossfilter="cf"
+				 dimension="dimSex" group="groupSex" domain="sex" showall="true" charttitle="Sex">
 				</div>
 
-
+				<div id="age-barchart" class="chart-container chart-container-medium col-sm-3" category-chart crossfilter="cf"
+				 dimension="dimAge" group="groupAge" domain="age" showall="true" charttitle="Age Group">
+				</div>
 
 				<div id="admin-barchart" class="chart-container col-sm-6" bar-chart crossfilter="cf" dimension="dimAdministrators"
 				 group="groupAdministrators" domain="administrators" showall="false" charttitle="Administrators (Top 20)">
@@ -99,19 +80,31 @@
 				 group="groupProviders" domain="providers" showall="false" charttitle="Providers (Top 20)">
 				</div>
 
-
-				<div id="sex-barchart" class="chart-container col-sm-6" horizontal-bar-chart crossfilter="cf" dimension="dimSex"
-				 group="groupSex" domain="sex" showall="true" charttitle="Sex">
-				</div>
-
-				<div id="age-barchart" class="chart-container col-sm-6" horizontal-bar-chart crossfilter="cf" dimension="dimAge"
-				 group="groupAge" domain="age" showall="true" charttitle="Age Group">
-				</div>
-
-
 				<div id="procedure-barchart" class="chart-container col-sm-12" bar-chart crossfilter="cf" dimension="dimProcedure"
 				 group="groupProcedure" domain="procedures" showall="false" charttitle="Procedures">
 				</div>
+
+
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 		</div>

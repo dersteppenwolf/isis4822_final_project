@@ -86,7 +86,7 @@ dataViz.directive('categoryChart', function ($parse, $log, $filter) {
                 }
 
                 data.forEach(d => {
-                    d.label = jsUcfirst( labelFromDomain(d.key))
+                    d.label =  labelFromDomain(d.key)
                 });
 
                 scope.dataset = data.sort( function (a, b) {
@@ -122,12 +122,12 @@ dataViz.directive('categoryChart', function ($parse, $log, $filter) {
                     if (items.length > 0) {
                         label = items[0].label
                     } else {
-                        $log.log("Not Foud: " + d)
+                        $log.log("Not Found: " + d)
                         $log.log(domain)
                         label = d
                     }
                 }
-                return label
+                return jsUcfirst( label.toLowerCase() )
             }
 
             function jsUcfirst(string) { 
@@ -186,6 +186,7 @@ dataViz.directive('categoryChart', function ($parse, $log, $filter) {
                 xScale = d3.scaleLinear()
                     .rangeRound([margin.left, width])
                     .domain([0, d3.max(scope.dataset, function (d) { return xValue(d); })])
+                    .nice()
 
                 xAxis = d3.axisBottom(xScale).ticks(5)
                                 
@@ -216,24 +217,31 @@ dataViz.directive('categoryChart', function ($parse, $log, $filter) {
                     .on("click", handleMouseClick)
 
                     bars.append("rect")
-                        .attr("class", function (d) { return  "categoryBack" })
+                        .attr("class",  "categoryBack")
                         //.attr("x", X )
                         .attr("y", function (d) {   return Y(d)  - yScale.bandwidth() * 0.3   })
                         .attr("height", yScale.bandwidth() * 1.25)
-                        .attr("width", xScale.domain()[1])
+                        .attr("width", function (d) { return  xScale(xScale.domain()[1] ) -margin.left - margin.right  } )
+                        .exit().remove()
+                    
+                    bars.append("rect")
+                        .attr("class",  "categoryTotal")
+                        .attr("y", function (d) {   return Y(d)  + yScale.bandwidth() * 0.9   })
+                        .attr("height", 2)
+                        .attr("width", function (d) { return  xScale(xScale.domain()[1] ) -margin.left - margin.right  } )
                         .exit().remove()
                     
                     bars.append("rect")
                         .attr("class", function (d) { return Boolean(d.selected) ? "categorySelected" : "category" })
                         .attr("y", function (d) {   return Y(d)  + yScale.bandwidth() * 0.9   })
                         .attr("height", 2)
-                        .attr("width", function (d) { return  X(d) - 50 -margin.left - margin.right  } )
+                        .attr("width", function (d) { return  X(d)  -margin.left - margin.right  } )
                         .exit().remove()
     
                     bars.append("text")
                         .attr("class", "categoryLabel") 
                         .attr("y", function (d) {   return Y(d)  + yScale.bandwidth() * 0.55    })
-                        .attr("x", function (d) {   return margin.left    })
+                        //.attr("x", function (d) {   return margin.left    })
                         .attr("width", function (d) { return  X(d) - margin.left - margin.right  } )
                         .text(function (d) { return labelFromDomain(d.key) ; })
                 }
