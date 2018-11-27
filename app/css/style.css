@@ -106,6 +106,10 @@ body>.container {
   padding-left: 10px;
 }
 
+.navbar{
+  padding: 0px;
+}
+
 .jumbotron {
   padding: 50px;
   padding-top: 60px;
@@ -275,7 +279,7 @@ text.value {
   font-size: 12px; 
   text-anchor: left;
   stroke: #ffffff; 
-  stroke-width: 1px;
+  stroke-width: 0.8px;
   text-transform: lowercase;
 }
 text.valueBack {

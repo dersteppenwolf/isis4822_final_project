@@ -19,7 +19,7 @@ dataViz.directive('horizontalBarChart', function ($parse, $log, $filter) {
             scope.showall = JSON.parse(attrs.showall)
             scope.dataset = []
 
-            var xScale, yScale, xGridGen, xAxisGen, yAxisGen, barsGen;
+            var xScale, yScale, xGridGen, xAxisGen, yAxisGen, barsGen, bars;
 
             scope.tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
@@ -184,7 +184,7 @@ dataViz.directive('horizontalBarChart', function ($parse, $log, $filter) {
                     .call(g => g.select(".domain").remove())
 
                 barsGen = g => {
-                    var bars = g.selectAll()
+                    bars = g.selectAll()
                     .data(scope.dataset)
                     //.enter()
                     .enter().append("g")
@@ -244,6 +244,13 @@ dataViz.directive('horizontalBarChart', function ($parse, $log, $filter) {
                 t.select("g.grid")
                     .duration(500)
                     .call(xGridGen);
+
+                // t.selectAll("g.bar,g.barSelected")
+                //     .duration(500)
+                //     .attr("y", Y )
+                //     .attr("height", yScale.bandwidth())
+                //     .attr("width", function (d) { return  X(d) - margin.left - margin.right  } )
+                //     .call(barsGen)
 
                 scope.svg.selectAll(".bar").remove()
                 scope.svg.selectAll(".barSelected").remove()
