@@ -4,9 +4,9 @@
   "description": "rec sys client",
   "main": "gulpfile.js",
   "dependencies": {
+    "angular-ui-grid": "^4.6.6",
     "angularjs-slider": "^6.6.1",
     "browser-sync": "^2.18.13",
-    "circos": "^2.1.0",
     "crossfilter2": "^1.4.6",
     "d3": "^5.7.0",
     "d3-tip": "^0.9.1",

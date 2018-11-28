@@ -185,6 +185,11 @@ svg {
 .chart-container-medium{
   height: 220px;
 }
+.chart-container-table{
+  height: 280px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 
 
 
@@ -384,6 +389,9 @@ text.categoryLabel {
   font-size: 10pt;
   font-weight: bold;
 }
+.chartSubTitle{
+  font-size: 9pt;
+}
 .chartUnit{
   font-size: 8pt;
 }
@@ -391,8 +399,47 @@ text.categoryLabel {
 
 
 
+/* table */
 
+/* .st-sort-ascent:before {
+  content: '\25B2';
+}
 
+.st-sort-descent:before {
+  content: '\25BC';
+} */
 
+.sortable {  cursor: pointer;}
+.st-sort-ascent i,.st-sort-descent i {  padding-left: 4px;}
+.st-sort-ascent i:before {  content: '\25B2';}
+.st-sort-descent i:before {  content: '\25BC';}
+.st-selected{
+  background: rgba(218, 146, 70 ,1) !important;
+  color: white !important;
+}
 
+.table {
+  border-spacing: 0;
+  border: 0px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-size: 10pt;
+  background-color: transparent;
+}
+.tableContent {
+  height:15px;
+  text-align: left;
+  overflow: hidden;
+  /* 
+  max-width: 90ch;
+  cursor: help; */
+}
+.grid {
+  width: 100%;
+  /* height: 400px; */
+}
+.grid .ui-grid-header-cell {
+  height: 25px;
+}
 
