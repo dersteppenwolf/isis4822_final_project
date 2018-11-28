@@ -66,18 +66,18 @@ dataViz.controller('costsController', function (
   ////////////////////////////////
   $scope.loadDomains = function () {
     $log.log("loadDomains");
-
-    $scope.tooltip.style("left", window.innerWidth / 2 - 80 + "px")
-                    .style("top", window.innerHeight / 2- 80 + "px")
+    $scope.tooltip.style("left", window.innerWidth / 8  + "px")
+                    .style("top", window.innerHeight / 8 + "px")
+                    .style("width", "80%") 
+                    .style("height", "80%")
                     .style("display", "inline-block")
-                    .html('<div style="margin:30px; padding:10px" >Loading 200k rows... </div>');
+                    .html('<div style="margin:10%;  padding:10px" class="headerTitle" >Loading 303k rows... </div>');
 
     $http.get('data/domains.json').
       then(function (response) {
         //$log.log("loadDomains ok ");
         var data = response.data;
         //$log.log(data);
-        //$log.log(Object.keys(data));
 
         $scope.sex = data.sex
         $scope.years = data.years
