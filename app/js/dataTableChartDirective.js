@@ -3,7 +3,6 @@ dataViz.directive('datatableChart', function ($parse, $log, $filter) {
         restrict: 'EA',
         scope: true,
         template: ` 
-  
             <div  class="chartTitle">
                 {{charttitle}} 
             </div>
@@ -12,9 +11,6 @@ dataViz.directive('datatableChart', function ($parse, $log, $filter) {
              </div>
             <div ui-grid="gridOptions" ui-grid-selection 
                 class="chart-container-table grid table"></div>
-
-               
- 
         `,
 
         link: function (scope, elem, attrs) {

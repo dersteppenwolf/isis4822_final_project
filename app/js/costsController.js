@@ -60,6 +60,8 @@ dataViz.controller('costsController', function (
   //  Procedures
   $scope.dimProcedure = {}
   $scope.groupProcedure = {}
+
+  $scope.dimensions = []
   
   
 
@@ -69,9 +71,9 @@ dataViz.controller('costsController', function (
     $scope.tooltip.style("left", window.innerWidth / 8  + "px")
                     .style("top", window.innerHeight / 8 + "px")
                     .style("width", "80%") 
-                    .style("height", "80%")
+                    .style("height", "60%")
                     .style("display", "inline-block")
-                    .html('<div style="margin:10%;  padding:10px" class="headerTitle" >Loading 303k rows... </div>');
+                    .html('<div style="margin:10%;  padding:10px" class="headerTitle" > <h1> Loading 303k records... </h1> <img src="img/Blocks-1.6s-164px.gif"/>  </div>');
 
     $http.get('data/domains.json').
       then(function (response) {
@@ -191,6 +193,19 @@ dataViz.controller('costsController', function (
       .order(orderValue)
 
     //////////////
+
+    $scope.dimensions.push($scope.dimYear)
+    $scope.dimensions.push($scope.dimStates)
+    $scope.dimensions.push($scope.dimAge)
+    $scope.dimensions.push($scope.dimSex)
+    $scope.dimensions.push($scope.dimAdministrators)
+    $scope.dimensions.push($scope.dimProviders)
+    $scope.dimensions.push($scope.dimSisben)
+    $scope.dimensions.push($scope.dimRegime)
+    $scope.dimensions.push($scope.dimProcedure)
+
+
+    //////////////
     $scope.dimYear.filterAll()
 
     //////////////
@@ -288,7 +303,19 @@ dataViz.controller('costsController', function (
     } else {
       $scope.totalCostPerPerson = 0;
     }
-    $scope.$apply();
+    //$scope.$apply();
+  }
+
+  $scope.clearFilters = function (){
+    $log.log("clearFilters");
+
+    $scope.dimensions.forEach(function(d){
+      $log.log(d.hasCurrentFilter())
+      if(d.hasCurrentFilter()){
+       // d.filterAll()
+      }
+
+    })
   }
 
   
