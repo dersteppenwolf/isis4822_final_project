@@ -20,7 +20,7 @@ dataViz.directive('categoryChart', function ($parse, $log, $filter) {
 
             scope.dataset = []
 
-            var xScale, yScale, xGridGen, xAxisGen, yAxisGen, barsGen, bars;
+            var xScale, yScale,  xAxisGen,  barsGen, bars, bar;
 
             scope.tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
@@ -233,13 +233,13 @@ dataViz.directive('categoryChart', function ($parse, $log, $filter) {
                         .attr("width", function (d) { return  xScale(xScale.domain()[1] ) -margin.left - margin.right  } )
                         .exit().remove()
                     
-                    bars.append("rect")
+                    bar = bars.append("rect")
                         .attr("class", function (d) { return Boolean(d.selected) ? "categorySelected" : "category" })
                         .attr("y", function (d) {   return Y(d)  + yScale.bandwidth() * 0.9   })
                         .attr("height", 2)
                         .attr("width", function (d) { return  X(d)  -margin.left - margin.right  } )
                         .exit().remove()
-    
+               
                     bars.append("text")
                         .attr("class", "categoryLabel") 
                         .attr("y", function (d) {   return Y(d)  + yScale.bandwidth() * 0.55    })
@@ -258,24 +258,14 @@ dataViz.directive('categoryChart', function ($parse, $log, $filter) {
                     .duration(750)
                     .call(xAxisGen);
 
-                // t.select("g.y.axis")
-                //     .duration(500)
-                //     .call(yAxisGen);
+                scope.svg.selectAll(".categorySelected, .category").transition()
+                    .duration(750)
+                    .attr("width", function (d) { return  X(d) - margin.left - margin.right  } )
 
-                // t.select("g.grid")
-                //     .duration(500)
-                //     .call(xGridGen);
+                // scope.svg.selectAll(".bar").remove()
+                // scope.svg.selectAll(".barSelected").remove()
+                // scope.svg.selectAll(".bars").call(barsGen)
 
-                // t.selectAll("g.bar,g.barSelected")
-                //     .duration(500)
-                //     .attr("y", Y )
-                //     .attr("height", yScale.bandwidth())
-                //     .attr("width", function (d) { return  X(d) - margin.left - margin.right  } )
-                //     .call(barsGen)
-
-                scope.svg.selectAll(".bar").remove()
-                scope.svg.selectAll(".barSelected").remove()
-                scope.svg.selectAll(".bars").call(barsGen)
             }
 
 
@@ -302,22 +292,9 @@ dataViz.directive('categoryChart', function ($parse, $log, $filter) {
                     .attr("class", "x axis")
                     .call(xAxisGen);
 
-                // scope.svg.append("g")
-                //     .attr("class", "y axis")
-                //     .call(yAxisGen);
-
-                // add the Y gridlines
-                // scope.svg.append("g")
-                //     .attr("class", "grid")
-                //     .call(xGridGen)
-
                 scope.svg.append("g")
                     .attr("class", "bars")
                     .call(barsGen)
-
-                
-
-                
 
                 scope.initialized = true;
             }
@@ -351,11 +328,12 @@ dataViz.directive('categoryChart', function ($parse, $log, $filter) {
                 //$log.log("handleMouseClick "+ scope.id);
                 if (!Boolean(d.selected)) {
                     d.selected = true;
-                    d3.select(this).attr("class", "barSelected")
+                    d3.select(this).selectAll("rect.category").attr("class", "categorySelected")
                     //$log.log(scope.dataset)
                     //dimension.filterExact(d.key);
                 } else {
                     d.selected = false
+                    d3.select(this).selectAll("rect.categorySelected").attr("class", "category")
                 }
 
                 const selectedItems = scope.dataset.filter(i => Boolean(i.selected)).map(a => a.key);

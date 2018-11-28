@@ -409,14 +409,6 @@ text.categoryLabel {
   content: '\25BC';
 } */
 
-.sortable {  cursor: pointer;}
-.st-sort-ascent i,.st-sort-descent i {  padding-left: 4px;}
-.st-sort-ascent i:before {  content: '\25B2';}
-.st-sort-descent i:before {  content: '\25BC';}
-.st-selected{
-  background: rgba(218, 146, 70 ,1) !important;
-  color: white !important;
-}
 
 .table {
   border-spacing: 0;
@@ -441,5 +433,8 @@ text.categoryLabel {
 }
 .grid .ui-grid-header-cell {
   height: 25px;
+}
+.ui-grid-row.ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell {
+  background-color: rgba(218, 146, 70 ,1);
 }
 
