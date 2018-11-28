@@ -255,6 +255,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     .data(scope.dataset)
                     .enter()
                     .append("rect")
+                    //.style("mix-blend-mode", "multiply")
                     .attr("class", function (d) { return Boolean(d.selected) ? "barSelected" : "bar" })
                     .attr("x", X)
                     .attr("y", Y)
@@ -292,11 +293,17 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     .duration(500)
                     .call(yGridGen);
 
+                // scope.svg.selectAll(".bar, .barSelected").transition()
+                //     .duration(750)
+                //     .attr("x", X)
+
+                
                 scope.svg.selectAll(".bar").remove()
                 scope.svg.selectAll(".barSelected").remove()
 
                 scope.svg.selectAll(".bars")
                     .call(barsGen)
+                
                 
                 if(scope.showtrend ){
                     t.select(".lineSeries")
@@ -406,39 +413,8 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 }
             }
 
-            function handleMouseOut(d, i) {
-                // $log.log("handleMouseOut");
-            }
-
-            function handleMouseMove(d, i) {
-                //$log.log("handleMouseMove");
-            }
-
-            /*
-            function wrap(text, w) {
-                text.each(function() {
-                  var text = d3.select(this),
-                      words = text.text().split(/\s+/).reverse(),
-                      word,
-                      line = [],
-                      lineNumber = 0,
-                      lineHeight = 1.1, // ems
-                      y = text.attr("y"),
-                      dy = parseFloat(text.attr("dy")),
-                      tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em")
-                  while (word = words.pop()) {
-                    line.push(word)
-                    tspan.text(line.join(" "))
-                    if (tspan.node().getComputedTextLength() > w) {
-                      line.pop()
-                      tspan.text(line.join(" "))
-                      line = [word]
-                      tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", `${++lineNumber * lineHeight + dy}em`).text(word)
-                    }
-                  }
-                })
-            }
-            */
+            
+           
 
 
 
