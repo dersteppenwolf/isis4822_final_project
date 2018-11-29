@@ -151,10 +151,21 @@ svg {
   font-size: 25px;
 }
 
+#parent {position: relative;}
+#child {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 60%;
+    margin: auto;
+}
 .visCard {
-  padding-right: 10px;
-  padding-left: 10px;
-  font-size: 18px;
+  font-size: 16px;
+
+  line-height: 25px;
 }
 
 
