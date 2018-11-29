@@ -45,7 +45,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
           
 
             window.onresize = function () {
-                $log.log("onresize");
+                //$log.log("onresize");
                 //width = getDivWidth('.chart-container') - margin.left - margin.right;
                 width = getDivWidth("#"+scope.id) - margin.left - margin.right;
                 $log.log(width);  
@@ -55,7 +55,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
             };
             ////////////////
             scope.$watch(scope.crossfilter, function (newVal, oldVal) {
-                $log.log("watch crossfilter " + scope.id);
+                //$log.log("watch crossfilter " + scope.id);
                 if (newVal.onChange) {
                     scope.crossfilter = newVal
                     scope.crossfilter.onChange(scope.onCrossfilterChange);
@@ -63,14 +63,14 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
             });
 
             scope.$watch(dimension, function (newVal, oldVal) {
-                $log.log("watch dimension " + scope.id);
+                //$log.log("watch dimension " + scope.id);
                 if (newVal.filterExact) {
                     dimension = newVal
                 }
             });
 
             scope.$watch(group, function (newVal, oldVal) {
-                $log.log("watch group " + scope.id);
+                //$log.log("watch group " + scope.id);
                 if (newVal.all) {
                     group = newVal
                     scope.onCrossfilterChange("load")
@@ -78,14 +78,14 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
             });
 
             scope.$watch(domain, function (newVal, oldVal) {
-                $log.log("watch domain " + scope.id);
+                //$log.log("watch domain " + scope.id);
                 if (newVal) {
                     domain = newVal
                 }
             });
 
             scope.onCrossfilterChange = function (eventType) {
-                $log.log("barChartDirective - onCrossfilterChange " + scope.id)
+                //$log.log("barChartDirective - onCrossfilterChange " + scope.id)
                 //$log.log(eventType)
                 if (scope.showall) {
                     var data = group.all()
@@ -148,10 +148,6 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 return label
             }
 
-
-
-
-
             // The x-accessor for the path generator; xScale o xValue.
             function X(d) {
                 return xScale(xValue(d));
@@ -161,8 +157,6 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
             function Y(d) {
                 return yScale(yValue(d));
             }
-
-
 
             function getDivWidth(div) {
                 var width = d3.select(div)
@@ -189,7 +183,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
              * update drawing parameters according to new data
              */
             function updateParameters() {
-                $log.log("updateParameters");
+                //$log.log("updateParameters");
                 
                 xScale = d3.scaleBand()
                     .padding(0.2)
@@ -255,7 +249,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
             }
 
             function redrawChart() {
-                $log.log("redrawChart");
+                //$log.log("redrawChart");
                 updateParameters();
                 try {
                     if (scope.showall) {
@@ -293,7 +287,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
 
 
             function render() {
-                $log.log("render");
+                //$log.log("render");
                 updateParameters()
 
                 scope.svg
@@ -379,7 +373,7 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
 
             scope.$on('clearFilter', function(event, data){
                 if(dimension.hasCurrentFilter()){
-                    $log.log("on clearFilter "+ scope.id);
+                    //$log.log("on clearFilter "+ scope.id);
                     scope.dataset.forEach(function(d){
                         d.selected = false
                     })

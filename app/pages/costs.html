@@ -2,9 +2,9 @@
 
 	<div class="row">
 
-		<div class="col-md-2">
-			<p class="dashboardTitle">map</p>
-			
+		<div id="colombia-map" class="chart-container chart-container-table col-md-3" colombia-map 
+		crossfilter="cf" 
+		dimension="dimStates" group="groupStates" domain="states"  charttitle="Map">
 		</div>
 
 		<div class="col-md-3">
@@ -14,15 +14,7 @@
 		</div>
 
 
-		<div id="parent" class="col-md-1 chart-container chart-container-little  ">
-			<div id="child" class="visCard">
-				Costs per Person (C/P)
-
-				<div ng-animate-swap="totalCostPerPerson" class="cell swap-animation">
-					${{totalCostPerPerson | megaNumber:1}} COP
-				</div>
-			</div>
-		</div>
+		
 
 
 		<div id="parent" class="col-md-1 chart-container chart-container-little  ">

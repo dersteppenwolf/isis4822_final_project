@@ -35,7 +35,7 @@ dataViz.directive('categoryChart', function ($parse, $log, $filter) {
             var height = divH - margin.top - margin.bottom;
 
             window.onresize = function () {
-                $log.log("onresize");
+                //$log.log("onresize");
                 //width = getDivWidth('.chart-container') - margin.left - margin.right;
                 width = getDivWidth("#"+scope.id) - margin.left - margin.right;
                 $log.log(width);  
@@ -44,7 +44,7 @@ dataViz.directive('categoryChart', function ($parse, $log, $filter) {
             };
             ////////////////
             scope.$watch(scope.crossfilter, function (newVal, oldVal) {
-                $log.log("watch crossfilter " + scope.id);
+                //$log.log("watch crossfilter " + scope.id);
                 if (newVal.onChange) {
                     scope.crossfilter = newVal
                     scope.crossfilter.onChange(scope.onCrossfilterChange);
@@ -52,14 +52,14 @@ dataViz.directive('categoryChart', function ($parse, $log, $filter) {
             });
 
             scope.$watch(dimension, function (newVal, oldVal) {
-                $log.log("watch dimension " + scope.id);
+                //$log.log("watch dimension " + scope.id);
                 if (newVal.filterExact) {
                     dimension = newVal
                 }
             });
 
             scope.$watch(group, function (newVal, oldVal) {
-                $log.log("watch group " + scope.id);
+                //$log.log("watch group " + scope.id);
                 if (newVal.all) {
                     group = newVal
                     scope.onCrossfilterChange("load")
@@ -67,7 +67,7 @@ dataViz.directive('categoryChart', function ($parse, $log, $filter) {
             });
 
             scope.$watch(domain, function (newVal, oldVal) {
-                $log.log("watch domain " + scope.id);
+                //$log.log("watch domain " + scope.id);
                 if (newVal) {
                     domain = newVal
                 }
@@ -77,7 +77,7 @@ dataViz.directive('categoryChart', function ($parse, $log, $filter) {
             scope.$on('clearFilter', function(event, data){
                 
                 if(dimension.hasCurrentFilter()){
-                    $log.log("on clearFilter "+ scope.id);
+                    //$log.log("on clearFilter "+ scope.id);
                     scope.dataset.forEach(function(d){
                         d.selected = false
                     })
@@ -89,7 +89,7 @@ dataViz.directive('categoryChart', function ($parse, $log, $filter) {
             
 
             scope.onCrossfilterChange = function (eventType) {
-                $log.log("horizontalBarChartDirective - onCrossfilterChange " + scope.id)
+                //$log.log("horizontalBarChartDirective - onCrossfilterChange " + scope.id)
                 //$log.log(eventType)
                 var data = []
                 if (scope.showall) {
@@ -189,7 +189,7 @@ dataViz.directive('categoryChart', function ($parse, $log, $filter) {
              * update drawing parameters according to new data
              */
             function updateParameters() {
-                $log.log("updateParameters");
+                //$log.log("updateParameters");
                 
                 yScale  = d3.scaleBand()
                     .padding(0.4)
@@ -263,7 +263,7 @@ dataViz.directive('categoryChart', function ($parse, $log, $filter) {
             }
 
             function redrawChart() {
-                $log.log("redrawChart");
+                //$log.log("redrawChart");
                 updateParameters();
                 var t = scope.svg.transition();
 
@@ -274,17 +274,11 @@ dataViz.directive('categoryChart', function ($parse, $log, $filter) {
                 scope.svg.selectAll(".categorySelected, .category").transition()
                     .duration(750)
                     .attr("width", function (d) { return  X(d) - margin.left - margin.right  } )
-
-                // scope.svg.selectAll(".bar").remove()
-                // scope.svg.selectAll(".barSelected").remove()
-                // scope.svg.selectAll(".bars").call(barsGen)
-
             }
 
 
-
             function render() {
-                $log.log("render");
+                //$log.log("render");
                 updateParameters()
 
                 scope.svg
