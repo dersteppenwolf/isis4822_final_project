@@ -147,12 +147,10 @@ dataViz.directive('datatableChart', function ($parse, $log, $filter) {
                 return string.charAt(0).toUpperCase() + string.slice(1);
             }
 
-
-
             function redrawChart() {
                 try {
                     //$log.log("redrawChart");
-                    scope.$apply();
+                    scope.gridApi.core.refresh();
                 }
                 catch(err) {
                     $log.error(err)
