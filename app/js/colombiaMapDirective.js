@@ -23,18 +23,18 @@ dataViz.directive('colombiaMap', function ($parse, $log, $filter) {
                 .append("svg")
                 .attr("id", scope.id + "-svg")
 
-            var margin = { top: 30, bottom: 3, right: 10, left: 10 }
+            var margin = { top: 0, bottom: 0, right: 0, left: 0 }
             var width = getDivWidth("#" + scope.id) - margin.left - margin.right
 
             var divH = getDivHeight("#" + scope.id)
-            var height = divH - margin.top - margin.bottom;
+            var height = divH //- margin.top - margin.bottom;
 
-            var projection = d3.geoMercator()
-                //.scale(width / 2 / Math.PI)
-                .scale(950)
-                // Center the Map in Colombia
+            var projection = d3.geoMercator() //d3.geoCylindricalStereographic() // 
+                //.scale(width)
+                .scale(540)
                 .center([-74, 4.5])
-                .translate([width / 2, (height + margin.top) / 2])
+                .translate([width / 4, (height) / 2])
+                //.angle(45)
 
             var path = d3.geoPath()
                 .projection(projection);
@@ -110,18 +110,17 @@ dataViz.directive('colombiaMap', function ($parse, $log, $filter) {
                 scope.svg
                     .attr("width", width + margin.left + margin.right)
                     .attr("height", height + margin.top + margin.bottom)
-                    .append("g")
-                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+                    
 
-                mapLayer = scope.svg.append('g')
-                    .classed('map-layer', true);
+               // mapLayer = scope.svg.append('g')   .classed('map-layer', true);
+                mapLayer = scope.svg
 
-                scope.svg.append("text")
-                    .attr("class", "chartTitle")
-                    .attr("x", (width / 2))
-                    .attr("y", 0 + (margin.top / 2))
-                    .attr("text-anchor", "middle")
-                    .text(scope.charttitle)
+                // scope.svg.append("text")
+                //     .attr("class", "chartTitle")
+                //     .attr("x", (width / 2))
+                //     .attr("y", 0 + (margin.top / 2))
+                //     .attr("text-anchor", "middle")
+                //     .text(scope.charttitle)
 
 
                 var url = "/data/colombia_index.geojson";
@@ -189,8 +188,8 @@ dataViz.directive('colombiaMap', function ($parse, $log, $filter) {
                 //$log.log("mouseover "+ scope.id);
                 //$log.log(d);
                 d3.select(this).style('fill', 'white');
-                scope.tooltip.style("left", d3.event.pageX - 80 + "px")
-                    .style("top", d3.event.pageY - 70 + "px")
+                scope.tooltip.style("left", d3.event.pageX + 20 + "px")
+                    .style("top",(d3.event.pageY < 120)? d3.event.pageY + 70 :  d3.event.pageY - 60 + "px")
                     .style("display", "inline-block")
                     .html(tooltipValue(d));
             }
