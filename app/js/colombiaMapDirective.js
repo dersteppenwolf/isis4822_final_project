@@ -5,6 +5,9 @@ dataViz.directive('colombiaMap', function ($parse, $log, $filter) {
         template: '',
         link: function (scope, elem, attrs) {
 
+            var url = "data/colombia_index.geojson";
+            //$log.log(url);
+
             scope.crossfilter = $parse(attrs.crossfilter);
             var dimension = $parse(attrs.dimension);
             var group = $parse(attrs.group);
@@ -122,9 +125,6 @@ dataViz.directive('colombiaMap', function ($parse, $log, $filter) {
                 //     .attr("text-anchor", "middle")
                 //     .text(scope.charttitle)
 
-
-                var url = "/data/colombia_index.geojson";
-                //$log.log(url);
                 d3.json(url)
                     .then(function (geojson) {
                         //$log.log(geojson.features);

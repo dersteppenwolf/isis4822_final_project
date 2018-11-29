@@ -469,6 +469,6 @@ text.categoryLabel {
 }
 
 .monBouton:before{
-   background-image : url(/img/remove-filter-icon-24.jpg);
+   background-image : url(img/remove-filter-icon-24.jpg);
   background-size: 24px 24px;
 }
