@@ -20,16 +20,13 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
             if(attrs.resolveaxislabel)  {
                 scope.resolveaxislabel = JSON.parse(attrs.resolveaxislabel)
             }
-            scope.showtrend = false
-            if(attrs.showtrend)  {
-                scope.showtrend = JSON.parse(attrs.showtrend)
-            }
+            
 
             
             
             scope.dataset = []
 
-            var xScale, yScale, yGridGen, xAxisGen, yAxisGen, barsGen, lineGen;
+            var xScale, yScale, yGridGen, xAxisGen, yAxisGen, barsGen;
 
             scope.tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
@@ -109,9 +106,6 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 } else {
                     scope.dataset = group.top(NUM_TOP_ITEMS)
                 }
-
-                
-
 
                 if (!scope.initialized) {
                     render();
@@ -205,46 +199,37 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 yScale = d3.scaleLinear()
                     .rangeRound([height - margin.bottom, margin.top])
                     .domain([0, d3.max(scope.dataset, function (d) { return yValue(d); })])
-
+                    .nice()
 
                 xAxis = d3.axisBottom(xScale)
                 if(scope.resolveaxislabel){
                     xAxis.tickFormat(labelFromDomain)
                 }
                 
-                
                 yAxis = d3.axisLeft(yScale)
                     .ticks(5).tickPadding(10)
-                    .tickFormat(d => ( "$ " +$filter('megaNumber')(d) + "  "    )   );
-
-
+                    .tickFormat(d => ( "$ " +$filter('megaNumber')(d) + "  "    )   );       
                 
-
-                //if(!scope.resolveaxislabel){
-                    xAxisGen = g => g
-                        .attr("transform", `translate(0,${height - margin.bottom})`)
-                        .call(xAxis)
-                        .selectAll("text")
-                        .attr("y", 15)
-                        .attr("x", 0)
-                        .attr("dy", ".35em")
-                        .attr("transform", "rotate(25)")
-                        .style("text-anchor", "start")
-                // }else{
-                //     xAxisGen = g => g
-                //         .attr("transform", `translate(0,${height - margin.bottom})`)
-                //         .call(xAxis)
-                // }
-                    
-                    //.selectAll(".tick text")
-                    //.call(wrap, xScale.bandwidth())   
-                    
+                xAxisGen = g => g
+                    .attr("transform", `translate(0,${height - margin.bottom})`)
+                    .call(xAxis)
+                    .selectAll("text")
+                    // .attr("y", 15)
+                    // .attr("x", 0)
+                    // .attr("dy", ".35em")
+                    // .attr("transform", "rotate(25)")
+                    // .style("text-anchor", "start")
+                    .style("text-anchor", "end")
+                    .attr("dx", "-.8em")
+                    .attr("dy", ".15em")
+                    .attr("transform", function(d) {
+                        return "rotate(-25)" 
+                        });
 
                 yAxisGen = g => g
                     .attr("transform", `translate(${margin.left},0)`)
                     .call(yAxis)
                     .call(g => g.select(".domain").remove())
-
                 
                 yGridGen = g => g
                     .call(d3.axisLeft(yScale).ticks(5).tickSize(-width)
@@ -267,51 +252,42 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     //.on("mouseout", handleMouseOut)
                     .on("click", handleMouseClick)
                     .exit().remove();
-
-                lineGen = d3.line()
-                    .x(X) // set the x values for the line generator
-                    .y(Y) // set the y values for the line generator 
-                    .curve(d3.curveMonotoneX)
             }
 
             function redrawChart() {
                 $log.log("redrawChart");
                 updateParameters();
+                try {
+                    if (scope.showall) {
+                        var t = scope.svg.transition();
 
-                // Select the section we want to apply our changes to
-                var t = scope.svg.transition();
+                        t.select("g.y.axis")
+                        .duration(500)
+                        .call(yAxisGen);
 
-                t.select("g.x.axis")
-                    .duration(750)
-                    .call(xAxisGen);
+                        t.select("g.grid")
+                            .duration(500)
+                            .call(yGridGen);
 
-                t.select("g.y.axis")
-                    .duration(500)
-                    .call(yAxisGen);
-
-                t.select("g.grid")
-                    .duration(500)
-                    .call(yGridGen);
-
-                // scope.svg.selectAll(".bar, .barSelected").transition()
-                //     .duration(750)
-                //     .attr("x", X)
-
-                
-                scope.svg.selectAll(".bar").remove()
-                scope.svg.selectAll(".barSelected").remove()
-
-                scope.svg.selectAll(".bars")
-                    .call(barsGen)
-                
-                
-                if(scope.showtrend ){
-                    t.select(".lineSeries")
-                        .duration(750)
-                        .attr("d", lineGen(scope.dataset));
-                }
-
+                        scope.svg.selectAll(".bar, .barSelected")
+                            .transition()
+                            .duration(750)
+                            //.attr("x", X)
+                            .attr("y", Y)
+                            .attr("height", function (d) { return height - Y(d) - margin.bottom })
+                    }else{
+                        scope.svg.selectAll(".bar,.barSelected").remove()
+                        scope.svg.selectAll(".bars").call(barsGen)
+                        var t = scope.svg.transition();
+                        t.select("g.x.axis")
+                        .duration(500)
+                        .call(xAxisGen);
+                    }
                     
+                }
+                catch(err) {
+                   // $log.error(err)
+                }
             }
 
 
@@ -334,12 +310,6 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     .attr("text-anchor", "middle")
                     .text(scope.charttitle)
 
-                // scope.svg.append("text")
-                //     .attr("class", "chartUnit")
-                //     .attr("text-anchor", "middle")  // this makes it easy to centre the text as the transform is applied to the anchor
-                //     .attr("transform", "translate("+ (10) +","+(height/2)+")rotate(-90)")  // text is drawn off the screen top left, move down and out and rotate
-                //     .text("C/P");
-
                 scope.svg.append("g")
                     .attr("class", "x axis")
                     .call(xAxisGen);
@@ -357,12 +327,6 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                     .attr("class", "bars")
                     .call(barsGen)
                 
-                if(scope.showtrend ){
-                    scope.svg.append("path")
-                        .attr("class", "lineSeries")
-                        .attr("d", lineGen(scope.dataset));
-                }
-
                 scope.initialized = true;
             }
 
@@ -413,13 +377,16 @@ dataViz.directive('barChart', function ($parse, $log, $filter) {
                 }
             }
 
-            
-           
-
-
-
-           
-
+            scope.$on('clearFilter', function(event, data){
+                if(dimension.hasCurrentFilter()){
+                    $log.log("on clearFilter "+ scope.id);
+                    scope.dataset.forEach(function(d){
+                        d.selected = false
+                    })
+                    scope.svg.selectAll("rect.barSelected").attr("class", "bar")
+                    dimension.filterAll();
+                }
+            })
 
         }
     };

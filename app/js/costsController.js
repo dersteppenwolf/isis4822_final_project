@@ -309,14 +309,6 @@ dataViz.controller('costsController', function (
   $scope.clearFilters = function (){
     $log.log("clearFilters");
     $scope.$broadcast('clearFilter', {} );
-
-    // $scope.dimensions.forEach(function(d){
-    //   $log.log(d.hasCurrentFilter())
-    //   if(d.hasCurrentFilter()){
-    //    // d.filterAll()
-    //   }
-
-    // })
   }
 
   
