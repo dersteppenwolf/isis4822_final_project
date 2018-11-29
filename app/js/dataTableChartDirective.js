@@ -64,6 +64,15 @@ dataViz.directive('datatableChart', function ($parse, $log, $filter) {
                 });
             };
 
+            scope.$on('clearFilter', function(event, data){
+                if(dimension.hasCurrentFilter()){
+                    $log.log("on clearFilter "+ scope.id);
+                    scope.gridApi.selection.clearSelectedRows()
+                    scope.selectedItem = {label:""}
+                    dimension.filterAll();
+                }
+            })
+
             
                         
 
@@ -101,6 +110,8 @@ dataViz.directive('datatableChart', function ($parse, $log, $filter) {
                     domain = newVal
                 }
             });
+
+            
 
 
 
