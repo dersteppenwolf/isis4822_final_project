@@ -73,6 +73,19 @@ dataViz.directive('categoryChart', function ($parse, $log, $filter) {
                 }
             });
 
+
+            scope.$on('clearFilter', function(event, data){
+                
+                if(dimension.hasCurrentFilter()){
+                    $log.log("on clearFilter "+ scope.id);
+                    scope.dataset.forEach(function(d){
+                        d.selected = false
+                    })
+                    scope.svg.selectAll("rect.categorySelected").attr("class", "category")
+                    dimension.filterAll();
+                }
+            })
+
             
 
             scope.onCrossfilterChange = function (eventType) {
