@@ -3,7 +3,7 @@
 Final Project for  Class *ISIS 4822 -  Visual Analytics - Universidad de los Andes* http://johnguerra.co/classes/visual_analytics_fall_2018/
 
 - [Rheumatoid Arthritis in Colombia](#rheumatoid-arthritis-in-colombia)
-    - [Related Links](#related-links)
+    - [Main Links](#main-links)
     - [Description](#description)
         - [Main Goal of the Project](#main-goal-of-the-project)
         - [Justification](#justification)
@@ -23,7 +23,7 @@ Final Project for  Class *ISIS 4822 -  Visual Analytics - Universidad de los And
     - [Other Links / References](#other-links--references)
         - [Crossfilter](#crossfilter)
 
-## Related Links
+## Main Links
 
 * Demo: http://jcmendez.gkudos.com/ar/
 * Slides: 
@@ -33,11 +33,11 @@ Final Project for  Class *ISIS 4822 -  Visual Analytics - Universidad de los And
 
 ## Description
 
-Rheumatoid arthritis (RA) is an autoimmune disease that can cause joint pain and damage throughout your body. There's no cure for RA, but there are treatments that can help you to manage it. It is considered as a high-cost disease. In addition to to physical and emotional pain,  the economic costs associated are high. 
+Rheumatoid arthritis (RA) is an autoimmune disease that can cause joint pain and damage throughout your body. There's no cure for RA, but there are treatments that can help you to manage it. In addition to to physical and emotional pain,  the economic costs associated are high. In general, it is considered as a **high-cost** disease. 
 
 ###  Main Goal of the Project
 
-The following work tries to bring a *visual analytics* tool that could help to  understand the impact  of Rheumatoid Arthritis (RA) in Colombia  in terms of the economical costs associated with it.   The cost of procedures vary from  state, regime, age, administrator, provider, etc.  Using a visual tool could help the experts to explore and understand the available data. 
+The following work tries to bring a **visual analytics** tool that could help to  understand the impact  of Rheumatoid Arthritis (RA) in Colombia  in terms of the economical costs associated with it.   The cost of procedures vary from  state, regime, age, administrator, provider, etc.  Using a visual tool could help the experts to explore and understand the available data. 
 
 Costs of procedures related to RA are extracted from SISPRO ( [Sistema Integral de Información de la Protección Social](http://www.sispro.gov.co/) )   in the period from 2010 to 2017.
 
@@ -62,12 +62,31 @@ Costs of procedures related to RA are extracted from SISPRO ( [Sistema Integral 
 
 ## Who ? 
 
-users... 
+This visualization is intended for Physicians and Health professional interested in occurrence of Rheumatoid arthritis (RA) in Colombia.
 
 
 ## What ?
 
-data...
+* Main Dataset: SISPRO
+* Description: Administrative Database with Medical services given to patients in Colombian health system, filtered by Diagnostic codes for Rheumatoid Arthritis.
+* Source: SISPRO ( http://www.sispro.gov.co/ )
+* Source Type: Microsoft analysis services  data cube
+Cube: CU - Prestación Servicios de Salud
+* Dataset Type: Table, Temporal
+* Attributes
+    * States : Categorical. States of Colombia
+    * Year: Categorical, orderered, sequential. Year of the procedure.
+    * Regime :  Categorical.  Type of health regime to which the patient belongs
+    * Sisben : Categorical. Subtype of Subsidized regime. 
+    * Sex : Categorical.
+    * Age Group: Categorical, ordered. Age Groups classified by human cycle. 
+    * Administrator: Categorical. Administrators of the Social Security System
+    * Provider: Categorical. Company that provides a medical service.
+    * Procedure: Categorical. Procedures and medical services performed in
+Colombia
+    * Procedure Cost: Quantitative, ordered, sequential.  Cost of a procedure applied to a patient.
+    * People Served : Quantitative, ordered, sequential. Number of people 
+
 
 ## Why ?
 
