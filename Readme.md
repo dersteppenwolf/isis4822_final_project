@@ -149,9 +149,9 @@ To ease development task you can use gulp for local development:
 
 ![alt text](https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/providers.png "Providers")
 
-![alt text](https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/category.png "category")
+![alt text](https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/category2.png "category")
 
-![alt text](https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/table.png "Detail table")
+![alt text](https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/table2.png "Detail table")
 
 ## Other Links / References
 
