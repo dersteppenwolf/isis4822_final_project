@@ -94,7 +94,7 @@ Colombia
 
 ### Main Task
 
-**Discover** the  **distribution** of Costs per Person  of RA procedures in Colombia by state, year, regime, sisben, sex, age group,  administrator and provider.
+**Discover** the  **distribution** of _Costs per Person (CP)_  of RA procedures in Colombia by state, year, regime, sisben, sex, age group,  administrator and provider.
 
 ### Secondary Tasks
 
@@ -109,7 +109,15 @@ data...
 
 ## Insights
 
-* 
+* There are quality problems in data like these:
+    * Some states do not have data for one or more years (e.g Amazonas, Arauca, Casanare, Guainía, Guaviare)
+    * There are "Not Reported - NR" and  "Not Available - NA",  values in some of the attributes.  Such kind of _"data loss"_ problem should be mitigated by data publishers in order to improve the general data quality of the dataset.
+* The overall average of Costs per Person for procedures is higher for younger people.
+* There are  outliers in procedure costs that reflect problems during data collection or reporting (e.g. procedures with cost of $1 COP)
+*  
+
+
+
 
 ## Tech Stuff
 
