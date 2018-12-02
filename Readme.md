@@ -78,7 +78,7 @@ Run for local development:
 
 ## Screenshots
 
-![alt text](https://raw.githubusercontent.com/dersteppenwolf/isis4822/master/hw5/images/a.png "Visualization")
+![alt text](https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/dashboard.png "Visualization")
 
 
 ## References
