@@ -12,6 +12,8 @@ Final Project for  Class *ISIS 4822 -  Visual Analytics - Universidad de los And
     - [Who ?](#who)
     - [What ?](#what)
     - [Why ?](#why)
+        - [Main Task](#main-task)
+        - [Secondary Tasks](#secondary-tasks)
     - [How ?](#how)
     - [Insights](#insights)
     - [Tech Stuff](#tech-stuff)
@@ -90,7 +92,16 @@ Colombia
 
 ## Why ?
 
-data...
+### Main Task
+
+**Discover** the  **distribution** of Costs per Person  of RA procedures in Colombia by state, year, regime, sisben, sex, age group,  administrator and provider.
+
+### Secondary Tasks
+
+* **Derive** attributes from raw data as **features** to be used in  the final visualization.
+* **Identify** **Outliers**  in data.
+* **Identify** the **Features** of a specific procedure in the dataset. 
+* **Summarize** the **distribution** of Costs per Person, people served and total costs   of RA procedures in Colombia.
 
 ## How ?
 
@@ -98,7 +109,7 @@ data...
 
 ## Insights
 
-data...
+* 
 
 ## Tech Stuff
 
