@@ -1,10 +1,12 @@
 # Rheumatoid Arthritis in Colombia
 
-Project for  Class *ISIS 4822 -  Visual Analytics - Universidad de los Andes* http://johnguerra.co/classes/visual_analytics_fall_2018/
+Final Project for  Class *ISIS 4822 -  Visual Analytics - Universidad de los Andes* http://johnguerra.co/classes/visual_analytics_fall_2018/
 
 - [Rheumatoid Arthritis in Colombia](#rheumatoid-arthritis-in-colombia)
     - [Related Links](#related-links)
     - [Description](#description)
+        - [Main Goal of the Project](#main-goal-of-the-project)
+        - [Justification](#justification)
     - [About the Author](#about-the-author)
         - [Juan Carlos Méndez](#juan-carlos-m%C3%A9ndez)
     - [Who ?](#who)
@@ -31,7 +33,18 @@ Project for  Class *ISIS 4822 -  Visual Analytics - Universidad de los Andes* ht
 
 ## Description
 
-According to 
+Rheumatoid arthritis (RA) is an autoimmune disease that can cause joint pain and damage throughout your body. There's no cure for RA, but there are treatments that can help you to manage it. It is considered as a high-cost disease. In addition to to physical and emotional pain,  the economic costs associated are high. 
+
+###  Main Goal of the Project
+
+The following work tries to bring a *visual analytics* tool that could help to  understand the impact  of Rheumatoid Arthritis (RA) in Colombia  in terms of the economical costs associated with it.   The cost of procedures vary from  state, regime, age, administrator, provider, etc.  Using a visual tool could help the experts to explore and understand the available data. 
+
+Costs of procedures related to RA are extracted from SISPRO ( [Sistema Integral de Información de la Protección Social](http://www.sispro.gov.co/) )   in the period from 2010 to 2017.
+
+###  Justification
+
+* In recent years there has been an increase in the prevalence of the disease in the country.
+* At the moment there are not enough available tools that allow to explore RA data in a  user friendly way.
 
 
 ## About the Author 
@@ -45,6 +58,7 @@ According to
 **Github**: https://github.com/dersteppenwolf
 
 **Web**: https://neogeografia.wordpress.com/
+
 
 ## Who ? 
 
@@ -131,7 +145,7 @@ Dependencies:
     npm install gulp
     npm install
 
-To ease development task you can use gulp for local development:
+To ease local development  you can use gulp for hot reloading:
 
     gulp watch
 
