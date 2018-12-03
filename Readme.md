@@ -20,9 +20,11 @@ Final Project for  Class *ISIS 4822 -  Visual Analytics - Universidad de los And
         - [Technologies / Apis used](#technologies--apis-used)
         - [Running the App](#running-the-app)
         - [Source code](#source-code)
+            - [ETL](#etl)
+            - [Web Application](#web-application)
         - [Development](#development)
     - [Screenshots](#screenshots)
-    - [Other Links / References](#other-links--references)
+    - [Other Links / Docs](#other-links--docs)
         - [Crossfilter](#crossfilter)
 
 ## Main Links
@@ -55,7 +57,7 @@ Costs of procedures related to RA are extracted from SISPRO ( [Sistema Integral 
 
 **Email**: jc.mendez[~at~]uniandes.edu.co , juan[~at~]gkudos.com
 
-**Twitter**: @dersteppen
+**Twitter**:  [@dersteppen](https://twitter.com/dersteppen)
 
 **Github**: https://github.com/dersteppenwolf
 
@@ -71,7 +73,7 @@ This visualization is intended for Physicians and Health professional interested
 
 * Main Dataset: SISPRO
 * Description: Administrative Database with Medical services given to patients in Colombian health system, filtered by Diagnostic codes for Rheumatoid Arthritis.
-* Source: SISPRO ( http://www.sispro.gov.co/ )
+* Source: [SISPRO](http://www.sispro.gov.co/ )  
 * Source Type: Microsoft analysis services  data cube
 Cube: CU - Prestación Servicios de Salud
 * Dataset Type: Table, Temporal
@@ -99,7 +101,7 @@ Colombia
 ### Secondary Tasks
 
 * **Derive** attributes from raw data as **features** to be used in  the final visualization.
-* **Identify** **Outliers**  in data.
+* **Identify** **Outliers**  in costs.
 * **Identify** the **Features** of a specific procedure in the dataset. 
 * **Summarize** the **distribution** of Costs per Person, people served and total costs   of RA procedures in Colombia.
 
@@ -149,7 +151,16 @@ Then you can open a web browser using the following url:
 
 ### Source code
 
-You can find the source coude in the _app_ folder.
+#### ETL
+
+You can find the ETL's source coude in the _etl_ folder.
+That folder includes a tableau file used as a tool for data extraction from SISPRO's Analysis Services Data Cube.
+
+There are some Jupyter notebooks like __costos_20181122.ipynb__ is used for data validation / transformation.
+
+#### Web Application
+
+You can find the source code in the _app_ folder.
 
 Subfolders:
 
@@ -205,7 +216,7 @@ To ease local development  you can use gulp for hot reloading:
 
 ![alt text](https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/table2.png "Detail table")
 
-## Other Links / References
+## Other Links / Docs
 
 ###  Crossfilter
 
