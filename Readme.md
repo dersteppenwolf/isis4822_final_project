@@ -11,10 +11,14 @@ Final Project for  Class *ISIS 4822 -  Visual Analytics - Universidad de los And
         - [Juan Carlos Méndez](#juan-carlos-m%C3%A9ndez)
     - [Who ?](#who)
     - [What ?](#what)
+        - [Data](#data)
+        - [Derived](#derived)
     - [Why ?](#why)
         - [Main Task](#main-task)
         - [Secondary Tasks](#secondary-tasks)
     - [How ?](#how)
+        - [Idioms](#idioms)
+        - [Abstractions](#abstractions)
     - [Insights](#insights)
     - [Tech Stuff](#tech-stuff)
         - [Technologies / Apis used](#technologies--apis-used)
@@ -71,6 +75,8 @@ This visualization is intended for Physicians and Health professional interested
 
 ## What ?
 
+### Data 
+
 * Main Dataset: SISPRO
 * Description: Administrative Database with Medical services given to patients in Colombian health system, filtered by Diagnostic codes for Rheumatoid Arthritis.
 * Source: [SISPRO](http://www.sispro.gov.co/ )  
@@ -91,6 +97,28 @@ Colombia
     * Procedure Cost: Quantitative, ordered, sequential.  Cost of a procedure applied to a patient.
     * People Served : Quantitative, ordered, sequential. Number of people 
 
+### Derived
+
+**Categorical**
+
+Most categorical attributes from raw data  are  long strings that  repeat  many times. The size of original CSV file is 456 MB. Such kind of _"big"_ file can generate a lot of latency during downloads for _"normal"_ web clients.  To avoid that kind of problem, data is derived in two files: 
+* A lookup table (_domains.json - 1 MB_)
+* Encoded rows  (_costs.tsv - 20.4 MB_)
+
+Encoding was made as follows:
+* Extract ids / codes from original strings for States,  Administrators,  providers and procedures
+* Generate ids for regime, sisben, sex and age.
+
+**Geo**
+
+The geo data of the States used for the map (_colombia_index.geojson_) is a simplification of the original  polygons from [OSM](https://www.openstreetmap.org). 
+The derived file tries to reflect a ["Grid Map"](https://forumone.com/ideas/good-data-visualization-practice-tile-grid-maps-0) for Colombia that allows the user to easily identify a State for interactive widgets based on the bounding boxes of the 25k scale grid of Colombia. It was made with Postgis and QGIS. 
+
+
+![geo](https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/geo.png "geo")
+
+
+
 
 ## Why ?
 
@@ -107,7 +135,23 @@ Colombia
 
 ## How ?
 
-data...
+### Idioms  
+
+* Linked Filtering (Crossfiltering)
+* Animated Transitions
+
+Different encoding / All data / Linked Navigation
+
+### Abstractions
+  
+    * Encode: Separate, Order, Align 
+    * Manipulate: 
+        * Select and Highlight: Click / Hover
+        * Navigate: Attribute Reduction, Slice
+    * Facet: Juxtapose
+    * Reduce: Filter, Aggregate
+
+
 
 ## Insights
 
@@ -134,6 +178,9 @@ data...
 * Google Fonts
 * Font Awesome
 * Gulp: https://gulpjs.com/
+* Jupyter / Jupyter Lab 
+* Visual Studio Code
+* Tableau (Note: Used only for data extraction from [Microsoft Analysis Services](https://en.wikipedia.org/wiki/Microsoft_Analysis_Services )
 
 ### Running the App
 
@@ -154,9 +201,10 @@ Then you can open a web browser using the following url:
 #### ETL
 
 You can find the ETL's source coude in the _etl_ folder.
-That folder includes a tableau file used as a tool for data extraction from SISPRO's Analysis Services Data Cube.
+That folder includes a tableau workbook used as a tool for data extraction from SISPRO's Analysis Services Data Cube. 
+(Note: It only works on windows machines.  For more information about connect Tableau to a Microsoft Analysis Services database and set up a data source please read the  [official docs](https://onlinehelp.tableau.com/current/pro/desktop/en-us/examples_msas.htm) )
 
-There are some Jupyter notebooks like __costos_20181122.ipynb__ is used for data validation / transformation.
+There are some [Jupyter](http://jupyter.org/)  notebooks like __costos_20181122.ipynb__ is used for data validation / transformation.
 
 #### Web Application
 
