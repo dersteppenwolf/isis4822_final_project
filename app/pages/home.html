@@ -79,7 +79,7 @@
 			<p> </p>
 		</div>
 		<div class="col-8">
-			<h2 class="descriptionTitle">The Visualization project according to Tamara  Munzner's Framework  </h2>
+			<h2 class="descriptionTitle">The Visualization project according to Tamara Munzner's Framework </h2>
 
 
 			<h2 class="descriptionTitle">Who? </h2>
@@ -95,49 +95,252 @@
 
 
 	<div class="row">
-			<div class="col-2">
-				<p> </p>
-			</div>
-			<div class="col-8">
-			
-	
-				<h2 class="descriptionTitle">What? </h2>
-	
-				<p class="description">
-					
-					Data
-					<ul class="description">
+		<div class="col-2">
+			<p> </p>
+		</div>
+		<div class="col-8">
+
+
+			<h2 class="descriptionTitle">What? </h2>
+
+			<p class="description">
+
+				Data
+				<ul class="description">
 					<li>Main Dataset: SISPRO</li>
-					<li>Description: Administrative Database with Medical services given to patients in Colombian health system, filtered by Diagnostic codes for Rheumatoid Arthritis.</li>
+					<li>Description: Administrative Database with Medical services given to patients in Colombian health system,
+						filtered by Diagnostic codes for Rheumatoid Arthritis.</li>
 					<li>Source: <a href="http://www.sispro.gov.co/" rel="nofollow">SISPRO</a></li>
-					<li>Source Type: Microsoft analysis services  data cube
-					Cube: CU - Prestación Servicios de Salud</li>
+					<li>Source Type: Microsoft analysis services data cube
+						Cube: CU - Prestación Servicios de Salud</li>
 					<li>Dataset Type: Table, Temporal</li>
 					<li>Attributes
-					<ul>
-					<li>States : Categorical. States of Colombia</li>
-					<li>Year: Categorical, orderered, sequential. Year of the procedure.</li>
-					<li>Regime :  Categorical.  Type of health regime to which the patient belongs</li>
-					<li>Sisben : Categorical. Subtype of Subsidized regime.</li>
-					<li>Sex : Categorical.</li>
-					<li>Age Group: Categorical, ordered. Age Groups classified by human cycle.</li>
-					<li>Administrator: Categorical. Administrators of the Social Security System</li>
-					<li>Provider: Categorical. Company that provides a medical service.</li>
-					<li>Procedure: Categorical. Procedures and medical services performed in
-					Colombia</li>
-					<li>Procedure Cost: Quantitative, ordered, sequential.  Cost of a procedure applied to a patient.</li>
-					<li>People Served : Quantitative, ordered, sequential. Number of people</li>
-					</ul>
+						<ul>
+							<li>States : Categorical. States of Colombia</li>
+							<li>Year: Categorical, orderered, sequential. Year of the procedure.</li>
+							<li>Regime : Categorical. Type of health regime to which the patient belongs</li>
+							<li>Sisben : Categorical. Subtype of Subsidized regime.</li>
+							<li>Sex : Categorical.</li>
+							<li>Age Group: Categorical, ordered. Age Groups classified by human cycle.</li>
+							<li>Administrator: Categorical. Administrators of the Social Security System</li>
+							<li>Provider: Categorical. Company that provides a medical service.</li>
+							<li>Procedure: Categorical. Procedures and medical services performed in
+								Colombia</li>
+							<li>Procedure Cost: Quantitative, ordered, sequential. Cost of a procedure applied to a patient.</li>
+							<li>People Served : Quantitative, ordered, sequential. Number of people</li>
+						</ul>
 					</li>
-					</ul>
-				
-				</p>
-			</div>
-			<div class="col-2">
-				<p> </p>
-			</div>
-		</div>
+				</ul>
 
+
+				Derived
+				<p><strong>Categorical</strong></p>
+				<p class="description">Most categorical attributes from raw data are long strings that repeat many times. The size
+					of original CSV file is 456 MB. Such kind of <em>"big"</em> file can generate a lot of latency during downloads
+					for <em>"normal"</em> web clients. To avoid that kind of problem, data is derived in two files:</p>
+				<ul class="description">
+					<li>A lookup table (<em>domains.json - 1 MB</em>)</li>
+					<li>Encoded rows (<em>costs.tsv - 20.4 MB</em>)</li>
+				</ul>
+				<p class="description">Encoding was made as follows:</p>
+				<ul class="description">
+					<li>Extract ids / codes from original strings for States, Administrators, providers and procedures</li>
+					<li>Generate ids for regime, sisben, sex and age.</li>
+				</ul>
+				<p class="description"><strong>Geo</strong></p>
+				<p class="description">The geo data of the States used for the map (<em>colombia_index.geojson</em>) is a
+					simplification of the original polygons from <a href="https://www.openstreetmap.org" rel="nofollow">OSM</a>.
+					The derived file tries to reflect a <a href="https://forumone.com/ideas/good-data-visualization-practice-tile-grid-maps-0"
+					 rel="nofollow">"Grid Map"</a> for Colombia that allows the user to easily identify a State for interactive
+					widgets based on the bounding boxes of the 25k scale grid of Colombia. It was made with Postgis and QGIS.</p>
+				<p class="description"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/geo.png">
+
+						<center>
+							<img src="https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/geo.png" alt="geo"
+							 title="geo" width="450px">
+					</a>
+					</center>
+				</p>
+
+			</p>
+		</div>
+		<div class="col-2">
+			<p> </p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-2">
+			<p> </p>
+		</div>
+		<div class="col-8">
+
+
+			<h2 class="descriptionTitle">Why? </h2>
+
+			<p class="description">
+				<b>Main Task</b>:<br />
+				<strong>Discover</strong> the <strong>distribution</strong> of <em>Costs per Person (CP)</em> of RA procedures in
+				Colombia by state, year, regime, sisben, sex, age group, administrator and provider.
+				<br /><br />
+				<b>Secondary Tasks</b>:<br />
+				<ul class="description">
+					<li><strong>Derive</strong> attributes from raw data as <strong>features</strong> to be used in the final
+						visualization.</li>
+					<li><strong>Identify</strong> <strong>Outliers</strong> in costs.</li>
+					<li><strong>Identify</strong> the <strong>Features</strong> of a specific procedure in the dataset.</li>
+					<li><strong>Summarize</strong> the <strong>distribution</strong> of Costs per Person, people served and total
+						costs of RA procedures in Colombia.</li>
+				</ul>
+
+			</p>
+		</div>
+		<div class="col-2">
+			<p> </p>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="row">
+		<div class="col-2">
+			<p> </p>
+		</div>
+		<div class="col-8">
+
+
+			<h2 class="descriptionTitle">How? </h2>
+
+			<p class="description">
+				The dashboard uses different idioms / widgets with Different encodings for all data with Linked filtering
+				(Crossfiltering).
+
+				<br />
+				<strong>Idiom : Horizontal / Vertical Bar Charts</strong>
+				<br />
+				<strong>Encode</strong></p>
+			<ul class="description">
+				<li>Attributes: Year, State, Regime, Sisben, sex, age, administrator, provider</li>
+				<li>Mark: Line</li>
+				<li>Channel
+					<ul>
+						<li>Position: Key attribute. Horizontal / Vertical.</li>
+						<li>Color: Selection / Hover</li>
+					</ul>
+				</li>
+				<li>Encode: Separate, Order, Align.</li>
+			</ul>
+			<p class="description"><strong>Manipulate</strong></p>
+			<ul class="description">
+				<li>Select and Highlight: Click / Hover</li>
+				<li>Navigate: Attribute Reduction, Slice</li>
+				<li>Change with Animated Transitions</li>
+			</ul>
+			<p class="description"><strong>Facet</strong></p>
+			<ul class="description">
+				<li>Juxtapose</li>
+				<li>Linked Filtering (Crossfiltering)</li>
+			</ul>
+			<p class="description"><strong>Reduce</strong></p>
+			<ul class="description">
+				<li>Filter Items / Attributes</li>
+				<li>Aggregate Attributes</li>
+			</ul>
+
+
+
+
+			<center>
+				<img src="https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/category2.png" alt="geo"
+				 title="geo" width="450px">
+
+				<img src="https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/providers.png" alt="geo"
+				 title="geo" width="450px">
+			</center>
+
+			<br />
+			<br />
+			<br />
+
+
+			<strong>		Idiom : List</strong><br />
+<p  class="description"><strong>Encode</strong></p>
+<ul  class="description">
+<li>Attributes: Procedure Name, Cups, Cost per Person, Persons attended, total costs. Total costs per person, total persons attended, total costs.</li>
+<li>Mark: Area</li>
+<li>Channel
+<ul>
+<li>Position: Vertical,  Key attribute (Cups). Horizontal: other attributes</li>
+<li>Color:  Selection</li>
+</ul>
+</li>
+<li>Encode: Separate, Order</li>
+</ul>
+<p  class="description"><strong>Manipulate</strong></p>
+<ul  class="description">
+<li>Select</li>
+<li>Reorder</li>
+</ul>
+<p  class="description"><strong>Facet</strong></p>
+<ul  class="description">
+<li>Juxtapose</li>
+<li>Linked Filtering (Crossfiltering)</li>
+</ul>
+
+
+<center>
+		<img src="https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/table2.png" alt="geo"
+		 title="geo" width="800px">
+
+
+	</center>
+
+	<br />
+	<br />
+	<br />
+
+
+
+<strong>Idiom : Grid Map</strong>
+<p  class="description"><strong>Encode</strong></p>
+<ul  class="description">
+<li>Attributes: State</li>
+<li>Mark: Area</li>
+<li>Channel
+<ul>
+<li>Spatial Region</li>
+<li>Color:  Selection</li>
+</ul>
+</li>
+</ul>
+<p  class="description"><strong>Manipulate</strong></p>
+<ul  class="description">
+<li>Select</li>
+</ul>
+<p  class="description"><strong>Facet</strong></p>
+<ul  class="description">
+<li>Juxtapose</li>
+<li>Linked Filtering (Crossfiltering)</li>
+</ul>
+
+<center>
+		<img src="https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/map_index.png" alt="geo"
+		 title="geo" width="450px">
+
+
+	</center>
+
+
+
+
+			</p>
+		</div>
+		<div class="col-2">
+			<p> </p>
+		</div>
+	</div>
 
 
 
