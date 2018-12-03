@@ -45,6 +45,16 @@ body {
   text-justify: inter-word;
   color: #737373;
 }
+
+.descriptionTitle {
+  margin-top:20px;
+}
+.description {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 30px;
+}
+
 .vtitle {
   line-height: 50px;
   white-space: nowrap;
