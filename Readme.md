@@ -211,12 +211,17 @@ The dashboard uses different idioms / widgets with Different encodings for all d
 
 ## Insights
 
-* There are quality problems in data like these:
+* There are data quality problems  like these:
     * Some states do not have data for one or more years (e.g Amazonas, Arauca, Casanare, Guainía, Guaviare)
     * There are "Not Reported - NR" and  "Not Available - NA",  values in some of the attributes.  Such kind of _"data loss"_ problem should be mitigated by data publishers in order to improve the general data quality of the dataset.
-* The overall average of Costs per Person for procedures is higher for younger people.
-* There are  outliers in procedure costs that reflect problems during data collection or reporting (e.g. procedures with cost of $1 COP)
-*  
+    * The expert found different NIT providers with the same name. 
+* The overall  Costs per Person  (C/P) for procedures is higher for younger people.
+*  The overall  C/P is higher for [well known](https://www.elespectador.com/noticias/medio-ambiente/una-region-desconectada-articulo-449013) isolated states like Chocó, Guainía, La Guajira , Putumayo , Arauca, Vaupés and Vichada.
+* For every year of the dataset  Córdoba is the State with the highest  C/P. 
+* There are  anomalies in procedure costs that reflect problems during data collection  (e.g. procedures with cost of $1 COP)
+* According to the expert, the costs of some procedures in the database differ _a lot_ from the official rates stablished for the country. ( [SOAT DECRETO 2423 DE 1996](https://www.google.com.co/search?q=SOAT+DECRETO+2423+DE+1996&oq=SOAT+DECRETO+2423+DE+1996&aqs=chrome..69i57j69i60j0l4.273j0j7&sourceid=chrome&ie=UTF-8)] and its yearly updates)
+* There is a huge number of persons (65k) with RA that belong to the subsidized (_subsidiado_) regime. According to the expert, usually that group of people doesn't have access to the most advanced or modern procedures due to the high costs of them.
+* There are more women affected with the decease, but costs for men are  higher.
 
 
 
