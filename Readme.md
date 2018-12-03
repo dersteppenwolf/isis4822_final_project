@@ -175,8 +175,8 @@ The dashboard uses different idioms / widgets with Different encodings for all d
 
 **Encode**
 
-* Attributes: Procedure Name, Cups, Cost per Person, Persons attended, total costs.
-* Mark: Line
+* Attributes: Procedure Name, Cups, Cost per Person, Persons attended, total costs. Total costs per person, total persons attended, total costs.
+* Mark: Area
 * Channel 
     * Position: Vertical,  Key attribute (Cups). Horizontal: other attributes
     * Color:  Selection  
