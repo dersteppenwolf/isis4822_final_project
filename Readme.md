@@ -1,8 +1,15 @@
-# Rheumatoid Arthritis in Colombia
+# Dashboard to analyze Rheumatoid Arthritis in Colombia based on Costs per Person
 
 Final Project for  Class *ISIS 4822 -  Visual Analytics - Universidad de los Andes* http://johnguerra.co/classes/visual_analytics_fall_2018/
 
-- [Rheumatoid Arthritis in Colombia](#rheumatoid-arthritis-in-colombia)
+![alt text](https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/dashboard.png "Visualization")
+
+
+
+
+
+
+- [Dashboard to analyze Rheumatoid Arthritis in Colombia based on Costs per Person](#dashboard-to-analyze-rheumatoid-arthritis-in-colombia-based-on-costs-per-person)
     - [Main Links](#main-links)
     - [Description](#description)
         - [Main Goal of the Project](#main-goal-of-the-project)
