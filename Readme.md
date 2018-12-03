@@ -10,13 +10,13 @@ Final Project for  Class *ISIS 4822 -  Visual Analytics - Universidad de los And
     - [About the Author](#about-the-author)
         - [Juan Carlos Méndez](#juan-carlos-m%C3%A9ndez)
     - [Who ?](#who)
-    - [What ?](#what)
+    - [What?](#what)
         - [Data](#data)
         - [Derived](#derived)
-    - [Why ?](#why)
+    - [Why?](#why)
         - [Main Task](#main-task)
         - [Secondary Tasks](#secondary-tasks)
-    - [How ?](#how)
+    - [How?](#how)
         - [Idiom : Horizontal / Vertical Bar Charts](#idiom--horizontal--vertical-bar-charts)
         - [Idiom : List](#idiom--list)
         - [Idiom : Grid Map](#idiom--grid-map)
@@ -74,7 +74,7 @@ Costs of procedures related to RA are extracted from SISPRO ( [Sistema Integral 
 This visualization is intended for Physicians and Health professional interested in occurrence of Rheumatoid arthritis (RA) in Colombia.
 
 
-## What ?
+## What?
 
 ### Data 
 
@@ -121,7 +121,7 @@ The derived file tries to reflect a ["Grid Map"](https://forumone.com/ideas/good
 
 
 
-## Why ?
+## Why?
 
 ### Main Task
 
@@ -134,7 +134,7 @@ The derived file tries to reflect a ["Grid Map"](https://forumone.com/ideas/good
 * **Identify** the **Features** of a specific procedure in the dataset. 
 * **Summarize** the **distribution** of Costs per Person, people served and total costs   of RA procedures in Colombia.
 
-## How ?
+## How?
 
 The dashboard uses different idioms / widgets with Different encodings for all data with Linked filtering (Crossfiltering).
 
