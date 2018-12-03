@@ -9,7 +9,7 @@ Final Project for  Class *ISIS 4822 -  Visual Analytics - Universidad de los And
         - [Justification](#justification)
     - [About the Author](#about-the-author)
         - [Juan Carlos Méndez](#juan-carlos-m%C3%A9ndez)
-    - [Who ?](#who)
+    - [Who?](#who)
     - [What?](#what)
         - [Data](#data)
         - [Derived](#derived)
@@ -69,7 +69,7 @@ Costs of procedures related to RA are extracted from SISPRO ( [Sistema Integral 
 **Web**: https://neogeografia.wordpress.com/
 
 
-## Who ? 
+## Who? 
 
 This visualization is intended for Physicians and Health professional interested in occurrence of Rheumatoid arthritis (RA) in Colombia.
 
@@ -179,6 +179,10 @@ The dashboard uses different idioms / widgets with Different encodings for all d
 * Select 
 * Reorder
 
+**Facet** 
+* Juxtapose 
+* Linked Filtering (Crossfiltering)
+
 ### Idiom : Grid Map
 
 **Encode**
@@ -191,6 +195,10 @@ The dashboard uses different idioms / widgets with Different encodings for all d
 
 **Manipulate**
 * Select 
+
+**Facet** 
+* Juxtapose 
+* Linked Filtering (Crossfiltering)
 
 
 
