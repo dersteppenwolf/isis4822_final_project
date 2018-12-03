@@ -17,8 +17,9 @@ Final Project for  Class *ISIS 4822 -  Visual Analytics - Universidad de los And
         - [Main Task](#main-task)
         - [Secondary Tasks](#secondary-tasks)
     - [How ?](#how)
-        - [Idioms](#idioms)
-        - [Abstractions](#abstractions)
+        - [Idiom : Horizontal / Vertical Bar Charts](#idiom--horizontal--vertical-bar-charts)
+        - [Idiom : List](#idiom--list)
+        - [Idiom : Grid Map](#idiom--grid-map)
     - [Insights](#insights)
     - [Tech Stuff](#tech-stuff)
         - [Technologies / Apis used](#technologies--apis-used)
@@ -135,21 +136,61 @@ The derived file tries to reflect a ["Grid Map"](https://forumone.com/ideas/good
 
 ## How ?
 
-### Idioms  
+The dashboard uses different idioms / widgets with Different encodings for all data with Linked filtering (Crossfiltering).
 
+### Idiom : Horizontal / Vertical Bar Charts
+
+**Encode**
+
+* Attributes: Year, State, Regime, Sisben, sex, age, administrator, provider
+* Mark: Line
+* Channel 
+    * Position: Key attribute. Horizontal / Vertical.
+    * Color:  Selection / Hover
+* Encode: Separate, Order, Align.
+
+ 
+**Manipulate**
+* Select and Highlight: Click / Hover
+* Navigate: Attribute Reduction, Slice
+* Change with Animated Transitions
+
+**Facet** 
+* Juxtapose 
 * Linked Filtering (Crossfiltering)
-* Animated Transitions
 
-Different encoding / All data / Linked Navigation
+**Reduce**
 
-### Abstractions
+* Filter Items / Attributes 
+* Aggregate Attributes 
+
+### Idiom : List
+
+**Encode**
+
+* Attributes: Procedure Name, Cups, Cost per Person, Persons attended, total costs.
+* Mark: Line
+* Channel 
+    * Position: Vertical,  Key attribute (Cups). Horizontal: other attributes
+    * Color:  Selection  
+* Encode: Separate, Order
   
-    * Encode: Separate, Order, Align 
-    * Manipulate: 
-        * Select and Highlight: Click / Hover
-        * Navigate: Attribute Reduction, Slice
-    * Facet: Juxtapose
-    * Reduce: Filter, Aggregate
+**Manipulate**
+* Select 
+* Reorder
+
+### Idiom : Grid Map
+
+**Encode**
+
+* Attributes: State
+* Mark: Area
+* Channel 
+    * Spatial Region
+    * Color:  Selection  
+
+**Manipulate**
+* Select 
 
 
 
