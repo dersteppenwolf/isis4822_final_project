@@ -6,9 +6,6 @@ Final Project for  Class *ISIS 4822 -  Visual Analytics - Universidad de los And
 
 
 
-
-
-
 - [Dashboard to analyze Rheumatoid Arthritis in Colombia based on Costs per Person](#dashboard-to-analyze-rheumatoid-arthritis-in-colombia-based-on-costs-per-person)
     - [Main Links](#main-links)
     - [Description](#description)
@@ -45,7 +42,9 @@ Final Project for  Class *ISIS 4822 -  Visual Analytics - Universidad de los And
 * Slides: 
     * [Google Drive](https://docs.google.com/presentation/d/1iXhIYEBMXZJOl2563rpdmGvypB9WvecfZgQGxODS6rg/edit?usp=sharing)
     * [PDF](https://github.com/dersteppenwolf/isis4822_final_project/blob/master/project_Rheumatoid.Arthritis_jc.mendez_fall_2018.pdf) 
-* Video: https://www.youtube.com/watch?v=fCqVDYocl3Q 
+* Videos: 
+    * Short Demo https://youtu.be/fCqVDYocl3Q
+    * Demo and Explanation  https://youtu.be/HkGYSl6HJ48 
 * Paper: 
 
 
@@ -314,6 +313,8 @@ To ease local development  you can use gulp for hot reloading:
 ## Screenshots
 
 ![alt text](https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/dashboard.png "Visualization")
+
+![alt text](https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/preview.gif "Visualization")
 
 ![alt text](https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/top.png "Years / Main Cards")
 
