@@ -194,15 +194,15 @@ dataViz.controller('costsController', function (
 
     //////////////
 
-    $scope.dimensions.push($scope.dimYear)
-    $scope.dimensions.push($scope.dimStates)
-    $scope.dimensions.push($scope.dimAge)
-    $scope.dimensions.push($scope.dimSex)
-    $scope.dimensions.push($scope.dimAdministrators)
-    $scope.dimensions.push($scope.dimProviders)
-    $scope.dimensions.push($scope.dimSisben)
-    $scope.dimensions.push($scope.dimRegime)
-    $scope.dimensions.push($scope.dimProcedure)
+    // $scope.dimensions.push($scope.dimYear)
+    // $scope.dimensions.push($scope.dimStates)
+    // $scope.dimensions.push($scope.dimAge)
+    // $scope.dimensions.push($scope.dimSex)
+    // $scope.dimensions.push($scope.dimAdministrators)
+    // $scope.dimensions.push($scope.dimProviders)
+    // $scope.dimensions.push($scope.dimSisben)
+    // $scope.dimensions.push($scope.dimRegime)
+    // $scope.dimensions.push($scope.dimProcedure)
 
 
     //////////////
@@ -245,6 +245,7 @@ dataViz.controller('costsController', function (
     }
     //////////////
     $scope.tooltip.style("display", "none");
+    $scope.$apply();
   }
 
 

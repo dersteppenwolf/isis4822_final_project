@@ -10,6 +10,24 @@
 
 	<div id="total" class="anchorDiv"></div>
 
+	<div class="row">
+		<div class="col-3">
+			<p> </p>
+		</div>
+		<div class="col-2">
+			<p> <a class="nav-link " href="#!costs" target="_blank">Visualization</a> </p>
+		</div>
+		<div class="col-2">
+			<p> <a class="nav-link " href="#!insights" target="_blank">Insights</a> </p>
+		</div>
+		<div class="col-2">
+			<p><a class="nav-link " href="#!about"  target="_blank">About</a> </p>
+		</div>
+		<div class="col-3">
+			<p> </p>
+		</div>
+	</div>
+
 
 
 	<div class="row">
@@ -86,7 +104,7 @@
 
 			<p class="description">
 				<a href="http://jcmendez.gkudos.com/ar/#!/costs" target="_blank">This visualization </a>
-				 is intended for Physicians and Health professional interested in occurrence of Rheumatoid
+				is intended for Physicians and Health professional interested in occurrence of Rheumatoid
 				arthritis (RA) in Colombia.</p>
 		</div>
 		<div class="col-2">
@@ -106,7 +124,7 @@
 
 			<p class="description">
 
-					<strong>Data</strong>
+				<strong>Data</strong>
 				<ul class="description">
 					<li>Main Dataset: SISPRO</li>
 					<li>Description: Administrative Database with Medical services given to patients in Colombian health system,
@@ -133,10 +151,10 @@
 					</li>
 				</ul>
 
-				<br/>
-				
+				<br />
+
 				<p class="description">
-						<strong>Derived</strong> <br/>
+					<strong>Derived</strong> <br />
 					<strong>Categorical</strong></p>
 				<p class="description">Most categorical attributes from raw data are long strings that repeat many times. The size
 					of original CSV file is 456 MB. Such kind of <em>"big"</em> file can generate a lot of latency during downloads
@@ -268,72 +286,73 @@
 			<br />
 
 
-			<strong>		Idiom : List</strong><br />
-<p  class="description"><strong>Encode</strong></p>
-<ul  class="description">
-<li>Attributes: Procedure Name, Cups, Cost per Person, Persons attended, total costs. Total costs per person, total persons attended, total costs.</li>
-<li>Mark: Area</li>
-<li>Channel
-<ul>
-<li>Position: Vertical,  Key attribute (Cups). Horizontal: other attributes</li>
-<li>Color:  Selection</li>
-</ul>
-</li>
-<li>Encode: Separate, Order</li>
-</ul>
-<p  class="description"><strong>Manipulate</strong></p>
-<ul  class="description">
-<li>Select</li>
-<li>Reorder</li>
-</ul>
-<p  class="description"><strong>Facet</strong></p>
-<ul  class="description">
-<li>Juxtapose</li>
-<li>Linked Filtering (Crossfiltering)</li>
-</ul>
+			<strong> Idiom : List</strong><br />
+			<p class="description"><strong>Encode</strong></p>
+			<ul class="description">
+				<li>Attributes: Procedure Name, Cups, Cost per Person, Persons attended, total costs. Total costs per person, total
+					persons attended, total costs.</li>
+				<li>Mark: Area</li>
+				<li>Channel
+					<ul>
+						<li>Position: Vertical, Key attribute (Cups). Horizontal: other attributes</li>
+						<li>Color: Selection</li>
+					</ul>
+				</li>
+				<li>Encode: Separate, Order</li>
+			</ul>
+			<p class="description"><strong>Manipulate</strong></p>
+			<ul class="description">
+				<li>Select</li>
+				<li>Reorder</li>
+			</ul>
+			<p class="description"><strong>Facet</strong></p>
+			<ul class="description">
+				<li>Juxtapose</li>
+				<li>Linked Filtering (Crossfiltering)</li>
+			</ul>
 
 
-<center>
-		<img src="https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/table2.png" alt="geo"
-		 title="geo" width="800px">
+			<center>
+				<img src="https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/table2.png" alt="geo"
+				 title="geo" width="800px">
 
 
-	</center>
+			</center>
 
-	<br />
-	<br />
-	<br />
-
-
-
-<strong>Idiom : Grid Map</strong>
-<p  class="description"><strong>Encode</strong></p>
-<ul  class="description">
-<li>Attributes: State</li>
-<li>Mark: Area</li>
-<li>Channel
-<ul>
-<li>Spatial Region</li>
-<li>Color:  Selection</li>
-</ul>
-</li>
-</ul>
-<p  class="description"><strong>Manipulate</strong></p>
-<ul  class="description">
-<li>Select</li>
-</ul>
-<p  class="description"><strong>Facet</strong></p>
-<ul  class="description">
-<li>Juxtapose</li>
-<li>Linked Filtering (Crossfiltering)</li>
-</ul>
-
-<center>
-		<img src="https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/map_index.png" alt="geo"
-		 title="geo" width="450px">
+			<br />
+			<br />
+			<br />
 
 
-	</center>
+
+			<strong>Idiom : Grid Map</strong>
+			<p class="description"><strong>Encode</strong></p>
+			<ul class="description">
+				<li>Attributes: State</li>
+				<li>Mark: Area</li>
+				<li>Channel
+					<ul>
+						<li>Spatial Region</li>
+						<li>Color: Selection</li>
+					</ul>
+				</li>
+			</ul>
+			<p class="description"><strong>Manipulate</strong></p>
+			<ul class="description">
+				<li>Select</li>
+			</ul>
+			<p class="description"><strong>Facet</strong></p>
+			<ul class="description">
+				<li>Juxtapose</li>
+				<li>Linked Filtering (Crossfiltering)</li>
+			</ul>
+
+			<center>
+				<img src="https://raw.githubusercontent.com/dersteppenwolf/isis4822_final_project/master/media/map_index.png" alt="geo"
+				 title="geo" width="450px">
+
+
+			</center>
 
 
 
