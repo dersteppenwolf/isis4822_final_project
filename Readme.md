@@ -45,7 +45,7 @@ Final Project for  Class *ISIS 4822 -  Visual Analytics - Universidad de los And
 * Videos: 
     * Short Demo https://youtu.be/fCqVDYocl3Q
     * Demo and Explanation  https://youtu.be/HkGYSl6HJ48 
-* Paper: 
+* Paper: https://github.com/dersteppenwolf/isis4822_final_project/blob/master/Paper_Rheumatoid.Arthritis_jc.mendez_fall_2018.pdf
 
 
 ## Description
